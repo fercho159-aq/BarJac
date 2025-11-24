@@ -2,6 +2,8 @@ import { Header } from "@/components/landing/header";
 import { HeroSection } from "@/components/landing/hero-section";
 import { PromotionsSection } from "@/components/landing/promotions-section";
 import { Footer } from "@/components/landing/footer";
+import { AboutSection } from "@/components/landing/about-section";
+import { LocationsSection } from "@/components/landing/locations-section";
 
 export default function Home() {
   return (
@@ -10,7 +12,9 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <div className="space-y-24 md:space-y-32 my-24 md:my-32">
+          <AboutSection />
           <PromotionsSection />
+          <LocationsSection />
         </div>
       </main>
       <Footer />
