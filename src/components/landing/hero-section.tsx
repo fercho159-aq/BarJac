@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import Link from "next/link";
 
 export function HeroSection() {
   const heroImages = PlaceHolderImages.filter((img) => img.id.startsWith("hero"));
@@ -47,10 +48,11 @@ export function HeroSection() {
                     LA PRE-FIESTA EMPIEZA AQUÍ
                   </p>
                   <Button
+                    asChild
                     variant="outline"
                     className="mt-8 bg-transparent border-2 border-accent text-accent rounded-none hover:bg-accent hover:text-accent-foreground text-xl font-headline tracking-wider transition-all duration-300 hover:box-glow-accent px-10 py-3 h-auto"
                   >
-                    Ver Promociones
+                    <Link href="/menu">Ver Menú</Link>
                   </Button>
                 </div>
               </div>
