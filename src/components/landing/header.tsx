@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 const navLinks = [
@@ -67,6 +67,9 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-card border-l-border/50">
+            <SheetHeader>
+              <SheetTitle className="sr-only">Menú de Navegación</SheetTitle>
+            </SheetHeader>
             <nav className="flex flex-col items-center justify-center h-full gap-8">
               <Link href="/">
                 <h1 className="text-4xl font-headline text-glow-primary tracking-widest cursor-pointer mb-8">
