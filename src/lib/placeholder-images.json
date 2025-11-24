@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero1",
+      "description": "Neon sign in a bar",
+      "imageUrl": "https://images.unsplash.com/photo-1631058269796-6ea2654cc78b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjM5NTI5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neon sign"
+    },
+    {
+      "id": "hero2",
+      "description": "Colorful cocktails on a bar counter",
+      "imageUrl": "https://images.unsplash.com/photo-1647776111151-8a2257dbbc8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2NrdGFpbHMlMjBiYXJ8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cocktails bar"
+    },
+    {
+      "id": "hero3",
+      "description": "People dancing in a club",
+      "imageUrl": "https://images.unsplash.com/photo-1593958812614-2db6a598c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbHViJTIwcGFydHl8ZW58MHx8fHwxNzYzOTk3MjYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "club party"
+    }
+  ]
 }
