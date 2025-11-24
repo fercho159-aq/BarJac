@@ -4,8 +4,15 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/nosotros", label: "Nosotros" },
@@ -15,6 +22,7 @@ const navLinks = [
 
 export function Header() {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,12 +36,12 @@ export function Header() {
   return (
     <header
       className={cn(
-        "w-full p-4 md:p-6 flex justify-between items-center fixed top-0 left-0 z-50 transition-all duration-300",
+        "w-full p-4 md:px-6 flex justify-between items-center fixed top-0 left-0 z-50 transition-all duration-300",
         hasScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
       )}
     >
       <Link href="/">
-        <h1 className="text-4xl md:text-5xl font-headline text-glow-primary tracking-widest cursor-pointer">
+        <h1 className="text-3xl md:text-4xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 animate-pulse cursor-pointer">
           SAMBUCA
         </h1>
       </Link>
@@ -44,7 +52,12 @@ export function Header() {
           <Link
             key={link.href}
             href={link.href}
-            className="font-headline text-lg tracking-wider text-primary hover:text-primary-foreground hover:bg-primary rounded-md px-3 py-1 transition-colors"
+            className={cn(
+              "font-headline text-lg tracking-wider transition-colors px-3 py-1 rounded-md",
+              pathname === link.href
+                ? "text-primary-foreground bg-primary"
+                : "text-primary hover:text-primary-foreground hover:bg-primary/80"
+            )}
           >
             {link.label}
           </Link>
@@ -80,7 +93,12 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-headline text-2xl tracking-wider text-primary hover:text-primary-foreground hover:bg-primary rounded-md px-3 py-1 transition-colors"
+                  className={cn(
+                    "font-headline text-2xl tracking-wider transition-colors px-3 py-1 rounded-md",
+                    pathname === link.href
+                      ? "text-primary-foreground bg-primary"
+                      : "text-primary hover:text-primary-foreground hover:bg-primary/80"
+                  )}
                 >
                   {link.label}
                 </Link>
