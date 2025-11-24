@@ -44,7 +44,7 @@ export function Header() {
           <Link
             key={link.href}
             href={link.href}
-            className="font-headline text-lg tracking-wider text-primary-foreground/80 hover:text-primary transition-colors"
+            className="font-headline text-lg tracking-wider text-primary hover:text-primary-foreground hover:bg-primary rounded-md px-3 py-1 transition-colors"
           >
             {link.label}
           </Link>
@@ -77,7 +77,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-headline text-2xl tracking-wider text-primary-foreground/80 hover:text-primary transition-colors"
+                  className="font-headline text-2xl tracking-wider text-primary hover:text-primary-foreground hover:bg-primary rounded-md px-3 py-1 transition-colors"
                 >
                   {link.label}
                 </Link>
