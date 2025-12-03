@@ -66,6 +66,18 @@ export const breakfastItems = [
     { name: "Ahuja Norteña", quantity: "250 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "295.00" },
     { name: "Ribeye", quantity: "250 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "345.00" },
     { name: "New York", quantity: "250 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "345.00" },
+    { name: "Sirlon", quantity: "250 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "345.00" },
+    { name: "Pechuga al Limon", quantity: "200 gr", accompaniment: "Ensalada de la casa, Arroz amarillo", price: "165.00" },
+    { name: "Pechuga al Chipotle", quantity: "200 gr", accompaniment: "Ensalada de la casa, Arroz amarillo", price: "185.00" },
+    { name: "Tacos de Arrachera", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "58.00" },
+    { name: "Tacos de Ahuaja Norteña", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "58.00" },
+    { name: "Tacos de Ribeye", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "68.00" },
+    { name: "Tacos de New York", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "68.00" },
+    { name: "Tacos de Sirlon", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "68.00" },
+    { name: "Tacos de Pechuga al Limon", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "49.00" },
+    { name: "Tacos de Pechuga al Chipotle", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "49.00" },
+    { name: "Hamburguesa Clasica", quantity: "1 pz 180 gr", accompaniment: "Queso americano. Lechuga, jitomate, cebolla, tocino, papas a", price: "175.00" },
+    { name: "Hamburguesa Doble Carne", quantity: "1 pz 300 gr", accompaniment: "Queso americano. Lechuga, jitomate, cebolla, tocino, papas a", price: "195.00" }
 ];
 
   export const drinkItems = [
@@ -156,3 +168,7 @@ export const breakfastItems = [
   
   
 
+
+
+
+    
