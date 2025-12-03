@@ -51,8 +51,8 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-             <Image src="https://picsum.photos/seed/bar-logo/40/40" alt="Bar Jack Logo" width={40} height={40} className="rounded-full" data-ai-hint="bar logo" />
-            <span className="font-bold text-xl">Bar Jack</span>
+             <Image src="https://picsum.photos/seed/bar-logo/40/40" alt="Bar Jac Logo" width={40} height={40} className="rounded-full" data-ai-hint="bar logo" />
+            <span className="font-bold text-xl">Bar Jac</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -71,8 +71,8 @@ export default function Home() {
             <SheetContent side="right">
               <div className="flex flex-col space-y-4 p-4">
                  <Link href="/" className="flex items-center gap-2 mb-4">
-                    <Image src="https://picsum.photos/seed/bar-logo/40/40" alt="Bar Jack Logo" width={40} height={40} className="rounded-full" data-ai-hint="bar logo"/>
-                    <span className="font-bold text-xl">Bar Jack</span>
+                    <Image src="https://picsum.photos/seed/bar-logo/40/40" alt="Bar Jac Logo" width={40} height={40} className="rounded-full" data-ai-hint="bar logo"/>
+                    <span className="font-bold text-xl">Bar Jac</span>
                 </Link>
                 {navLinks.map(link => (
                   <Link key={link.href} href={link.href} onClick={() => setSheetOpen(false)} className="text-lg transition-colors hover:text-primary">{link.label}</Link>
@@ -88,14 +88,14 @@ export default function Home() {
         <section className="relative h-[70vh] w-full">
           <Image
             src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=2000&auto=format&fit=crop"
-            alt="Interior de Bar Jack"
+            alt="Interior de Bar Jac"
             fill
             className="object-cover"
             data-ai-hint="bar interior"
             priority
           />
           <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center text-white p-4">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">BAR JACK</h1>
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">BAR JAC</h1>
             <p className="mt-4 text-lg md:text-xl max-w-2xl">Música, amigos y el mejor ambiente de la ciudad.</p>
             <Button asChild className="mt-8">
                 <Link href="#menu">Ver Menú</Link>
@@ -280,7 +280,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <Card className="p-6">
                         <h3 className="text-2xl font-semibold mb-4">Reserva tu mesa</h3>
-                        <p className="text-muted-foreground mb-6">Asegura tu lugar y vive la experiencia Bar Jack. Contáctanos para grupos y eventos especiales.</p>
+                        <p className="text-muted-foreground mb-6">Asegura tu lugar y vive la experiencia Bar Jac. Contáctanos para grupos y eventos especiales.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                            <Button asChild size="lg">
                                 <a href="https://wa.me/525636363018" target="_blank" rel="noopener noreferrer">
@@ -388,7 +388,7 @@ export default function Home() {
       {/* Footer */}
       <footer id="contacto" className="bg-gray-900 text-gray-300">
         <div className="container py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-sm">&copy; {new Date().getFullYear()} Bar Jack. Todos los derechos reservados.</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} Bar Jac. Todos los derechos reservados.</p>
           <div className="flex space-x-4">
             <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
               <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook /></a>
