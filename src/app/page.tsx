@@ -410,17 +410,17 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer id="contacto" className="bg-secondary text-gray-300">
+      <footer id="contacto" className="bg-[hsl(var(--neon-yellow))]/10">
         <div className="container py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-sm">&copy; {new Date().getFullYear()} Bar Jac. Todos los derechos reservados.</p>
+          <p className="text-sm text-black">&copy; {new Date().getFullYear()} Bar Jac. Todos los derechos reservados.</p>
           <div className="flex space-x-4">
-            <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
+            <Button variant="ghost" size="icon" asChild className="text-primary hover:bg-primary/20 hover:text-primary">
               <a href="https://www.facebook.com/profile.php?id=61584743632789&locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook /></a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
+            <Button variant="ghost" size="icon" asChild className="text-primary hover:bg-primary/20 hover:text-primary">
               <a href="https://www.instagram.com/barjac_cdmx/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
+            <Button variant="ghost" size="icon" asChild className="text-primary hover:bg-primary/20 hover:text-primary">
               <a href="https://www.tiktok.com/@barjac234" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
             </Button>
           </div>
