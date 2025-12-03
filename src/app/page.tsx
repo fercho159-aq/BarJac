@@ -139,8 +139,8 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b border-[hsl(var(--neon-yellow))]/30 bg-[hsl(var(--neon-yellow))]/10 backdrop-blur supports-[backdrop-filter]:bg-[hsl(var(--neon-yellow))]/10">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-             <Image src="/images/Imagen de WhatsApp 2025-11-25 a las 10.21.55_ff8ad4cb.jpg" alt="Bar Jac Logo" width={40} height={40} className="rounded-full neon-border" data-ai-hint="bar logo" />
-            <span className="font-orbitron font-bold text-xl neon-text text-black" style={{ textShadow: '0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 20px #000' }}>Bar Jac</span>
+             <Image src="/images/Imagen de WhatsApp 2025-11-25 a las 10.21.55_ff8ad4cb.jpg" alt="BarJac Logo" width={40} height={40} className="rounded-full neon-border" data-ai-hint="bar logo" />
+            <span className="font-orbitron font-bold text-xl neon-text text-black" style={{ textShadow: '0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 20px #000' }}>BarJac</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -159,8 +159,8 @@ export default function Home() {
             <SheetContent side="right" className="bg-background">
               <div className="flex flex-col space-y-4 p-4">
                  <Link href="/" className="flex items-center gap-3 mb-4">
-                    <Image src="/images/Imagen de WhatsApp 2025-11-25 a las 10.21.55_ff8ad4cb.jpg" alt="Bar Jac Logo" width={40} height={40} className="rounded-full neon-border" data-ai-hint="bar logo"/>
-                    <span className="font-orbitron font-bold text-xl neon-text">Bar Jac</span>
+                    <Image src="/images/Imagen de WhatsApp 2025-11-25 a las 10.21.55_ff8ad4cb.jpg" alt="BarJac Logo" width={40} height={40} className="rounded-full neon-border" data-ai-hint="bar logo"/>
+                    <span className="font-orbitron font-bold text-xl neon-text">BarJac</span>
                 </Link>
                 {navLinks[language as keyof typeof navLinks].map(link => (
                   <Link key={link.href} href={link.href} onClick={() => setSheetOpen(false)} className="text-lg transition-colors hover:text-primary">{link.label}</Link>
@@ -176,14 +176,14 @@ export default function Home() {
         <section className="relative h-[70vh] w-full">
           <Image
             src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=2000&auto=format&fit=crop"
-            alt={language === 'es' ? "Interior de Bar Jac" : "Bar Jac Interior"}
+            alt={language === 'es' ? "Interior de BarJac" : "BarJac Interior"}
             fill
             className="object-cover"
             data-ai-hint="bar interior"
             priority
           />
           <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white p-4">
-            <h1 className="text-4xl md:text-6xl font-orbitron font-extrabold tracking-tight leading-tight neon-text">BAR JAC</h1>
+            <h1 className="text-4xl md:text-6xl font-orbitron font-extrabold tracking-tight leading-tight neon-text">BARJAC</h1>
             <p className="mt-4 text-lg md:text-xl max-w-2xl">{language === 'es' ? 'Música, amigos y el mejor ambiente de la ciudad.' : 'Music, friends and the best atmosphere in the city.'}</p>
             <div className="mt-8 flex gap-4">
               <Button asChild className="font-bold neon-border hover:bg-primary/90 hover:scale-105 transition-all">
@@ -391,7 +391,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <Card className="p-6 neon-border bg-background">
                         <h3 className="text-2xl font-semibold mb-4 font-orbitron">{language === 'es' ? 'Reserva tu mesa' : 'Reserve your table'}</h3>
-                        <p className="text-muted-foreground mb-6">{language === 'es' ? 'Asegura tu lugar y vive la experiencia Bar Jac. Contáctanos para grupos y eventos especiales.' : 'Secure your spot and live the Bar Jac experience. Contact us for groups and special events.'}</p>
+                        <p className="text-muted-foreground mb-6">{language === 'es' ? 'Asegura tu lugar y vive la experiencia BarJac. Contáctanos para grupos y eventos especiales.' : 'Secure your spot and live the BarJac experience. Contact us for groups and special events.'}</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                            <Button asChild size="lg" className="font-bold neon-border hover:bg-primary/90 hover:scale-105 transition-all">
                                 <a href="https://wa.me/525636363018" target="_blank" rel="noopener noreferrer">
@@ -499,7 +499,7 @@ export default function Home() {
       {/* Footer */}
       <footer id="contacto" className="bg-[hsl(var(--neon-yellow))]/10">
         <div className="container py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-sm text-black">&copy; {new Date().getFullYear()} Bar Jac. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
+          <p className="text-sm text-black">&copy; {new Date().getFullYear()} BarJac. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
           <div className="flex space-x-4">
             <Button variant="ghost" size="icon" asChild className="text-primary hover:bg-primary/20 hover:text-primary">
               <a href="https://www.facebook.com/profile.php?id=61584743632789&locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook /></a>
