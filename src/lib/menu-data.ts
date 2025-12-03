@@ -190,7 +190,22 @@ export const sodaItems = [
     { name: "Ciel Mineral 600 ml", price: "35.00" },
     { name: "Topo Chico 355 ml", price: "35.00" },
 ];
+
+export const beerItems = [
+    { name: "XX Ambar", quantity: "325 ml", price: "55.00" },
+    { name: "XX Lager", quantity: "325 ml", price: "55.00" },
+    { name: "Amstel Ultra", quantity: "355 ml", price: "55.00" },
+    { name: "Bohemia Oscura", quantity: "355 ml", price: "55.00" },
+    { name: "Heineken Normal", quantity: "355 ml", price: "55.00" },
+    { name: "Heineken Zero", quantity: "355 ml", price: "55.00" },
+    { name: "Corona", quantity: "355 ml", price: "55.00" },
+    { name: "Victoria", quantity: "355 ml", price: "55.00" },
+    { name: "Modelo Especial", quantity: "355 ml", price: "55.00" },
+    { name: "Tarro chico de Barril", quantity: "300 ml", price: "70.00" },
+    { name: "Tarro Grande de Barril", quantity: "1000 ml", price: "125.00" },
+];
     
 
     
+
 
