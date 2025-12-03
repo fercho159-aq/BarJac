@@ -11,6 +11,7 @@ import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import { breakfastItems, entranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems } from "@/lib/menu-data";
+import { TiktokIcon } from "@/components/icons/tiktok-icon";
 
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-1">
@@ -395,6 +396,9 @@ export default function Home() {
             </Button>
             <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
               <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
+              <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
             </Button>
           </div>
         </div>
