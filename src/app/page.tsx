@@ -398,7 +398,7 @@ export default function Home() {
               <a href="https://www.instagram.com/barjac_cdmx/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
-              <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
+              <a href="https://www.tiktok.com/@barjac234" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
             </Button>
           </div>
         </div>
@@ -406,5 +406,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
