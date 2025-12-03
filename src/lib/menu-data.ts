@@ -161,6 +161,10 @@ export const breakfastItems = [
     { name: "Amaretto Sour", quantity: "120 ml", price: "250.00" },
     { name: "Midori Sour", quantity: "120 ml", price: "250.00" },
     { name: "New York Sour", quantity: "150 ml", price: "250.00" },
+    { name: "Carajillo con Kalua", quantity: "120 ml", price: "135.00" },
+  ];
+  
+export const preparadosItems = [
     { name: "Cerveza Sunrise", quantity: "150 ml", price: "120.00" },
     { name: "Cerveza Hawaian", quantity: "150 ml", price: "150.00" },
     { name: "Chela Azulita", quantity: "150 ml", price: "120.00" },
@@ -168,10 +172,8 @@ export const breakfastItems = [
     { name: "Michelada", quantity: "45 ml", price: "15.00" },
     { name: "Cubana", quantity: "105 ml", price: "20.00" },
     { name: "Cerveza Camarones", quantity: "105 ml", price: "75.00" },
-    { name: "Carajillo con Kalua", quantity: "120 ml", price: "135.00" },
     { name: "Cerveza De Ostiones", quantity: "105 ml", price: "75.00" },
-  ];
-  
+];
   
 export const snackItems = [
     { name: "Alitas", quantity: "8pz", accompaniment: "Apio, Zanahoria y aderezo blue cheese", price: "165.00" },
@@ -207,6 +209,7 @@ export const beerItems = [
     
 
     
+
 
 
 

@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import { breakfastItems, entranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems } from "@/lib/menu-data";
+import { breakfastItems, entranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems, preparadosItems } from "@/lib/menu-data";
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
 import { cn } from "@/lib/utils";
 
@@ -35,6 +35,7 @@ export default function Home() {
     refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:border-[hsl(var(--neon-magenta))]",
     cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:border-[hsl(var(--neon-red))]",
     cocteleria: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:border-[hsl(var(--neon-cyan))]",
+    preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:border-[hsl(var(--neon-violet))]",
   };
 
   const getPriceClassName = (tab: string) => {
@@ -46,6 +47,7 @@ export default function Home() {
       case 'refrescos': return 'text-[hsl(var(--neon-magenta))]';
       case 'cerveza': return 'text-[hsl(var(--neon-red))]';
       case 'cocteleria': return 'text-[hsl(var(--neon-cyan))]';
+      case 'preparados': return 'text-[hsl(var(--neon-violet))]';
       default: return 'text-primary';
     }
   };
@@ -135,7 +137,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-12 font-orbitron neon-text">Nuestro Menú</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
               <div className="flex justify-center mb-8">
-                <TabsList className="grid w-full max-w-4xl grid-cols-2 md:grid-cols-4 lg:grid-cols-7 h-auto">
+                <TabsList className="grid w-full max-w-4xl grid-cols-2 md:grid-cols-4 lg:grid-cols-8 h-auto">
                   {Object.keys(menuColors).map((tab) => (
                     <TabsTrigger key={tab} value={tab} className={cn(activeTab === tab ? menuColors[tab] : 'data-[state=inactive]:border-transparent')}>
                       {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -269,6 +271,26 @@ export default function Home() {
                       <CardContent>
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className={cn("font-semibold text-lg", getPriceClassName('cerveza'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+              <TabsContent value="preparados">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold font-orbitron">Preparados</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {preparadosItems.map((item, index) => (
+                    <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader>
+                        <div className="flex justify-between items-baseline">
+                          <CardTitle className="text-xl">{item.name}</CardTitle>
+                          {item.quantity && <p className="text-sm text-muted-foreground ml-2">{item.quantity}</p>}
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('preparados'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
