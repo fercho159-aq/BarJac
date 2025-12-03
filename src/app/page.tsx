@@ -212,7 +212,7 @@ export default function Home() {
               </div>
               <TabsContent value="desayunos">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-2xl font-bold font-orbitron", getPriceClassName('desayunos'))}>{menuCategories[language as keyof typeof menuCategories].desayunos}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('desayunos'))}>{menuCategories[language as keyof typeof menuCategories].desayunos}</h3>
                   <p className="text-muted-foreground">{language === 'es' ? 'En paquete te incluimos café, fruta o jugo.' : 'In a package we include coffee, fruit or juice.'}</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -241,7 +241,7 @@ export default function Home() {
               </TabsContent>
               <TabsContent value="entradas">
                  <div className="text-center mb-6">
-                  <h3 className={cn("text-2xl font-bold font-orbitron", getPriceClassName('entradas'))}>{menuCategories[language as keyof typeof menuCategories].entradas}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('entradas'))}>{menuCategories[language as keyof typeof menuCategories].entradas}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentEntranceItems.map((item, index) => (
@@ -258,7 +258,7 @@ export default function Home() {
               </TabsContent>
               <TabsContent value="comida">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-2xl font-bold font-orbitron", getPriceClassName('comida'))}>{menuCategories[language as keyof typeof menuCategories].comida}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('comida'))}>{menuCategories[language as keyof typeof menuCategories].comida}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentFoodItems.map((item, index) => (
@@ -275,7 +275,7 @@ export default function Home() {
               </TabsContent>
                <TabsContent value="cocteleria">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-2xl font-bold font-orbitron", getPriceClassName('cocteleria'))}>{menuCategories[language as keyof typeof menuCategories].cocteleria}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cocteleria'))}>{menuCategories[language as keyof typeof menuCategories].cocteleria}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentDrinkItems.map((item, index) => (
@@ -295,7 +295,7 @@ export default function Home() {
               </TabsContent>
               <TabsContent value="snacks">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-2xl font-bold font-orbitron", getPriceClassName('snacks'))}>{menuCategories[language as keyof typeof menuCategories].snacks}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('snacks'))}>{menuCategories[language as keyof typeof menuCategories].snacks}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentSnackItems.map((item, index) => (
@@ -312,7 +312,7 @@ export default function Home() {
               </TabsContent>
               <TabsContent value="refrescos">
                  <div className="text-center mb-6">
-                  <h3 className={cn("text-2xl font-bold font-orbitron", getPriceClassName('refrescos'))}>{menuCategories[language as keyof typeof menuCategories].refrescos}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('refrescos'))}>{menuCategories[language as keyof typeof menuCategories].refrescos}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentSodaItems.map((item, index) => (
@@ -327,7 +327,7 @@ export default function Home() {
               </TabsContent>
               <TabsContent value="cerveza">
                  <div className="text-center mb-6">
-                  <h3 className={cn("text-2xl font-bold font-orbitron", getPriceClassName('cerveza'))}>{menuCategories[language as keyof typeof menuCategories].cerveza}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cerveza'))}>{menuCategories[language as keyof typeof menuCategories].cerveza}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentBeerItems.map((item, index) => (
@@ -343,7 +343,7 @@ export default function Home() {
               </TabsContent>
               <TabsContent value="preparados">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-2xl font-bold font-orbitron", getPriceClassName('preparados'))}>{menuCategories[language as keyof typeof menuCategories].preparados}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('preparados'))}>{menuCategories[language as keyof typeof menuCategories].preparados}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentPreparadosItems.map((item, index) => (
@@ -411,8 +411,8 @@ export default function Home() {
                         <h3 className="text-2xl font-semibold mb-4 font-orbitron">{language === 'es' ? 'Próximamente a domicilio' : 'Coming soon to your home'}</h3>
                         <p className="text-muted-foreground mb-6">{language === 'es' ? 'Disfruta de nuestros platillos y bebidas en la comodidad de tu casa.' : 'Enjoy our dishes and drinks in the comfort of your home.'}</p>
                         <div className="flex justify-center items-center gap-6">
-                           <Image src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=50&h=50" alt="Uber Eats" width={50} height={50} data-ai-hint="company logo" className="grayscale opacity-50"/>
-                           <Image src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=50&h=50" alt="Didi Food" width={50} height={50} data-ai-hint="company logo" className="grayscale opacity-50"/>
+                           <Image src="/images/DIDI.jpg" alt="Uber Eats" width={50} height={50} data-ai-hint="company logo" />
+                           <Image src="/images/UBER.jpg" alt="Didi Food" width={50} height={50} data-ai-hint="company logo" />
                         </div>
                     </Card>
                 </div>
