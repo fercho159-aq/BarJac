@@ -199,7 +199,7 @@ export default function Home() {
         {/* Menu Section */}
         <section id="menu" className="py-16 md:py-24">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
+            <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
               <div className="flex justify-center mb-8">
                 <TabsList className="grid w-full max-w-4xl grid-cols-2 md:grid-cols-4 lg:grid-cols-8 h-auto">
@@ -368,7 +368,7 @@ export default function Home() {
         {/* Promociones Section */}
         <section id="promociones" className="py-16 md:py-24 bg-secondary">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Promociones' : 'Promotions'}</h2>
+            <h2 className="text-5xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Promociones' : 'Promotions'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {promos[language as keyof typeof promos].map((promo, index) => (
                 <Card key={index} className="text-center transform hover:scale-105 transition-transform duration-300 neon-border bg-background">
@@ -387,7 +387,7 @@ export default function Home() {
         {/* Reservaciones y Delivery */}
         <section id="reservaciones" className="py-16 md:py-24">
             <div className="container text-center">
-                <h2 className="text-3xl font-bold mb-10 font-orbitron neon-text">{language === 'es' ? 'Reservaciones y Delivery' : 'Reservations and Delivery'}</h2>
+                <h2 className="text-5xl font-bold mb-10 font-orbitron neon-text">{language === 'es' ? 'Reservaciones y Delivery' : 'Reservations and Delivery'}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <Card className="p-6 neon-border bg-background">
                         <h3 className="text-2xl font-semibold mb-4 font-orbitron">{language === 'es' ? 'Reserva tu mesa' : 'Reserve your table'}</h3>
@@ -422,7 +422,7 @@ export default function Home() {
         {/* Opiniones Section */}
         <section id="opiniones" className="py-16 md:py-24 bg-secondary">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Lo que dicen nuestros clientes' : 'What our customers say'}</h2>
+            <h2 className="text-5xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Lo que dicen nuestros clientes' : 'What our customers say'}</h2>
             <Carousel
               opts={{
                 align: "start",
@@ -461,7 +461,7 @@ export default function Home() {
         {/* Ubicacion Section */}
         <section id="ubicacion" className="py-16 md:py-24">
           <div className="container">
-             <h2 className="text-3xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Encuéntranos' : 'Find us'}</h2>
+             <h2 className="text-5xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Encuéntranos' : 'Find us'}</h2>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="relative aspect-video rounded-lg overflow-hidden neon-border">
                     <iframe
