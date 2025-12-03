@@ -392,7 +392,7 @@ export default function Home() {
           <p className="text-sm">&copy; {new Date().getFullYear()} Bar Jac. Todos los derechos reservados.</p>
           <div className="flex space-x-4">
             <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
-              <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook /></a>
+              <a href="https://www.facebook.com/profile.php?id=61584751973959&locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
               <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
