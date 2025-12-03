@@ -35,6 +35,14 @@
     --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
+
+    --neon-blue: 221.2 83.2% 53.3%;
+    --neon-green: 130 80% 50%;
+    --neon-yellow: 54 96% 53%;
+    --neon-orange: 30 100% 50%;
+    --neon-magenta: 310 100% 55%;
+    --neon-red: 0 100% 50%;
+    --neon-cyan: 180 100% 50%;
   }
 
   .dark {

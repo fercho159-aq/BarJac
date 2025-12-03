@@ -12,6 +12,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import { breakfastItems, entranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems } from "@/lib/menu-data";
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
+import { cn } from "@/lib/utils";
 
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-1">
@@ -24,6 +25,30 @@ const StarRating = ({ rating }: { rating: number }) => (
 
 export default function Home() {
   const [isSheetOpen, setSheetOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("desayunos");
+
+  const menuColors: { [key: string]: string } = {
+    desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))]",
+    entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))]",
+    comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))]",
+    snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))]",
+    refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))]",
+    cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))]",
+    cocteleria: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))]",
+  };
+
+  const getPriceClassName = (tab: string) => {
+    switch (tab) {
+      case 'desayunos': return 'text-[hsl(var(--neon-blue))]';
+      case 'entradas': return 'text-[hsl(var(--neon-green))]';
+      case 'comida': return 'text-[hsl(var(--neon-yellow))]';
+      case 'snacks': return 'text-[hsl(var(--neon-orange))]';
+      case 'refrescos': return 'text-[hsl(var(--neon-magenta))]';
+      case 'cerveza': return 'text-[hsl(var(--neon-red))]';
+      case 'cocteleria': return 'text-[hsl(var(--neon-cyan))]';
+      default: return 'text-primary';
+    }
+  };
 
   const promos = [
     { title: "Jueves de Amigos", description: "2x1 en toda la coctelería nacional." },
@@ -108,16 +133,14 @@ export default function Home() {
         <section id="menu" className="py-16 md:py-24">
           <div className="container">
             <h2 className="text-3xl font-bold text-center mb-12 font-orbitron neon-text">Nuestro Menú</h2>
-            <Tabs defaultValue="desayunos" className="w-full">
+            <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
               <div className="flex justify-center mb-8">
                 <TabsList className="grid w-full max-w-4xl grid-cols-2 md:grid-cols-4 lg:grid-cols-7 h-auto">
-                  <TabsTrigger value="desayunos">Desayunos</TabsTrigger>
-                  <TabsTrigger value="entradas">Entradas</TabsTrigger>
-                  <TabsTrigger value="comida">Comida</TabsTrigger>
-                  <TabsTrigger value="snacks">Snacks</TabsTrigger>
-                  <TabsTrigger value="refrescos">Refrescos</TabsTrigger>
-                  <TabsTrigger value="cerveza">Cerveza</TabsTrigger>
-                  <TabsTrigger value="cocteleria">Coctelería</TabsTrigger>
+                  {Object.keys(menuColors).map((tab) => (
+                    <TabsTrigger key={tab} value={tab} className={cn(activeTab === tab && menuColors[tab])}>
+                      {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                    </TabsTrigger>
+                  ))}
                 </TabsList>
               </div>
               <TabsContent value="desayunos">
@@ -137,11 +160,11 @@ export default function Home() {
                         <div className="flex justify-between items-center mt-4">
                           <div>
                             <p className="font-semibold">Normal:</p>
-                            <p className="text-primary font-bold text-lg">${item.priceNormal}</p>
+                            <p className={cn("font-bold text-lg", getPriceClassName('desayunos'))}>${item.priceNormal}</p>
                           </div>
                           <div>
                             <p className="font-semibold">Paquete:</p>
-                            <p className="text-primary font-bold text-lg">${item.pricePackage}</p>
+                            <p className={cn("font-bold text-lg", getPriceClassName('desayunos'))}>${item.pricePackage}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -160,7 +183,7 @@ export default function Home() {
                       <CardContent>
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
-                        <p className="font-semibold text-primary text-lg">${item.price}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('entradas'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -177,7 +200,7 @@ export default function Home() {
                       <CardContent>
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
-                        <p className="font-semibold text-primary text-lg">${item.price}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('comida'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -197,7 +220,7 @@ export default function Home() {
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <p className="font-semibold text-primary text-lg">${item.price}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('cocteleria'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -214,7 +237,7 @@ export default function Home() {
                       <CardContent>
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
-                        <p className="font-semibold text-primary text-lg">${item.price}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('snacks'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -229,7 +252,7 @@ export default function Home() {
                     <Card key={index} className="bg-secondary border-primary/20">
                       <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
                       <CardContent>
-                        <p className="font-semibold text-primary text-lg">${item.price}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('refrescos'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -245,7 +268,7 @@ export default function Home() {
                       <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
                       <CardContent>
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
-                        <p className="font-semibold text-primary text-lg">${item.price}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('cerveza'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
