@@ -54,13 +54,19 @@ export const breakfastItems = [
   export const foodItems = [
     { name: "Tostada de Atun", quantity: "1 pz 80 gr", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
     { name: "Tostada de Pescado", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
+    { name: "Tostada de Pulpo", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
+    { name: "Tostada de Camaron", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
     { name: "Pescadilla", quantity: "3 pz 500 gr", accompaniment: "Aguacate, limon", price: "83.00" },
     { name: "Camarones Momia", quantity: "150 gr", accompaniment: "Ensalada de la casa", price: "225.00" },
     { name: "Atun a la Parrilla", quantity: "200 gr", accompaniment: "Ensalada de la casa, Arroz amarillo", price: "213.00" },
+    { name: "Salmon a la Parrilla", quantity: "200 gr", accompaniment: "Ensalada de la casa, Arroz amarillo", price: "245.00" },
+    { name: "Ensalada de Frutos Rojos", quantity: "180 gr", accompaniment: "Aderezo de la casa, queso cabra", price: "165.00" },
+    { name: "Ensalada de Melon", quantity: "200 gr", accompaniment: "Queso doble Crema", price: "115.00" },
     { name: "Arrachera", quantity: "200 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "295.00" },
-    { name: "Tacos de Arrachera (Orden)", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "58.00" },
-    { name: "Hamburguesa Clasica", quantity: "1 pz 180 gr", accompaniment: "Queso americano. Lechuga, jitomate, cebolla, tocino, papas a la francesa", price: "175.00" },
-  ];
+    { name: "Ahuja Norteña", quantity: "250 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "295.00" },
+    { name: "Ribeye", quantity: "250 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "345.00" },
+    { name: "New York", quantity: "250 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "345.00" },
+];
 
   export const drinkItems = [
     { name: "Gin & Tonic", description: "Beefeater, Agua Tónica, Gajo de Limón Verde." },
@@ -149,3 +155,4 @@ export const breakfastItems = [
   ];
   
   
+
