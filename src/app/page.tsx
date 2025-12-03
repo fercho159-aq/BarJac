@@ -2,18 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Facebook, Instagram, Music, MapPin, Beer, Utensils, QrCode } from "lucide-react";
+import { Facebook, Instagram, Music, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const menuItems = [
-    { name: "Alitas BBQ", price: "150", description: "10 pz de alitas bañadas en nuestra salsa BBQ casera." },
-    { name: "Hamburguesa Jack", price: "180", description: "Carne de res premium, queso cheddar, tocino y aros de cebolla." },
-    { name: "Tacos de Arrachera", price: "120", description: "3 tacos de arrachera con guacamole y cebolla morada." },
-    { name: "Cerveza Artesanal", price: "90", description: "Consulta nuestra selección de cervezas locales." },
-  ];
-
   const drinkItems = [
     { name: "Gin & Tonic", price: "150", description: "Beefeater, Agua Tónica, Gajo de Limón Verde." },
     { name: "Vodka & Tonic", price: "140", description: "Smirnoff, Agua Tónica, Gajo de Limón Verde." },
@@ -26,16 +19,18 @@ export default function Home() {
   ];
 
   const foodItems = [
+    { name: "Alitas BBQ", price: "150", description: "10 pz de alitas bañadas en nuestra salsa BBQ casera." },
+    { name: "Hamburguesa Jack", price: "180", description: "Carne de res premium, queso cheddar, tocino y aros de cebolla." },
+    { name: "Tacos de Arrachera", price: "120", description: "3 tacos de arrachera con guacamole y cebolla morada." },
     { name: "Tostada de Atun", quantity: "1 pz 80 gr", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
     { name: "Tostada de Pescado", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
     { name: "Pescadilla", quantity: "3 pz 500 gr", accompaniment: "Aguacate, limon", price: "83.00" },
     { name: "Camarones Momia", quantity: "150 gr", accompaniment: "Ensalada de la casa", price: "225.00" },
     { name: "Atun a la Parrilla", quantity: "200 gr", accompaniment: "Ensalada de la casa, Arroz amarillo", price: "213.00" },
     { name: "Arrachera", quantity: "200 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "295.00" },
-    { name: "Tacos de Arrachera", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "58.00" },
+    { name: "Tacos de Arrachera (Orden)", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "58.00" },
     { name: "Hamburguesa Clasica", quantity: "1 pz 180 gr", accompaniment: "Queso americano. Lechuga, jitomate, cebolla, tocino, papas a la francesa", price: "175.00" },
 ];
-
 
   const promos = [
     { title: "Jueves de Amigos", description: "2x1 en toda la coctelería nacional." },
@@ -106,8 +101,9 @@ export default function Home() {
                     <CardTitle>{item.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">{item.quantity}</p>
-                    <p className="text-muted-foreground mb-2">{item.accompaniment}</p>
+                    {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                    {item.accompaniment && <p className="text-muted-foreground mb-2">{item.accompaniment}</p>}
+                    {item.description && <p className="text-muted-foreground mb-2">{item.description}</p>}
                     <p className="font-semibold text-primary">${item.price}</p>
                   </CardContent>
                 </Card>
