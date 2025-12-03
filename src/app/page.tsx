@@ -395,7 +395,7 @@ export default function Home() {
               <a href="https://www.facebook.com/profile.php?id=61584743632789&locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
-              <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
+              <a href="https://www.instagram.com/barjac_cdmx/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild className="hover:bg-primary/20 hover:text-white">
               <a href="#" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
@@ -406,3 +406,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
