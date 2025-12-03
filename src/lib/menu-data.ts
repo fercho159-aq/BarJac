@@ -173,7 +173,11 @@ export const breakfastItems = [
   ];
   
   
-
+export const snackItems = [
+    { name: "Alitas", quantity: "", accompaniment: "Apio, Zanahoria", price: "165.00" },
+    { name: "Boneles", quantity: "", accompaniment: "Apio, Zanahoria", price: "145.00" },
+    { name: "Papas a la Parmesana", quantity: "", accompaniment: "", price: "108.00" },
+];
 
 
 
