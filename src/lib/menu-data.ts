@@ -153,6 +153,23 @@ export const breakfastItems = [
     { name: "Old Fashioned", quantity: "75 ml", price: "220.00" },
     { name: "Pink Gin", quantity: "60 ml", price: "220.00" },
     { name: "Manhattan Dulce", quantity: "82.5 ml", price: "220.00" },
+    { name: "Manhattan Seco", quantity: "82.5 ml", price: "220.00" },
+    { name: "Horses Neck", quantity: "180 ml", price: "220.00" },
+    { name: "Manhattan Perfecto", quantity: "90 ml", price: "220.00" },
+    { name: "Rob Roy", quantity: "82.5 ml", price: "220.00" },
+    { name: "Whiskey Sour", quantity: "120 ml", price: "220.00" },
+    { name: "Amaretto Sour", quantity: "120 ml", price: "250.00" },
+    { name: "Midori Sour", quantity: "120 ml", price: "250.00" },
+    { name: "New York Sour", quantity: "150 ml", price: "250.00" },
+    { name: "Cerveza Sunrise", quantity: "150 ml", price: "120.00" },
+    { name: "Cerveza Hawaian", quantity: "150 ml", price: "150.00" },
+    { name: "Chela Azulita", quantity: "150 ml", price: "120.00" },
+    { name: "Chelada", quantity: "15 ml", price: "15.00" },
+    { name: "Michelada", quantity: "45 ml", price: "15.00" },
+    { name: "Cubana", quantity: "105 ml", price: "20.00" },
+    { name: "Cerveza Camarones", quantity: "105 ml", price: "75.00" },
+    { name: "Carajillo con Kalua", quantity: "120 ml", price: "135.00" },
+    { name: "Cerveza De Ostiones", quantity: "105 ml", price: "75.00" },
   ];
   
   
@@ -190,6 +207,7 @@ export const beerItems = [
     
 
     
+
 
 
 
