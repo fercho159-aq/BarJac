@@ -14,6 +14,29 @@ export default function Home() {
     { name: "Cerveza Artesanal", price: "90", description: "Consulta nuestra selección de cervezas locales." },
   ];
 
+  const drinkItems = [
+    { name: "Gin & Tonic", price: "150", description: "Beefeater, Agua Tónica, Gajo de Limón Verde." },
+    { name: "Vodka & Tonic", price: "140", description: "Smirnoff, Agua Tónica, Gajo de Limón Verde." },
+    { name: "Cuba Libre", price: "130", description: "Bacardi Blanco, Jugo de Limón, Coca Cola." },
+    { name: "Tequila Sunrise", price: "160", description: "Jose Cuervo Tradicional, Jugo de Naranja, Granadina." },
+    { name: "Godfather", price: "180", description: "J.W. Red Label, Disaronno." },
+    { name: "Black Russian", price: "150", description: "Smirnoff, Kahlua." },
+    { name: "Cosmopolitan", price: "170", description: "Smirnoff, Controy, Jugo de Arándano, Jugo de Limón." },
+    { name: "Margarita Clásica", price: "160", description: "Jose Cuervo Tradicional, Controy, Jugo de Limón." },
+  ];
+
+  const foodItems = [
+    { name: "Tostada de Atun", quantity: "1 pz 80 gr", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
+    { name: "Tostada de Pescado", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
+    { name: "Pescadilla", quantity: "3 pz 500 gr", accompaniment: "Aguacate, limon", price: "83.00" },
+    { name: "Camarones Momia", quantity: "150 gr", accompaniment: "Ensalada de la casa", price: "225.00" },
+    { name: "Atun a la Parrilla", quantity: "200 gr", accompaniment: "Ensalada de la casa, Arroz amarillo", price: "213.00" },
+    { name: "Arrachera", quantity: "200 gr", accompaniment: "Papas a la Francesa, Cebollas Cambray, Nopal Baby, Chiles toreados", price: "295.00" },
+    { name: "Tacos de Arrachera", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "58.00" },
+    { name: "Hamburguesa Clasica", quantity: "1 pz 180 gr", accompaniment: "Queso americano. Lechuga, jitomate, cebolla, tocino, papas a la francesa", price: "175.00" },
+];
+
+
   const promos = [
     { title: "Jueves de Amigos", description: "2x1 en toda la coctelería nacional." },
     { title: "Sábado de Champions", description: "Cubeta de 10 cervezas nacionales por $300 durante los partidos." },
@@ -59,8 +82,10 @@ export default function Home() {
         <section id="menu" className="py-16 md:py-24">
           <div className="container">
             <h2 className="text-3xl font-bold text-center mb-10">Nuestro Menú</h2>
+            
+            <h3 className="text-2xl font-bold text-center mb-6 mt-12">Bebidas</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {menuItems.map((item, index) => (
+              {drinkItems.map((item, index) => (
                 <Card key={index}>
                   <CardHeader>
                     <CardTitle>{item.name}</CardTitle>
@@ -72,6 +97,23 @@ export default function Home() {
                 </Card>
               ))}
             </div>
+
+            <h3 className="text-2xl font-bold text-center mb-6 mt-12">Comida</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {foodItems.map((item, index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <CardTitle>{item.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{item.quantity}</p>
+                    <p className="text-muted-foreground mb-2">{item.accompaniment}</p>
+                    <p className="font-semibold text-primary">${item.price}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
              <div className="text-center mt-12">
                 <h3 className="text-2xl font-bold mb-4">Menú Digital</h3>
                  <div className="flex justify-center">
