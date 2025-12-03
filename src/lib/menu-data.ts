@@ -179,8 +179,18 @@ export const snackItems = [
     { name: "Papas a la Parmesana", quantity: "", accompaniment: "", price: "108.00" },
 ];
 
-
-
+export const sodaItems = [
+    { name: "Agua Enbotellada 355 ml", price: "20.00" },
+    { name: "Sidral 355 ml", price: "30.00" },
+    { name: "Coca Cola 355 ml", price: "30.00" },
+    { name: "Coca Cola Light 355 ml", price: "30.00" },
+    { name: "Fresca 355 ml", price: "30.00" },
+    { name: "Valle Frut Mango 355 ml", price: "30.00" },
+    { name: "Valle Frut Guayaba 355 ml", price: "30.00" },
+    { name: "Ciel Mineral 600 ml", price: "35.00" },
+    { name: "Topo Chico 355 ml", price: "35.00" },
+];
     
 
     
+

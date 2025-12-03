@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import { breakfastItems, entranceItems, foodItems, drinkItems, snackItems } from "@/lib/menu-data";
+import { breakfastItems, entranceItems, foodItems, drinkItems, snackItems, sodaItems } from "@/lib/menu-data";
 
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-1">
@@ -215,8 +215,18 @@ export default function Home() {
                 </div>
               </TabsContent>
               <TabsContent value="refrescos">
-                 <div className="text-center py-10">
-                  <p className="text-muted-foreground">La sección de Refrescos estará disponible próximamente.</p>
+                 <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold">Refrescos</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {sodaItems.map((item, index) => (
+                    <Card key={index}>
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        <p className="font-semibold text-primary text-lg">${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
               </TabsContent>
               <TabsContent value="cerveza">
