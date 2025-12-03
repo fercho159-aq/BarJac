@@ -28,13 +28,13 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("desayunos");
 
   const menuColors: { [key: string]: string } = {
-    desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))]",
-    entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))]",
-    comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))]",
-    snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))]",
-    refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))]",
-    cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))]",
-    cocteleria: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))]",
+    desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:border-[hsl(var(--neon-blue))]",
+    entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:border-[hsl(var(--neon-green))]",
+    comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:border-[hsl(var(--neon-yellow))]",
+    snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:border-[hsl(var(--neon-orange))]",
+    refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:border-[hsl(var(--neon-magenta))]",
+    cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:border-[hsl(var(--neon-red))]",
+    cocteleria: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:border-[hsl(var(--neon-cyan))]",
   };
 
   const getPriceClassName = (tab: string) => {
@@ -137,7 +137,7 @@ export default function Home() {
               <div className="flex justify-center mb-8">
                 <TabsList className="grid w-full max-w-4xl grid-cols-2 md:grid-cols-4 lg:grid-cols-7 h-auto">
                   {Object.keys(menuColors).map((tab) => (
-                    <TabsTrigger key={tab} value={tab} className={cn(activeTab === tab && menuColors[tab])}>
+                    <TabsTrigger key={tab} value={tab} className={cn(activeTab === tab ? menuColors[tab] : 'data-[state=inactive]:border-transparent')}>
                       {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </TabsTrigger>
                   ))}
