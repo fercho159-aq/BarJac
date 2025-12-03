@@ -9,6 +9,14 @@ import Link from "next/link";
 export default function Home() {
 
   const breakfastItems = [
+    { name: "Chilaquiles Verdes", quantity: "100 gs", accompaniment: "Cebolla, cilantro, crema, queso panela", priceNormal: "90.00", pricePackage: "120.00" },
+    { name: "Chilaquiles Verdes con Huevo", quantity: "100 gs + 120 gr", accompaniment: "Cebolla, cilantro, crema, queso panela", priceNormal: "110.00", pricePackage: "140.00" },
+    { name: "Chilaquiles Verdes con Pollo", quantity: "100 gs + 100 gr", accompaniment: "Cebolla, cilantro, crema, queso panela", priceNormal: "120.00", pricePackage: "150.00" },
+    { name: "Chilaquiles Verdes con Ahuja Norteña", quantity: "100 gs + 100 gr", accompaniment: "Cebolla, cilantro, crema, queso panela", priceNormal: "150.00", pricePackage: "180.00" },
+    { name: "Chilaquiles Verdes con Arrachera Marinada", quantity: "100 gs + 100 gr", accompaniment: "Cebolla, cilantro, crema, queso panela", priceNormal: "160.00", pricePackage: "190.00" },
+    { name: "Chilaquiles Verdes con Ribeye", quantity: "100 gs + 100 gr", accompaniment: "Cebolla, cilantro, crema, queso panela", priceNormal: "160.00", pricePackage: "190.00" },
+    { name: "Chilaquiles Verdes con New York", quantity: "100 gs + 100 gr", accompaniment: "Cebolla, cilantro, crema, queso panela", priceNormal: "160.00", pricePackage: "190.00" },
+    { name: "Chilaquiles Verdes con Sirlon", quantity: "100 gs + 100 gr", accompaniment: "Cebolla, cilantro, crema, queso panela", priceNormal: "160.00", pricePackage: "190.00" },
     { name: "Huevos Divorciados", quantity: "120 gr", accompaniment: "Frijol, Crema Queso Panela, cilantro", priceNormal: "89.00", pricePackage: "119.00" },
     { name: "Huevos a la Mexicana", quantity: "120 gr", accompaniment: "Frijol, ensalada, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
     { name: "Huevos Rancheros", quantity: "120 gs", accompaniment: "jamon, frijoles, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
