@@ -51,7 +51,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-             <Image src="https://picsum.photos/seed/bar-logo/40/40" alt="Bar Jac Logo" width={40} height={40} className="rounded-full" data-ai-hint="bar logo" />
+             <Image src="/images/Imagen de WhatsApp 2025-11-25 a las 10.21.55_ff8ad4cb.jpg" alt="Bar Jac Logo" width={40} height={40} className="rounded-full" data-ai-hint="bar logo" />
             <span className="font-bold text-xl">Bar Jac</span>
           </Link>
 
