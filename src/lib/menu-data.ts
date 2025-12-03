@@ -105,6 +105,30 @@ export const breakfastItems = [
     { name: "Fidel Castro", quantity: "180 ml", price: "90.00" },
     { name: "Colorado Bulldog", quantity: "150 ml", price: "90.00" },
     { name: "Godfather", quantity: "60 ml", price: "90.00" },
+    { name: "Cape Codder", quantity: "180 ml", price: "90.00" },
+    { name: "Margarita Clásica", quantity: "112.5 ml", price: "90.00" },
+    { name: "Woo Woo", quantity: "180 ml", price: "90.00" },
+    { name: "White Lady", quantity: "112.5 ml", price: "90.00" },
+    { name: "Boulevardier", quantity: "90 ml", price: "90.00" },
+    { name: "Pink Lady", quantity: "120 ml", price: "90.00" },
+    { name: "Americano", quantity: "90 ml", price: "90.00" },
+    { name: "Mojito", quantity: "180 ml", price: "90.00" },
+    { name: "Wet Martini", quantity: "75 ml", price: "90.00" },
+    { name: "Negroni", quantity: "90 ml", price: "90.00" },
+    { name: "Gin & Tonic", quantity: "180 ml", price: "110.00" },
+    { name: "Gin Basil Smash", quantity: "105 ml", price: "110.00" },
+    { name: "Southside", quantity: "105 ml", price: "110.00" },
+    { name: "Mezcaloni", quantity: "90 ml", price: "110.00" },
+    { name: "Dry Martini", quantity: "60 ml", price: "110.00" },
+    { name: "Hemingway Daiquiri", quantity: "112.5 ml", price: "110.00" },
+    { name: "Dirty Martini", quantity: "90 ml", price: "110.00" },
+    { name: "Cosmopolitan", quantity: "112.5 ml", price: "110.00" },
+    { name: "AMF", quantity: "180 ml", price: "110.00" },
+    { name: "Tommy's Margarita", quantity: "135 ml", price: "110.00" },
+    { name: "Bull", quantity: "150 ml", price: "110.00" },
+    { name: "Lychburg Limonade", quantity: "180 ml", price: "110.00" },
+    { name: "Negroni Sbagliato", quantity: "90 ml", price: "125.00" },
+    { name: "Carajillo", quantity: "120 ml", price: "125.00" },
   ];
   
   
@@ -142,6 +166,7 @@ export const beerItems = [
     
 
     
+
 
 
 

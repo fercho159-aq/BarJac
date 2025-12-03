@@ -189,9 +189,13 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {drinkItems.map((item, index) => (
                      <Card key={index}>
-                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardHeader>
+                        <div className="flex justify-between items-baseline">
+                          <CardTitle className="text-xl">{item.name}</CardTitle>
+                          {item.quantity && <p className="text-sm text-muted-foreground ml-2">{item.quantity}</p>}
+                        </div>
+                      </CardHeader>
                       <CardContent>
-                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className="font-semibold text-primary text-lg">${item.price}</p>
                       </CardContent>
                     </Card>
