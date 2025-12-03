@@ -77,7 +77,13 @@ export const breakfastItems = [
     { name: "Tacos de Pechuga al Limon", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "49.00" },
     { name: "Tacos de Pechuga al Chipotle", quantity: "1 pz 60 gr", accompaniment: "Papas al oregano, chiles toreados, nopal baby, guacamole", price: "49.00" },
     { name: "Hamburguesa Clasica", quantity: "1 pz 180 gr", accompaniment: "Queso americano. Lechuga, jitomate, cebolla, tocino, papas a", price: "175.00" },
-    { name: "Hamburguesa Doble Carne", quantity: "1 pz 300 gr", accompaniment: "Queso americano. Lechuga, jitomate, cebolla, tocino, papas a", price: "195.00" }
+    { name: "Hamburguesa Doble Carne", quantity: "1 pz 300 gr", accompaniment: "Queso americano. Lechuga, jitomate, cebolla, tocino, papas a", price: "195.00" },
+    { name: "Hamburguesa Tocinito", quantity: "1 pz 180 gr", accompaniment: "Queso chihuahua. Lechuga, jitomate, cebolla, tocino, papas a la francesa", price: "185.00" },
+    { name: "Hamburguesa Queso + Queso", quantity: "1 pz 180 gr", accompaniment: "Queso chihuahua, Queso Oaxaca. Lechuga, jitomate, cebolla, papas", price: "185.00" },
+    { name: "Hamburguesa de la Granja", quantity: "1 pz 300 gr", accompaniment: "Queso chihuahua, Lechuga, jitomate, cebolla, papas a la francesa", price: "185.00" },
+    { name: "Hamburguesa Mar y Tierra", quantity: "1 pz 240 gr", accompaniment: "Queso Oaxaca, Lechuga, jitomate, cebolla, papas a la francesa", price: "195.00" },
+    { name: "Hamburguesa la de Casa", quantity: "1 pz 150 gr Arrachera", accompaniment: "Queso Oaxaca, queso chihuahua, Lechuga, jitomate, cebolla", price: "228.00" },
+    { name: "Hamburguesa de Pollo", quantity: "1 pz 180 gr", accompaniment: "Queso Americano, Lechuga, jitomate, cebolla, salsa Bufalo, papas", price: "185.00" }
 ];
 
   export const drinkItems = [
@@ -170,5 +176,7 @@ export const breakfastItems = [
 
 
 
+
+    
 
     
