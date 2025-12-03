@@ -129,6 +129,30 @@ export const breakfastItems = [
     { name: "Lychburg Limonade", quantity: "180 ml", price: "110.00" },
     { name: "Negroni Sbagliato", quantity: "90 ml", price: "125.00" },
     { name: "Carajillo", quantity: "120 ml", price: "125.00" },
+    { name: "Long Island Iced Tea", quantity: "180 ml", price: "125.00" },
+    { name: "Clover Club", quantity: "120 ml", price: "125.00" },
+    { name: "Mezcalita", quantity: "105 ml", price: "125.00" },
+    { name: "John Collins", quantity: "180 ml", price: "125.00" },
+    { name: "Mimosa", quantity: "240 ml", price: "125.00" },
+    { name: "Back Room", quantity: "90 ml", price: "125.00" },
+    { name: "Tequila Sunrise", quantity: "180 ml", price: "125.00" },
+    { name: "Bloody Mari", quantity: "165 ml", price: "135.00" },
+    { name: "Tom Collins", quantity: "180 ml", price: "135.00" },
+    { name: "Beverly Hills Iced Tea", quantity: "180 ml", price: "135.00" },
+    { name: "Long Beach Iced Tea", quantity: "180 ml", price: "135.00" },
+    { name: "Piña Colada", quantity: "180 ml", price: "135.00" },
+    { name: "Sex On The Beach", quantity: "180 ml", price: "135.00" },
+    { name: "Pitufo", quantity: "180 ml", price: "135.00" },
+    { name: "Red Snapper", quantity: "165 ml", price: "155.00" },
+    { name: "Last Word", quantity: "90 ml", price: "155.00" },
+    { name: "Frangelico Spritz", quantity: "127.5 ml", price: "155.00" },
+    { name: "Paloma", quantity: "180 ml", price: "155.00" },
+    { name: "Side Car", quantity: "112.5 ml", price: "175.00" },
+    { name: "Aperol Spritz", quantity: "127 ml", price: "175.00" },
+    { name: "St Germain Spritz", quantity: "127.5 ml", price: "175.00" },
+    { name: "Old Fashioned", quantity: "75 ml", price: "220.00" },
+    { name: "Pink Gin", quantity: "60 ml", price: "220.00" },
+    { name: "Manhattan Dulce", quantity: "82.5 ml", price: "220.00" },
   ];
   
   
@@ -166,6 +190,7 @@ export const beerItems = [
     
 
     
+
 
 
 
