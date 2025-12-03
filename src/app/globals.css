@@ -94,4 +94,7 @@
     border-color: hsl(var(--primary) / 0.5);
     box-shadow: 0 0 5px hsl(var(--primary) / 0.4), 0 0 10px hsl(var(--primary) / 0.3), inset 0 0 5px hsl(var(--primary) / 0.4);
   }
+  iframe {
+    filter: invert(1) hue-rotate(180deg);
+  }
 }

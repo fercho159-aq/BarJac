@@ -472,7 +472,7 @@ export default function Home() {
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        className="absolute inset-0 w-full h-full filter grayscale contrast-125 opacity-80"
+                        className="absolute inset-0 w-full h-full opacity-80"
                     ></iframe>
                 </div>
                  <div className="space-y-6">
