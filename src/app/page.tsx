@@ -191,7 +191,8 @@ export default function Home() {
                      <Card key={index}>
                       <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
                       <CardContent>
-                        <p className="text-muted-foreground mb-2 text-sm">{item.description}</p>
+                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="font-semibold text-primary text-lg">${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
