@@ -7,6 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+
+  const breakfastItems = [
+    { name: "Huevos Divorciados", quantity: "120 gr", accompaniment: "Frijol, Crema Queso Panela, cilantro", priceNormal: "89.00", pricePackage: "119.00" },
+    { name: "Huevos a la Mexicana", quantity: "120 gr", accompaniment: "Frijol, ensalada, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
+    { name: "Huevos Rancheros", quantity: "120 gs", accompaniment: "jamon, frijoles, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
+    { name: "Huevos revueltos", quantity: "120 gs", accompaniment: "Frijol, ensalada, tortillas. Con Jamon 70gs, tocino 90gs, o chorizo 90gs", priceNormal: "89.00", pricePackage: "119.00" },
+  ];
+
   const entranceItems = [
     { name: "Coktel de Camaron Chico", quantity: "80 gr", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
     { name: "Coktel de Camaron Grande", quantity: "140 gr", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
@@ -164,6 +172,34 @@ export default function Home() {
           <div className="container">
             <h2 className="text-3xl font-bold text-center mb-10">Nuestro Menú</h2>
             
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold">Desayunos</h3>
+              <p className="text-muted-foreground">En paquete te incluimos café, fruta o jugo.</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {breakfastItems.map((item, index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <CardTitle>{item.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{item.quantity}</p>
+                    <p className="text-muted-foreground mb-2">{item.accompaniment}</p>
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <p className="font-semibold">Normal:</p>
+                        <p className="text-primary">${item.priceNormal}</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Paquete:</p>
+                        <p className="text-primary">${item.pricePackage}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
             <h3 className="text-2xl font-bold text-center mb-6 mt-12">Entradas</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {entranceItems.map((item, index) => (
