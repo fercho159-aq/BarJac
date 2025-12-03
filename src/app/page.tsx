@@ -74,22 +74,22 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b border-[hsl(var(--neon-yellow))]/30 bg-[hsl(var(--neon-yellow))]/10 backdrop-blur supports-[backdrop-filter]:bg-[hsl(var(--neon-yellow))]/10">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
              <Image src="/images/Imagen de WhatsApp 2025-11-25 a las 10.21.55_ff8ad4cb.jpg" alt="Bar Jac Logo" width={40} height={40} className="rounded-full neon-border" data-ai-hint="bar logo" />
-            <span className="font-orbitron font-bold text-xl neon-text">Bar Jac</span>
+            <span className="font-orbitron font-bold text-xl neon-text text-black" style={{ textShadow: '0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 20px #000' }}>Bar Jac</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             {navLinks.map(link => (
-              <Link key={link.href} href={link.href} className="transition-colors hover:text-primary hover:brightness-125">{link.label}</Link>
+              <Link key={link.href} href={link.href} className="transition-colors hover:text-black font-bold">{link.label}</Link>
             ))}
           </nav>
           
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className="md:hidden text-black hover:bg-white/20">
                 <MenuIcon className="h-6 w-6" />
                 <span className="sr-only">Abrir menú</span>
               </Button>
