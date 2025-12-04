@@ -30,14 +30,14 @@ export default function Home() {
   const [language, setLanguage] = useState("es");
 
   const menuColors: { [key: string]: string } = {
-    desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:border-[hsl(var(--neon-blue))]",
-    entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:border-[hsl(var(--neon-green))]",
-    comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:border-[hsl(var(--neon-yellow))]",
-    snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:border-[hsl(var(--neon-orange))]",
-    refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:border-[hsl(var(--neon-magenta))]",
-    cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:border-[hsl(var(--neon-red))]",
-    cocteleria: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:border-[hsl(var(--neon-cyan))]",
-    preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:border-[hsl(var(--neon-violet))]",
+    desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
+    entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
+    comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
+    snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
+    refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
+    cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
+    cocteleria: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:bg-[hsl(var(--neon-cyan))]/10 data-[state=active]:border-[hsl(var(--neon-cyan))]",
+    preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:bg-[hsl(var(--neon-violet))]/10 data-[state=active]:border-[hsl(var(--neon-violet))]",
   };
   
   const menuCategories = {
@@ -203,15 +203,34 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-              <div className="flex justify-center mb-8">
-                <TabsList className="grid w-full max-w-4xl grid-cols-2 md:grid-cols-4 lg:grid-cols-8 h-auto">
+              <Carousel
+                opts={{
+                  align: "start",
+                  dragFree: true,
+                }}
+                className="w-full mb-8"
+              >
+                <CarouselContent className="-ml-1">
+                  <TabsList className="p-1 h-auto bg-transparent">
                   {Object.keys(menuColors).map((tab) => (
-                    <TabsTrigger key={tab} value={tab} className={cn(activeTab === tab ? menuColors[tab] : 'data-[state=inactive]:border-transparent')}>
-                      {menuCategories[language as keyof typeof menuCategories][tab as keyof typeof menuCategories.es]}
-                    </TabsTrigger>
+                    <CarouselItem key={tab} className="basis-auto pl-1">
+                      <TabsTrigger 
+                        value={tab} 
+                        className={cn(
+                          "text-lg md:text-xl font-bold px-4 py-2 border-2 rounded-full transition-all duration-300",
+                          activeTab === tab 
+                            ? menuColors[tab] + ' bg-opacity-10'
+                            : 'border-transparent text-muted-foreground hover:text-white'
+                        )}
+                      >
+                        {menuCategories[language as keyof typeof menuCategories][tab as keyof typeof menuCategories.es]}
+                      </TabsTrigger>
+                    </CarouselItem>
                   ))}
-                </TabsList>
-              </div>
+                  </TabsList>
+                </CarouselContent>
+              </Carousel>
+
               <TabsContent value="desayunos">
                 <div className="text-center mb-6">
                   <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('desayunos'))}>{menuCategories[language as keyof typeof menuCategories].desayunos}</h3>
