@@ -283,7 +283,7 @@ export default function Home() {
                   {currentDrinkItems.map((item, index) => (
                      <Card key={index} className="bg-secondary border-primary/20">
                       <CardHeader>
-                        <div className="flex justify-between items-baseline">
+                        <div className="flex items-baseline">
                           <CardTitle className="text-xl">{item.name}</CardTitle>
                           {item.quantity && <p className="text-sm text-muted-foreground ml-2">{item.quantity}</p>}
                         </div>
