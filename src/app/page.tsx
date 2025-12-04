@@ -183,7 +183,9 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white p-4">
-            <h1 className="text-4xl md:text-6xl font-orbitron font-extrabold tracking-tight leading-tight neon-text">BARJAC</h1>
+            <div className="w-full max-w-md md:max-w-xl lg:max-w-2xl">
+              <Image src="/images/BARJAC-hero.png" alt="BarJac Logo" width={427} height={68} layout="responsive" className="neon-text"/>
+            </div>
             <p className="mt-4 text-lg md:text-xl max-w-2xl">{language === 'es' ? 'Música, amigos y el mejor ambiente de la ciudad.' : 'Music, friends and the best atmosphere in the city.'}</p>
             <div className="mt-8 flex gap-4">
               <Button asChild className="font-bold neon-border hover:bg-primary/90 hover:scale-105 transition-all">
@@ -411,8 +413,8 @@ export default function Home() {
                         <h3 className="text-2xl font-semibold mb-4 font-orbitron">{language === 'es' ? 'Próximamente a domicilio' : 'Coming soon to your home'}</h3>
                         <p className="text-muted-foreground mb-6">{language === 'es' ? 'Disfruta de nuestros platillos y bebidas en la comodidad de tu casa.' : 'Enjoy our dishes and drinks in the comfort of your home.'}</p>
                         <div className="flex justify-center items-center gap-6">
-                           <Image src="/images/DIDI.jpg" alt="Uber Eats" width={50} height={50} data-ai-hint="company logo" />
-                           <Image src="/images/UBER.jpg" alt="Didi Food" width={50} height={50} data-ai-hint="company logo" />
+                           <Image src="/images/DIDI.jpg" alt="Didi Food" width={50} height={50} data-ai-hint="company logo" />
+                           <Image src="/images/UBER.jpg" alt="Uber Eats" width={50} height={50} data-ai-hint="company logo" />
                         </div>
                     </Card>
                 </div>
