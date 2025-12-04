@@ -136,22 +136,22 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-[hsl(var(--neon-yellow))]/30 bg-[hsl(var(--neon-yellow))]/10 backdrop-blur supports-[backdrop-filter]:bg-[hsl(var(--neon-yellow))]/10">
+      <header className="sticky top-0 z-50 w-full border-b border-[hsl(var(--neon-yellow))]/30 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
              <Image src="/images/Imagen de WhatsApp 2025-11-25 a las 10.21.55_ff8ad4cb.jpg" alt="BarJac Logo" width={40} height={40} className="rounded-full neon-border" data-ai-hint="bar logo" />
-            <span className="font-orbitron font-bold text-xl neon-text text-black" style={{ textShadow: '0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 20px #000' }}>BarJac</span>
+            <span className="font-orbitron font-bold text-xl neon-text" style={{ textShadow: '0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 20px #000' }}>BarJac</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             {navLinks[language as keyof typeof navLinks].map(link => (
-              <Link key={link.href} href={link.href} className="transition-colors hover:text-black font-bold">{link.label}</Link>
+              <Link key={link.href} href={link.href} className="transition-colors hover:text-primary font-bold">{link.label}</Link>
             ))}
           </nav>
           
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-black hover:bg-white/20">
+              <Button variant="ghost" size="icon" className="md:hidden text-primary hover:bg-primary/20">
                 <MenuIcon className="h-6 w-6" />
                 <span className="sr-only">{language === 'es' ? 'Abrir menú' : 'Open menu'}</span>
               </Button>
@@ -184,7 +184,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white p-4">
             <div className="w-full max-w-md md:max-w-xl lg:max-w-2xl">
-              <Image src="/images/barjac.png" alt="BarJac Logo" width={427} height={68} layout="responsive" className="neon-text"/>
+              <Image src="/images/barjacbien.png" alt="BarJac Logo" width={427} height={68} layout="responsive" className="neon-text"/>
             </div>
             <p className="mt-2 text-lg md:text-xl max-w-2xl" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>{language === 'es' ? 'Música, amigos y el mejor ambiente de la ciudad.' : 'Music, friends and the best atmosphere in the city.'}</p>
             <div className="mt-8 flex gap-4">
@@ -499,17 +499,17 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer id="contacto" className="bg-[hsl(var(--neon-yellow))]/10">
+      <footer id="contacto" className="bg-primary/90">
         <div className="container py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-sm text-black">&copy; {new Date().getFullYear()} BarJac. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
+          <p className="text-sm text-primary-foreground">&copy; {new Date().getFullYear()} BarJac. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
           <div className="flex space-x-4">
-            <Button variant="ghost" size="icon" asChild className="text-primary hover:bg-primary/20 hover:text-primary">
+            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20 hover:text-primary-foreground">
               <a href="https://www.facebook.com/profile.php?id=61584743632789&locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook /></a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="text-primary hover:bg-primary/20 hover:text-primary">
+            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20 hover:text-primary-foreground">
               <a href="https://www.instagram.com/barjac_cdmx/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="text-primary hover:bg-primary/20 hover:text-primary">
+            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20 hover:text-primary-foreground">
               <a href="https://www.tiktok.com/@barjac234" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
             </Button>
           </div>
