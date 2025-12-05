@@ -32,7 +32,7 @@ export default function Home() {
   const menuColors: { [key: string]: string } = {
     desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
     entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
-    entradas_frias: "text-white shadow-[0_0_10px_#ffffff] border-white data-[state=active]:bg-white/10 data-[state=active]:border-white",
+    entradas_frias: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
     comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
     snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
     refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
@@ -71,7 +71,7 @@ export default function Home() {
     switch (tab) {
       case 'desayunos': return 'text-[hsl(var(--neon-blue))]';
       case 'entradas': return 'text-[hsl(var(--neon-green))]';
-      case 'entradas_frias': return 'text-white';
+      case 'entradas_frias': return 'text-[hsl(var(--neon-yellow))]';
       case 'comida': return 'text-[hsl(var(--neon-yellow))]';
       case 'snacks': return 'text-[hsl(var(--neon-orange))]';
       case 'refrescos': return 'text-[hsl(var(--neon-magenta))]';
@@ -208,34 +208,23 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-              <Carousel
-                opts={{
-                  align: "start",
-                  dragFree: true,
-                }}
-                className="w-full mb-8"
-              >
-                <CarouselContent className="-ml-1">
-                  <TabsList className="p-1 h-auto bg-transparent">
-                  {Object.keys(menuColors).map((tab) => (
-                    <CarouselItem key={tab} className="basis-auto pl-1">
-                      <TabsTrigger 
-                        value={tab} 
-                        className={cn(
-                          "text-lg md:text-xl font-bold px-4 py-2 border-2 rounded-full transition-all duration-300",
-                          activeTab === tab 
-                            ? menuColors[tab] + ' bg-opacity-10'
-                            : 'border-transparent text-muted-foreground hover:text-white'
-                        )}
-                      >
-                        {menuCategories[language as keyof typeof menuCategories][tab as keyof typeof menuCategories.es]}
-                      </TabsTrigger>
-                    </CarouselItem>
-                  ))}
-                  </TabsList>
-                </CarouselContent>
-              </Carousel>
-
+              <TabsList className="p-1 h-auto bg-transparent justify-center mb-8">
+              {Object.keys(menuColors).map((tab) => (
+                <TabsTrigger 
+                  key={tab} 
+                  value={tab} 
+                  className={cn(
+                    "text-lg md:text-xl font-bold px-4 py-2 border-2 rounded-full transition-all duration-300 m-1",
+                    activeTab === tab 
+                      ? menuColors[tab] + ' bg-opacity-10'
+                      : 'border-transparent text-muted-foreground hover:text-white'
+                  )}
+                >
+                  {menuCategories[language as keyof typeof menuCategories][tab as keyof typeof menuCategories.es]}
+                </TabsTrigger>
+              ))}
+              </TabsList>
+              
               <TabsContent value="desayunos">
                 <div className="text-center mb-6">
                   <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('desayunos'))}>{menuCategories[language as keyof typeof menuCategories].desayunos}</h3>
