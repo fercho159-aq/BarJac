@@ -176,9 +176,9 @@ export const preparadosItemsEn = [
 ];
   
 export const snackItemsEn = [
-    { name: "Wings", quantity: "8pcs", accompaniment: "Celery, Carrot and blue cheese dressing", price: "165.00" },
-    { name: "Boneless", quantity: "250g", accompaniment: "Celery, Carrot and blue cheese dressing", price: "145.00" },
-    { name: "Parmesan Fries", quantity: "250g", accompaniment: "Served with pomodoro sauce", price: "108.00" },
+    { name: "Wings", quantity: "300g", accompaniment: "Celery, Carrot and blue cheese dressing", price: "165.00" },
+    { name: "Boneless", quantity: "200g", accompaniment: "Celery, Carrot and blue cheese dressing", price: "145.00" },
+    { name: "Parmesan Fries", quantity: "", accompaniment: "Served with pomodoro sauce", price: "108.00" },
 ];
 
 export const sodaItemsEn = [

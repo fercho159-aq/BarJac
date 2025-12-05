@@ -176,9 +176,9 @@ export const preparadosItems = [
 ];
   
 export const snackItems = [
-    { name: "Alitas", quantity: "8pz", accompaniment: "Apio, Zanahoria y aderezo blue cheese", price: "165.00" },
-    { name: "Boneless", quantity: "250gr", accompaniment: "Apio, Zanahoria y aderezo blue cheese", price: "145.00" },
-    { name: "Papas a la Parmesana", quantity: "250gr", accompaniment: "Acompañadas de salsa pomodoro", price: "108.00" },
+    { name: "Alitas", quantity: "300gr", accompaniment: "Apio, Zanahoria y aderezo blue cheese", price: "165.00" },
+    { name: "Boneless", quantity: "200gr", accompaniment: "Apio, Zanahoria y aderezo blue cheese", price: "145.00" },
+    { name: "Papas a la Parmesana", quantity: "", accompaniment: "Acompañadas de salsa pomodoro", price: "108.00" },
 ];
 
 export const sodaItems = [
@@ -209,6 +209,7 @@ export const beerItems = [
     
 
     
+
 
 
 
