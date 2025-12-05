@@ -33,7 +33,7 @@ export default function Home() {
   const menuColors: { [key: string]: string } = {
     desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
     entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
-    entradas_frias: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
+    entradas_frias: "text-[hsl(var(--neon-brown))] shadow-[0_0_10px_hsl(var(--neon-brown))] border-[hsl(var(--neon-brown))] data-[state=active]:bg-[hsl(var(--neon-brown))]/10 data-[state=active]:border-[hsl(var(--neon-brown))]",
     comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
     snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
     refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
@@ -72,7 +72,7 @@ export default function Home() {
     switch (tab) {
       case 'desayunos': return 'text-[hsl(var(--neon-blue))]';
       case 'entradas': return 'text-[hsl(var(--neon-green))]';
-      case 'entradas_frias': return 'text-[hsl(var(--neon-yellow))]';
+      case 'entradas_frias': return 'text-[hsl(var(--neon-brown))]';
       case 'comida': return 'text-[hsl(var(--neon-yellow))]';
       case 'snacks': return 'text-[hsl(var(--neon-orange))]';
       case 'refrescos': return 'text-[hsl(var(--neon-magenta))]';
