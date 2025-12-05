@@ -176,8 +176,8 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white p-4">
-            <div className="w-full max-w-md md:max-w-xl lg:max-w-2xl">
-              <Image src="/images/barjacbien.png" alt="BarJac Logo" width={427} height={68} className="neon-text object-contain"/>
+            <div className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl">
+              <Image src="/images/barjacbien.png" alt="BarJac Logo" width={600} height={95} className="neon-text object-contain mx-auto"/>
             </div>
             <p className="mt-2 text-lg md:text-xl max-w-2xl" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>{language === 'es' ? 'Música, amigos y el mejor ambiente de la ciudad.' : 'Music, friends and the best atmosphere in the city.'}</p>
             <div className="mt-8 flex gap-4">
