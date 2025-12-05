@@ -50,13 +50,16 @@ export const breakfastItems = [
     { name: "Queso Fundido con Sirlon", accompaniment: "Cebolla Cambray, chile toreado, tortillas", price: "185.00" },
     { name: "Guacamole", accompaniment: "Cebolla Cambray, chile toreado, tortillas", price: "145.00" },
   ];
-  
-  export const foodItems = [
+
+  export const coldEntranceItems = [
     { name: "Tostada de Atun", quantity: "1 pz 80 gr", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
     { name: "Tostada de Pescado", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
     { name: "Tostada de Pulpo", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
     { name: "Tostada de Camaron", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
     { name: "Pescadilla", quantity: "3 pz 500 gr", accompaniment: "Aguacate, limon", price: "83.00" },
+  ];
+  
+  export const foodItems = [
     { name: "Camarones Momia", quantity: "150 gr", accompaniment: "Ensalada de la casa", price: "225.00" },
     { name: "Atun a la Parrilla", quantity: "200 gr", accompaniment: "Ensalada de la casa, Arroz amarillo", price: "213.00" },
     { name: "Salmon a la Parrilla", quantity: "200 gr", accompaniment: "Ensalada de la casa, Arroz amarillo", price: "245.00" },
@@ -217,3 +220,6 @@ export const beerItems = [
 
 
 
+
+
+    

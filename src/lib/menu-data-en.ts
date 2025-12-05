@@ -50,13 +50,16 @@ export const breakfastItemsEn = [
     { name: "Melted Cheese with Sirloin", accompaniment: "Cambray onion, toreado chili, tortillas", price: "185.00" },
     { name: "Guacamole", accompaniment: "Cambray onion, toreado chili, tortillas", price: "145.00" },
   ];
-  
-  export const foodItemsEn = [
+
+  export const coldEntranceItemsEn = [
     { name: "Tuna Tostada", quantity: "1 pc 80g", accompaniment: "onion, tomato, avocado", price: "95.00" },
     { name: "Fish Tostada", quantity: "1 pc 60g", accompaniment: "onion, tomato, avocado", price: "95.00" },
     { name: "Octopus Tostada", quantity: "1 pc 60g", accompaniment: "onion, tomato, avocado", price: "125.00" },
     { name: "Shrimp Tostada", quantity: "1 pc 60g", accompaniment: "onion, tomato, avocado", price: "125.00" },
     { name: "Fish Quesadilla", quantity: "3 pcs 500g", accompaniment: "Avocado, lemon", price: "83.00" },
+  ];
+  
+  export const foodItemsEn = [
     { name: "Mummy Shrimps", quantity: "150g", accompaniment: "House salad", price: "225.00" },
     { name: "Grilled Tuna", quantity: "200g", accompaniment: "House salad, Yellow rice", price: "213.00" },
     { name: "Grilled Salmon", quantity: "200g", accompaniment: "House salad, Yellow rice", price: "245.00" },
@@ -206,3 +209,6 @@ export const beerItemsEn = [
     { name: "Small Draft Beer Mug", quantity: "300 ml", price: "70.00" },
     { name: "Large Draft Beer Mug", quantity: "1000 ml", price: "125.00" },
 ];
+
+
+    

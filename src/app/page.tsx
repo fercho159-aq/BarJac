@@ -3,15 +3,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import { breakfastItems, entranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems, preparadosItems } from "@/lib/menu-data";
-import { breakfastItemsEn, entranceItemsEn, foodItemsEn, drinkItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn } from "@/lib/menu-data-en";
+import { breakfastItems, entranceItems, coldEntranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems, preparadosItems } from "@/lib/menu-data";
+import { breakfastItemsEn, entranceItemsEn, coldEntranceItemsEn, foodItemsEn, drinkItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn } from "@/lib/menu-data-en";
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
 import { cn } from "@/lib/utils";
 
@@ -32,6 +32,7 @@ export default function Home() {
   const menuColors: { [key: string]: string } = {
     desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
     entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
+    entradas_frias: "text-white shadow-[0_0_10px_#ffffff] border-white data-[state=active]:bg-white/10 data-[state=active]:border-white",
     comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
     snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
     refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
@@ -44,6 +45,7 @@ export default function Home() {
     es: {
       desayunos: "Desayunos",
       entradas: "Entradas",
+      entradas_frias: "Entradas Frias",
       comida: "Comida",
       snacks: "Snacks",
       refrescos: "Refrescos",
@@ -54,6 +56,7 @@ export default function Home() {
     en: {
       desayunos: "Breakfast",
       entradas: "Appetizers",
+      entradas_frias: "Cold Appetizers",
       comida: "Food",
       snacks: "Snacks",
       refrescos: "Sodas",
@@ -68,6 +71,7 @@ export default function Home() {
     switch (tab) {
       case 'desayunos': return 'text-[hsl(var(--neon-blue))]';
       case 'entradas': return 'text-[hsl(var(--neon-green))]';
+      case 'entradas_frias': return 'text-white';
       case 'comida': return 'text-[hsl(var(--neon-yellow))]';
       case 'snacks': return 'text-[hsl(var(--neon-orange))]';
       case 'refrescos': return 'text-[hsl(var(--neon-magenta))]';
@@ -125,6 +129,7 @@ export default function Home() {
 
   const currentBreakfastItems = language === 'es' ? breakfastItems : breakfastItemsEn;
   const currentEntranceItems = language === 'es' ? entranceItems : entranceItemsEn;
+  const currentColdEntranceItems = language === 'es' ? coldEntranceItems : coldEntranceItemsEn;
   const currentFoodItems = language === 'es' ? foodItems : foodItemsEn;
   const currentDrinkItems = language === 'es' ? drinkItems : drinkItemsEn;
   const currentSnackItems = language === 'es' ? snackItems : snackItemsEn;
@@ -184,7 +189,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white p-4">
             <div className="w-full max-w-md md:max-w-xl lg:max-w-2xl">
-              <Image src="/images/barjacbien.png" alt="BarJac Logo" width={427} height={68} layout="responsive" className="neon-text"/>
+              <Image src="/images/barjacbien.png" alt="BarJac Logo" width={427} height={68} className="neon-text object-contain"/>
             </div>
             <p className="mt-2 text-lg md:text-xl max-w-2xl" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>{language === 'es' ? 'Música, amigos y el mejor ambiente de la ciudad.' : 'Music, friends and the best atmosphere in the city.'}</p>
             <div className="mt-8 flex gap-4">
@@ -272,6 +277,23 @@ export default function Home() {
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
                         <p className={cn("font-semibold text-lg", getPriceClassName('entradas'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+              <TabsContent value="entradas_frias">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('entradas_frias'))}>{menuCategories[language as keyof typeof menuCategories].entradas_frias}</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentColdEntranceItems.map((item, index) => (
+                    <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('entradas_frias'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -472,8 +494,6 @@ export default function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
             </Carousel>
           </div>
         </section>
@@ -537,3 +557,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
