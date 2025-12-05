@@ -57,6 +57,9 @@ export const breakfastItemsEn = [
     { name: "Octopus Tostada", quantity: "1 pc 60g", accompaniment: "onion, tomato, avocado", price: "125.00" },
     { name: "Shrimp Tostada", quantity: "1 pc 60g", accompaniment: "onion, tomato, avocado", price: "125.00" },
     { name: "Fish Quesadilla", quantity: "3 pcs 500g", accompaniment: "Avocado, lemon", price: "83.00" },
+    { name: "Red Aguachile", quantity: "", accompaniment: "", price: "" },
+    { name: "Black Aguachile", quantity: "", accompaniment: "", price: "" },
+    { name: "Green Aguachile", quantity: "", accompaniment: "", price: "" },
   ];
   
   export const foodItemsEn = [
@@ -179,8 +182,8 @@ export const preparadosItemsEn = [
 ];
   
 export const snackItemsEn = [
-    { name: "Wings", quantity: "300g", accompaniment: "Celery, Carrot and blue cheese dressing", price: "165.00" },
-    { name: "Boneless", quantity: "200g", accompaniment: "Celery, Carrot and blue cheese dressing", price: "145.00" },
+    { name: "Wings", quantity: "300gr", accompaniment: "Celery, Carrot and blue cheese dressing", price: "165.00" },
+    { name: "Boneless", quantity: "200gr", accompaniment: "Celery, Carrot and blue cheese dressing", price: "145.00" },
     { name: "Parmesan Fries", quantity: "", accompaniment: "Served with pomodoro sauce", price: "108.00" },
 ];
 

@@ -57,6 +57,9 @@ export const breakfastItems = [
     { name: "Tostada de Pulpo", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
     { name: "Tostada de Camaron", quantity: "1 pz 60 gr", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
     { name: "Pescadilla", quantity: "3 pz 500 gr", accompaniment: "Aguacate, limon", price: "83.00" },
+    { name: "Aguachile rojo", quantity: "", accompaniment: "", price: "" },
+    { name: "Aguachile negro", quantity: "", accompaniment: "", price: "" },
+    { name: "Aguachile verde", quantity: "", accompaniment: "", price: "" },
   ];
   
   export const foodItems = [
