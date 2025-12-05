@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon } from "lucide-react";
+import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, Calendar as CalendarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -177,9 +177,9 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white p-4">
             <div className="w-full max-w-lg md:max-w-2xl lg:max-w-4xl">
-              <Image src="/images/barjacbien.png" alt="BarJac Logo" width={600} height={95} className="neon-text object-contain mx-auto"/>
+              <Image src="/images/barjacbien.png" alt="BarJac Logo" width={800} height={127} className="neon-text object-contain mx-auto"/>
             </div>
-            <p className="mt-2 text-lg md:text-xl max-w-2xl" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>{language === 'es' ? 'Música, amigos y el mejor ambiente de la ciudad.' : 'Music, friends and the best atmosphere in the city.'}</p>
+            <p className="mt-0 text-lg md:text-xl max-w-2xl" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>{language === 'es' ? 'Música, amigos y el mejor ambiente de la ciudad.' : 'Music, friends and the best atmosphere in the city.'}</p>
             <div className="mt-8 flex gap-4">
               <Button asChild className="font-bold neon-border hover:bg-primary/90 hover:scale-105 transition-all">
                   <Link href="#menu" onClick={() => setLanguage('es')}>Ver Menú</Link>
@@ -398,6 +398,16 @@ export default function Home() {
                 <p className="text-2xl font-bold">{language === 'es' ? '13 de Diciembre' : 'December 13th'}</p>
                 <p className="text-xl">4:00 PM</p>
                 <p className="text-lg">{language === 'es' ? 'Tendremos invitados especiales. ¡No te lo puedes perder!' : 'We will have special guests. You can\'t miss it!'}</p>
+                <Button asChild size="lg" className="font-bold neon-border hover:bg-primary/90 hover:scale-105 transition-all mt-6">
+                  <a 
+                    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Gran+Inauguraci%C3%B3n+BarJac&dates=20241213T160000/20241213T200000&details=%C2%A1No+te+lo+puedes+perder%21+Tendremos+invitados+especiales.&location=ALVARO+OBREGON+234,+CUAUHTEMOC,+C.P+06700,+ESQ.+MEDELLIN+Y+AV+YUCATAN,+CDMX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <CalendarIcon className="mr-2 h-5 w-5" />
+                    {language === 'es' ? 'Añadir Recordatorio' : 'Add Reminder'}
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -540,3 +550,4 @@ export default function Home() {
     
 
     
+
