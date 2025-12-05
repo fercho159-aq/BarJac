@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon } from "lucide-react";
 import Image from "next/image";
@@ -14,6 +13,8 @@ import { breakfastItems, entranceItems, coldEntranceItems, foodItems, drinkItems
 import { breakfastItemsEn, entranceItemsEn, coldEntranceItemsEn, foodItemsEn, drinkItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn } from "@/lib/menu-data-en";
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
 import { cn } from "@/lib/utils";
+import Autoplay from "embla-carousel-autoplay"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-1">
@@ -80,19 +81,6 @@ export default function Home() {
       case 'preparados': return 'text-[hsl(var(--neon-violet))]';
       default: return 'text-primary';
     }
-  };
-
-  const promos = {
-    es: [
-      { title: "Jueves de Amigos", description: "2x1 en toda la coctelería nacional." },
-      { title: "Sábado de Champions", description: "Cubeta de 10 cervezas nacionales por $300 durante los partidos." },
-      { title: "DJ Night", description: "Todos los viernes, DJ en vivo y shots de bienvenida." },
-    ],
-    en: [
-      { title: "Friends Thursday", description: "2x1 on all national cocktails." },
-      { title: "Champions Saturday", description: "Bucket of 10 national beers for $300 during the matches." },
-      { title: "DJ Night", description: "Every Friday, live DJ and welcome shots." },
-    ]
   };
   
   const testimonials = {
@@ -208,8 +196,8 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-              <TabsList className="p-1 h-auto bg-transparent justify-center mb-8">
-              {Object.keys(menuColors).map((tab) => (
+            <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 p-1 h-auto bg-transparent justify-center mb-8">
+              {Object.keys(menuCategories.es).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
                   value={tab} 
@@ -399,22 +387,22 @@ export default function Home() {
         
         {/* Promociones Section */}
         <section id="promociones" className="py-16 md:py-24 bg-secondary">
-          <div className="container">
-            <h2 className="text-5xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Promociones' : 'Promotions'}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {promos[language as keyof typeof promos].map((promo, index) => (
-                <Card key={index} className="text-center transform hover:scale-105 transition-transform duration-300 neon-border bg-background">
-                  <CardHeader>
-                    <CardTitle className="text-primary font-orbitron">{promo.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-lg">{promo.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+        <div className="container">
+          <h2 className="text-5xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Gran Inauguración' : 'Grand Opening'}</h2>
+          <div className="flex justify-center">
+            <Card className="text-center transform hover:scale-105 transition-transform duration-300 neon-border bg-background max-w-2xl">
+              <CardHeader>
+                <CardTitle className="text-primary font-orbitron text-3xl">{language === 'es' ? '¡Estás invitado!' : 'You are invited!'}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-2xl font-bold">{language === 'es' ? '13 de Diciembre' : 'December 13th'}</p>
+                <p className="text-xl">4:00 PM</p>
+                <p className="text-lg">{language === 'es' ? 'Tendremos invitados especiales. ¡No te lo puedes perder!' : 'We will have special guests. You can\'t miss it!'}</p>
+              </CardContent>
+            </Card>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Reservaciones y Delivery */}
         <section id="reservaciones" className="py-16 md:py-24">
@@ -546,6 +534,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
