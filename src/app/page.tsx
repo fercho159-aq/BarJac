@@ -461,9 +461,13 @@ export default function Home() {
                             <p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p>
                             <p className={cn("font-bold text-lg", getPriceClassName('bebidas'))}>${item.priceGlass}</p>
                           </div>
-                          <div>
+                          <div className="text-right">
                             <p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>
-                            <p className={cn("font-bold text-lg", getPriceClassName('bebidas'))}>${item.priceBottle}</p>
+                            {item.priceBottle ? (
+                              <p className={cn("font-bold text-lg", getPriceClassName('bebidas'))}>${item.priceBottle}</p>
+                            ) : (
+                              <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>
+                            )}
                           </div>
                         </div>
                       </CardContent>
@@ -636,14 +640,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-    
-
-
-
-
-    
