@@ -51,10 +51,10 @@ export const breakfastItems = [
   ];
 
   export const coldEntranceItems = [
-    { name: "Cocktel de camaron chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
-    { name: "Cocktel de camaron grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
-    { name: "Cocktel de campechano chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
-    { name: "Cocktel de campachano grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
+    { name: "Cóctel de camaron chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
+    { name: "Cóctel de camaron grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
+    { name: "Cóctel de campechano chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
+    { name: "Cóctel de campachano grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
     { name: "Tostada de atun", quantity: "1 pz 80 grs", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
     { name: "Tostada de pescado", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
     { name: "Tostada de pulpo", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
