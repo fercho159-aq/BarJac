@@ -38,10 +38,6 @@ export const breakfastItemsEn = [
   ];
   
   export const entranceItemsEn = [
-    { name: "Small Shrimp Cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
-    { name: "Large Shrimp Cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
-    { name: "Small Campechano Cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
-    { name: "Large Campechano Cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
     { name: "Melted Cheese", accompaniment: "cambray onion, toreado chili, tortillas", price: "125.00" },
     { name: "Melted Cheese with Arrachera", accompaniment: "cambray onion, toreado chili, tortillas", price: "165.00" },
     { name: "Melted Cheese with Northern Needle Steak", accompaniment: "cambray onion, toreado chili, tortillas", price: "165.00" },
@@ -55,6 +51,10 @@ export const breakfastItemsEn = [
   ];
 
   export const coldEntranceItemsEn = [
+    { name: "Small Shrimp Cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
+    { name: "Large Shrimp Cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
+    { name: "Small Campechano Cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
+    { name: "Large Campechano Cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
     { name: "Tuna Tostada", quantity: "1 pc 80grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
     { name: "Fish Tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
     { name: "Octopus Tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
