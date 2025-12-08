@@ -215,5 +215,30 @@ export const beerItemsEn = [
     { name: "Large draft beer mug", quantity: "1000 ml", price: "125.00" },
 ];
 
-
+export const beverageItemsEn = [
+    { name: "Tanqueray", category: "Gin", priceGlass: "120.00", priceBottle: "1,100.00" },
+    { name: "Hendrick's", category: "Gin", priceGlass: "150.00", priceBottle: "1,900.00" },
+    { name: "Smirnoff", category: "Vodka", priceGlass: "95.00", priceBottle: "1,100.00" },
+    { name: "Smirnoff Tamarindo", category: "Vodka", priceGlass: "105.00", priceBottle: "1,100.00" },
+    { name: "Absolut", category: "Vodka", priceGlass: "110.00", priceBottle: "1,300.00" },
+    { name: "Grey Goose", category: "Vodka", priceGlass: "145.00", priceBottle: "2,300.00" },
+    { name: "Herradura Blanco", category: "Tequila", priceGlass: "115.00", priceBottle: "1,400.00" },
+    { name: "Herradura Reposado", category: "Tequila", priceGlass: "120.00", priceBottle: "1,900.00" },
+    { name: "Dobel Diamante", category: "Tequila", priceGlass: "160.00", priceBottle: "2,300.00" },
+    { name: "Don Julio 70", category: "Tequila", priceGlass: "150.00", priceBottle: "2,500.00" },
+    { name: "Don Julio Blanco", category: "Tequila", priceGlass: "140.00", priceBottle: "2,100.00" },
+    { name: "Herradura Añejo", category: "Tequila", priceGlass: "145.00", priceBottle: "1,600.00" },
+    { name: "Hornitos Añejo", category: "Tequila", priceGlass: "130.00", priceBottle: "1,900.00" },
+    { name: "Jose Cuervo Tradicional", category: "Tequila", priceGlass: "100.00", priceBottle: "1,400.00" },
+    { name: "Montelobos Espadín", category: "Mezcal", priceGlass: "135.00", priceBottle: "1,550.00" },
+    { name: "400 Conejos Joven", category: "Mezcal", priceGlass: "120.00", priceBottle: "1,350.00" },
+    { name: "mono araña", category: "Mezcal", priceGlass: "100.00", priceBottle: "1,200.00" },
+    { name: "Matusalem Plata", category: "Ron", priceGlass: "120.00", priceBottle: "1,400.00" },
+    { name: "Havana 3", category: "Ron", priceGlass: "105.00", priceBottle: "1,100.00" },
+    { name: "Havana 7", category: "Ron", priceGlass: "115.00", priceBottle: "1,600.00" },
+    { name: "Bacardí Añejo", category: "Ron", priceGlass: "105.00", priceBottle: "1,200.00" },
+    { name: "Bacardí Solera", category: "Ron", priceGlass: "105.00", priceBottle: "1,700.00" },
+    { name: "Malibu", category: "Ron", priceGlass: "115.00", priceBottle: "1,200.00" },
+    { name: "Bacardi bco", category: "Ron", priceGlass: "90.00", priceBottle: "1,400.00" },
+];
     

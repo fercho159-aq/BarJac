@@ -9,8 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import { breakfastItems, entranceItems, coldEntranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems, preparadosItems } from "@/lib/menu-data";
-import { breakfastItemsEn, entranceItemsEn, coldEntranceItemsEn, foodItemsEn, drinkItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn } from "@/lib/menu-data-en";
+import { beverageItems, breakfastItems, entranceItems, coldEntranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems, preparadosItems } from "@/lib/menu-data";
+import { beverageItemsEn, breakfastItemsEn, entranceItemsEn, coldEntranceItemsEn, foodItemsEn, drinkItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn } from "@/lib/menu-data-en";
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
 import { BottleIcon } from "@/components/icons/bottle-icon";
 import { cn } from "@/lib/utils";
@@ -184,6 +184,7 @@ export default function Home() {
   const currentSodaItems = language === 'es' ? sodaItems : sodaItemsEn;
   const currentBeerItems = language === 'es' ? beerItems : beerItemsEn;
   const currentPreparadosItems = language === 'es' ? preparadosItems : preparadosItemsEn;
+  const currentBeverageItems = language === 'es' ? beverageItems : beverageItemsEn;
 
 
   return (
@@ -446,7 +447,28 @@ export default function Home() {
                   <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('bebidas'))}>{menuCategories[language as keyof typeof menuCategories].bebidas}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {/* Content for Bebidas will be added here */}
+                   {currentBeverageItems.map((item, index) => (
+                    <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader>
+                        <div className="flex items-baseline justify-between">
+                          <CardTitle>{item.name}</CardTitle>
+                          <span className="text-xs font-semibold text-muted-foreground bg-gray-700 px-2 py-1 rounded-full">{item.category}</span>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="flex justify-between items-center mt-4">
+                          <div>
+                            <p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p>
+                            <p className={cn("font-bold text-lg", getPriceClassName('bebidas'))}>${item.priceGlass}</p>
+                          </div>
+                          <div>
+                            <p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>
+                            <p className={cn("font-bold text-lg", getPriceClassName('bebidas'))}>${item.priceBottle}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
               </TabsContent>
             </Tabs>
