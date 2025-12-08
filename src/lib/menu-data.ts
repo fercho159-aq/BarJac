@@ -269,5 +269,8 @@ export const beverageItems = [
     { name: "Cinzano to spritz dry", category: "Licor", priceGlass: "110.00", priceBottle: null },
     { name: "Campari Vermouth", category: "Licor", priceGlass: "110.00", priceBottle: null },
     { name: "Licor de 43", category: "Licor", priceGlass: "135.00", priceBottle: null },
-    { name: "Branca Menta de hiervas", category: "Licor", priceGlass: "120.00", priceBottle: null }
+    { name: "Branca Menta de hiervas", category: "Licor", priceGlass: "120.00", priceBottle: null },
+    { name: "Angostura de hierbas", category: "Licor", priceGlass: "140.00", priceBottle: null },
+    { name: "ST- German", category: "Licor", priceGlass: "160.00", priceBottle: null },
+    { name: "Avellana Frangelico", category: "Licor", priceGlass: "135.00", priceBottle: null }
 ];

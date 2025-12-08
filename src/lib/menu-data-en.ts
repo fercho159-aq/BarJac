@@ -269,5 +269,8 @@ export const beverageItemsEn = [
     { name: "Cinzano to spritz dry", category: "Liqueur", priceGlass: "110.00", priceBottle: null },
     { name: "Campari Vermouth", category: "Liqueur", priceGlass: "110.00", priceBottle: null },
     { name: "Licor de 43", category: "Liqueur", priceGlass: "135.00", priceBottle: null },
-    { name: "Branca Menta de hiervas", category: "Liqueur", priceGlass: "120.00", priceBottle: null }
+    { name: "Branca Menta de hiervas", category: "Liqueur", priceGlass: "120.00", priceBottle: null },
+    { name: "Angostura bitters", category: "Liqueur", priceGlass: "140.00", priceBottle: null },
+    { name: "St-Germain", category: "Liqueur", priceGlass: "160.00", priceBottle: null },
+    { name: "Frangelico Hazelnut", category: "Liqueur", priceGlass: "135.00", priceBottle: null }
 ];
