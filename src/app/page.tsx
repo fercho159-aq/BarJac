@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, Calendar as CalendarIcon } from "lucide-react";
+import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, Briefcase, Copy, UtensilsCrossed } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -12,6 +12,7 @@ import { useState } from "react";
 import { breakfastItems, entranceItems, coldEntranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems, preparadosItems } from "@/lib/menu-data";
 import { breakfastItemsEn, entranceItemsEn, coldEntranceItemsEn, foodItemsEn, drinkItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn } from "@/lib/menu-data-en";
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
+import { BottleIcon } from "@/components/icons/bottle-icon";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
@@ -112,6 +113,61 @@ export default function Home() {
       { href: "#reservaciones", label: "Reservations" },
       { href: "#ubicacion", label: "Location" },
       { href: "#opiniones", label: "Reviews" },
+    ]
+  };
+
+  const promotions = {
+    es: [
+      { 
+        title: "Lunes y Miércoles de “Embotellados”", 
+        description: "Todas nuestras cervezas embotelladas 3 x $100.", 
+        icon: BottleIcon,
+        color: "blue"
+      },
+      { 
+        title: "Martes y Viernes “Happy Hour Godin”", 
+        description: "Para oficinistas de la zona, si nos muestran su credencial de trabajo obtienen un 20% de consumo en su siguiente visita, siempre y cuando regresen en “Happy Hour Godin” del mismo mes de su consumo.", 
+        icon: Briefcase,
+        color: "green"
+      },
+      { 
+        title: "Jueves “Veo doble”", 
+        description: "Toda nuestra coctelería de autor se sirve doble (evitar decir 2x1).", 
+        icon: Copy,
+        color: "yellow"
+      },
+      { 
+        title: "Trios Bar Jac de Lunes a Viernes", 
+        description: "$199.00: Sopa o crema del día, Hamburguesa Clásica o 3 tacos (arrachera, pechuga, aguja o combinados) o pescadilla y Bebida sin alcohol (naranjada, limonada o refresco).", 
+        icon: UtensilsCrossed,
+        color: "orange"
+      }
+    ],
+    en: [
+      { 
+        title: "Monday & Wednesday \"Bottled\" Days", 
+        description: "All our bottled beers 3 for $100.", 
+        icon: BottleIcon,
+        color: "blue"
+      },
+      { 
+        title: "Tuesday & Friday \"Godin Happy Hour\"", 
+        description: "For office workers in the area, if you show us your work ID, you get a 20% discount on your next visit, as long as you return during \"Godin Happy Hour\" in the same month.", 
+        icon: Briefcase,
+        color: "green"
+      },
+      { 
+        title: "Thursday \"Seeing Double\"", 
+        description: "All our signature cocktails are served double (avoid saying 2x1).", 
+        icon: Copy,
+        color: "yellow"
+      },
+      { 
+        title: "Bar Jac Trios Monday to Friday", 
+        description: "$199.00: Soup or cream of the day, Classic Burger or 3 tacos (arrachera, chicken, aguja or combined) or pescadilla and a non-alcoholic drink (orangeade, lemonade or soda).", 
+        icon: UtensilsCrossed,
+        color: "orange"
+      }
     ]
   };
 
@@ -387,32 +443,34 @@ export default function Home() {
         
         {/* Promociones Section */}
         <section id="promociones" className="py-16 md:py-24 bg-secondary">
-        <div className="container">
-          <h2 className="text-5xl font-bold text-center mb-10 font-orbitron neon-text">{language === 'es' ? 'Gran Inauguración' : 'Grand Opening'}</h2>
-          <div className="flex justify-center">
-            <Card className="text-center transform hover:scale-105 transition-transform duration-300 neon-border bg-background max-w-2xl">
-              <CardHeader>
-                <CardTitle className="text-primary font-orbitron text-3xl">{language === 'es' ? '¡Estás invitado!' : 'You are invited!'}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-2xl font-bold">{language === 'es' ? '13 de Diciembre' : 'December 13th'}</p>
-                <p className="text-xl">4:00 PM</p>
-                <p className="text-lg">{language === 'es' ? 'Tendremos invitados especiales. ¡No te lo puedes perder!' : 'We will have special guests. You can\'t miss it!'}</p>
-                <Button asChild size="lg" className="font-bold neon-border hover:bg-primary/90 hover:scale-105 transition-all mt-6">
-                  <a 
-                    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Gran+Inauguraci%C3%B3n+BarJac&dates=20241213T160000/20241213T200000&details=%C2%A1No+te+lo+puedes+perder%21+Tendremos+invitados+especiales.&location=ALVARO+OBREGON+234,+CUAUHTEMOC,+C.P+06700,+ESQ.+MEDELLIN+Y+AV+YUCATAN,+CDMX"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <CalendarIcon className="mr-2 h-5 w-5" />
-                    {language === 'es' ? 'Añadir Recordatorio' : 'Add Reminder'}
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
+          <div className="container">
+            <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Promociones' : 'Promotions'}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {(promotions[language as keyof typeof promotions]).map((promo, index) => {
+                const Icon = promo.icon;
+                const colors: { [key: string]: string } = {
+                  blue: 'border-[hsl(var(--neon-blue))] text-[hsl(var(--neon-blue))] shadow-[0_0_15px_hsl(var(--neon-blue))]',
+                  green: 'border-[hsl(var(--neon-green))] text-[hsl(var(--neon-green))] shadow-[0_0_15px_hsl(var(--neon-green))]',
+                  yellow: 'border-[hsl(var(--neon-yellow))] text-[hsl(var(--neon-yellow))] shadow-[0_0_15px_hsl(var(--neon-yellow))]',
+                  orange: 'border-[hsl(var(--neon-orange))] text-[hsl(var(--neon-orange))] shadow-[0_0_15px_hsl(var(--neon-orange))]',
+                };
+                return (
+                  <Card key={index} className={cn("bg-background/50 text-center transform hover:scale-105 transition-transform duration-300 neon-border", colors[promo.color])}>
+                    <CardHeader className="items-center">
+                      <div className="p-4 bg-background rounded-full mb-2">
+                        <Icon className="h-10 w-10" />
+                      </div>
+                      <CardTitle className="font-orbitron text-xl">{promo.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">{promo.description}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Reservaciones y Delivery */}
         <section id="reservaciones" className="py-16 md:py-24">
@@ -550,4 +608,5 @@ export default function Home() {
     
 
     
+
 
