@@ -247,7 +247,7 @@ export const beverageItemsEn = [
     { name: "Jim beam white", category: "Whisky Bourbon", priceGlass: "105.00", priceBottle: "1,400.00" },
     { name: "Woodford reserve", category: "Whisky Bourbon", priceGlass: "145.00", priceBottle: "2,400.00" },
     { name: "Bulleit bourbon", category: "Whisky Bourbon", priceGlass: "135.00", priceBottle: "1,900.00" },
-    { name: "Martell V.S.", category: "Cognac", priceGlass: "155.00", priceBottle: "2,300.00" },
+    { name: "Martell v.s.", category: "Cognac", priceGlass: "155.00", priceBottle: "2,300.00" },
     { name: "Torres 10", category: "Brandy", priceGlass: "115.00", priceBottle: "1,500.00" },
     { name: "Sambuca vaccari nero", category: "Anise", priceGlass: "120.00", priceBottle: null },
     { name: "Anís de cadenas", category: "Anise", priceGlass: "115.00", priceBottle: null },
@@ -274,4 +274,3 @@ export const beverageItemsEn = [
     { name: "St-Germain", category: "Liqueur", priceGlass: "160.00", priceBottle: null },
     { name: "Frangelico", category: "Liqueur", priceGlass: "135.00", priceBottle: null }
 ];
-```
