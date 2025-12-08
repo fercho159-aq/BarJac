@@ -41,6 +41,7 @@ export default function Home() {
     cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
     cocteleria: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:bg-[hsl(var(--neon-cyan))]/10 data-[state=active]:border-[hsl(var(--neon-cyan))]",
     preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:bg-[hsl(var(--neon-violet))]/10 data-[state=active]:border-[hsl(var(--neon-violet))]",
+    bebidas: "text-[hsl(var(--neon-gray))] shadow-[0_0_10px_hsl(var(--neon-gray))] border-[hsl(var(--neon-gray))] data-[state=active]:bg-[hsl(var(--neon-gray))]/10 data-[state=active]:border-[hsl(var(--neon-gray))]",
   };
   
   const menuCategories = {
@@ -54,6 +55,7 @@ export default function Home() {
       cerveza: "Cerveza",
       cocteleria: "Coctelería",
       preparados: "Preparados",
+      bebidas: "Bebidas",
     },
     en: {
       desayunos: "Breakfast",
@@ -65,6 +67,7 @@ export default function Home() {
       cerveza: "Beer",
       cocteleria: "Cocktails",
       preparados: "Preparados",
+      bebidas: "Drinks",
     }
   };
 
@@ -80,6 +83,7 @@ export default function Home() {
       case 'cerveza': return 'text-[hsl(var(--neon-red))]';
       case 'cocteleria': return 'text-[hsl(var(--neon-cyan))]';
       case 'preparados': return 'text-[hsl(var(--neon-violet))]';
+      case 'bebidas': return 'text-[hsl(var(--neon-gray))]';
       default: return 'text-primary';
     }
   };
@@ -252,7 +256,7 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-            <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 p-1 h-auto bg-transparent justify-center mb-8">
+            <TabsList className="grid w-full grid-cols-3 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-10 p-1 h-auto bg-transparent justify-center mb-8">
               {Object.keys(menuCategories.es).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
@@ -435,6 +439,14 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   ))}
+                </div>
+              </TabsContent>
+              <TabsContent value="bebidas">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('bebidas'))}>{menuCategories[language as keyof typeof menuCategories].bebidas}</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Content for Bebidas will be added here */}
                 </div>
               </TabsContent>
             </Tabs>
