@@ -132,7 +132,7 @@ export default function Home() {
       },
       { 
         title: "Jueves “Veo doble”", 
-        description: "Toda nuestra coctelería de autor se sirve doble (evitar decir 2x1).", 
+        description: "Toda nuestra coctelería se sirve doble.", 
         icon: Copy,
         color: "yellow"
       },
@@ -158,7 +158,7 @@ export default function Home() {
       },
       { 
         title: "Thursday \"Seeing Double\"", 
-        description: "All our signature cocktails are served double (avoid saying 2x1).", 
+        description: "All our cocktails are served double.", 
         icon: Copy,
         color: "yellow"
       },
@@ -610,3 +610,6 @@ export default function Home() {
     
 
 
+
+
+    
