@@ -368,6 +368,7 @@ export default function Home() {
                         </div>
                       </CardHeader>
                       <CardContent>
+                        {item.ingredients && <p className="text-sm text-muted-foreground mb-2">{item.ingredients}</p>}
                         <p className={cn("font-semibold text-lg", getPriceClassName('cocteleria'))}>${item.price}</p>
                       </CardContent>
                     </Card>
