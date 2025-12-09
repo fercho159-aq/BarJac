@@ -84,7 +84,7 @@ export const breakfastItems = [
     { name: "Tacos de sirloin", quantity: "1 pz 60 grs", accompaniment: "papas al oregano, chiles toreados, nopal baby, guacamole", price: "68.00" },
     { name: "Tacos de pechuga al limon", quantity: "1 pz 60 grs", accompaniment: "papas al oregano, chiles toreados, nopal baby, guacamole", price: "49.00" },
     { name: "Tacos de pechuga al chipotle", quantity: "1 pz 60 grs", accompaniment: "papas al oregano, chiles toreados, nopal baby, guacamole", price: "49.00" },
-    { name: "Tacos queso, carne", quantity: "", accompaniment: "Bisteck, cebolla acitrónada, queso y tortilla de harina.", price: "48.00" },
+    { name: "Tacos queso carne", quantity: "", accompaniment: "Bisteck, cebolla acitrónada, queso y tortilla de harina.", price: "48.00" },
     { name: "Hamburguesa clasica", quantity: "1 pz 180 grs", accompaniment: "queso americano. lechuga, jitomate, cebolla, tocino, papas a", price: "175.00" },
     { name: "Hamburguesa doble carne", quantity: "1 pz 300 grs", accompaniment: "queso americano. lechuga, jitomate, cebolla, tocino, papas a", price: "195.00" },
     { name: "Hamburguesa tocinito", quantity: "1 pz 180 grs", accompaniment: "queso chihuahua. lechuga, jitomate, cebolla, tocino, papas a la francesa", price: "185.00" },

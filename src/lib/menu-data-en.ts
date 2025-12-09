@@ -84,7 +84,7 @@ export const breakfastItemsEn = [
     { name: "Sirloin tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "68.00" },
     { name: "Lemon chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
     { name: "Chipotle chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
-    { name: "Cheese and meat Tacos", quantity: "", accompaniment: "Steak, sautéed onion, cheese and flour tortilla.", price: "48.00" },
+    { name: "Cheese meat Tacos", quantity: "", accompaniment: "Steak, sautéed onion, cheese and flour tortilla.", price: "48.00" },
     { name: "Classic burger", quantity: "1 pc 180grs", accompaniment: "american cheese. lettuce, tomato, onion, bacon, fries", price: "175.00" },
     { name: "Double meat burger", quantity: "1 pc 300grs", accompaniment: "american cheese. lettuce, tomato, onion, bacon, fries", price: "195.00" },
     { name: "Bacon burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese. lettuce, tomato, onion, bacon, french fries", price: "185.00" },
