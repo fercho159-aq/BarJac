@@ -45,7 +45,7 @@ export const breakfastItemsEn = [
     { name: "Melted cheese with new york", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
     { name: "Melted cheese with sirloin", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
     { name: "Guacamole", accompaniment: "cambray onion, toreado chili, tortillas", price: "145.00" },
-    { name: "Fish quesadilla", quantity: "3 pcs 500grs", accompaniment: "avocado, lemon", price: "83.00" },
+    { name: "Fish Quesadilla", quantity: "3 pcs 500grs", accompaniment: "Delicious fish quesadillas served with avocado and a touch of lime.", price: "83.00" },
     { name: "Sopes", quantity: "", accompaniment: "", price: "" },
     { name: "Huaraches", quantity: "", accompaniment: "", price: "" },
   ];
@@ -85,14 +85,14 @@ export const breakfastItemsEn = [
     { name: "Lemon chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
     { name: "Chipotle chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
     { name: "Cheese meat Tacos", quantity: "", accompaniment: "Steak, sautéed onion, cheese and flour tortilla.", price: "48.00" },
-    { name: "Classic burger", quantity: "1 pc 180grs", accompaniment: "american cheese. lettuce, tomato, onion, bacon, fries", price: "175.00" },
-    { name: "Double meat burger", quantity: "1 pc 300grs", accompaniment: "american cheese. lettuce, tomato, onion, bacon, fries", price: "195.00" },
-    { name: "Bacon burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese. lettuce, tomato, onion, bacon, french fries", price: "185.00" },
-    { name: "Cheese + cheese burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese, oaxaca cheese. lettuce, tomato, onion, fries", price: "185.00" },
-    { name: "Farm burger", quantity: "1 pc 300grs", accompaniment: "chihuahua cheese, lettuce, tomato, onion, egg, french fries", price: "185.00" },
-    { name: "Surf and turf burger", quantity: "1 pc 240grs", accompaniment: "oaxaca cheese, lettuce, tomato, onion, french fries", price: "195.00" },
-    { name: "House burger", quantity: "1 pc 150grs Arrachera", accompaniment: "oaxaca cheese, chihuahua cheese, lettuce, tomato, onion", price: "228.00" },
-    { name: "Chicken burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, onion, buffalo sauce, fries", price: "185.00" }
+    { name: "Classic burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "175.00" },
+    { name: "Double meat burger", quantity: "1 pc 300grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "195.00" },
+    { name: "Bacon burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "185.00" },
+    { name: "Cheese + cheese burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese, oaxaca cheese, lettuce, tomato, caramelized onion, french fries", price: "185.00" },
+    { name: "Farm burger", quantity: "1 pc 300grs", accompaniment: "chihuahua cheese, lettuce, tomato, caramelized onion, egg, french fries", price: "185.00" },
+    { name: "Surf and turf burger", quantity: "1 pc 240grs", accompaniment: "oaxaca cheese, lettuce, tomato, caramelized onion, french fries", price: "195.00" },
+    { name: "House burger", quantity: "1 pc 150grs Arrachera", accompaniment: "oaxaca cheese, chihuahua cheese, lettuce, tomato, caramelized onion", price: "228.00" },
+    { name: "Chicken burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, buffalo sauce, french fries", price: "185.00" }
 ];
 
 export const drinkItemsEn = [
@@ -152,6 +152,7 @@ export const drinkItemsEn = [
     { name: "Piña colada", quantity: "180 ml", price: "135.00", ingredients: "Pineapple Juice, Bacardi Blanco, Coconut Flamingo, Lime Juice, Coconut Nectar, Pineapple Slice, Cherry" },
     { name: "Sex on the beach", quantity: "180 ml", price: "135.00", ingredients: "Smirnoff, Peach flamingo, Orange juice, Cranberry juice" },
     { name: "Pitufo", quantity: "180 ml", price: "135.00", ingredients: "Malibu, Curacao Flamingo, Pineapple Juice, Sprite, Pineapple Slice, Cherry" },
+    { name: "Carajillo with Kahlua", quantity: "120 ml", price: "135.00", ingredients: "Kahlua, Espresso, Coffee Beans" },
     { name: "Red snapper", quantity: "165 ml", price: "155.00", ingredients: "Beefeater, Tomato Juice, Petroleo, Salt, Black Pepper, Lime Juice, Celery Tip" },
     { name: "Last word", quantity: "90 ml", price: "155.00", ingredients: "Beefeater, Cherry flamingo, Green chartreuse, Lime juice, Cherry" },
     { name: "Frangelico spritz", quantity: "127.5 ml", price: "155.00", ingredients: "Cinzano To Spritz, Frangelico, Mineral Water, Ferrero Rocher" },
@@ -170,7 +171,6 @@ export const drinkItemsEn = [
     { name: "Amaretto sour", quantity: "120 ml", price: "250.00", ingredients: "Angostura bitter, Egg white, Disaronno, Lemon juice, Simple syrup, Lemon wedge, Cherry" },
     { name: "Midori sour", quantity: "120 ml", price: "250.00", ingredients: "Angostura bitter, Egg white, Midori, Lemon juice, Simple syrup, Lemon wedge, Cherry" },
     { name: "New york sour", quantity: "150 ml", price: "250.00", ingredients: "Angostura bitter, Egg white, Jim beam white, Lemon juice, Simple syrup, Altozano ensamble crianza, Orange peel, Cherry" },
-    { name: "Carajillo with Kahlua", quantity: "120 ml", price: "135.00", ingredients: "Kahlua, Espresso, Coffee Beans" },
   ];
   
 export const preparadosItemsEn = [

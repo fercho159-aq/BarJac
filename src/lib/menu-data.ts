@@ -45,7 +45,7 @@ export const breakfastItems = [
     { name: "Queso fundido con new york", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
     { name: "Queso fundido con sirloin", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
     { name: "Guacamole", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "145.00" },
-    { name: "Pescadilla", quantity: "3 pz 500 grs", accompaniment: "aguacate, limon", price: "83.00" },
+    { name: "Quesadilla de Pescado", quantity: "3 pz 500 grs", accompaniment: "Deliciosas quesadillas de pescado servidas con aguacate y un toque de limón.", price: "83.00" },
     { name: "Sopes", quantity: "", accompaniment: "", price: "" },
     { name: "Huaraches", quantity: "", accompaniment: "", price: "" },
   ];
@@ -84,15 +84,15 @@ export const breakfastItems = [
     { name: "Tacos de sirloin", quantity: "1 pz 60 grs", accompaniment: "papas al oregano, chiles toreados, nopal baby, guacamole", price: "68.00" },
     { name: "Tacos de pechuga al limon", quantity: "1 pz 60 grs", accompaniment: "papas al oregano, chiles toreados, nopal baby, guacamole", price: "49.00" },
     { name: "Tacos de pechuga al chipotle", quantity: "1 pz 60 grs", accompaniment: "papas al oregano, chiles toreados, nopal baby, guacamole", price: "49.00" },
-    { name: "Tacos queso carne", quantity: "", accompaniment: "Bisteck, cebolla acitrónada, queso y tortilla de harina.", price: "48.00" },
-    { name: "Hamburguesa clasica", quantity: "1 pz 180 grs", accompaniment: "queso americano. lechuga, jitomate, cebolla, tocino, papas a", price: "175.00" },
-    { name: "Hamburguesa doble carne", quantity: "1 pz 300 grs", accompaniment: "queso americano. lechuga, jitomate, cebolla, tocino, papas a", price: "195.00" },
-    { name: "Hamburguesa tocinito", quantity: "1 pz 180 grs", accompaniment: "queso chihuahua. lechuga, jitomate, cebolla, tocino, papas a la francesa", price: "185.00" },
-    { name: "Hamburguesa queso + queso", quantity: "1 pz 180 grs", accompaniment: "queso chihuahua, queso oaxaca. lechuga, jitomate, cebolla, papas", price: "185.00" },
-    { name: "Hamburguesa de la granja", quantity: "1 pz 300 grs", accompaniment: "queso chihuahua, lechuga, jitomate, cebolla, huevo, papas a la francesa", price: "185.00" },
-    { name: "Hamburguesa mar y tierra", quantity: "1 pz 240 grs", accompaniment: "queso oaxaca, lechuga, jitomate, cebolla, papas a la francesa", price: "195.00" },
-    { name: "Hamburguesa la de casa", quantity: "1 pz 150 grs Arrachera", accompaniment: "queso oaxaca, queso chihuahua, lechuga, jitomate, cebolla", price: "228.00" },
-    { name: "Hamburguesa de pollo", quantity: "1 pz 180 grs", accompaniment: "queso americano, lechuga, jitomate, cebolla, salsa bufalo, papas", price: "185.00" }
+    { name: "Tacos queso carne", quantity: "", accompaniment: "Bisteck, cebolla acitronada, queso y tortilla de harina.", price: "48.00" },
+    { name: "Hamburguesa clasica", quantity: "1 pz 180 grs", accompaniment: "queso americano, lechuga, jitomate, cebolla caramelizada, tocino, papas a la francesa", price: "175.00" },
+    { name: "Hamburguesa doble carne", quantity: "1 pz 300 grs", accompaniment: "queso americano, lechuga, jitomate, cebolla caramelizada, tocino, papas a la francesa", price: "195.00" },
+    { name: "Hamburguesa tocinito", quantity: "1 pz 180 grs", accompaniment: "queso chihuahua, lechuga, jitomate, cebolla caramelizada, tocino, papas a la francesa", price: "185.00" },
+    { name: "Hamburguesa queso + queso", quantity: "1 pz 180 grs", accompaniment: "queso chihuahua, queso oaxaca, lechuga, jitomate, cebolla caramelizada, papas a la francesa", price: "185.00" },
+    { name: "Hamburguesa de la granja", quantity: "1 pz 300 grs", accompaniment: "queso chihuahua, lechuga, jitomate, cebolla caramelizada, huevo, papas a la francesa", price: "185.00" },
+    { name: "Hamburguesa mar y tierra", quantity: "1 pz 240 grs", accompaniment: "queso oaxaca, lechuga, jitomate, cebolla caramelizada, papas a la francesa", price: "195.00" },
+    { name: "Hamburguesa la de casa", quantity: "1 pz 150 grs Arrachera", accompaniment: "queso oaxaca, queso chihuahua, lechuga, jitomate, cebolla caramelizada", price: "228.00" },
+    { name: "Hamburguesa de pollo", quantity: "1 pz 180 grs", accompaniment: "queso americano, lechuga, jitomate, cebolla caramelizada, salsa bufalo, papas a la francesa", price: "185.00" }
 ];
 
 export const drinkItems = [
@@ -152,6 +152,7 @@ export const drinkItems = [
     { name: "Piña colada", quantity: "180 ml", price: "135.00", ingredients: "Jugo de Piña, Bacardi Blanco, Flamingo de Coco, Jugo de Limón Verde, Néctar de Coco, Rodaja de Piña, Cereza" },
     { name: "Sex on the beach", quantity: "180 ml", price: "135.00", ingredients: "Smirnoff, Flamingo de durazno, Jugo de naranja, Jugo de arándano" },
     { name: "Pitufo", quantity: "180 ml", price: "135.00", ingredients: "Malibu, Flamingo de Curazao, Jugo de Piña, Sprite, Rodaja de Piña, Cereza" },
+    { name: "Carajillo con Kalua", quantity: "120 ml", price: "135.00", ingredients: "Kahlua, Expresso, Granos de Café" },
     { name: "Red snapper", quantity: "165 ml", price: "155.00", ingredients: "Beefetear, Jugo de Tomate, Petroleo, Sal, Pimienta Negra, Jugo de Limón Verde, Punta de Apio" },
     { name: "Last word", quantity: "90 ml", price: "155.00", ingredients: "Beefetear, Flamingo de cereza, Chartreuse verde, Jugo de limón verde, Cereza" },
     { name: "Frangelico spritz", quantity: "127.5 ml", price: "155.00", ingredients: "Cinzano To Spritz, Frangelico, Agua Mineral, Ferrero Rocher" },
@@ -170,8 +171,7 @@ export const drinkItems = [
     { name: "Amaretto sour", quantity: "120 ml", price: "250.00", ingredients: "Bitter de angostura, Clara de huevo, Dissarono, Jugo de limón amarillo, Jarabe natural, Gajo de limón amarillo, Cereza" },
     { name: "Midori sour", quantity: "120 ml", price: "250.00", ingredients: "Bitter de angostura, Clara de huevo, Midori, Jugo de limón amarillo, Jarabe natural, Gajo de limón amarillo, Cereza" },
     { name: "New york sour", quantity: "150 ml", price: "250.00", ingredients: "Bitter de angostura, Clara de huevo, Jim beam white, Jugo de limón amarillo, Jarabe natural, Altozano ensamble crianza, Cascara de naranja, Cereza" },
-    { name: "Carajillo con Kalua", quantity: "120 ml", price: "135.00", ingredients: "Kahlua, Expresso, Granos de Café" },
-  ];
+];
   
 export const preparadosItems = [
     { name: "Cerveza sunrise", quantity: "150 ml", price: "120.00", ingredients: "Chamoy De Sabor, Tajin, Jose Cuervo Tradicional, Granadina, Jugo De Limón Verde, Heineken" },
