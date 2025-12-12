@@ -447,6 +447,7 @@ export default function Home() {
               <TabsContent value="bebidas">
                 <div className="text-center mb-6">
                   <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('bebidas'))}>{menuCategories[language as keyof typeof menuCategories].bebidas}</h3>
+                  <p className="text-muted-foreground">{language === 'es' ? 'En la compra de cada botella, incluye 6 refrescos de 325 ml gratis.' : 'Each bottle purchase includes 6 free 325 ml soft drinks.'}</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                    {currentBeverageItems.map((item, index) => (
