@@ -45,7 +45,7 @@ export const breakfastItemsEn = [
     { name: "Melted cheese with new york", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
     { name: "Melted cheese with sirloin", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
     { name: "Guacamole", accompaniment: "cambray onion, toreado chili, tortillas", price: "145.00" },
-    { name: "Fish Quesadilla", quantity: "3 pcs 500grs", accompaniment: "Delicious fish quesadillas served with avocado and a touch of lime.", price: "83.00" },
+    { name: "Pescadilla", quantity: "3 pcs 500grs", accompaniment: "Delicious fish quesadillas served with avocado and a touch of lime.", price: "83.00" },
     { name: "Sopes", quantity: "", accompaniment: "", price: "" },
     { name: "Huaraches", quantity: "", accompaniment: "", price: "" },
   ];

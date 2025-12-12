@@ -45,7 +45,7 @@ export const breakfastItems = [
     { name: "Queso fundido con new york", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
     { name: "Queso fundido con sirloin", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
     { name: "Guacamole", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "145.00" },
-    { name: "Quesadilla de Pescado", quantity: "3 pz 500 grs", accompaniment: "Deliciosas quesadillas de pescado servidas con aguacate y un toque de limón.", price: "83.00" },
+    { name: "Pescadilla", quantity: "3 pz 500 grs", accompaniment: "Deliciosas quesadillas de pescado servidas con aguacate y un toque de limón.", price: "83.00" },
     { name: "Sopes", quantity: "", accompaniment: "", price: "" },
     { name: "Huaraches", quantity: "", accompaniment: "", price: "" },
   ];
