@@ -257,13 +257,13 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-            <TabsList className="grid w-full grid-cols-3 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-10 p-1 h-auto bg-transparent justify-center mb-8">
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 p-1 h-auto bg-transparent justify-center mb-8 gap-2">
               {Object.keys(menuCategories.es).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
                   value={tab} 
                   className={cn(
-                    "text-lg md:text-xl font-bold px-4 py-2 border-2 rounded-full transition-all duration-300 m-1",
+                    "text-base md:text-lg font-bold px-3 py-2 border-2 rounded-full transition-all duration-300",
                     activeTab === tab 
                       ? menuColors[tab] + ' bg-opacity-10'
                       : 'border-transparent text-muted-foreground hover:text-white'
