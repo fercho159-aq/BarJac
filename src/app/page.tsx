@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, Briefcase, Copy, UtensilsCrossed } from "lucide-react";
+import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, Briefcase, Copy, UtensilsCrossed, PartyPopper } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -447,7 +447,17 @@ export default function Home() {
               <TabsContent value="bebidas">
                 <div className="text-center mb-6">
                   <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('bebidas'))}>{menuCategories[language as keyof typeof menuCategories].bebidas}</h3>
-                  <p className="text-muted-foreground">{language === 'es' ? 'En la compra de cada botella, incluye 6 refrescos de 325 ml gratis.' : 'Each bottle purchase includes 6 free 325 ml soft drinks.'}</p>
+                  <div className="mt-4 mb-8 max-w-md mx-auto p-4 rounded-lg border-2 border-[hsl(var(--neon-cyan))] bg-secondary shadow-[0_0_15px_hsl(var(--neon-cyan))]">
+                      <div className="flex items-center justify-center gap-3">
+                        <PartyPopper className="h-8 w-8 text-[hsl(var(--neon-cyan))]" />
+                        <p className="text-lg font-bold text-[hsl(var(--neon-cyan))]">
+                          {language === 'es' ? '¡PROMOCIÓN!' : 'PROMOTION!'}
+                        </p>
+                      </div>
+                      <p className="text-white mt-2">
+                        {language === 'es' ? 'En la compra de cada botella, incluye 6 refrescos de 325 ml ¡gratis!' : 'Each bottle purchase includes 6 free 325 ml soft drinks!'}
+                      </p>
+                  </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                    {currentBeverageItems.map((item, index) => (
@@ -643,3 +653,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
