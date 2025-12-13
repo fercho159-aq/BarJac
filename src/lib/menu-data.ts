@@ -1,6 +1,7 @@
 
 
 
+
 export const breakfastItems = [
     { name: "Chilaquiles verdes", quantity: "100 grs", accompaniment: "cebolla, cilantro, crema, queso panela", priceNormal: "90.00", pricePackage: "120.00" },
     { name: "Chilaquiles verdes con huevo", quantity: "100 grs + 120 grs", accompaniment: "cebolla, cilantro, crema, queso panela", priceNormal: "110.00", pricePackage: "140.00" },
@@ -38,20 +39,20 @@ export const breakfastItems = [
     { name: "Huevos a la mexicana", quantity: "120 grs", accompaniment: "frijol, ensalada, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
     { name: "Huevos rancheros", quantity: "120 grs", accompaniment: "jamón, frijoles, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
     { name: "Huevos revueltos", quantity: "120 grs", accompaniment: "frijol, ensalada, tortillas. con jamón 70grs, tocino 90grs, o chorizo 90grs", priceNormal: "89.00", pricePackage: "119.00" },
-    { name: "Sopes con Arrachera (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
-    { name: "Sopes con Sirloin (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
-    { name: "Sopes con Rib Eye (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
-    { name: "Sopes con New York (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
-    { name: "Sopes con Aguja Norteña (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "139.00" },
-    { name: "Sopes con Huevo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "119.00" },
-    { name: "Sopes con Pollo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "119.00" },
-    { name: "Huarache con Arrachera", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
-    { name: "Huarache con Sirloin", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
-    { name: "Huarache con Rib Eye", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
-    { name: "Huarache con New York", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
-    { name: "Huarache con Aguja Norteña", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "169.00" },
-    { name: "Huarache con Huevo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "159.00" },
-    { name: "Huarache con Pollo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "159.00" },
+    { name: "Sopes con Arrachera (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "149.00", pricePackage: "179.00" },
+    { name: "Sopes con Sirlon (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "149.00", pricePackage: "179.00" },
+    { name: "Sopes con Rib Eye (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "149.00", pricePackage: "179.00" },
+    { name: "Sopes con New York (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "149.00", pricePackage: "179.00" },
+    { name: "Sopes con Aguja Norteña (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "139.00", pricePackage: "169.00" },
+    { name: "Sopes con Huevo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "119.00", pricePackage: "149.00" },
+    { name: "Sopes con Pollo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "119.00", pricePackage: "149.00" },
+    { name: "Huarache con Arrachera", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "179.00", pricePackage: "209.00" },
+    { name: "Huarache con Sirlon", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "179.00", pricePackage: "209.00" },
+    { name: "Huarache con Rib Eye", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "179.00", pricePackage: "209.00" },
+    { name: "Huarache con New York", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "179.00", pricePackage: "209.00" },
+    { name: "Huarache con Aguja Norteña", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "169.00", pricePackage: "199.00" },
+    { name: "Huarache con Huevo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "159.00", pricePackage: "189.00" },
+    { name: "Huarache con Pollo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "159.00", pricePackage: "189.00" },
   ];
   
   export const entranceItems = [
@@ -257,3 +258,4 @@ export const licorItems = [
     
 
     
+

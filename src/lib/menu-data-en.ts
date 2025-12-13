@@ -37,20 +37,20 @@ export const breakfastItemsEn = [
     { name: "Mexican style eggs", quantity: "120grs", accompaniment: "beans, salad, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
     { name: "Rancheros eggs", quantity: "120grs", accompaniment: "ham, beans, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
     { name: "Scrambled eggs", quantity: "120grs", accompaniment: "beans, salad, tortillas. with ham 70grs, bacon 90grs, or chorizo 90grs", priceNormal: "89.00", pricePackage: "119.00" },
-    { name: "Sopes with Arrachera (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
-    { name: "Sopes with Sirlon (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
-    { name: "Sopes with Rib Eye (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
-    { name: "Sopes with New York (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
-    { name: "Sopes with Northern Needle Steak (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "139.00" },
-    { name: "Sopes with Egg (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "119.00" },
-    { name: "Sopes with Chicken (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "119.00" },
-    { name: "Huarache with Arrachera", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "179.00" },
-    { name: "Huarache with Sirlon", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "179.00" },
-    { name: "Huarache with Rib Eye", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "179.00" },
-    { name: "Huarache with New York", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "179.00" },
-    { name: "Huarache with Northern Needle Steak", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "169.00" },
-    { name: "Huarache with Egg", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "159.00" },
-    { name: "Huarache with Chicken", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "159.00" },
+    { name: "Sopes with Arrachera (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00" },
+    { name: "Sopes with Sirlon (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00" },
+    { name: "Sopes with Rib Eye (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00" },
+    { name: "Sopes with New York (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00" },
+    { name: "Sopes with Northern Needle Steak (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "139.00", pricePackage: "169.00" },
+    { name: "Sopes with Egg (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "119.00", pricePackage: "149.00" },
+    { name: "Sopes with Chicken (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "119.00", pricePackage: "149.00" },
+    { name: "Huarache with Arrachera", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00" },
+    { name: "Huarache with Sirlon", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00" },
+    { name: "Huarache with Rib Eye", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00" },
+    { name: "Huarache with New York", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00" },
+    { name: "Huarache with Northern Needle Steak", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "169.00", pricePackage: "199.00" },
+    { name: "Huarache with Egg", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "159.00", pricePackage: "189.00" },
+    { name: "Huarache with Chicken", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "159.00", pricePackage: "189.00" },
   ];
   
   export const entranceItemsEn = [
@@ -256,3 +256,4 @@ export const licorItemsEn = [
     
 
     
+
