@@ -103,7 +103,7 @@ export const breakfastItemsEn = [
     { name: "Sirloin tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "68.00" },
     { name: "Lemon chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
     { name: "Chipotle chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
-    { name: "Cheese meat Tacos", quantity: "110 gr", accompaniment: "Guacamole", price: "48.00" },
+    { name: "Cheese meat Tacos", quantity: "110 gr", accompaniment: "Cheese crust with sirloin meat, served with guacamole", price: "48.00" },
   ];
 
   export const burgerItemsEn = [

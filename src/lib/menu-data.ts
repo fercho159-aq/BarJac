@@ -1,5 +1,6 @@
 
 
+
 export const breakfastItems = [
     { name: "Chilaquiles verdes", quantity: "100 grs", accompaniment: "cebolla, cilantro, crema, queso panela", priceNormal: "90.00", pricePackage: "120.00" },
     { name: "Chilaquiles verdes con huevo", quantity: "100 grs + 120 grs", accompaniment: "cebolla, cilantro, crema, queso panela", priceNormal: "110.00", pricePackage: "140.00" },
@@ -38,17 +39,17 @@ export const breakfastItems = [
     { name: "Huevos rancheros", quantity: "120 grs", accompaniment: "jamón, frijoles, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
     { name: "Huevos revueltos", quantity: "120 grs", accompaniment: "frijol, ensalada, tortillas. con jamón 70grs, tocino 90grs, o chorizo 90grs", priceNormal: "89.00", pricePackage: "119.00" },
     { name: "Sopes con Arrachera (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
-    { name: "Sopes con Sirlon (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
+    { name: "Sopes con Sirloin (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
     { name: "Sopes con Rib Eye (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
     { name: "Sopes con New York (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
-    { name: "Sopes con Aguaja Norteña (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "139.00" },
+    { name: "Sopes con Aguja Norteña (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "139.00" },
     { name: "Sopes con Huevo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "119.00" },
     { name: "Sopes con Pollo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "119.00" },
     { name: "Huarache con Arrachera", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
-    { name: "Huarache con Sirlon", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
+    { name: "Huarache con Sirloin", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
     { name: "Huarache con Rib Eye", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
     { name: "Huarache con New York", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "179.00" },
-    { name: "Huarache con Aguaja Norteña", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "169.00" },
+    { name: "Huarache con Aguja Norteña", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "169.00" },
     { name: "Huarache con Huevo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "159.00" },
     { name: "Huarache con Pollo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "159.00" },
   ];
@@ -103,7 +104,7 @@ export const breakfastItems = [
     { name: "Taco de sirloin", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
     { name: "Taco de pechuga al limón", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
     { name: "Taco de pechuga al chipotle", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
-    { name: "Taco queso carne", quantity: "110 gr", accompaniment: "guacamole", price: "48.00" },
+    { name: "Taco queso carne", quantity: "110 gr", accompaniment: "Costra de queso con carne de sirloin, acompañado de guacamole", price: "48.00" },
   ];
 
   export const burgerItems = [
@@ -131,7 +132,7 @@ export const preparadosItems = [
     { name: "Michelada", quantity: "45 ml", price: "15.00", ingredients: "Jugo de Limón, Petróleo" },
     { name: "Cubana", quantity: "105 ml", price: "20.00", ingredients: "Jugo De Limón Verde, Petróleo, Tajín" },
     { name: "Clamato", quantity: "105 ml", price: "25.00", ingredients: "Jugo De Limón Verde, Petróleo, Clamato, Tajín" },
-    { name: "Cerveza con camarones", quantity: "105 ml", price: "75.00", ingredients: "Jugo De Limón Verde, Petróleo, Clamato, Tajín, Camarones" },
+    { name: "Cerveza con camarón", quantity: "105 ml", price: "75.00", ingredients: "Jugo De Limón Verde, Petróleo, Clamato, Tajín, Camarones" },
     { name: "Cerveza con ostiones", quantity: "105 ml", price: "75.00", ingredients: "Jugo De Limón Verde, Petróleo, Clamato, Tajín, Ostiones" },
 ];
   
