@@ -11,13 +11,15 @@ import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 import { 
-    breakfastItems, entranceItems, coldEntranceItems, snackItems, sodaItems, beerItems, preparadosItems,
+    breakfastItems, entranceItems,
     cutsItems, saladItems, seafoodItems, tacoItems, burgerItems,
+    snackItems, sodaItems, beerItems, preparadosItems,
     ginebraItems, vodkaItems, tequilaItems, mezcalItems, ronItems, whiskyItems, cognacItems, brandyItems, licorItems 
 } from "@/lib/menu-data";
 import { 
-    breakfastItemsEn, entranceItemsEn, coldEntranceItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn,
+    breakfastItemsEn, entranceItemsEn,
     cutsItemsEn, saladItemsEn, seafoodItemsEn, tacoItemsEn, burgerItemsEn,
+    snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn,
     ginebraItemsEn, vodkaItemsEn, tequilaItemsEn, mezcalItemsEn, ronItemsEn, whiskyItemsEn, cognacItemsEn, brandyItemsEn, licorItemsEn
 } from "@/lib/menu-data-en";
 
@@ -44,7 +46,6 @@ export default function Home() {
   const menuColors: { [key: string]: string } = {
     desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
     entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
-    entradas_frias: "text-[hsl(var(--neon-brown))] shadow-[0_0_10px_hsl(var(--neon-brown))] border-[hsl(var(--neon-brown))] data-[state=active]:bg-[hsl(var(--neon-brown))]/10 data-[state=active]:border-[hsl(var(--neon-brown))]",
     cortes: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
     ensaladas: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
     mariscos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
@@ -71,7 +72,6 @@ export default function Home() {
     es: {
       desayunos: "Desayunos",
       entradas: "Entradas",
-      entradas_frias: "Entradas Frías",
       cortes: "Cortes",
       ensaladas: "Ensaladas",
       mariscos: "Mariscos",
@@ -86,7 +86,6 @@ export default function Home() {
     en: {
       desayunos: "Breakfast",
       entradas: "Appetizers",
-      entradas_frias: "Cold Appetizers",
       cortes: "Cuts",
       ensaladas: "Salads",
       mariscos: "Seafood",
@@ -130,7 +129,6 @@ export default function Home() {
     switch (tab) {
       case 'desayunos': return 'text-[hsl(var(--neon-blue))]';
       case 'entradas': return 'text-[hsl(var(--neon-green))]';
-      case 'entradas_frias': return 'text-[hsl(var(--neon-brown))]';
       case 'cortes': return 'text-[hsl(var(--neon-yellow))]';
       case 'ensaladas': return 'text-[hsl(var(--neon-orange))]';
       case 'mariscos': return 'text-[hsl(var(--neon-magenta))]';
@@ -243,7 +241,6 @@ export default function Home() {
 
   const currentBreakfastItems = language === 'es' ? breakfastItems : breakfastItemsEn;
   const currentEntranceItems = language === 'es' ? entranceItems : entranceItemsEn;
-  const currentColdEntranceItems = language === 'es' ? coldEntranceItems : coldEntranceItemsEn;
   const currentSnackItems = language === 'es' ? snackItems : snackItemsEn;
   const currentSodaItems = language === 'es' ? sodaItems : sodaItemsEn;
   const currentBeerItems = language === 'es' ? beerItems : beerItemsEn;
@@ -336,7 +333,7 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-            <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
+            <TabsList className="grid w-full grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
               {Object.keys(menuCategories[language as keyof typeof menuCategories]).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
@@ -394,23 +391,6 @@ export default function Home() {
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
                         <p className={cn("font-semibold text-lg", getPriceClassName('entradas'))}>${item.price}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-              <TabsContent value="entradas_frias">
-                <div className="text-center mb-6">
-                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('entradas_frias'))}>{menuCategories[language as keyof typeof menuCategories].entradas_frias}</h3>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {currentColdEntranceItems.map((item, index) => (
-                    <Card key={index} className="bg-secondary border-primary/20">
-                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
-                      <CardContent>
-                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
-                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
-                        <p className={cn("font-semibold text-lg", getPriceClassName('entradas_frias'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}

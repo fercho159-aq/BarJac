@@ -96,6 +96,18 @@ export const breakfastItems = [
       { name: "Camarones momia", quantity: "150 grs", accompaniment: "ensalada de la casa", price: "225.00" },
       { name: "Atún a la parrilla", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "213.00" },
       { name: "Salmón a la parrilla", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "245.00" },
+      { name: "Agua chile rojo", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma", price: "235.00" },
+      { name: "Agua verde estilo sinaloa", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma", price: "235.00" },
+      { name: "Agua chile negro", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma", price: "235.00" },
+      { name: "Vuelve a la vida", quantity: "190 gr", accompaniment: "galletas saladas, tostadas salma", price: "185.00" },
+      { name: "Cóctel de camarón chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
+      { name: "Cóctel de camarón grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
+      { name: "Cóctel campechano chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
+      { name: "Cóctel campechano grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
+      { name: "Tostada de atún", quantity: "1 pz 80 grs", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
+      { name: "Tostada de pescado", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
+      { name: "Tostada de pulpo", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
+      { name: "Tostada de camarón", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
   ];
 
   export const tacoItems = [

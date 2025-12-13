@@ -96,6 +96,18 @@ export const breakfastItemsEn = [
       { name: "Mummy shrimps", quantity: "150grs", accompaniment: "house salad", price: "225.00" },
       { name: "Grilled tuna", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "213.00" },
       { name: "Grilled salmon", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "245.00" },
+      { name: "Red aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
+      { name: "Sinaloa style green aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
+      { name: "Black aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
+      { name: "Vuelve a la vida (Seafood Cocktail)", quantity: "190 gr", accompaniment: "crackers, salma toasts", price: "185.00" },
+      { name: "Small shrimp cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
+      { name: "Large shrimp cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
+      { name: "Small campechano cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
+      { name: "Large campechano cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
+      { name: "Tuna tostada", quantity: "1 pc 80grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
+      { name: "Fish tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
+      { name: "Octopus tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
+      { name: "Shrimp tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
   ];
 
   export const tacoItemsEn = [
