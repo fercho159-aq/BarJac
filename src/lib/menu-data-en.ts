@@ -46,11 +46,27 @@ export const breakfastItemsEn = [
     { name: "Melted cheese with sirloin", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
     { name: "Guacamole", accompaniment: "cambray onion, toreado chili, tortillas", price: "145.00" },
     { name: "Pescadilla", quantity: "3 pcs 500grs", accompaniment: "Delicious fish quesadillas served with avocado and a touch of lime.", price: "83.00" },
-    { name: "Sopes", quantity: "", accompaniment: "", price: "" },
-    { name: "Huaraches", quantity: "", accompaniment: "", price: "" },
+    { name: "Sopes with Arrachera (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
+    { name: "Sopes with Sirlon (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
+    { name: "Sopes with Rib Eye (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
+    { name: "Sopes with New York (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
+    { name: "Sopes with Northern Needle Steak (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "139.00" },
+    { name: "Sopes with Egg (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "119.00" },
+    { name: "Sopes with Chicken (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "119.00" },
+    { name: "Huarache with Arrachera", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "179.00" },
+    { name: "Huarache with Sirlon", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "179.00" },
+    { name: "Huarache with Rib Eye", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "179.00" },
+    { name: "Huarache with New York", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "179.00" },
+    { name: "Huarache with Northern Needle Steak", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "169.00" },
+    { name: "Huarache with Egg", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "159.00" },
+    { name: "Huarache with Chicken", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "159.00" },
   ];
 
   export const coldEntranceItemsEn = [
+    { name: "Red aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
+    { name: "Sinaloa style green aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
+    { name: "Black aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
+    { name: "Vuelve a la vida (Seafood Cocktail)", quantity: "190 gr", accompaniment: "crackers, salma toasts", price: "185.00" },
     { name: "Small shrimp cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
     { name: "Large shrimp cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
     { name: "Small campechano cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
@@ -59,9 +75,6 @@ export const breakfastItemsEn = [
     { name: "Fish tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
     { name: "Octopus tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
     { name: "Shrimp tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
-    { name: "Red aguachile", quantity: "", accompaniment: "", price: "" },
-    { name: "Black aguachile", quantity: "", accompaniment: "", price: "" },
-    { name: "Green aguachile", quantity: "", accompaniment: "", price: "" },
   ];
   
   export const foodItemsEn = [
@@ -84,7 +97,7 @@ export const breakfastItemsEn = [
     { name: "Sirloin tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "68.00" },
     { name: "Lemon chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
     { name: "Chipotle chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
-    { name: "Cheese meat Tacos", quantity: "", accompaniment: "Steak, sautéed onion, cheese and flour tortilla.", price: "48.00" },
+    { name: "Cheese meat Tacos", quantity: "110 gr", accompaniment: "Steak, sautéed onion, cheese and flour tortilla.", price: "48.00" },
     { name: "Classic burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "175.00" },
     { name: "Double meat burger", quantity: "1 pc 300grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "195.00" },
     { name: "Bacon burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "185.00" },
@@ -276,3 +289,4 @@ export const beverageItemsEn = [
     { name: "St-Germain", category: "Liqueur", priceGlass: "160.00", priceBottle: null },
     { name: "Frangelico", category: "Liqueur", priceGlass: "135.00", priceBottle: null }
 ];
+
