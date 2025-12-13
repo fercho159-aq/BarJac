@@ -121,7 +121,7 @@ export default function Home() {
       mezcal: "Mezcal",
       ron: "Ron",
       whisky: "Whisky",
-      cognac: "Coñac",
+      coñac: "Coñac",
       brandy: "Brandy",
       licor: "Licor",
     },
@@ -160,7 +160,7 @@ export default function Home() {
       case 'mezcal': return 'text-lime-400';
       case 'ron': return 'text-orange-400';
       case 'whisky': return 'text-yellow-600';
-      case 'cognac': return 'text-red-500';
+      case 'coñac': return 'text-red-500';
       case 'brandy': return 'text-rose-500';
       case 'licor': return 'text-pink-500';
       default: return 'text-primary';
@@ -348,7 +348,7 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-            <TabsList className="flex flex-wrap h-auto justify-center bg-transparent mb-8 gap-x-4 gap-y-2">
+            <TabsList className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
               {Object.keys(menuCategories[language as keyof typeof menuCategories]).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
@@ -713,7 +713,7 @@ export default function Home() {
                                 ))}
                             </div>
                         </TabsContent>
-                        <TabsContent value="cognac">
+                        <TabsContent value="coñac">
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {currentCognacItems.map((item, index) => (
                                     <Card key={index} className="bg-secondary border-primary/20">
@@ -929,6 +929,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
