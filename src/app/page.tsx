@@ -10,8 +10,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import { beverageItems, breakfastItems, entranceItems, coldEntranceItems, foodItems, drinkItems, snackItems, sodaItems, beerItems, preparadosItems } from "@/lib/menu-data";
-import { beverageItemsEn, breakfastItemsEn, entranceItemsEn, coldEntranceItemsEn, foodItemsEn, drinkItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn } from "@/lib/menu-data-en";
+import { 
+    breakfastItems, entranceItems, coldEntranceItems, snackItems, sodaItems, beerItems, preparadosItems,
+    cutsItems, saladItems, seafoodItems, tacoItems, burgerItems,
+    ginebraItems, vodkaItems, tequilaItems, mezcalItems, ronItems, whiskyItems, cognacItems, brandyItems, licorItems 
+} from "@/lib/menu-data";
+import { 
+    breakfastItemsEn, entranceItemsEn, coldEntranceItemsEn, snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn,
+    cutsItemsEn, saladItemsEn, seafoodItemsEn, tacoItemsEn, burgerItemsEn,
+    ginebraItemsEn, vodkaItemsEn, tequilaItemsEn, mezcalItemsEn, ronItemsEn, whiskyItemsEn, cognacItemsEn, brandyItemsEn, licorItemsEn
+} from "@/lib/menu-data-en";
+
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
 import { BottleIcon } from "@/components/icons/bottle-icon";
 import { cn } from "@/lib/utils";
@@ -36,41 +45,85 @@ export default function Home() {
     desayunos: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
     entradas: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
     entradas_frias: "text-[hsl(var(--neon-brown))] shadow-[0_0_10px_hsl(var(--neon-brown))] border-[hsl(var(--neon-brown))] data-[state=active]:bg-[hsl(var(--neon-brown))]/10 data-[state=active]:border-[hsl(var(--neon-brown))]",
-    comida: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
+    cortes: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
+    ensaladas: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
+    mariscos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
+    tacos: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
+    hamburguesas: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:bg-[hsl(var(--neon-cyan))]/10 data-[state=active]:border-[hsl(var(--neon-cyan))]",
     snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
     refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
     cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
-    cocteleria: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:bg-[hsl(var(--neon-cyan))]/10 data-[state=active]:border-[hsl(var(--neon-cyan))]",
-    preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:bg-[hsl(var(--neon-violet))]/10 data-[state=active]:border-[hsl(var(--neon-violet))]",
     bebidas: "text-[hsl(var(--neon-gray))] shadow-[0_0_10px_hsl(var(--neon-gray))] border-[hsl(var(--neon-gray))] data-[state=active]:bg-[hsl(var(--neon-gray))]/10 data-[state=active]:border-[hsl(var(--neon-gray))]",
+    preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:bg-[hsl(var(--neon-violet))]/10 data-[state=active]:border-[hsl(var(--neon-violet))]",
+    // Cocteleria tabs
+    ginebra: "text-blue-400 shadow-[0_0_10px_#60a5fa] border-blue-400 data-[state=active]:bg-blue-400/10 data-[state=active]:border-blue-400",
+    vodka: "text-purple-400 shadow-[0_0_10px_#c084fc] border-purple-400 data-[state=active]:bg-purple-400/10 data-[state=active]:border-purple-400",
+    tequila: "text-amber-400 shadow-[0_0_10px_#fbbf24] border-amber-400 data-[state=active]:bg-amber-400/10 data-[state=active]:border-amber-400",
+    mezcal: "text-lime-400 shadow-[0_0_10px_#a3e635] border-lime-400 data-[state=active]:bg-lime-400/10 data-[state=active]:border-lime-400",
+    ron: "text-orange-400 shadow-[0_0_10px_#fb923c] border-orange-400 data-[state=active]:bg-orange-400/10 data-[state=active]:border-orange-400",
+    whisky: "text-yellow-600 shadow-[0_0_10px_#d97706] border-yellow-600 data-[state=active]:bg-yellow-600/10 data-[state=active]:border-yellow-600",
+    cognac: "text-red-500 shadow-[0_0_10px_#ef4444] border-red-500 data-[state=active]:bg-red-500/10 data-[state=active]:border-red-500",
+    brandy: "text-rose-500 shadow-[0_0_10px_#f43f5e] border-rose-500 data-[state=active]:bg-rose-500/10 data-[state=active]:border-rose-500",
+    licor: "text-pink-500 shadow-[0_0_10px_#ec4899] border-pink-500 data-[state=active]:bg-pink-500/10 data-[state=active]:border-pink-500"
   };
   
-  const menuCategories = {
+  const menuCategories: { [key: string]: string } = {
     es: {
       desayunos: "Desayunos",
       entradas: "Entradas",
       entradas_frias: "Entradas Frías",
-      comida: "Comida",
+      cortes: "Cortes",
+      ensaladas: "Ensaladas",
+      mariscos: "Mariscos",
+      tacos: "Tacos",
+      hamburguesas: "Hamburguesas",
       snacks: "Snacks",
       refrescos: "Refrescos",
       cerveza: "Cerveza",
-      cocteleria: "Coctelería",
-      preparados: "Preparados",
       bebidas: "Bebidas",
+      preparados: "Preparados"
     },
     en: {
       desayunos: "Breakfast",
       entradas: "Appetizers",
       entradas_frias: "Cold Appetizers",
-      comida: "Food",
+      cortes: "Cuts",
+      ensaladas: "Salads",
+      mariscos: "Seafood",
+      tacos: "Tacos",
+      hamburguesas: "Burgers",
       snacks: "Snacks",
       refrescos: "Sodas",
       cerveza: "Beer",
-      cocteleria: "Cocktails",
-      preparados: "Preparados",
       bebidas: "Drinks",
+      preparados: "Preparados"
     }
   };
+
+  const drinkCategories = {
+    es: {
+      ginebra: "Ginebra",
+      vodka: "Vodka",
+      tequila: "Tequila",
+      mezcal: "Mezcal",
+      ron: "Ron",
+      whisky: "Whisky",
+      cognac: "Coñac",
+      brandy: "Brandy",
+      licor: "Licor",
+    },
+    en: {
+      ginebra: "Gin",
+      vodka: "Vodka",
+      tequila: "Tequila",
+      mezcal: "Mezcal",
+      ron: "Rum",
+      whisky: "Whisky",
+      cognac: "Cognac",
+      brandy: "Brandy",
+      licor: "Liqueur",
+    }
+  }
 
 
   const getPriceClassName = (tab: string) => {
@@ -78,13 +131,25 @@ export default function Home() {
       case 'desayunos': return 'text-[hsl(var(--neon-blue))]';
       case 'entradas': return 'text-[hsl(var(--neon-green))]';
       case 'entradas_frias': return 'text-[hsl(var(--neon-brown))]';
-      case 'comida': return 'text-[hsl(var(--neon-yellow))]';
+      case 'cortes': return 'text-[hsl(var(--neon-yellow))]';
+      case 'ensaladas': return 'text-[hsl(var(--neon-orange))]';
+      case 'mariscos': return 'text-[hsl(var(--neon-magenta))]';
+      case 'tacos': return 'text-[hsl(var(--neon-red))]';
+      case 'hamburguesas': return 'text-[hsl(var(--neon-cyan))]';
       case 'snacks': return 'text-[hsl(var(--neon-orange))]';
       case 'refrescos': return 'text-[hsl(var(--neon-magenta))]';
       case 'cerveza': return 'text-[hsl(var(--neon-red))]';
-      case 'cocteleria': return 'text-[hsl(var(--neon-cyan))]';
-      case 'preparados': return 'text-[hsl(var(--neon-violet))]';
       case 'bebidas': return 'text-[hsl(var(--neon-gray))]';
+      case 'preparados': return 'text-[hsl(var(--neon-violet))]';
+      case 'ginebra': return 'text-blue-400';
+      case 'vodka': return 'text-purple-400';
+      case 'tequila': return 'text-amber-400';
+      case 'mezcal': return 'text-lime-400';
+      case 'ron': return 'text-orange-400';
+      case 'whisky': return 'text-yellow-600';
+      case 'cognac': return 'text-red-500';
+      case 'brandy': return 'text-rose-500';
+      case 'licor': return 'text-pink-500';
       default: return 'text-primary';
     }
   };
@@ -179,13 +244,26 @@ export default function Home() {
   const currentBreakfastItems = language === 'es' ? breakfastItems : breakfastItemsEn;
   const currentEntranceItems = language === 'es' ? entranceItems : entranceItemsEn;
   const currentColdEntranceItems = language === 'es' ? coldEntranceItems : coldEntranceItemsEn;
-  const currentFoodItems = language === 'es' ? foodItems : foodItemsEn;
-  const currentDrinkItems = language === 'es' ? drinkItems : drinkItemsEn;
   const currentSnackItems = language === 'es' ? snackItems : snackItemsEn;
   const currentSodaItems = language === 'es' ? sodaItems : sodaItemsEn;
   const currentBeerItems = language === 'es' ? beerItems : beerItemsEn;
   const currentPreparadosItems = language === 'es' ? preparadosItems : preparadosItemsEn;
-  const currentBeverageItems = language === 'es' ? beverageItems : beverageItemsEn;
+
+  const currentCutsItems = language === 'es' ? cutsItems : cutsItemsEn;
+  const currentSaladItems = language === 'es' ? saladItems : saladItemsEn;
+  const currentSeafoodItems = language === 'es' ? seafoodItems : seafoodItemsEn;
+  const currentTacoItems = language === 'es' ? tacoItems : tacoItemsEn;
+  const currentBurgerItems = language === 'es' ? burgerItems : burgerItemsEn;
+
+  const currentGinebraItems = language === 'es' ? ginebraItems : ginebraItemsEn;
+  const currentVodkaItems = language === 'es' ? vodkaItems : vodkaItemsEn;
+  const currentTequilaItems = language === 'es' ? tequilaItems : tequilaItemsEn;
+  const currentMezcalItems = language === 'es' ? mezcalItems : mezcalItemsEn;
+  const currentRonItems = language === 'es' ? ronItems : ronItemsEn;
+  const currentWhiskyItems = language === 'es' ? whiskyItems : whiskyItemsEn;
+  const currentCognacItems = language === 'es' ? cognacItems : cognacItemsEn;
+  const currentBrandyItems = language === 'es' ? brandyItems : brandyItemsEn;
+  const currentLicorItems = language === 'es' ? licorItems : licorItemsEn;
 
 
   return (
@@ -259,7 +337,7 @@ export default function Home() {
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
             <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
-              {Object.keys(menuCategories.es).map((tab) => (
+              {Object.keys(menuCategories[language as keyof typeof menuCategories]).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
                   value={tab} 
@@ -338,44 +416,102 @@ export default function Home() {
                   ))}
                 </div>
               </TabsContent>
-              <TabsContent value="comida">
+              
+              {/* CORTES */}
+              <TabsContent value="cortes">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('comida'))}>{menuCategories[language as keyof typeof menuCategories].comida}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cortes'))}>{menuCategories[language as keyof typeof menuCategories].cortes}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {currentFoodItems.map((item, index) => (
+                  {currentCutsItems.map((item, index) => (
                      <Card key={index} className="bg-secondary border-primary/20">
                       <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
                       <CardContent>
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
-                        <p className={cn("font-semibold text-lg", getPriceClassName('comida'))}>${item.price}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('cortes'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
                 </div>
               </TabsContent>
-               <TabsContent value="cocteleria">
+              
+              {/* ENSALADAS */}
+              <TabsContent value="ensaladas">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cocteleria'))}>{menuCategories[language as keyof typeof menuCategories].cocteleria}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('ensaladas'))}>{menuCategories[language as keyof typeof menuCategories].ensaladas}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {currentDrinkItems.map((item, index) => (
+                  {currentSaladItems.map((item, index) => (
                      <Card key={index} className="bg-secondary border-primary/20">
-                      <CardHeader>
-                        <div className="flex items-baseline">
-                          <CardTitle className="text-xl">{item.name}</CardTitle>
-                          {item.quantity && <p className="text-sm text-muted-foreground ml-2">{item.quantity}</p>}
-                        </div>
-                      </CardHeader>
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
                       <CardContent>
-                        {item.ingredients && <p className="text-sm text-muted-foreground mb-2">{item.ingredients}</p>}
-                        <p className={cn("font-semibold text-lg", getPriceClassName('cocteleria'))}>${item.price}</p>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('ensaladas'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
                 </div>
               </TabsContent>
+
+              {/* MARISCOS */}
+              <TabsContent value="mariscos">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('mariscos'))}>{menuCategories[language as keyof typeof menuCategories].mariscos}</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentSeafoodItems.map((item, index) => (
+                     <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('mariscos'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+
+              {/* TACOS */}
+              <TabsContent value="tacos">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('tacos'))}>{menuCategories[language as keyof typeof menuCategories].tacos}</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentTacoItems.map((item, index) => (
+                     <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('tacos'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+
+              {/* HAMBURGUESAS */}
+              <TabsContent value="hamburguesas">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('hamburguesas'))}>{menuCategories[language as keyof typeof menuCategories].hamburguesas}</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentBurgerItems.map((item, index) => (
+                     <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('hamburguesas'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+
               <TabsContent value="snacks">
                 <div className="text-center mb-6">
                   <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('snacks'))}>{menuCategories[language as keyof typeof menuCategories].snacks}</h3>
@@ -447,48 +583,172 @@ export default function Home() {
               </TabsContent>
               <TabsContent value="bebidas">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('bebidas'))}>{menuCategories[language as keyof typeof menuCategories].bebidas}</h3>
-                  <div className="mt-4 mb-8 max-w-md mx-auto p-4 rounded-lg border-2 border-[hsl(var(--neon-cyan))] bg-secondary shadow-[0_0_15px_hsl(var(--neon-cyan))]">
-                      <div className="flex items-center justify-center gap-3">
+                    <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('bebidas'))}>{language === 'es' ? 'Bebidas por Botella y Copeo' : 'Drinks by Bottle and Glass'}</h3>
+                     <div className="mt-4 mb-8 max-w-md mx-auto p-4 rounded-lg border-2 border-[hsl(var(--neon-cyan))] bg-secondary shadow-[0_0_15px_hsl(var(--neon-cyan))]">
+                        <div className="flex items-center justify-center gap-3">
                         <PartyPopper className="h-8 w-8 text-[hsl(var(--neon-cyan))]" />
                         <p className="text-lg font-bold text-[hsl(var(--neon-cyan))]">
-                          {language === 'es' ? '¡PROMOCIÓN!' : 'PROMOTION!'}
+                            {language === 'es' ? '¡PROMOCIÓN!' : 'PROMOTION!'}
                         </p>
-                      </div>
-                      <p className="text-white mt-2">
+                        </div>
+                        <p className="text-white mt-2">
                         {language === 'es' ? 'En la compra de cada botella, incluye 6 refrescos de 325 ml ¡gratis!' : 'Each bottle purchase includes 6 free 325 ml soft drinks!'}
-                      </p>
-                  </div>
+                        </p>
+                    </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                   {currentBeverageItems.map((item, index) => (
-                    <Card key={index} className="bg-secondary border-primary/20">
-                      <CardHeader>
-                        <div className="flex items-baseline justify-between">
-                          <CardTitle>{item.name}</CardTitle>
-                          <span className="text-xs font-semibold text-muted-foreground bg-gray-700 px-2 py-1 rounded-full">{item.category}</span>
+
+                <Tabs defaultValue="ginebra" className="w-full">
+                    <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
+                    {Object.keys(drinkCategories[language as keyof typeof drinkCategories]).map((tab) => (
+                        <TabsTrigger
+                        key={tab}
+                        value={tab}
+                        className={cn("text-base md:text-lg font-bold px-3 py-2 border-2 rounded-full transition-all duration-300", menuColors[tab] || 'border-transparent text-muted-foreground hover:text-white')}
+                        >
+                        {drinkCategories[language as keyof typeof drinkCategories][tab as keyof typeof drinkCategories.es]}
+                        </TabsTrigger>
+                    ))}
+                    </TabsList>
+                    
+                    <TabsContent value="ginebra">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentGinebraItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('ginebra'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('ginebra'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
                         </div>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="flex justify-between items-center mt-4">
-                          <div>
-                            <p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p>
-                            <p className={cn("font-bold text-lg", getPriceClassName('bebidas'))}>${item.priceGlass}</p>
-                          </div>
-                          <div className="text-right">
-                            <p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>
-                            {item.priceBottle ? (
-                              <p className={cn("font-bold text-lg", getPriceClassName('bebidas'))}>${item.priceBottle}</p>
-                            ) : (
-                              <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>
-                            )}
-                          </div>
+                    </TabsContent>
+                    <TabsContent value="vodka">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentVodkaItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('vodka'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('vodka'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
                         </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                    </TabsContent>
+                    <TabsContent value="tequila">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentTequilaItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('tequila'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('tequila'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </TabsContent>
+                    <TabsContent value="mezcal">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentMezcalItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('mezcal'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('mezcal'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </TabsContent>
+                    <TabsContent value="ron">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentRonItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('ron'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('ron'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </TabsContent>
+                    <TabsContent value="whisky">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentWhiskyItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('whisky'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('whisky'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </TabsContent>
+                    <TabsContent value="cognac">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentCognacItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('cognac'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('cognac'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </TabsContent>
+                    <TabsContent value="brandy">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentBrandyItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('brandy'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('brandy'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </TabsContent>
+                    <TabsContent value="licor">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {currentLicorItems.map((item, index) => (
+                                <Card key={index} className="bg-secondary border-primary/20">
+                                <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                <CardContent>
+                                    <div className="flex justify-between items-center mt-4">
+                                    <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('licor'))}>${item.priceGlass}</p></div>
+                                    <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('licor'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                    </div>
+                                </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </TabsContent>
+
+                </Tabs>
               </TabsContent>
+
             </Tabs>
           </div>
         </section>
@@ -654,3 +914,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
