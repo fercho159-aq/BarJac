@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -48,7 +49,7 @@ export default function Home() {
     es: {
       desayunos: "Desayunos",
       entradas: "Entradas",
-      entradas_frias: "Entradas Frias",
+      entradas_frias: "Entradas Frías",
       comida: "Comida",
       snacks: "Snacks",
       refrescos: "Refrescos",
@@ -257,7 +258,7 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 p-1 h-auto bg-transparent justify-center mb-8 gap-2">
+            <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
               {Object.keys(menuCategories.es).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
@@ -653,5 +654,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

@@ -1,3 +1,4 @@
+
 export const breakfastItemsEn = [
     { name: "Green chilaquiles", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "90.00", pricePackage: "120.00" },
     { name: "Green chilaquiles with egg", quantity: "100grs + 120grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "110.00", pricePackage: "140.00" },
@@ -77,19 +78,26 @@ export const breakfastItemsEn = [
     { name: "Shrimp tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
   ];
   
-  export const foodItemsEn = [
-    { name: "Mummy shrimps", quantity: "150grs", accompaniment: "house salad", price: "225.00" },
-    { name: "Grilled tuna", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "213.00" },
-    { name: "Grilled salmon", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "245.00" },
-    { name: "Red fruits salad", quantity: "180grs", accompaniment: "house dressing, goat cheese", price: "165.00" },
-    { name: "Melon salad", quantity: "200grs", accompaniment: "panela cheese", price: "115.00" },
+  export const cutsItemsEn = [
     { name: "Arrachera", quantity: "200grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "295.00" },
     { name: "Northern needle steak", quantity: "250grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "295.00" },
     { name: "Rib eye", quantity: "250grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "345.00" },
     { name: "New york", quantity: "250grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "345.00" },
     { name: "Sirloin", quantity: "250grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "345.00" },
-    { name: "Lemon chicken breast", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "165.00" },
-    { name: "Chipotle chicken breast", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "185.00" },
+  ];
+
+  export const saladItemsEn = [
+    { name: "Red fruits salad", quantity: "180grs", accompaniment: "house dressing, goat cheese", price: "165.00" },
+    { name: "Melon salad", quantity: "200grs", accompaniment: "panela cheese", price: "115.00" },
+  ];
+
+  export const seafoodItemsEn = [
+      { name: "Mummy shrimps", quantity: "150grs", accompaniment: "house salad", price: "225.00" },
+      { name: "Grilled tuna", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "213.00" },
+      { name: "Grilled salmon", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "245.00" },
+  ];
+
+  export const tacoItemsEn = [
     { name: "Arrachera tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "58.00" },
     { name: "Northern needle steak tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "58.00" },
     { name: "Rib eye tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "68.00" },
@@ -98,6 +106,9 @@ export const breakfastItemsEn = [
     { name: "Lemon chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
     { name: "Chipotle chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
     { name: "Cheese meat Tacos", quantity: "110 gr", accompaniment: "Steak, sautéed onion, cheese and flour tortilla.", price: "48.00" },
+  ];
+
+  export const burgerItemsEn = [
     { name: "Classic burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "175.00" },
     { name: "Double meat burger", quantity: "1 pc 300grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "195.00" },
     { name: "Bacon burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "185.00" },
@@ -105,8 +116,13 @@ export const breakfastItemsEn = [
     { name: "Farm burger", quantity: "1 pc 300grs", accompaniment: "chihuahua cheese, lettuce, tomato, caramelized onion, egg, french fries", price: "185.00" },
     { name: "Surf and turf burger", quantity: "1 pc 240grs", accompaniment: "oaxaca cheese, lettuce, tomato, caramelized onion, french fries", price: "195.00" },
     { name: "House burger", quantity: "1 pc 150grs Arrachera", accompaniment: "oaxaca cheese, chihuahua cheese, lettuce, tomato, caramelized onion", price: "228.00" },
-    { name: "Chicken burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, buffalo sauce, french fries", price: "185.00" }
-];
+    { name: "Chicken burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, buffalo sauce, french fries", price: "185.00" },
+  ];
+
+  export const chickenItemsEn = [
+    { name: "Lemon chicken breast", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "165.00" },
+    { name: "Chipotle chicken breast", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "185.00" },
+  ];
 
 export const drinkItemsEn = [
     { name: "Kamikaze", quantity: "37.5 ml", price: "65.00", ingredients: "Smirnoff, Cointreau, Lime juice" },
@@ -145,7 +161,7 @@ export const drinkItemsEn = [
     { name: "Hemingway daiquiri", quantity: "112.5 ml", price: "110.00", ingredients: "Bacardi blanco, Cherry flamingo, Lime juice, Grapefruit juice, Cherry" },
     { name: "Dirty martini", quantity: "90 ml", price: "110.00", ingredients: "Smirnoff/Beefeater, Dry vermouth, Brine, Olive/Lemon peel" },
     { name: "Cosmopolitan", quantity: "112.5 ml", price: "110.00", ingredients: "Smirnoff, Cointreau, Cranberry juice, Lime juice, Orange peel" },
-    { name: "Amf", quantity: "180 ml", price: "110.00", ingredients: "Smirnoff, Beefeater, Mono Araña, Flamingo De Curazao, Jugo De Limon Amarillo, Jarabe Natural, Sprite, Cascara De Limón Amarillo" },
+    { name: "AMF", quantity: "180 ml", price: "110.00", ingredients: "Smirnoff, Beefeater, Mono Araña, Flamingo De Curazao, Jugo De Limon Amarillo, Jarabe Natural, Sprite, Cascara De Limón Amarillo" },
     { name: "Tommy's margarita", quantity: "135 ml", price: "110.00", ingredients: "Salt, Jose cuervo tradicional, Lime juice, Agave honey" },
     { name: "Bull", quantity: "150 ml", price: "110.00", ingredients: "Lime Juice, Simple Syrup, Bacardi Blanco, Bohemia Oscura, Lime Wedge" },
     { name: "Lynchburg lemonade", quantity: "180 ml", price: "110.00", ingredients: "Jim beam white, Cointreau, Lemon juice, Simple syrup, Sprite, Lemon wedge" },
@@ -230,13 +246,19 @@ export const beerItemsEn = [
     { name: "Large draft beer mug", quantity: "1000 ml", price: "125.00" },
 ];
 
-export const beverageItemsEn = [
+export const ginebraItemsEn = [
     { name: "Tanqueray", category: "Gin", priceGlass: "120.00", priceBottle: "1,100.00" },
     { name: "Hendrick's", category: "Gin", priceGlass: "150.00", priceBottle: "1,900.00" },
+];
+
+export const vodkaItemsEn = [
     { name: "Smirnoff", category: "Vodka", priceGlass: "95.00", priceBottle: "1,100.00" },
     { name: "Smirnoff tamarindo", category: "Vodka", priceGlass: "105.00", priceBottle: "1,100.00" },
     { name: "Absolut", category: "Vodka", priceGlass: "110.00", priceBottle: "1,300.00" },
     { name: "Grey goose", category: "Vodka", priceGlass: "145.00", priceBottle: "2,300.00" },
+];
+
+export const tequilaItemsEn = [
     { name: "Herradura blanco", category: "Tequila", priceGlass: "115.00", priceBottle: "1,400.00" },
     { name: "Herradura reposado", category: "Tequila", priceGlass: "120.00", priceBottle: "1,900.00" },
     { name: "Dobel diamante", category: "Tequila", priceGlass: "160.00", priceBottle: "2,300.00" },
@@ -245,9 +267,15 @@ export const beverageItemsEn = [
     { name: "Herradura añejo", category: "Tequila", priceGlass: "145.00", priceBottle: "1,600.00" },
     { name: "Hornitos añejo", category: "Tequila", priceGlass: "130.00", priceBottle: "1,900.00" },
     { name: "Jose cuervo tradicional", category: "Tequila", priceGlass: "100.00", priceBottle: "1,400.00" },
+];
+
+export const mezcalItemsEn = [
     { name: "Montelobos espadín", category: "Mezcal", priceGlass: "135.00", priceBottle: "1,550.00" },
     { name: "400 conejos joven", category: "Mezcal", priceGlass: "120.00", priceBottle: "1,350.00" },
     { name: "Mono araña", category: "Mezcal", priceGlass: "100.00", priceBottle: "1,200.00" },
+];
+
+export const ronItemsEn = [
     { name: "Matusalem plata", category: "Ron", priceGlass: "120.00", priceBottle: "1,400.00" },
     { name: "Havana 3", category: "Ron", priceGlass: "105.00", priceBottle: "1,100.00" },
     { name: "Havana 7", category: "Ron", priceGlass: "115.00", priceBottle: "1,600.00" },
@@ -255,6 +283,9 @@ export const beverageItemsEn = [
     { name: "Bacardí solera", category: "Ron", priceGlass: "105.00", priceBottle: "1,700.00" },
     { name: "Malibu", category: "Ron", priceGlass: "115.00", priceBottle: "1,200.00" },
     { name: "Bacardi blanco", category: "Ron", priceGlass: "90.00", priceBottle: "1,400.00" },
+];
+
+export const whiskyItemsEn = [
     { name: "Red label", category: "Whisky", priceGlass: "110.00", priceBottle: "1,500.00" },
     { name: "The glenlivet 12", category: "Whisky", priceGlass: "165.00", priceBottle: "2,800.00" },
     { name: "Macallan 12", category: "Whisky", priceGlass: "180.00", priceBottle: "4,200.00" },
@@ -262,8 +293,17 @@ export const beverageItemsEn = [
     { name: "Jim beam white", category: "Whisky Bourbon", priceGlass: "105.00", priceBottle: "1,400.00" },
     { name: "Woodford reserve", category: "Whisky Bourbon", priceGlass: "145.00", priceBottle: "2,400.00" },
     { name: "Bulleit bourbon", category: "Whisky Bourbon", priceGlass: "135.00", priceBottle: "1,900.00" },
+];
+
+export const cognacItemsEn = [
     { name: "Martell v.s.", category: "Cognac", priceGlass: "155.00", priceBottle: "2,300.00" },
+];
+
+export const brandyItemsEn = [
     { name: "Torres 10", category: "Brandy", priceGlass: "115.00", priceBottle: "1,500.00" },
+];
+
+export const licorItemsEn = [
     { name: "Sambuca vaccari nero", category: "Anise", priceGlass: "120.00", priceBottle: null },
     { name: "Anís de cadenas", category: "Anise", priceGlass: "115.00", priceBottle: null },
     { name: "Aperol", category: "Aperitif", priceGlass: "110.00", priceBottle: null },
@@ -289,4 +329,3 @@ export const beverageItemsEn = [
     { name: "St-Germain", category: "Liqueur", priceGlass: "160.00", priceBottle: null },
     { name: "Frangelico", category: "Liqueur", priceGlass: "135.00", priceBottle: null }
 ];
-
