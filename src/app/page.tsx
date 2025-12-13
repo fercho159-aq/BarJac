@@ -49,7 +49,7 @@ export default function Home() {
     cortes: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
     ensaladas: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
     mariscos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
-    tacos: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
+    taco: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
     hamburguesas: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:bg-[hsl(var(--neon-cyan))]/10 data-[state=active]:border-[hsl(var(--neon-cyan))]",
     snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
     
@@ -80,7 +80,7 @@ export default function Home() {
       cortes: "Cortes",
       ensaladas: "Ensaladas",
       mariscos: "Mariscos",
-      tacos: "Tacos",
+      taco: "Taco",
       hamburguesas: "Hamburguesas",
       snacks: "Snacks",
       bebidas: "Bebidas",
@@ -91,7 +91,7 @@ export default function Home() {
       cortes: "Cuts",
       ensaladas: "Salads",
       mariscos: "Seafood",
-      tacos: "Tacos",
+      taco: "Taco",
       hamburguesas: "Burgers",
       snacks: "Snacks",
       bebidas: "Drinks",
@@ -146,7 +146,7 @@ export default function Home() {
       case 'cortes': return 'text-[hsl(var(--neon-yellow))]';
       case 'ensaladas': return 'text-[hsl(var(--neon-orange))]';
       case 'mariscos': return 'text-[hsl(var(--neon-magenta))]';
-      case 'tacos': return 'text-[hsl(var(--neon-red))]';
+      case 'taco': return 'text-[hsl(var(--neon-red))]';
       case 'hamburguesas': return 'text-[hsl(var(--neon-cyan))]';
       case 'snacks': return 'text-[hsl(var(--neon-orange))]';
       case 'bebidas': return 'text-[hsl(var(--neon-gray))]';
@@ -177,7 +177,7 @@ export default function Home() {
     en: [
       { name: "Carlos M.", rating: 5, comment: "The atmosphere is incredible and the food is delicious! The chilaquiles are the best I've ever had.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d" },
       { name: "Ana P.", rating: 4, comment: "Very good place to go with friends. The live music gives it a special touch. The micheladas are a must.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e" },
-      { name: "Javier G.", rating: 5, comment: "Excellent service and the cocktails are top-notch. I recommend the 'Old Fashioned'. I'll be back soon.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f" },
+      { name: "Javier G.", rating: 5, comment: "Excellent service and the cocktails are top-notch. I recommend the 'Old Fashioned'. I'll be back soon.", avatar: "https://i.pravatar.cc/150?u=a_042581f4e29026704f" },
       { name: "Sofia R.", rating: 5, comment: "I loved the terrace. It's the perfect place for a Saturday afternoon. The promos are great!", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704g" },
     ]
   };
@@ -348,7 +348,7 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-            <TabsList className="grid w-full grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
+            <TabsList className="flex flex-wrap h-auto justify-center bg-transparent mb-8 gap-x-4 gap-y-2">
               {Object.keys(menuCategories[language as keyof typeof menuCategories]).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
@@ -470,9 +470,9 @@ export default function Home() {
               </TabsContent>
 
               {/* TACOS */}
-              <TabsContent value="tacos">
+              <TabsContent value="taco">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('tacos'))}>{menuCategories[language as keyof typeof menuCategories].tacos}</h3>
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('taco'))}>{menuCategories[language as keyof typeof menuCategories].taco}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentTacoItems.map((item, index) => (
@@ -481,7 +481,7 @@ export default function Home() {
                       <CardContent>
                         {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                         <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
-                        <p className={cn("font-semibold text-lg", getPriceClassName('tacos'))}>${item.price}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('taco'))}>${item.price}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -721,7 +721,7 @@ export default function Home() {
                                     <CardContent>
                                         <div className="flex justify-between items-center mt-4">
                                         <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('cognac'))}>${item.priceGlass}</p></div>
-                                        <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('cognac'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                        <div className="text-right"><p className="fontsemibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('cognac'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
                                         </div>
                                     </CardContent>
                                     </Card>
@@ -929,5 +929,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     

@@ -40,13 +40,13 @@ export const breakfastItemsEn = [
   ];
   
   export const entranceItemsEn = [
-    { name: "Melted cheese", accompaniment: "cambray onion, toreado chili, tortillas", price: "125.00" },
-    { name: "Melted cheese with arrachera", accompaniment: "cambray onion, toreado chili, tortillas", price: "165.00" },
-    { name: "Melted cheese with northern needle steak", accompaniment: "cambray onion, toreado chili, tortillas", price: "165.00" },
-    { name: "Melted cheese with rib eye", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
-    { name: "Melted cheese with new york", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
-    { name: "Melted cheese with sirloin", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
-    { name: "Guacamole", accompaniment: "cambray onion, toreado chili, tortillas", price: "145.00" },
+    { name: "Melted cheese", quantity: "180 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "125.00" },
+    { name: "Melted cheese with arrachera", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "165.00" },
+    { name: "Melted cheese with northern needle steak", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "165.00" },
+    { name: "Melted cheese with rib eye", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
+    { name: "Melted cheese with new york", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
+    { name: "Melted cheese with sirloin", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
+    { name: "Guacamole", quantity: "180 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "145.00" },
     { name: "Pescadilla", quantity: "3 pcs 500grs", accompaniment: "Delicious fish quesadillas served with avocado and a touch of lime.", price: "83.00" },
     { name: "Sopes with Arrachera (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
     { name: "Sopes with Sirlon (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "149.00" },
@@ -62,21 +62,6 @@ export const breakfastItemsEn = [
     { name: "Huarache with Northern Needle Steak", quantity: "80 gr", accompaniment: "Beans, cheese and cream", price: "169.00" },
     { name: "Huarache with Egg", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "159.00" },
     { name: "Huarache with Chicken", quantity: "120 gr", accompaniment: "Beans, cheese and cream", price: "159.00" },
-  ];
-
-  export const coldEntranceItemsEn = [
-    { name: "Red aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
-    { name: "Sinaloa style green aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
-    { name: "Black aguachile", quantity: "120 gr", accompaniment: "crackers, salma toasts", price: "235.00" },
-    { name: "Vuelve a la vida (Seafood Cocktail)", quantity: "190 gr", accompaniment: "crackers, salma toasts", price: "185.00" },
-    { name: "Small shrimp cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
-    { name: "Large shrimp cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
-    { name: "Small campechano cocktail", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
-    { name: "Large campechano cocktail", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
-    { name: "Tuna tostada", quantity: "1 pc 80grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
-    { name: "Fish tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
-    { name: "Octopus tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
-    { name: "Shrimp tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
   ];
   
   export const cutsItemsEn = [
@@ -265,5 +250,7 @@ export const licorItemsEn = [
     { name: "St-Germain", category: "Liqueur", priceGlass: "160.00", priceBottle: null },
     { name: "Frangelico", category: "Liqueur", priceGlass: "135.00", priceBottle: null }
 ];
+
+    
 
     

@@ -40,13 +40,13 @@ export const breakfastItems = [
   ];
   
   export const entranceItems = [
-    { name: "Queso fundido", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "125.00" },
-    { name: "Queso fundido con arrachera", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "165.00" },
-    { name: "Queso fundido con aguja norteña", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "165.00" },
-    { name: "Queso fundido con rib eye", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
-    { name: "Queso fundido con new york", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
-    { name: "Queso fundido con sirloin", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
-    { name: "Guacamole", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "145.00" },
+    { name: "Queso fundido", quantity: "180 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "125.00" },
+    { name: "Queso fundido con arrachera", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "165.00" },
+    { name: "Queso fundido con aguja norteña", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "165.00" },
+    { name: "Queso fundido con rib eye", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
+    { name: "Queso fundido con new york", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
+    { name: "Queso fundido con sirloin", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
+    { name: "Guacamole", quantity: "180 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "145.00" },
     { name: "Pescadilla", quantity: "3 pz 500 grs", accompaniment: "Deliciosas quesadillas de pescado servidas con aguacate y un toque de limón.", price: "83.00" },
     { name: "Sopes con Arrachera (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
     { name: "Sopes con Sirlon (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "149.00" },
@@ -62,21 +62,6 @@ export const breakfastItems = [
     { name: "Huarache con Aguaja Norteña", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", price: "169.00" },
     { name: "Huarache con Huevo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "159.00" },
     { name: "Huarache con Pollo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", price: "159.00" },
-  ];
-
-  export const coldEntranceItems = [
-    { name: "Agua chile rojo", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma", price: "235.00" },
-    { name: "Agua verde estilo sinaloa", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma", price: "235.00" },
-    { name: "Agua chile negro", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma", price: "235.00" },
-    { name: "Vuelve a la vida", quantity: "190 gr", accompaniment: "galletas saladas, tostadas salma", price: "185.00" },
-    { name: "Cóctel de camarón chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
-    { name: "Cóctel de camarón grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
-    { name: "Cóctel campechano chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
-    { name: "Cóctel campechano grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
-    { name: "Tostada de atún", quantity: "1 pz 80 grs", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
-    { name: "Tostada de pescado", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
-    { name: "Tostada de pulpo", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
-    { name: "Tostada de camarón", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
   ];
   
   export const cutsItems = [
@@ -111,14 +96,14 @@ export const breakfastItems = [
   ];
 
   export const tacoItems = [
-    { name: "Tacos de arrachera", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "58.00" },
-    { name: "Tacos de aguja norteña", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "58.00" },
-    { name: "Tacos de rib eye", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
-    { name: "Tacos de new york", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
-    { name: "Tacos de sirloin", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
-    { name: "Tacos de pechuga al limón", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
-    { name: "Tacos de pechuga al chipotle", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
-    { name: "Tacos queso carne", quantity: "110 gr", accompaniment: "Bistec, cebolla acitronada, queso y tortilla de harina.", price: "48.00" },
+    { name: "Taco de arrachera", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "58.00" },
+    { name: "Taco de aguja norteña", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "58.00" },
+    { name: "Taco de rib eye", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
+    { name: "Taco de new york", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
+    { name: "Taco de sirloin", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
+    { name: "Taco de pechuga al limón", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
+    { name: "Taco de pechuga al chipotle", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
+    { name: "Taco queso carne", quantity: "110 gr", accompaniment: "Bistec, cebolla acitronada, queso y tortilla de harina.", price: "48.00" },
   ];
 
   export const burgerItems = [
@@ -265,5 +250,7 @@ export const licorItems = [
     { name: "St-Germain", category: "Licor", priceGlass: "160.00", priceBottle: null },
     { name: "Frangelico", category: "Licor", priceGlass: "135.00", priceBottle: null }
 ];
+
+    
 
     
