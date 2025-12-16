@@ -129,8 +129,7 @@ export default function Home() {
       ginebra: "Gin",
       vodka: "Vodka",
       tequila: "Tequila",
-      mezcal: "Mezcal",
-      ron: "Rum",
+      mezcal: "Rum",
       whisky: "Whisky",
       cognac: "Cognac",
       brandy: "Brandy",
@@ -221,7 +220,7 @@ export default function Home() {
       },
       { 
         title: "Trios Bar Jac de Lunes a Viernes", 
-        description: "$199.00: Sopa o crema del día, Hamburguesa Clásica o 3 tacos (arrachera, pechuga, aguja o combinados) o pescadilla y Bebida sin alcohol (naranjada, limonada o refresco).", 
+        description: "$199.00: Sopa o crema del día, Hamburguesa Clásica o 3 tacos (arrachera, pechuga, aguja o combinados) o pescadilla y cóctel de camarón chico y Bebida sin alcohol (naranjada, limonada o refresco).", 
         icon: UtensilsCrossed,
         color: "orange"
       }
@@ -247,7 +246,7 @@ export default function Home() {
       },
       { 
         title: "Bar Jac Trios Monday to Friday", 
-        description: "$199.00: Soup or cream of the day, Classic Burger or 3 tacos (arrachera, chicken, aguja or combined) or pescadilla and a non-alcoholic drink (orangeade, lemonade or soda).", 
+        description: "$199.00: Soup or cream of the day, Classic Burger or 3 tacos (arrachera, chicken, aguja or combined) or pescadilla and small shrimp cocktail and a non-alcoholic drink (orangeade, lemonade or soda).", 
         icon: UtensilsCrossed,
         color: "orange"
       }
@@ -878,7 +877,7 @@ export default function Home() {
              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="relative aspect-video rounded-lg overflow-hidden neon-border">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.628045558913!2d-99.1680506850934!3d19.42850698688649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3a5a47814b%3A0x44f19b81aa528539!2sAv.%20%C3%81lvaro%20Obreg%C3%B3n%20234%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1678886361548!5m2!1ses-419!2smx"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.628045558913!2d-99.1680506850934!3d19.42850698688649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3a5a47814b%3A0x44f19b81aa528539!2sAv.%20%C3%81lvaro%20Obreg%C3%B3n%20234%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1678886361548!5m2!1ses-419!2smx!4v1678886361548!5m2!1ses-419!2smx"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -914,13 +913,13 @@ export default function Home() {
         <div className="container py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-primary-foreground">&copy; {new Date().getFullYear()} BarJac. {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}</p>
           <div className="flex space-x-4">
-            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20 hover:text-primary-foreground">
+            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20">
               <a href="https://www.facebook.com/profile.php?id=61584743632789&locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook /></a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20 hover:text-primary-foreground">
+            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20">
               <a href="https://www.instagram.com/barjac_cdmx/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20 hover:text-primary-foreground">
+            <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20">
               <a href="https://www.tiktok.com/@barjac234" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
             </Button>
           </div>
