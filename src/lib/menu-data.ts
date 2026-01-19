@@ -85,14 +85,14 @@ export const breakfastItems = [
   ];
 
   export const tacoItems = [
-    { name: "Taco de arrachera", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "58.00" },
-    { name: "Taco de aguja norteña", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "58.00" },
-    { name: "Taco de rib eye", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
-    { name: "Taco de new york", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
-    { name: "Taco de sirloin", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
-    { name: "Taco de pechuga al limón", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
-    { name: "Taco de pechuga al chipotle", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
-    { name: "Taco queso carne", quantity: "110 gr", accompaniment: "Costra de queso con carne de sirloin, servido con guacamole y tortillas de maíz o harina.", price: "48.00" },
+    { name: "Taco de arrachera", quantity: "1 pza - 60 g", accompaniment: "Preparado con arrachera a la plancha, acompañado de papas al orégano, chiles toreados y guacamole.", price: "58.00" },
+    { name: "Taco de aguja norteña", quantity: "1 pza - 60 g", accompaniment: "Elaborado con aguja norteña, acompañado de papas al orégano, chiles toreados y guacamole.", price: "58.00" },
+    { name: "Taco de rib eye", quantity: "1 pza - 60 g", accompaniment: "Preparado con rib eye, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
+    { name: "Taco de New York", quantity: "1 pza - 60 g", accompaniment: "Elaborado con corte New York, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
+    { name: "Taco de sirloin", quantity: "1 pza - 60 g", accompaniment: "Preparado con sirloin, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
+    { name: "Taco de pechuga al limón", quantity: "1 pza - 60 g", accompaniment: "Elaborado con pechuga marinada al limón, acompañado de papas al orégano, chiles toreados y guacamole.", price: "49.00" },
+    { name: "Taco de pechuga al chipotle", quantity: "1 pza - 60 g", accompaniment: "Preparado con pechuga en salsa chipotle, acompañado de papas al orégano, chiles toreados y guacamole.", price: "49.00" },
+    { name: "Taco queso carne", quantity: "110 g", accompaniment: "Bisteck de cerdo encebollado, con queso gratinado, acompañado con salsa martajada y cebolla y cilantro.", price: "48.00" },
   ];
 
   export const burgerItems = [

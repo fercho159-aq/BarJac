@@ -85,14 +85,14 @@ export const breakfastItemsEn = [
   ];
 
   export const tacoItemsEn = [
-    { name: "Arrachera tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "58.00" },
-    { name: "Northern needle steak tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "58.00" },
-    { name: "Rib eye tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "68.00" },
-    { name: "New york tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "68.00" },
-    { name: "Sirloin tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "68.00" },
-    { name: "Lemon chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
-    { name: "Chipotle chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
-    { name: "Cheese meat Tacos", quantity: "110 gr", accompaniment: "Cheese crust with sirloin meat, served with guacamole and corn or flour tortillas.", price: "48.00" },
+    { name: "Arrachera taco", quantity: "1 pc - 60 g", accompaniment: "Prepared with grilled arrachera, served with oregano potatoes, toreados chilis, and guacamole.", price: "58.00" },
+    { name: "Northern needle steak taco", quantity: "1 pc - 60 g", accompaniment: "Made with northern needle steak, served with oregano potatoes, toreados chilis, and guacamole.", price: "58.00" },
+    { name: "Rib eye taco", quantity: "1 pc - 60 g", accompaniment: "Prepared with rib eye, served with oregano potatoes, toreados chilis, and guacamole.", price: "68.00" },
+    { name: "New York taco", quantity: "1 pc - 60 g", accompaniment: "Made with New York strip, served with oregano potatoes, toreados chilis, and guacamole.", price: "68.00" },
+    { name: "Sirloin taco", quantity: "1 pc - 60 g", accompaniment: "Prepared with sirloin, served with oregano potatoes, toreados chilis, and guacamole.", price: "68.00" },
+    { name: "Lemon chicken breast taco", quantity: "1 pc - 60 g", accompaniment: "Made with lemon-marinated chicken breast, served with oregano potatoes, toreados chilis, and guacamole.", price: "49.00" },
+    { name: "Chipotle chicken breast taco", quantity: "1 pc - 60 g", accompaniment: "Prepared with chicken in chipotle sauce, served with oregano potatoes, toreados chilis, and guacamole.", price: "49.00" },
+    { name: "Cheese meat Tacos", quantity: "110 g", accompaniment: "Chopped pork steak with onions and melted cheese, served with martajada sauce, onion, and cilantro.", price: "48.00" },
   ];
 
   export const burgerItemsEn = [
