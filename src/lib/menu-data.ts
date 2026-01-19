@@ -62,8 +62,8 @@ export const breakfastItems = [
   ];
 
   export const saladItems = [
-    { name: "Ensalada de frutos rojos", quantity: "180 grs", accompaniment: "aderezo de la casa, queso cabra", price: "165.00" },
-    { name: "Ensalada de melón", quantity: "200 grs", accompaniment: "queso panela", price: "115.00" },
+    { name: "Ensalada de frutos rojos", quantity: "180 g", accompaniment: "Preparada con mix de lechugas y una selección de frutos rojos frescos, acompañada de aderezo de la casa, queso de cabra y nuez caramelizada.", price: "165.00" },
+    { name: "Ensalada de melón", quantity: "200 g", accompaniment: "Preparada con mix de lechugas y melón, prosciutto, acompañada de aderezo de miel mostaza, queso panela.", price: "115.00" },
   ];
 
   export const seafoodItems = [

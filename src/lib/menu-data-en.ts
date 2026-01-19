@@ -62,8 +62,8 @@ export const breakfastItemsEn = [
   ];
 
   export const saladItemsEn = [
-    { name: "Red fruits salad", quantity: "180grs", accompaniment: "house dressing, goat cheese", price: "165.00" },
-    { name: "Melon salad", quantity: "200grs", accompaniment: "panela cheese", price: "115.00" },
+    { name: "Red fruits salad", quantity: "180 g", accompaniment: "Prepared with a mix of lettuces and a selection of fresh red fruits, accompanied by house dressing, goat cheese, and caramelized walnuts.", price: "165.00" },
+    { name: "Melon salad", quantity: "200 g", accompaniment: "Prepared with a mix of lettuces and melon, prosciutto, accompanied by honey mustard dressing, and panela cheese.", price: "115.00" },
   ];
 
   export const seafoodItemsEn = [
