@@ -210,52 +210,52 @@ export default function Home() {
   const promotions = {
     es: [
       { 
-        title: "Lunes y Miércoles de “Embotellados”", 
-        description: "Todas nuestras cervezas embotelladas 3 x $100.", 
+        title: "Cervezas 3x$100 ¡Todos los días!", 
+        description: "Aprovecha nuestra promoción en cervezas embotelladas de 355ml, 3 por $100.", 
         icon: BottleIcon,
         color: "blue"
       },
       { 
-        title: "Martes y Viernes “Happy Hour Godin”", 
-        description: "Para oficinistas de la zona, si nos muestran su credencial de trabajo obtienen un 20% de consumo en su siguiente visita, siempre y cuando regresen en “Happy Hour Godin” del mismo mes de su consumo.", 
+        title: "Happy Hour Godín", 
+        description: "Los martes y viernes, muestra tu credencial de trabajo y obtén un 20% de descuento en tu próxima visita.", 
         icon: Briefcase,
         color: "green"
       },
       { 
-        title: "Jueves “Veo doble”", 
-        description: "Toda nuestra coctelería se sirve doble.", 
+        title: "Jueves de Coctelería Doble", 
+        description: "Todos los jueves, tu coctel favorito se sirve doble. ¡Aprovecha!", 
         icon: Copy,
         color: "yellow"
       },
       { 
-        title: "Trios Bar Jac de Lunes a Viernes", 
-        description: "$199.00: Sopa o crema del día, Hamburguesa Clásica o 3 tacos (arrachera, pechuga, aguja o combinados) o pescadilla y cóctel de camarón chico y Bebida sin alcohol (naranjada, limonada o refresco).", 
+        title: "Tríos Bar Jac por $199", 
+        description: "De lunes a viernes, disfruta de una comida completa por $199: Sopa/crema + plato fuerte + bebida.", 
         icon: UtensilsCrossed,
         color: "orange"
       }
     ],
     en: [
       { 
-        title: "Monday & Wednesday \"Bottled\" Days", 
-        description: "All our bottled beers 3 for $100.", 
+        title: "Beers 3 for $100, Every Day!", 
+        description: "Take advantage of our promotion on 355ml bottled beers, 3 for $100.", 
         icon: BottleIcon,
         color: "blue"
       },
       { 
-        title: "Tuesday & Friday \"Godin Happy Hour\"", 
-        description: "For office workers in the area, if you show us your work ID, you get a 20% discount on your next visit, as long as you return during \"Godin Happy Hour\" in the same month.", 
+        title: "Godín Happy Hour", 
+        description: "On Tuesdays and Fridays, show your work ID and get a 20% discount on your next visit.", 
         icon: Briefcase,
         color: "green"
       },
       { 
-        title: "Thursday \"Seeing Double\"", 
-        description: "All our cocktails are served double.", 
+        title: "Double Cocktails Thursdays", 
+        description: "Every Thursday, your favorite cocktail is served double. Enjoy!", 
         icon: Copy,
         color: "yellow"
       },
       { 
-        title: "Bar Jac Trios Monday to Friday", 
-        description: "$199.00: Soup or cream of the day, Classic Burger or 3 tacos (arrachera, chicken, aguja or combined) or pescadilla and small shrimp cocktail and a non-alcoholic drink (orangeade, lemonade or soda).", 
+        title: "Bar Jac Trios for $199", 
+        description: "From Monday to Friday, enjoy a full meal for $199: Soup/cream + main course + drink.", 
         icon: UtensilsCrossed,
         color: "orange"
       }
@@ -1053,3 +1053,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
