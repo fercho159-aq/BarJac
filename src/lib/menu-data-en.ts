@@ -113,15 +113,14 @@ export const breakfastItemsEn = [
 
   
 export const preparadosItemsEn = [
-    { name: "Sunrise beer", quantity: "150 ml", price: "120.00", ingredients: "Flavor Chamoy, Tajin, Jose Cuervo Tradicional, Grenadine, Lime Juice, Heineken" },
-    { name: "Hawaiian beer", quantity: "150 ml", price: "150.00", ingredients: "Flavor Chamoy, Tajin, Bacardi Blanco, Pineapple Juice, Flamingo De Curazao, Lime Juice, Heineken" },
-    { name: "Blue chela", quantity: "150 ml", price: "120.00", ingredients: "Flavor Chamoy, Tajin, Jose Cuervo Tradicional, Flamingo De Curazao, Lime Juice, Sprite, Shark Gummy" },
-    { name: "Chelada", quantity: "15 ml", price: "15.00", ingredients: "Salt, Lime Juice" },
-    { name: "Michelada", quantity: "45 ml", price: "15.00", ingredients: "Lime Juice, Petroleo" },
-    { name: "Cubana", quantity: "105 ml", price: "20.00", ingredients: "Lime Juice, Petroleo, Tajin" },
-    { name: "Clamato", quantity: "105 ml", price: "25.00", ingredients: "Lime Juice, Petroleo, Clamato, Tajin" },
-    { name: "Shrimp beer", quantity: "105 ml", price: "75.00", ingredients: "Lime Juice, Petroleo, Clamato, Tajin, Shrimps" },
-    { name: "Oyster beer", quantity: "105 ml", price: "75.00", ingredients: "Lime Juice, Petroleo, Clamato, Tajin, Oysters" },
+    { name: "Sunrise Beer", quantity: "150 ml", price: "120.00", ingredients: "Prepared with flavored chamoy, Tajín, Jose Cuervo Tradicional, grenadine, lime juice, and Heineken." },
+    { name: "Hawaiian Beer", quantity: "150 ml", price: "150.00", ingredients: "Prepared with flavored chamoy, Tajín, Bacardi Blanco, pineapple juice, Flamingo de Curazao, lime juice, and Heineken." },
+    { name: "Oyster Beer", quantity: "105 ml", price: "75.00", ingredients: "Prepared with lime juice, petroleo sauce, Clamato, Tajín, and oysters." },
+    { name: "Chelada", quantity: "15 ml", price: "15.00", ingredients: "Prepared with salt and lime juice." },
+    { name: "Michelada", quantity: "45 ml", price: "15.00", ingredients: "Prepared with lime juice and Tajín." },
+    { name: "Cubana", quantity: "105 ml", price: "20.00", ingredients: "Prepared with lime juice, petroleo sauce, and Tajín." },
+    { name: "Clamato", quantity: "105 ml", price: "35.00", ingredients: "Prepared with lime juice, petroleo sauce, Clamato, and Tajín." },
+    { name: "Shrimp Beer", quantity: "105 ml", price: "75.00", ingredients: "Prepared with lime juice, petroleo sauce, Clamato, Tajín, and shrimp." },
 ];
   
 export const snackItemsEn = [
@@ -246,6 +245,7 @@ export const licorItemsEn = [
     
 
     
+
 
 
 

@@ -113,15 +113,14 @@ export const breakfastItems = [
 
   
 export const preparadosItems = [
-    { name: "Cerveza sunrise", quantity: "150 ml", price: "120.00", ingredients: "Chamoy De Sabor, Tajín, Jose Cuervo Tradicional, Granadina, Jugo De Limón Verde, Heineken" },
-    { name: "Cerveza hawaian", quantity: "150 ml", price: "150.00", ingredients: "Chamoy De Sabor, Tajín, Bacardí Blanco, Jugo De Piña, Flamingo De Curazao, Jugo De Limón Verde, Heineken" },
-    { name: "Chela azulita", quantity: "150 ml", price: "120.00", ingredients: "Chamoy De Sabor, Tajín, Jose Cuervo Tradicional, Flamingo De Curazao, Jugo De Limón Verde, Sprite, Gomita De Tiburones" },
-    { name: "Chelada", quantity: "15 ml", price: "15.00", ingredients: "Sal, Jugo De Limón Verde" },
-    { name: "Michelada", quantity: "45 ml", price: "15.00", ingredients: "Jugo de Limón, Petróleo" },
-    { name: "Cubana", quantity: "105 ml", price: "20.00", ingredients: "Jugo De Limón Verde, Petróleo, Tajín" },
-    { name: "Clamato", quantity: "105 ml", price: "25.00", ingredients: "Jugo De Limón Verde, Petróleo, Clamato, Tajín" },
-    { name: "Cerveza con camarón", quantity: "105 ml", price: "75.00", ingredients: "Jugo De Limón Verde, Petróleo, Clamato, Tajín, Camarones" },
-    { name: "Cerveza con ostiones", quantity: "105 ml", price: "75.00", ingredients: "Jugo De Limón Verde, Petróleo, Clamato, Tajín, Ostiones" },
+    { name: "Cerveza Sunrise", quantity: "150 ml", price: "120.00", ingredients: "Preparado con chamoy de sabor, Tajín, José Cuervo Tradicional, granadina, jugo de limón verde y Heineken." },
+    { name: "Cerveza Hawaian", quantity: "150 ml", price: "150.00", ingredients: "Preparado con chamoy de sabor, Tajín, Bacardí Blanco, jugo de piña, Flamingo de Curazao, jugo de limón verde y Heineken." },
+    { name: "Cerveza con ostiones", quantity: "105 ml", price: "75.00", ingredients: "Preparado con jugo de limón verde, petróleo, Clamato, Tajín y ostiones." },
+    { name: "Chelada", quantity: "15 ml", price: "15.00", ingredients: "Preparado con sal y jugo de limón verde." },
+    { name: "Michelada", quantity: "45 ml", price: "15.00", ingredients: "Preparado con jugo de limón verde y tajín." },
+    { name: "Cubana", quantity: "105 ml", price: "20.00", ingredients: "Preparado con jugo de limón verde, petróleo y Tajín." },
+    { name: "Clamato", quantity: "105 ml", price: "35.00", ingredients: "Preparado con jugo de limón verde, petróleo, Clamato y Tajín." },
+    { name: "Cerveza con camarón", quantity: "105 ml", price: "75.00", ingredients: "Preparado con jugo de limón verde, petróleo, Clamato, Tajín y camarones." },
 ];
   
 export const snackItems = [
@@ -246,6 +245,7 @@ export const licorItems = [
     
 
     
+
 
 
 
