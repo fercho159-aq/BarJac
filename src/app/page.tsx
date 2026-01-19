@@ -14,13 +14,13 @@ import {
     breakfastItems, entranceItems,
     cutsItems, saladItems, seafoodItems, tacoItems, burgerItems,
     snackItems, sodaItems, beerItems, preparadosItems, cocteleriaItems,
-    ginebraItems, vodkaItems, tequilaItems, mezcalItems, ronItems, whiskyItems, cognacItems, brandyItems, licorItems 
+    ginebraItems, vodkaItems, tequilaItems, mezcalItems, ronItems, whiskyItems, cognacItems, brandyItems, licorItems, bourbonItems
 } from "@/lib/menu-data";
 import { 
     breakfastItemsEn, entranceItemsEn,
     cutsItemsEn, saladItemsEn, seafoodItemsEn, tacoItemsEn, burgerItemsEn,
     snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn, cocteleriaItemsEn,
-    ginebraItemsEn, vodkaItemsEn, tequilaItemsEn, mezcalItemsEn, ronItemsEn, whiskyItemsEn, cognacItemsEn, brandyItemsEn, licorItemsEn
+    ginebraItemsEn, vodkaItemsEn, tequilaItemsEn, mezcalItemsEn, ronItemsEn, whiskyItemsEn, cognacItemsEn, brandyItemsEn, licorItemsEn, bourbonItemsEn
 } from "@/lib/menu-data-en";
 
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
@@ -69,6 +69,7 @@ export default function Home() {
     mezcal: "text-lime-400 shadow-[0_0_10px_#a3e635] border-lime-400 data-[state=active]:bg-lime-400/10 data-[state=active]:border-lime-400",
     ron: "text-orange-400 shadow-[0_0_10px_#fb923c] border-orange-400 data-[state=active]:bg-orange-400/10 data-[state=active]:border-orange-400",
     whisky: "text-yellow-600 shadow-[0_0_10px_#d97706] border-yellow-600 data-[state=active]:bg-yellow-600/10 data-[state=active]:border-yellow-600",
+    bourbon: "text-orange-600 shadow-[0_0_10px_#ea580c] border-orange-600 data-[state=active]:bg-orange-600/10 data-[state=active]:border-orange-600",
     cognac: "text-red-500 shadow-[0_0_10px_#ef4444] border-red-500 data-[state=active]:bg-red-500/10 data-[state=active]:border-red-500",
     brandy: "text-rose-500 shadow-[0_0_10px_#f43f5e] border-rose-500 data-[state=active]:bg-rose-500/10 data-[state=active]:border-rose-500",
     licor: "text-pink-500 shadow-[0_0_10px_#ec4899] border-pink-500 data-[state=active]:bg-pink-500/10 data-[state=active]:border-pink-500"
@@ -124,6 +125,7 @@ export default function Home() {
       mezcal: "Mezcal",
       ron: "Ron",
       whisky: "Whisky",
+      bourbon: "Bourbon",
       cognac: "Coñac",
       brandy: "Brandy",
       licor: "Licor",
@@ -135,6 +137,7 @@ export default function Home() {
       mezcal: "Mezcal",
       ron: "Rum",
       whisky: "Whisky",
+      bourbon: "Bourbon",
       cognac: "Cognac",
       brandy: "Brandy",
       licor: "Liqueur",
@@ -164,6 +167,7 @@ export default function Home() {
       case 'mezcal': return 'text-lime-400';
       case 'ron': return 'text-orange-400';
       case 'whisky': return 'text-yellow-600';
+      case 'bourbon': return 'text-orange-600';
       case 'cognac': return 'text-red-500';
       case 'brandy': return 'text-rose-500';
       case 'licor': return 'text-pink-500';
@@ -278,6 +282,7 @@ export default function Home() {
   const currentMezcalItems = language === 'es' ? mezcalItems : mezcalItemsEn;
   const currentRonItems = language === 'es' ? ronItems : ronItemsEn;
   const currentWhiskyItems = language === 'es' ? whiskyItems : whiskyItemsEn;
+  const currentBourbonItems = language === 'es' ? bourbonItems : bourbonItemsEn;
   const currentCognacItems = language === 'es' ? cognacItems : cognacItemsEn;
   const currentBrandyItems = language === 'es' ? brandyItems : brandyItemsEn;
   const currentLicorItems = language === 'es' ? licorItems : licorItemsEn;
@@ -404,15 +409,19 @@ export default function Home() {
                             return categoryKey;
                         } else {
                             if (categoryKey === 'Eggs') return 'Eggs Your Way';
+                            if (categoryKey === 'Chilaquiles') return 'Chilaquiles (green, red or combined)';
+                            if (categoryKey === 'Enchiladas') return 'Enchiladas (green, red or combined)';
                             return categoryKey;
                         }
                     };
 
                     const getCategoryDescription = () => {
                         if (language === 'es') {
+                            if (categoryKey === 'Huevos') return 'chorizo, jamón, tocino, a la mexicana, rancheros y divorciados. Acompañados de frijoles refritos y ensalada de la casa.';
                             if (categoryKey === 'Chilaquiles') return 'Crujientes totopos de maíz bañados en salsa roja, verde o una combinación de ambas, acompañados de proteína de elección. Se sirven con cebolla fresca, cilantro, un delicado toque de crema, queso panela y la proteína que prefieras.';
                             if (categoryKey === 'Enchiladas') return 'Delicadas enchiladas preparadas con proteína de tu elección, bañadas en salsa roja, verde o ambas. Se acompañan con cebolla finamente fileteada, cilantro fresco, un toque de crema, queso panela y la proteína que prefieras.';
                         } else {
+                            if (categoryKey === 'Eggs') return 'chorizo, ham, bacon, Mexican style, rancheros, and divorced. Served with refried beans and house salad.';
                             if (categoryKey === 'Chilaquiles') return 'Crispy corn tortilla chips bathed in red, green, or a combination of both sauces, accompanied by your choice of protein. Served with fresh onion, cilantro, a delicate touch of cream, panela cheese, and your preferred protein.';
                             if (categoryKey === 'Enchiladas') return 'Delicate enchiladas prepared with your choice of protein, bathed in red, green, or both sauces. They are accompanied by finely sliced onion, fresh cilantro, a touch of cream, panela cheese, and your preferred protein.';
                         }
@@ -711,7 +720,7 @@ export default function Home() {
                     </div>
 
                     <Tabs defaultValue="ginebra" className="w-full">
-                        <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
+                        <TabsList className="grid w-full grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
                         {Object.keys(drinkCategories[language as keyof typeof drinkCategories]).map((tab) => (
                             <TabsTrigger
                             key={tab}
@@ -807,6 +816,21 @@ export default function Home() {
                                         <div className="flex justify-between items-center mt-4">
                                         <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('whisky'))}>${item.priceGlass}</p></div>
                                         <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('whisky'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
+                                        </div>
+                                    </CardContent>
+                                    </Card>
+                                ))}
+                            </div>
+                        </TabsContent>
+                        <TabsContent value="bourbon">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {currentBourbonItems.map((item, index) => (
+                                    <Card key={index} className="bg-secondary border-primary/20">
+                                    <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                                    <CardContent>
+                                        <div className="flex justify-between items-center mt-4">
+                                        <div><p className="font-semibold">{language === 'es' ? 'Copeo:' : 'Glass:'}</p><p className={cn("font-bold text-lg", getPriceClassName('bourbon'))}>${item.priceGlass}</p></div>
+                                        <div className="text-right"><p className="font-semibold">{language === 'es' ? 'Botella:' : 'Bottle:'}</p>{item.priceBottle ? <p className={cn("font-bold text-lg", getPriceClassName('bourbon'))}>${item.priceBottle}</p> : <p className="text-sm text-muted-foreground italic">{language === 'es' ? 'No disponible' : 'Not available'}</p>}</div>
                                         </div>
                                     </CardContent>
                                     </Card>
@@ -1029,5 +1053,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

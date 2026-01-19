@@ -177,6 +177,7 @@ export const cocteleriaItemsEn = [
 export const ginebraItemsEn = [
     { name: "Tanqueray", category: "Gin", priceGlass: "120.00", priceBottle: "1,100.00" },
     { name: "Hendrick's", category: "Gin", priceGlass: "150.00", priceBottle: "1,900.00" },
+    { name: "Beefeater", category: "Gin", priceGlass: "110.00", priceBottle: "1,150.00" },
 ];
 
 export const vodkaItemsEn = [
@@ -193,7 +194,6 @@ export const tequilaItemsEn = [
     { name: "Don julio 70", category: "Tequila", priceGlass: "150.00", priceBottle: "2,500.00" },
     { name: "Don julio blanco", category: "Tequila", priceGlass: "140.00", priceBottle: "2,100.00" },
     { name: "Herradura añejo", category: "Tequila", priceGlass: "145.00", priceBottle: "1,600.00" },
-    { name: "Hornitos añejo", category: "Tequila", priceGlass: "130.00", priceBottle: "1,900.00" },
     { name: "Jose cuervo tradicional", category: "Tequila", priceGlass: "100.00", priceBottle: "1,400.00" },
 ];
 
@@ -218,9 +218,12 @@ export const whiskyItemsEn = [
     { name: "The glenlivet 12", category: "Whisky", priceGlass: "165.00", priceBottle: "2,800.00" },
     { name: "Macallan 12", category: "Whisky", priceGlass: "180.00", priceBottle: "4,200.00" },
     { name: "Black label", category: "Whisky", priceGlass: "130.00", priceBottle: "2,700.00" },
-    { name: "Jim beam white", category: "Whisky Bourbon", priceGlass: "105.00", priceBottle: "1,400.00" },
-    { name: "Woodford reserve", category: "Whisky Bourbon", priceGlass: "145.00", priceBottle: "2,400.00" },
-    { name: "Bulleit bourbon", category: "Whisky Bourbon", priceGlass: "135.00", priceBottle: "1,900.00" },
+];
+
+export const bourbonItemsEn = [
+    { name: "Jim beam white", category: "Bourbon", priceGlass: "105.00", priceBottle: "1,400.00" },
+    { name: "Woodford reserve", category: "Bourbon", priceGlass: "145.00", priceBottle: "2,400.00" },
+    { name: "Bulleit bourbon", category: "Bourbon", priceGlass: "135.00", priceBottle: "1,900.00" },
 ];
 
 export const cognacItemsEn = [
@@ -242,29 +245,12 @@ export const licorItemsEn = [
     { name: "Jagermeister", category: "Liqueur", priceGlass: "115.00", priceBottle: null },
     { name: "Fernet menta", category: "Liqueur", priceGlass: "115.00", priceBottle: null },
     { name: "Kahlua", category: "Liqueur", priceGlass: "115.00", priceBottle: null },
-    { name: "Flamingo cherry", category: "Liqueur", priceGlass: "95.00", priceBottle: null },
-    { name: "Flamingo peach", category: "Liqueur", priceGlass: "95.00", priceBottle: null },
-    { name: "Flamingo curacao", category: "Liqueur", priceGlass: "95.00", priceBottle: null },
     { name: "Porto ferreira tawny", category: "Liqueur", priceGlass: "140.00", priceBottle: null },
-    { name: "Chartreuse de hierbas verde", category: "Liqueur", priceGlass: "185.00", priceBottle: null },
-    { name: "Midori de melón", category: "Liqueur", priceGlass: "135.00", priceBottle: null },
-    { name: "Licor de naranja controy", category: "Liqueur", priceGlass: "110.00", priceBottle: null },
-    { name: "Cinzano to spritz dry", category: "Liqueur", priceGlass: "110.00", priceBottle: null },
-    { name: "Campari vermouth", category: "Liqueur", priceGlass: "110.00", priceBottle: null },
+    { name: "Chartreuse verde", category: "Liqueur", priceGlass: "185.00", priceBottle: null },
+    { name: "Midori", category: "Liqueur", priceGlass: "135.00", priceBottle: null },
+    { name: "Campari", category: "Liqueur", priceGlass: "110.00", priceBottle: null },
     { name: "Licor 43", category: "Liqueur", priceGlass: "135.00", priceBottle: null },
-    { name: "Branca menta de hierbas", category: "Liqueur", priceGlass: "120.00", priceBottle: null },
-    { name: "Angostura de hierbas", category: "Liqueur", priceGlass: "140.00", priceBottle: null },
+    { name: "Branca menta", category: "Liqueur", priceGlass: "120.00", priceBottle: null },
     { name: "St-Germain", category: "Liqueur", priceGlass: "160.00", priceBottle: null },
     { name: "Frangelico", category: "Liqueur", priceGlass: "135.00", priceBottle: null }
 ];
-
-    
-
-    
-
-    
-
-
-
-
-

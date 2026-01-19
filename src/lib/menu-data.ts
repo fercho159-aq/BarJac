@@ -177,6 +177,7 @@ export const cocteleriaItems = [
 export const ginebraItems = [
     { name: "Tanqueray", category: "Ginebra", priceGlass: "120.00", priceBottle: "1,100.00" },
     { name: "Hendrick's", category: "Ginebra", priceGlass: "150.00", priceBottle: "1,900.00" },
+    { name: "Beefeater", category: "Ginebra", priceGlass: "110.00", priceBottle: "1,150.00" },
 ];
 
 export const vodkaItems = [
@@ -193,7 +194,6 @@ export const tequilaItems = [
     { name: "Don julio 70", category: "Tequila", priceGlass: "150.00", priceBottle: "2,500.00" },
     { name: "Don julio blanco", category: "Tequila", priceGlass: "140.00", priceBottle: "2,100.00" },
     { name: "Herradura añejo", category: "Tequila", priceGlass: "145.00", priceBottle: "1,600.00" },
-    { name: "Hornitos añejo", category: "Tequila", priceGlass: "130.00", priceBottle: "1,900.00" },
     { name: "Jose cuervo tradicional", category: "Tequila", priceGlass: "100.00", priceBottle: "1,400.00" },
 ];
 
@@ -218,9 +218,12 @@ export const whiskyItems = [
     { name: "The glenlivet 12", category: "Whisky", priceGlass: "165.00", priceBottle: "2,800.00" },
     { name: "Macallan 12", category: "Whisky", priceGlass: "180.00", priceBottle: "4,200.00" },
     { name: "Black label", category: "Whisky", priceGlass: "130.00", priceBottle: "2,700.00" },
-    { name: "Jim beam white", category: "Whisky Bourbon", priceGlass: "105.00", priceBottle: "1,400.00" },
-    { name: "Woodford reserve", category: "Whisky Bourbon", priceGlass: "145.00", priceBottle: "2,400.00" },
-    { name: "Bulleit bourbon", category: "Whisky Bourbon", priceGlass: "135.00", priceBottle: "1,900.00" },
+];
+
+export const bourbonItems = [
+    { name: "Jim beam white", category: "Bourbon", priceGlass: "105.00", priceBottle: "1,400.00" },
+    { name: "Woodford reserve", category: "Bourbon", priceGlass: "145.00", priceBottle: "2,400.00" },
+    { name: "Bulleit bourbon", category: "Bourbon", priceGlass: "135.00", priceBottle: "1,900.00" },
 ];
 
 export const cognacItems = [
@@ -242,29 +245,12 @@ export const licorItems = [
     { name: "Jagermeister", category: "Licor", priceGlass: "115.00", priceBottle: null },
     { name: "Fernet menta", category: "Licor", priceGlass: "115.00", priceBottle: null },
     { name: "Kahlúa", category: "Licor", priceGlass: "115.00", priceBottle: null },
-    { name: "Flamingo cereza", category: "Licor", priceGlass: "95.00", priceBottle: null },
-    { name: "Flamingo durazno", category: "Licor", priceGlass: "95.00", priceBottle: null },
-    { name: "Flamingo curacao", category: "Licor", priceGlass: "95.00", priceBottle: null },
-    { name: "Porto ferreira tawny", category: "Licor", priceGlass: "140.00", priceBottle: null },
-    { name: "Chartreuse de hierbas verde", category: "Licor", priceGlass: "185.00", priceBottle: null },
-    { name: "Midori de melón", category: "Licor", priceGlass: "135.00", priceBottle: null },
-    { name: "Licor de naranja controy", category: "Licor", priceGlass: "110.00", priceBottle: null },
-    { name: "Cinzano to spritz dry", category: "Licor", priceGlass: "110.00", priceBottle: null },
-    { name: "Campari vermouth", category: "Licor", priceGlass: "110.00", priceBottle: null },
+    { name: "Oporto ferreira tawny", category: "Licor", priceGlass: "140.00", priceBottle: null },
+    { name: "Chartreuse verde", category: "Licor", priceGlass: "185.00", priceBottle: null },
+    { name: "Midori", category: "Licor", priceGlass: "135.00", priceBottle: null },
+    { name: "Campari", category: "Licor", priceGlass: "110.00", priceBottle: null },
     { name: "Licor 43", category: "Licor", priceGlass: "135.00", priceBottle: null },
-    { name: "Branca menta de hierbas", category: "Licor", priceGlass: "120.00", priceBottle: null },
-    { name: "Angostura de hierbas", category: "Licor", priceGlass: "140.00", priceBottle: null },
+    { name: "Branca menta", category: "Licor", priceGlass: "120.00", priceBottle: null },
     { name: "St-Germain", category: "Licor", priceGlass: "160.00", priceBottle: null },
     { name: "Frangelico", category: "Licor", priceGlass: "135.00", priceBottle: null }
 ];
-
-    
-
-    
-
-    
-
-
-
-
-
