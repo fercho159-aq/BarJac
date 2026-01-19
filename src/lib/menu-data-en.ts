@@ -96,14 +96,14 @@ export const breakfastItemsEn = [
   ];
 
   export const burgerItemsEn = [
-    { name: "Classic burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "175.00" },
-    { name: "Double meat burger", quantity: "1 pc 300grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "195.00" },
-    { name: "Bacon burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese, lettuce, tomato, caramelized onion, bacon, french fries", price: "185.00" },
-    { name: "Cheese + cheese burger", quantity: "1 pc 180grs", accompaniment: "chihuahua cheese, oaxaca cheese, lettuce, tomato, caramelized onion, french fries", price: "185.00" },
-    { name: "Farm burger", quantity: "1 pc 300grs", accompaniment: "chihuahua cheese, lettuce, tomato, caramelized onion, egg, french fries", price: "185.00" },
-    { name: "Surf and turf burger", quantity: "1 pc 240grs", accompaniment: "oaxaca cheese, lettuce, tomato, caramelized onion, french fries", price: "195.00" },
-    { name: "House burger", quantity: "1 pc 150grs Arrachera", accompaniment: "oaxaca cheese, chihuahua cheese, lettuce, tomato, caramelized onion", price: "228.00" },
-    { name: "Chicken burger", quantity: "1 pc 180grs", accompaniment: "american cheese, lettuce, tomato, caramelized onion, buffalo sauce, french fries", price: "185.00" },
+    { name: "Classic burger", quantity: "1 pc - 180 g", accompaniment: "80/20 beef, served with lettuce, tomato, caramelized onion, Chihuahua cheese, bacon, and house dressing.", price: "175" },
+    { name: "Double meat burger", quantity: "1 pc - 300 g", accompaniment: "Double 80/20 beef, served with lettuce, tomato, caramelized onion, Chihuahua cheese, bacon, and house dressing.", price: "195" },
+    { name: "Bacon burger", quantity: "1 pc - 180 g", accompaniment: "80/20 beef, served with lettuce, tomato, caramelized onion, Chihuahua cheese, bacon, crispy bacon, and house dressing.", price: "185" },
+    { name: "Cheese + cheese burger", quantity: "1 pc - 180 g", accompaniment: "80/20 beef, served with lettuce, tomato, caramelized onion, Chihuahua, Oaxaca, American, and Gouda cheese, bacon, and house dressing.", price: "185" },
+    { name: "Farm burger", quantity: "1 pc - 300 g", accompaniment: "80/20 beef, served with lettuce, tomato, caramelized onion, Chihuahua and American cheese, bacon, house dressing, and topped with a fried egg.", price: "185" },
+    { name: "Surf and turf burger", quantity: "1 pc - 240 g", accompaniment: "80/20 beef, small shrimp, served with lettuce, tomato, caramelized onion, Chihuahua cheese, bacon, and BBQ sauce.", price: "195" },
+    { name: "House burger", quantity: "1 pc - 150 g arrachera", accompaniment: "Arrachera steak, served with lettuce, tomato, crispy onion, Chihuahua cheese, and house dressing.", price: "228" },
+    { name: "Chicken burger", quantity: "1 pc - 180 g", accompaniment: "Fried chicken thigh, served with lettuce, tomato, caramelized onion, Chihuahua cheese, buffalo sauce, and sriracha sauce.", price: "185" },
   ];
 
   export const chickenItemsEn = [

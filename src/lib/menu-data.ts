@@ -96,14 +96,14 @@ export const breakfastItems = [
   ];
 
   export const burgerItems = [
-    { name: "Hamburguesa clásica", quantity: "1 pz 180 grs", accompaniment: "queso americano, lechuga, jitomate, cebolla caramelizada, tocino, papas a la francesa", price: "175.00" },
-    { name: "Hamburguesa doble carne", quantity: "1 pz 300 grs", accompaniment: "queso americano, lechuga, jitomate, cebolla caramelizada, tocino, papas a la francesa", price: "195.00" },
-    { name: "Hamburguesa tocinito", quantity: "1 pz 180 grs", accompaniment: "queso chihuahua, lechuga, jitomate, cebolla caramelizada, tocino, papas a la francesa", price: "185.00" },
-    { name: "Hamburguesa queso + queso", quantity: "1 pz 180 grs", accompaniment: "queso chihuahua, queso oaxaca, lechuga, jitomate, cebolla caramelizada, papas a la francesa", price: "185.00" },
-    { name: "Hamburguesa de la granja", quantity: "1 pz 300 grs", accompaniment: "queso chihuahua, lechuga, jitomate, cebolla caramelizada, huevo, papas a la francesa", price: "185.00" },
-    { name: "Hamburguesa mar y tierra", quantity: "1 pz 240 grs", accompaniment: "queso oaxaca, lechuga, jitomate, cebolla caramelizada, papas a la francesa", price: "195.00" },
-    { name: "Hamburguesa la de casa", quantity: "1 pz 150 grs Arrachera", accompaniment: "queso oaxaca, queso chihuahua, lechuga, jitomate, cebolla caramelizada", price: "228.00" },
-    { name: "Hamburguesa de pollo", quantity: "1 pz 180 grs", accompaniment: "queso americano, lechuga, jitomate, cebolla caramelizada, salsa búfalo, papas a la francesa", price: "185.00" },
+    { name: "Hamburguesa clásica", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "175" },
+    { name: "Hamburguesa doble carne", quantity: "1 pza - 300 g", accompaniment: "Doble carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "195" },
+    { name: "Hamburguesa tocinito", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino, tocino crispy y aderezo de la casa.", price: "185" },
+    { name: "Hamburguesa queso + queso", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, oaxaca, americano y gouda tocino y aderezo de la casa.", price: "185" },
+    { name: "Hamburguesa de la granja", quantity: "1 pza - 300 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, americano, tocino, aderezo de la casa y cubierta con huevo estrellado.", price: "185" },
+    { name: "Hamburguesa mar y tierra", quantity: "1 pza - 240 g", accompaniment: "Carne de res 80/20, camarón pacotilla, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y salsa BBQ.", price: "195" },
+    { name: "Hamburguesa de la casa", quantity: "1 pza - 150 g de arrachera", accompaniment: "Carne de arrachera, acompañada de lechuga, jitomate, cebolla crispy, queso chihuahua y aderezo de la casa.", price: "228" },
+    { name: "Hamburguesa de pollo", quantity: "1 pza - 180 g", accompaniment: "Muslo de pollo frito, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, salsa búfalo y salsa sriacha.", price: "185" },
   ];
 
   export const chickenItems = [
