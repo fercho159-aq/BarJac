@@ -103,13 +103,13 @@ export default function Home() {
       refrescos: "Refrescos",
       cerveza: "Cerveza",
       preparados: "Preparados",
-      cocteleria: "Coctelería"
+      cocteleria: "Licores"
     },
     en: {
       refrescos: "Sodas",
       cerveza: "Beer",
       preparados: "Preparados",
-      cocteleria: "Cocktails"
+      cocteleria: "Liqueurs"
     }
   };
 
@@ -121,7 +121,7 @@ export default function Home() {
       mezcal: "Mezcal",
       ron: "Ron",
       whisky: "Whisky",
-      coñac: "Coñac",
+      cognac: "Coñac",
       brandy: "Brandy",
       licor: "Licor",
     },
@@ -129,7 +129,8 @@ export default function Home() {
       ginebra: "Gin",
       vodka: "Vodka",
       tequila: "Tequila",
-      mezcal: "Rum",
+      mezcal: "Mezcal",
+      ron: "Rum",
       whisky: "Whisky",
       cognac: "Cognac",
       brandy: "Brandy",
@@ -159,7 +160,7 @@ export default function Home() {
       case 'mezcal': return 'text-lime-400';
       case 'ron': return 'text-orange-400';
       case 'whisky': return 'text-yellow-600';
-      case 'coñac': return 'text-red-500';
+      case 'cognac': return 'text-red-500';
       case 'brandy': return 'text-rose-500';
       case 'licor': return 'text-pink-500';
       default: return 'text-primary';
@@ -789,7 +790,7 @@ export default function Home() {
                                 ))}
                             </div>
                         </TabsContent>
-                        <TabsContent value="coñac">
+                        <TabsContent value="cognac">
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {currentCognacItems.map((item, index) => (
                                     <Card key={index} className="bg-secondary border-primary/20">
@@ -1005,3 +1006,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
