@@ -559,6 +559,7 @@ export default function Home() {
               <TabsContent value="snacks">
                 <div className="text-center mb-6">
                   <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('snacks'))}>{menuCategories[language as keyof typeof menuCategories].snacks}</h3>
+                   <p className="text-muted-foreground mt-2 max-w-lg mx-auto">{language === 'es' ? 'CON SALSA A ELEGIR (BBQ, BÚFALO, MANGO HABANERO Y MEZCAL, Y TAMARINDO JALAPEÑO)' : 'WITH YOUR CHOICE OF SAUCE (BBQ, BUFFALO, MANGO HABANERO & MEZCAL, AND TAMARIND JALAPEÑO)'}</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentSnackItems.map((item, index) => (

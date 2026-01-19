@@ -125,9 +125,9 @@ export const preparadosItemsEn = [
 ];
   
 export const snackItemsEn = [
-    { name: "Wings", quantity: "300grs", accompaniment: "celery, carrot and blue cheese dressing", price: "165.00" },
-    { name: "Boneless", quantity: "200grs", accompaniment: "celery, carrot and blue cheese dressing", price: "145.00" },
-    { name: "Parmesan fries", quantity: "", accompaniment: "w/truffle", price: "108.00" },
+    { name: "Wings", quantity: "300 g", accompaniment: "Cooked to perfection, served with celery, carrot, and ranch dressing.", price: "165.00" },
+    { name: "Boneless", quantity: "200 g", accompaniment: "Made with chicken breast, served with celery, carrot, and ranch dressing.", price: "145.00" },
+    { name: "Truffle Parmesan Fries", quantity: "", accompaniment: "Golden fries, finished with parmesan cheese and a delicate touch of truffle.", price: "108.00" },
 ];
 
 export const sodaItemsEn = [
@@ -245,4 +245,5 @@ export const licorItemsEn = [
     
 
     
+
 

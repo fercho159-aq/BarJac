@@ -125,9 +125,9 @@ export const preparadosItems = [
 ];
   
 export const snackItems = [
-    { name: "Alitas", quantity: "300grs", accompaniment: "apio, zanahoria y aderezo blue cheese", price: "165.00" },
-    { name: "Boneless", quantity: "200grs", accompaniment: "apio, zanahoria y aderezo blue cheese", price: "145.00" },
-    { name: "Papas a la parmesana", quantity: "", accompaniment: "c/trufa", price: "108.00" },
+    { name: "Alitas", quantity: "300 g", accompaniment: "Preparadas al punto, acompañadas de apio, zanahoria y aderezo ranch.", price: "165.00" },
+    { name: "Boneless", quantity: "200 g", accompaniment: "Elaborados con pechuga de pollo, servidos con apio, zanahoria y aderezo ranch.", price: "145.00" },
+    { name: "Papas a la parmesana con trufa", quantity: "", accompaniment: "Papas doradas, terminadas con queso parmesano y un delicado toque de trufa.", price: "108.00" },
 ];
 
 export const sodaItems = [
@@ -245,4 +245,5 @@ export const licorItems = [
     
 
     
+
 
