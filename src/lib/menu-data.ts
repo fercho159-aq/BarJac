@@ -43,14 +43,14 @@ export const breakfastItems = [
 ];
   
   export const entranceItems = [
-    { name: "Queso fundido", quantity: "180 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "125.00" },
-    { name: "Queso fundido con arrachera", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "165.00" },
-    { name: "Queso fundido con aguja norteña", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "165.00" },
-    { name: "Queso fundido con rib eye", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
-    { name: "Queso fundido con new york", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
-    { name: "Queso fundido con sirloin", quantity: "180 gr + 80 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "185.00" },
-    { name: "Guacamole", quantity: "180 gr", accompaniment: "cebolla cambray, chile toreado, tortillas", price: "145.00" },
-    { name: "Pescadilla", quantity: "3 pz 500 grs", accompaniment: "Deliciosas quesadillas de pescado servidas con aguacate y un toque de limón.", price: "83.00" },
+    { name: "Queso fundido tradicional", quantity: "180 g", accompaniment: "Preparado con queso derretido al punto perfecto, acompañado de cebolla cambray, chile toreado y tortillas recién hechas.", price: "125.00" },
+    { name: "Queso fundido con arrachera", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y arrachera jugosa, servido con cebolla cambray, chile toreado y tortillas.", price: "165.00" },
+    { name: "Queso fundido con aguja norteña", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y aguja norteña, acompañado de cebolla cambray, chile toreado y tortillas.", price: "165.00" },
+    { name: "Queso fundido con rib eye", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y rib eye, servido con cebolla cambray, chile toreado y tortillas.", price: "185.00" },
+    { name: "Queso fundido con new york", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y corte New York, acompañado de cebolla cambray, chile toreado y tortillas.", price: "185.00" },
+    { name: "Queso fundido con sirloin", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y sirloin, servido con cebolla cambray, chile toreado y tortillas.", price: "185.00" },
+    { name: "Guacamole tradicional", quantity: "180 g", accompaniment: "Preparado al momento con aguacate fresco, acompañado de pico de gallo, queso panela y chicharrón fresco.", price: "145.00" },
+    { name: "Pescadillas de pescado", quantity: "3 pz – 500 g", accompaniment: "Deliciosas quesadillas rellenas de pescado, servidas con mix de coles, mayonesa chipotle y aguacate.", price: "83.00" },
   ];
   
   export const cutsItems = [
@@ -92,7 +92,7 @@ export const breakfastItems = [
     { name: "Taco de sirloin", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "68.00" },
     { name: "Taco de pechuga al limón", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
     { name: "Taco de pechuga al chipotle", quantity: "1 pz 60 grs", accompaniment: "papas al orégano, chiles toreados, nopal baby, guacamole", price: "49.00" },
-    { name: "Taco queso carne", quantity: "110 gr", accompaniment: "Costra de queso con carne de sirloin, acompañado de guacamole", price: "48.00" },
+    { name: "Taco queso carne", quantity: "110 gr", accompaniment: "Costra de queso con carne de sirloin, servido con guacamole y tortillas de maíz o harina.", price: "48.00" },
   ];
 
   export const burgerItems = [

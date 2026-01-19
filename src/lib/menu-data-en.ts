@@ -43,14 +43,14 @@ export const breakfastItemsEn = [
 ];
   
   export const entranceItemsEn = [
-    { name: "Melted cheese", quantity: "180 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "125.00" },
-    { name: "Melted cheese with arrachera", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "165.00" },
-    { name: "Melted cheese with northern needle steak", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "165.00" },
-    { name: "Melted cheese with rib eye", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
-    { name: "Melted cheese with new york", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
-    { name: "Melted cheese with sirloin", quantity: "180 gr + 80 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "185.00" },
-    { name: "Guacamole", quantity: "180 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "145.00" },
-    { name: "Pescadilla", quantity: "3 pcs 500grs", accompaniment: "Delicious fish quesadillas served with avocado and a touch of lime.", price: "83.00" },
+    { name: "Traditional melted cheese", quantity: "180 g", accompaniment: "Prepared with perfectly melted cheese, accompanied by cambray onion, toreado chili, and freshly made tortillas.", price: "125.00" },
+    { name: "Melted cheese with arrachera", quantity: "180 g + 80 g", accompaniment: "Made with melted cheese and juicy arrachera, served with cambray onion, toreado chili, and tortillas.", price: "165.00" },
+    { name: "Melted cheese with northern needle steak", quantity: "180 g + 80 g", accompaniment: "Prepared with melted cheese and northern needle steak, accompanied by cambray onion, toreado chili, and tortillas.", price: "165.00" },
+    { name: "Melted cheese with rib eye", quantity: "180 g + 80 g", accompaniment: "Made with melted cheese and rib eye, served with cambray onion, toreado chili, and tortillas.", price: "185.00" },
+    { name: "Melted cheese with new york", quantity: "180 g + 80 g", accompaniment: "Prepared with melted cheese and New York strip, accompanied by cambray onion, toreado chili, and tortillas.", price: "185.00" },
+    { name: "Melted cheese with sirloin", quantity: "180 g + 80 g", accompaniment: "Made with melted cheese and sirloin, served with cambray onion, toreado chili, and tortillas.", price: "185.00" },
+    { name: "Traditional guacamole", quantity: "180 g", accompaniment: "Freshly prepared with avocado, accompanied by pico de gallo, panela cheese, and fresh pork rinds.", price: "145.00" },
+    { name: "Fish pescadillas", quantity: "3 pcs – 500 g", accompaniment: "Delicious fish-filled quesadillas, served with a coleslaw mix, chipotle mayonnaise, and avocado.", price: "83.00" },
   ];
   
   export const cutsItemsEn = [
@@ -92,7 +92,7 @@ export const breakfastItemsEn = [
     { name: "Sirloin tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "68.00" },
     { name: "Lemon chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
     { name: "Chipotle chicken breast tacos", quantity: "1 pc 60grs", accompaniment: "oregano potatoes, toreados chilis, baby nopal, guacamole", price: "49.00" },
-    { name: "Cheese meat Tacos", quantity: "110 gr", accompaniment: "Cheese crust with sirloin meat, served with guacamole", price: "48.00" },
+    { name: "Cheese meat Tacos", quantity: "110 gr", accompaniment: "Cheese crust with sirloin meat, served with guacamole and corn or flour tortillas.", price: "48.00" },
   ];
 
   export const burgerItemsEn = [
@@ -245,3 +245,4 @@ export const licorItemsEn = [
     
 
     
+
