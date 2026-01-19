@@ -227,7 +227,7 @@ export default function Home() {
       },
       { 
         title: "Tríos Bar Jac por $199", 
-        description: "De lunes a viernes, disfruta de una comida completa por $199: Sopa/crema + plato fuerte + bebida.", 
+        description: "De lunes a viernes, disfruta de una comida completa por $199: Sopa o crema del día + Hamburguesa o Tacos de Arrachera o Pescadillas con Cóctel Chico + Bebida sin alcohol.", 
         icon: UtensilsCrossed,
         color: "orange"
       }
@@ -253,7 +253,7 @@ export default function Home() {
       },
       { 
         title: "Bar Jac Trios for $199", 
-        description: "From Monday to Friday, enjoy a full meal for $199: Soup/cream + main course + drink.", 
+        description: "From Monday to Friday, enjoy a full meal for $199: Soup or cream of the day + Burger or Arrachera Tacos or Pescadillas with a Small Cocktail + Non-alcoholic drink.", 
         icon: UtensilsCrossed,
         color: "orange"
       }
