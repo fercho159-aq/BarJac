@@ -54,11 +54,11 @@ export const breakfastItems = [
   ];
   
   export const cutsItems = [
-    { name: "Arrachera", quantity: "200 grs", accompaniment: "papas a la francesa, cebollas cambray, nopal baby, chiles toreados", price: "295.00" },
-    { name: "Aguja norteña", quantity: "250 grs", accompaniment: "papas a la francesa, cebollas cambray, nopal baby, chiles toreados", price: "295.00" },
-    { name: "Rib eye", quantity: "250 grs", accompaniment: "papas a la francesa, cebollas cambray, nopal baby, chiles toreados", price: "345.00" },
-    { name: "New york", quantity: "250 grs", accompaniment: "papas a la francesa, cebollas cambray, nopal baby, chiles toreados", price: "345.00" },
-    { name: "Sirloin", quantity: "250 grs", accompaniment: "papas a la francesa, cebollas cambray, nopal baby, chiles toreados", price: "345.00" },
+    { name: "Arrachera a la parrilla", quantity: "200 g", accompaniment: "Preparada a la parrilla, servida con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "295.00" },
+    { name: "New York a la parrilla", quantity: "250 g", accompaniment: "Corte clásico a la parrilla, acompañado de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "345.00" },
+    { name: "Rib eye a la parrilla", quantity: "250 g", accompaniment: "Corte jugoso preparado a la parrilla, servido con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "345.00" },
+    { name: "Sirloin a la parrilla", quantity: "250 g", accompaniment: "Preparado a la parrilla, servido con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "345.00" },
+    { name: "Aguja norteña a la parrilla", quantity: "250 g", accompaniment: "Cocinada al punto, acompañada de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "295.00" },
   ];
 
   export const saladItems = [

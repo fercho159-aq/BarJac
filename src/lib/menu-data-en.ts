@@ -54,11 +54,11 @@ export const breakfastItemsEn = [
   ];
   
   export const cutsItemsEn = [
-    { name: "Arrachera", quantity: "200grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "295.00" },
-    { name: "Northern needle steak", quantity: "250grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "295.00" },
-    { name: "Rib eye", quantity: "250grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "345.00" },
-    { name: "New york", quantity: "250grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "345.00" },
-    { name: "Sirloin", quantity: "250grs", accompaniment: "french fries, cambray onions, baby nopal, toreados chilis", price: "345.00" },
+    { name: "Grilled Arrachera", quantity: "200 g", accompaniment: "Grilled, served with french fries, cambray onions, baby nopal, and toreados chilis.", price: "295.00" },
+    { name: "Grilled New York", quantity: "250 g", accompaniment: "Classic grilled cut, served with french fries, cambray onions, baby nopal, and toreados chilis.", price: "345.00" },
+    { name: "Grilled Rib Eye", quantity: "250 g", accompaniment: "Juicy cut prepared on the grill, served with french fries, cambray onions, baby nopal, and toreados chilis.", price: "345.00" },
+    { name: "Grilled Sirloin", quantity: "250 g", accompaniment: "Grilled, served with french fries, cambray onions, baby nopal, and toreados chilis.", price: "345.00" },
+    { name: "Grilled Northern Needle Steak", quantity: "250 g", accompaniment: "Cooked to perfection, served with french fries, cambray onions, baby nopal, and toreados chilis.", price: "295.00" },
   ];
 
   export const saladItemsEn = [
@@ -245,4 +245,3 @@ export const licorItemsEn = [
     
 
     
-
