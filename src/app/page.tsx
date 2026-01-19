@@ -257,7 +257,7 @@ export default function Home() {
   const currentEntranceItems = language === 'es' ? entranceItems : entranceItemsEn;
   const currentSnackItems = language === 'es' ? snackItems : snackItemsEn;
   const currentSodaItems = language === 'es' ? sodaItems : sodaItemsEn;
-  const currentBeerItems = language === 'es' ? beerItems : beerItemsEn;
+  
   const currentPreparadosItems = language === 'es' ? preparadosItems : preparadosItemsEn;
 
   const currentCutsItems = language === 'es' ? cutsItems : cutsItemsEn;
@@ -288,6 +288,10 @@ export default function Home() {
   const breakfastOrder = language === 'es' 
     ? ['Huevos', 'Chilaquiles', 'Enchiladas', 'Sopes y Huaraches'] 
     : ['Eggs', 'Chilaquiles', 'Enchiladas', 'Sopes & Huaraches'];
+
+  const currentBeerItems = language === 'es' ? beerItems : beerItemsEn;
+  const bottledBeers = currentBeerItems.filter((beer: any) => beer.type === 'botella');
+  const draftBeers = currentBeerItems.filter((beer: any) => beer.type === 'barril');
 
 
   return (
@@ -596,8 +600,11 @@ export default function Home() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                       {currentSodaItems.map((item, index) => (
                         <Card key={index} className="bg-secondary border-primary/20">
-                          <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                          <CardHeader>
+                            <CardTitle>{item.name}</CardTitle>
+                          </CardHeader>
                           <CardContent>
+                            {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
                             <p className={cn("font-semibold text-lg", getPriceClassName('refrescos'))}>${item.price}</p>
                           </CardContent>
                         </Card>
@@ -610,7 +617,7 @@ export default function Home() {
                       <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cerveza'))}>{bebidasSubCategories[language as keyof typeof bebidasSubCategories].cerveza}</h3>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {currentBeerItems.map((item, index) => (
+                      {bottledBeers.map((item: any, index: number) => (
                         <Card key={index} className="bg-secondary border-primary/20">
                           <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
                           <CardContent>
@@ -619,6 +626,25 @@ export default function Home() {
                           </CardContent>
                         </Card>
                       ))}
+                    </div>
+
+                    <div className="mt-12">
+                      <div className="text-center mb-6">
+                        <h4 className="text-3xl font-bold font-orbitron text-primary">
+                          {language === 'es' ? 'CERVEZA DE BARRIL' : 'DRAFT BEER'}
+                        </h4>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
+                        {draftBeers.map((item: any, index: number) => (
+                          <Card key={index} className="bg-secondary border-primary/20">
+                            <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                            <CardContent>
+                              {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                              <p className={cn("font-semibold text-lg", getPriceClassName('cerveza'))}>${item.price}</p>
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
                     </div>
                   </TabsContent>
 

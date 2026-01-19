@@ -131,29 +131,30 @@ export const snackItems = [
 ];
 
 export const sodaItems = [
-    { name: "Agua embotellada 355 ml", price: "20.00" },
-    { name: "Sidral 355 ml", price: "30.00" },
-    { name: "Coca-Cola 355 ml", price: "30.00" },
-    { name: "Coca-Cola light 355 ml", price: "30.00" },
-    { name: "Fresca 355 ml", price: "30.00" },
-    { name: "Valle frut mango 355 ml", price: "30.00" },
-    { name: "Valle frut guayaba 355 ml", price: "30.00" },
-    { name: "Ciel mineral 600 ml", price: "35.00" },
-    { name: "Topo chico 355 ml", price: "35.00" },
+    { name: "Fresca", quantity: "355 ml", price: "30.00" },
+    { name: "Agua embotellada", quantity: "355 ml", price: "20.00" },
+    { name: "Sidral Mundet", quantity: "355 ml", price: "30.00" },
+    { name: "Coca-Cola", quantity: "355 ml", price: "30.00" },
+    { name: "Coca-Cola Light", quantity: "355 ml", price: "30.00" },
+    { name: "Coca-Cola Sin Azúcar", quantity: "355 ml", price: "30.00" },
+    { name: "Valle Frut Mango", quantity: "355 ml", price: "30.00" },
+    { name: "Valle Frut Guayaba", quantity: "355 ml", price: "30.00" },
+    { name: "Ciel Mineral", quantity: "600 ml", price: "35.00" },
+    { name: "Topo Chico", quantity: "355 ml", price: "35.00" },
 ];
 
 export const beerItems = [
-    { name: "XX ámbar", quantity: "325 ml", price: "55.00" },
-    { name: "XX lager", quantity: "325 ml", price: "55.00" },
-    { name: "Amstel ultra", quantity: "355 ml", price: "55.00" },
-    { name: "Bohemia oscura", quantity: "355 ml", price: "55.00" },
-    { name: "Heineken normal", quantity: "355 ml", price: "55.00" },
-    { name: "Heineken zero", quantity: "355 ml", price: "55.00" },
-    { name: "Corona", quantity: "355 ml", price: "55.00" },
-    { name: "Victoria", quantity: "355 ml", price: "55.00" },
-    { name: "Modelo especial", quantity: "355 ml", price: "55.00" },
-    { name: "Tarro chico de barril", quantity: "300 ml", price: "70.00" },
-    { name: "Tarro grande de barril", quantity: "1000 ml", price: "125.00" },
+    { name: "XX Ámbar", quantity: "325 ml", price: "55.00", type: 'botella' },
+    { name: "XX Lager", quantity: "325 ml", price: "55.00", type: 'botella' },
+    { name: "Amstel Ultra", quantity: "355 ml", price: "55.00", type: 'botella' },
+    { name: "Bohemia Oscura", quantity: "355 ml", price: "55.00", type: 'botella' },
+    { name: "Heineken", quantity: "355 ml", price: "55.00", type: 'botella' },
+    { name: "Heineken Zero", quantity: "355 ml", price: "55.00", type: 'botella' },
+    { name: "Victoria", quantity: "355 ml", price: "55.00", type: 'botella' },
+    { name: "Corona", quantity: "355 ml", price: "55.00", type: 'botella' },
+    { name: "Modelo Especial", quantity: "355 ml", price: "55.00", type: 'botella' },
+    { name: "Tarro chico", quantity: "300 ml", price: "70.00", type: 'barril' },
+    { name: "Tarro grande", quantity: "1L", price: "125.00", type: 'barril' },
 ];
     
 export const ginebraItems = [
@@ -245,5 +246,6 @@ export const licorItems = [
     
 
     
+
 
 
