@@ -177,16 +177,14 @@ export default function Home() {
   
   const testimonials = {
     es: [
-      { name: "Carlos M.", rating: 5, comment: "¡El ambiente es increíble y la comida deliciosa! Los chilaquiles son los mejores que he probado.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d" },
-      { name: "Ana P.", rating: 4, comment: "Muy buen lugar para ir con amigos. La música en vivo le da un toque especial. Las micheladas son un must.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e" },
-      { name: "Javier G.", rating: 5, comment: "Excelente servicio y la coctelería es de primer nivel. Recomiendo el 'Old Fashioned'. Volveré pronto.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f" },
-      { name: "Sofia R.", rating: 5, comment: "Me encantó la terraza. Es el lugar perfecto para una tarde de sábado. ¡Las promos están geniales!", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704g" },
+      { name: "Mariana L.", rating: 5, comment: "Excelente lugar para pasar un buen rato, la comida es deliciosa (recomiendo los tacos de rib eye) y los tragos muy bien preparados. El ambiente es muy agradable, con buena música y el servicio de 10. ¡Volveremos!", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026705d" },
+      { name: "Fernando S.", rating: 5, comment: "Las promociones son lo mejor, sobre todo los jueves de coctelería doble. El ambiente es relajado y perfecto para ir después de la oficina. El personal es súper amable y atento.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026705e" },
+      { name: "Valeria R.", rating: 5, comment: "Un lugar increíble en la Roma. La terraza es perfecta para una tarde con amigos. La comida tiene muy buen sazón y la carta de bebidas es muy amplia. Definitivamente uno de mis nuevos lugares favoritos.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026705f" },
     ],
     en: [
-      { name: "Carlos M.", rating: 5, comment: "The atmosphere is incredible and the food is delicious! The chilaquiles are the best I've ever had.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d" },
-      { name: "Ana P.", rating: 4, comment: "Very good place to go with friends. The live music gives it a special touch. The micheladas are a must.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e" },
-      { name: "Javier G.", rating: 5, comment: "Excellent service and the cocktails are top-notch. I recommend the 'Old Fashioned'. I'll be back soon.", avatar: "https://i.pravatar.cc/150?u=a_042581f4e29026704f" },
-      { name: "Sofia R.", rating: 5, comment: "I loved the terrace. It's the perfect place for a Saturday afternoon. The promos are great!", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704g" },
+      { name: "Mariana L.", rating: 5, comment: "Excellent place to have a good time, the food is delicious (I recommend the rib eye tacos) and the drinks are very well prepared. The atmosphere is very pleasant, with good music and 10/10 service. We will be back!", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026705d" },
+      { name: "Fernando S.", rating: 5, comment: "The promotions are the best, especially the double cocktail Thursdays. The atmosphere is relaxed and perfect to go after the office. The staff is super friendly and attentive.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026705e" },
+      { name: "Valeria R.", rating: 5, comment: "An incredible place in Roma. The terrace is perfect for an afternoon with friends. The food is very well seasoned and the drink menu is very extensive. Definitely one of my new favorite places.", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026705f" },
     ]
   };
 
@@ -967,6 +965,7 @@ export default function Home() {
                 align: "start",
                 loop: true,
               }}
+              plugins={[Autoplay({ delay: 5000 })]}
               className="w-full max-w-4xl mx-auto"
             >
               <CarouselContent>
@@ -991,6 +990,13 @@ export default function Home() {
                 ))}
               </CarouselContent>
             </Carousel>
+            <div className="mt-8 text-center">
+              <Button asChild className="font-bold neon-border hover:bg-primary/90 hover:scale-105 transition-all">
+                <a href="https://www.google.com/maps/place/BarJac/@19.4168227,-99.1708007,17z/data=!4m8!3m7!1s0x85d1ff001e0dc5b9:0xfdcd63bfe41952d9!8m2!3d19.4168177!4d-99.1659298!9m1!1b1!16s%2Fg%2F11yr45lq9_?entry=ttu" target="_blank" rel="noopener noreferrer">
+                  {language === 'es' ? 'Escribe una reseña' : 'Write a review'}
+                </a>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -1002,7 +1008,7 @@ export default function Home() {
              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="relative aspect-video rounded-lg overflow-hidden neon-border">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.628045558913!2d-99.1680506850934!3d19.42850698688649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3a5a47814b%3A0x44f19b81aa528539!2sAv.%20%C3%81lvaro%20Obreg%C3%B3n%20234%2C%20Roma%20Nte.%2C%20Cuauht%C3%A9moc%2C%2006700%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1678886361548!5m2!1ses-419!2smx!4v1678886361548!5m2!1ses-419!2smx"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.900451683412!2d-99.1659298!3d19.4168177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff001e0dc5b9%3A0xfdcd63bfe41952d9!2sBarJac!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
