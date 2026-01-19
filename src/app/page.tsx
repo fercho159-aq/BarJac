@@ -275,6 +275,19 @@ export default function Home() {
   const currentCognacItems = language === 'es' ? cognacItems : cognacItemsEn;
   const currentBrandyItems = language === 'es' ? brandyItems : brandyItemsEn;
   const currentLicorItems = language === 'es' ? licorItems : licorItemsEn;
+  
+  const groupedBreakfastItems = (currentBreakfastItems as any[]).reduce((acc, item) => {
+    const category = item.category;
+    if (!acc[category]) {
+        acc[category] = [];
+    }
+    acc[category].push(item);
+    return acc;
+  }, {} as Record<string, any[]>);
+
+  const breakfastOrder = language === 'es' 
+    ? ['Huevos', 'Chilaquiles', 'Enchiladas', 'Sopes y Huaraches'] 
+    : ['Eggs', 'Chilaquiles', 'Enchiladas', 'Sopes & Huaraches'];
 
 
   return (
@@ -366,32 +379,68 @@ export default function Home() {
               
               <TabsContent value="desayunos">
                 <div className="text-center mb-6">
-                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('desayunos'))}>{menuCategories[language as keyof typeof menuCategories].desayunos}</h3>
-                  <p className="text-muted-foreground">{language === 'es' ? 'En paquete te incluimos café, fruta o jugo.' : 'In a package we include coffee, fruit or juice.'}</p>
+                    <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('desayunos'))}>{menuCategories[language as keyof typeof menuCategories].desayunos}</h3>
+                    <p className="text-muted-foreground">{language === 'es' ? 'En paquete te incluimos café, fruta o jugo.' : 'In a package we include coffee, fruit or juice.'}</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {currentBreakfastItems.map((item, index) => (
-                    <Card key={index} className="bg-secondary border-primary/20">
-                      <CardHeader>
-                        <CardTitle>{item.name}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-sm text-muted-foreground">{item.quantity}</p>
-                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
-                        <div className="flex justify-between items-center mt-4">
-                          <div>
-                            <p className="font-semibold">{language === 'es' ? 'Normal:' : 'Normal:'}</p>
-                            <p className={cn("font-bold text-lg", getPriceClassName('desayunos'))}>${item.priceNormal}</p>
-                          </div>
-                          <div>
-                            <p className="font-semibold">{language === 'es' ? 'Paquete:' : 'Package:'}</p>
-                            <p className={cn("font-bold text-lg", getPriceClassName('desayunos'))}>${item.pricePackage}</p>
-                          </div>
+
+                {breakfastOrder.map(categoryKey => {
+                    if (!groupedBreakfastItems[categoryKey]) return null;
+
+                    const getCategoryTitle = () => {
+                        if (language === 'es') {
+                            if (categoryKey === 'Huevos') return 'Huevos al gusto';
+                            if (categoryKey === 'Chilaquiles') return 'Chilaquiles (verdes, rojos o combinados)';
+                            if (categoryKey === 'Enchiladas') return 'Enchiladas (verdes, rojas o combinadas)';
+                            return categoryKey;
+                        } else {
+                            if (categoryKey === 'Eggs') return 'Eggs Your Way';
+                            return categoryKey;
+                        }
+                    };
+
+                    const getCategoryDescription = () => {
+                        if (language === 'es') {
+                            if (categoryKey === 'Chilaquiles') return 'Crujientes totopos de maíz bañados en salsa roja, verde o una combinación de ambas, acompañados de proteína de elección. Se sirven con cebolla fresca, cilantro, un delicado toque de crema, queso panela y la proteína que prefieras.';
+                            if (categoryKey === 'Enchiladas') return 'Delicadas enchiladas preparadas con proteína de tu elección, bañadas en salsa roja, verde o ambas. Se acompañan con cebolla finamente fileteada, cilantro fresco, un toque de crema, queso panela y la proteína que prefieras.';
+                        } else {
+                            if (categoryKey === 'Chilaquiles') return 'Crispy corn tortilla chips bathed in red, green, or a combination of both sauces, accompanied by your choice of protein. Served with fresh onion, cilantro, a delicate touch of cream, panela cheese, and your preferred protein.';
+                            if (categoryKey === 'Enchiladas') return 'Delicate enchiladas prepared with your choice of protein, bathed in red, green, or both sauces. They are accompanied by finely sliced onion, fresh cilantro, a touch of cream, panela cheese, and your preferred protein.';
+                        }
+                        return null;
+                    };
+
+                    return (
+                        <div key={categoryKey} className="mb-12">
+                            <div className="text-center mb-6">
+                                <h4 className="text-3xl font-bold font-orbitron text-primary">{getCategoryTitle()}</h4>
+                                {getCategoryDescription() && <p className="text-muted-foreground max-w-3xl mx-auto">{getCategoryDescription()}</p>}
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {groupedBreakfastItems[categoryKey].map((item: any, index: number) => (
+                                    <Card key={index} className="bg-secondary border-primary/20">
+                                        <CardHeader>
+                                            <CardTitle>{item.name}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                                            {item.accompaniment && <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>}
+                                            <div className="flex justify-between items-center mt-4">
+                                                <div>
+                                                    <p className="font-semibold">{language === 'es' ? 'Normal:' : 'Normal:'}</p>
+                                                    <p className={cn("font-bold text-lg", getPriceClassName('desayunos'))}>${item.priceNormal}</p>
+                                                </div>
+                                                <div>
+                                                    <p className="font-semibold">{language === 'es' ? 'Paquete:' : 'Package:'}</p>
+                                                    <p className={cn("font-bold text-lg", getPriceClassName('desayunos'))}>${item.pricePackage}</p>
+                                                </div>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                ))}
+                            </div>
                         </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                    )
+                })}
               </TabsContent>
               <TabsContent value="entradas">
                  <div className="text-center mb-6">

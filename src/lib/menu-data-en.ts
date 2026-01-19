@@ -1,57 +1,46 @@
 
 
 export const breakfastItemsEn = [
-    { name: "Green chilaquiles", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "90.00", pricePackage: "120.00" },
-    { name: "Green chilaquiles with egg", quantity: "100grs + 120grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "110.00", pricePackage: "140.00" },
-    { name: "Green chilaquiles with chicken", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "120.00", pricePackage: "150.00" },
-    { name: "Green chilaquiles with northern needle steak", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "150.00", pricePackage: "180.00" },
-    { name: "Green chilaquiles with marinated arrachera", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "160.00", pricePackage: "190.00" },
-    { name: "Green chilaquiles with rib eye", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "160.00", pricePackage: "190.00" },
-    { name: "Green chilaquiles with new york", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "160.00", pricePackage: "190.00" },
-    { name: "Green chilaquiles with sirloin", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "160.00", pricePackage: "190.00" },
-    { name: "Red chilaquiles", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "90.00", pricePackage: "120.00" },
-    { name: "Red chilaquiles with egg", quantity: "100grs + 120grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "110.00", pricePackage: "140.00" },
-    { name: "Red chilaquiles with chicken", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "120.00", pricePackage: "150.00" },
-    { name: "Red chilaquiles with northern needle steak", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "150.00", pricePackage: "180.00" },
-    { name: "Red chilaquiles with marinated arrachera", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "160.00", pricePackage: "190.00" },
-    { name: "Red chilaquiles with rib eye", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "160.00", pricePackage: "190.00" },
-    { name: "Red chilaquiles with new york", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "160.00", pricePackage: "190.00" },
-    { name: "Red chilaquiles with sirloin", quantity: "100grs + 100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "160.00", pricePackage: "190.00" },
-    { name: "Green enchiladas with chicken", quantity: "160grs", accompaniment: "onion, cilantro, cream, panela cheese, cheese", priceNormal: "116.00", pricePackage: "146.00" },
-    { name: "Green enchiladas with egg", quantity: "120grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "126.00", pricePackage: "156.00" },
-    { name: "Green enchiladas with northern needle steak", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "152.00", pricePackage: "182.00" },
-    { name: "Green enchiladas with marinated arrachera", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "163.00", pricePackage: "193.00" },
-    { name: "Green enchiladas with rib eye", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "163.00", pricePackage: "193.00" },
-    { name: "Green enchiladas with new york", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "163.00", pricePackage: "193.00" },
-    { name: "Green enchiladas with sirloin", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "163.00", pricePackage: "193.00" },
-    { name: "Red enchiladas with chicken", quantity: "160grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "116.00", pricePackage: "146.00" },
-    { name: "Red enchiladas with egg", quantity: "120grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "126.00", pricePackage: "156.00" },
-    { name: "Red enchiladas with northern needle steak", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "152.00", pricePackage: "182.00" },
-    { name: "Red enchiladas with marinated arrachera", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "163.00", pricePackage: "193.00" },
-    { name: "Red enchiladas with rib eye", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "163.00", pricePackage: "193.00" },
-    { name: "Red enchiladas with new york", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "163.00", pricePackage: "193.00" },
-    { name: "Red enchiladas with sirloin", quantity: "100grs", accompaniment: "onion, cilantro, cream, panela cheese", priceNormal: "163.00", pricePackage: "193.00" },
-    { name: "Swiss enchiladas with chicken", quantity: "160grs", accompaniment: "onion, cilantro, cream, panela cheese, cheese", priceNormal: "135.00", pricePackage: "165.00" },
-    { name: "Veracruzanas enchiladas", quantity: "180grs", accompaniment: "chorizo, cilantro, cream, panela cheese, avocado", priceNormal: "115.00", pricePackage: "145.00" },
-    { name: "Divorced eggs", quantity: "120grs", accompaniment: "beans, cream, panela cheese, cilantro", priceNormal: "89.00", pricePackage: "119.00" },
-    { name: "Mexican style eggs", quantity: "120grs", accompaniment: "beans, salad, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
-    { name: "Rancheros eggs", quantity: "120grs", accompaniment: "ham, beans, tortillas", priceNormal: "89.00", pricePackage: "119.00" },
-    { name: "Scrambled eggs", quantity: "120grs", accompaniment: "beans, salad, tortillas. with ham 70grs, bacon 90grs, or chorizo 90grs", priceNormal: "89.00", pricePackage: "119.00" },
-    { name: "Sopes with Arrachera (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00" },
-    { name: "Sopes with Sirlon (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00" },
-    { name: "Sopes with Rib Eye (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00" },
-    { name: "Sopes with New York (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00" },
-    { name: "Sopes with Northern Needle Steak (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "139.00", pricePackage: "169.00" },
-    { name: "Sopes with Egg (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "119.00", pricePackage: "149.00" },
-    { name: "Sopes with Chicken (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "119.00", pricePackage: "149.00" },
-    { name: "Huarache with Arrachera", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00" },
-    { name: "Huarache with Sirlon", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00" },
-    { name: "Huarache with Rib Eye", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00" },
-    { name: "Huarache with New York", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00" },
-    { name: "Huarache with Northern Needle Steak", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "169.00", pricePackage: "199.00" },
-    { name: "Huarache with Egg", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "159.00", pricePackage: "189.00" },
-    { name: "Huarache with Chicken", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "159.00", pricePackage: "189.00" },
-  ];
+    // Eggs
+    { name: "Eggs Your Way", quantity: "120g", accompaniment: "Chorizo, ham, bacon, Mexican style, rancheros, and divorced. Served with refried beans and house salad.", priceNormal: "89.00", pricePackage: "119.00", category: "Eggs" },
+
+    // Chilaquiles
+    { name: "Simple Chilaquiles", quantity: "100 g", accompaniment: "", priceNormal: "90.00", pricePackage: "120.00", category: "Chilaquiles" },
+    { name: "Chilaquiles with Egg", quantity: "120 g", accompaniment: "", priceNormal: "110.00", pricePackage: "140.00", category: "Chilaquiles" },
+    { name: "Chilaquiles with Chicken", quantity: "100 g", accompaniment: "", priceNormal: "120.00", pricePackage: "150.00", category: "Chilaquiles" },
+    { name: "Chilaquiles with Northern Needle Steak", quantity: "100 g", accompaniment: "", priceNormal: "150.00", pricePackage: "180.00", category: "Chilaquiles" },
+    { name: "Chilaquiles with Marinated Arrachera", quantity: "100 g", accompaniment: "", priceNormal: "160.00", pricePackage: "190.00", category: "Chilaquiles" },
+    { name: "Chilaquiles with Rib Eye", quantity: "100 g", accompaniment: "", priceNormal: "160.00", pricePackage: "190.00", category: "Chilaquiles" },
+    { name: "Chilaquiles with Sirloin", quantity: "100 g", accompaniment: "", priceNormal: "160.00", pricePackage: "190.00", category: "Chilaquiles" },
+    { name: "Chilaquiles with New York", quantity: "100 g", accompaniment: "", priceNormal: "160.00", pricePackage: "190.00", category: "Chilaquiles" },
+    
+    // Enchiladas
+    { name: "Enchiladas with Egg", quantity: "120 g", accompaniment: "", priceNormal: "126.00", pricePackage: "156.00", category: "Enchiladas" },
+    { name: "Enchiladas with Chicken", quantity: "100 g", accompaniment: "", priceNormal: "116.00", pricePackage: "146.00", category: "Enchiladas" },
+    { name: "Enchiladas with Northern Needle Steak", quantity: "100 g", accompaniment: "", priceNormal: "152.00", pricePackage: "182.00", category: "Enchiladas" },
+    { name: "Enchiladas with Marinated Arrachera", quantity: "100 g", accompaniment: "", priceNormal: "163.00", pricePackage: "193.00", category: "Enchiladas" },
+    { name: "Enchiladas with Rib Eye", quantity: "100 g", accompaniment: "", priceNormal: "163.00", pricePackage: "193.00", category: "Enchiladas" },
+    { name: "Enchiladas with New York", quantity: "100 g", accompaniment: "", priceNormal: "163.00", pricePackage: "193.00", category: "Enchiladas" },
+    { name: "Enchiladas with Sirloin", quantity: "100 g", accompaniment: "", priceNormal: "163.00", pricePackage: "193.00", category: "Enchiladas" },
+    { name: "Swiss Enchiladas", quantity: "160 g", accompaniment: "", priceNormal: "135.00", pricePackage: "165.00", category: "Enchiladas" },
+    { name: "Veracruzanas Enchiladas", quantity: "180 g", accompaniment: "", priceNormal: "115.00", pricePackage: "145.00", category: "Enchiladas" },
+
+    // Sopes & Huaraches
+    { name: "Sopes with Arrachera (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00", category: "Sopes & Huaraches" },
+    { name: "Sopes with Sirlon (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00", category: "Sopes & Huaraches" },
+    { name: "Sopes with Rib Eye (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00", category: "Sopes & Huaraches" },
+    { name: "Sopes with New York (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "149.00", pricePackage: "179.00", category: "Sopes & Huaraches" },
+    { name: "Sopes with Northern Needle Steak (2 pcs)", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "139.00", pricePackage: "169.00", category: "Sopes & Huaraches" },
+    { name: "Sopes with Egg (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "119.00", pricePackage: "149.00", category: "Sopes & Huaraches" },
+    { name: "Sopes with Chicken (2 pcs)", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "119.00", pricePackage: "149.00", category: "Sopes & Huaraches" },
+    { name: "Huarache with Arrachera", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00", category: "Sopes & Huaraches" },
+    { name: "Huarache with Sirlon", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00", category: "Sopes & Huaraches" },
+    { name: "Huarache with Rib Eye", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00", category: "Sopes & Huaraches" },
+    { name: "Huarache with New York", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "179.00", pricePackage: "209.00", category: "Sopes & Huaraches" },
+    { name: "Huarache with Northern Needle Steak", quantity: "80 gr", accompaniment: "Beans, cheese and cream", priceNormal: "169.00", pricePackage: "199.00", category: "Sopes & Huaraches" },
+    { name: "Huarache with Egg", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "159.00", pricePackage: "189.00", category: "Sopes & Huaraches" },
+    { name: "Huarache with Chicken", quantity: "120 gr", accompaniment: "Beans, cheese and cream", priceNormal: "159.00", pricePackage: "189.00", category: "Sopes & Huaraches" },
+];
   
   export const entranceItemsEn = [
     { name: "Melted cheese", quantity: "180 gr", accompaniment: "cambray onion, toreado chili, tortillas", price: "125.00" },
@@ -256,4 +245,3 @@ export const licorItemsEn = [
     
 
     
-
