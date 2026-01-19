@@ -67,21 +67,21 @@ export const breakfastItems = [
   ];
 
   export const seafoodItems = [
-      { name: "Camarones momia", quantity: "150 grs", accompaniment: "ensalada de la casa", price: "225.00" },
-      { name: "Atún a la parrilla", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "213.00" },
-      { name: "Salmón a la parrilla", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "245.00" },
-      { name: "Cóctel de camarón chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
-      { name: "Cóctel de camarón grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
-      { name: "Cóctel campechano chico", quantity: "80 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "95.00" },
-      { name: "Cóctel campechano grande", quantity: "140 grs", accompaniment: "cebolla, jitomate, cilantro, aguacate", price: "145.00" },
-      { name: "Tostada de atún", quantity: "1 pz 80 grs", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
-      { name: "Tostada de pescado", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "95.00" },
-      { name: "Tostada de pulpo", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
-      { name: "Tostada de camarón", quantity: "1 pz 60 grs", accompaniment: "cebolla, jitomate, aguacate", price: "125.00" },
-      { name: "Aguachile rojo", price: "235.00", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma" },
-      { name: "Aguachile verde estilo Sinaloa", price: "235.00", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma" },
-      { name: "Aguachile negro", price: "235.00", quantity: "120 gr", accompaniment: "galletas saladas, tostadas salma" },
-      { name: "Vuelve a la vida", price: "185.00", quantity: "190 gr", accompaniment: "galletas saladas, tostadas salma" },
+      { name: "Camarones momia", quantity: "150 g", accompaniment: "Rellenos de chile jalapeño y queso gouda, envueltos en tocino, y acompañados de arroz y ensalada de la casa.", price: "225.00" },
+      { name: "Atún a la parrilla", quantity: "200 g", accompaniment: "Atún nacional en costra de mix de chiles y semillas, acompañado de arroz amarillo y ensalada de la casa.", price: "213.00" },
+      { name: "Salmón a la parrilla", quantity: "200 g", accompaniment: "Salmón bañado en una salsa cremosa de limón, acompañado de arroz y ensalada de la casa.", price: "245.00" },
+      { name: "Cóctel de camarón chico", quantity: "80 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "95.00" },
+      { name: "Cóctel de camarón grande", quantity: "140 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "145.00" },
+      { name: "Cóctel campechano chico", quantity: "80 g", accompaniment: "Camarón pacotilla y pulpo, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "95.00" },
+      { name: "Cóctel campechano grande", quantity: "140 g", accompaniment: "Camarón pacotilla y pulpo, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "145.00" },
+      { name: "Tostada de atún", quantity: "1 pza - 80 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, atún laminado marinado en salsa negra y limón, terminado con aguacate y poro frito.", price: "95.00" },
+      { name: "Tostada de pescado", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de pescado (cebolla, pepino, cilantro, jitomate y salsa mango habanero).", price: "95.00" },
+      { name: "Tostada de pulpo", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de pulpo (cebolla, pepino, cilantro, jitomate, tomate y salsa negra).", price: "125.00" },
+      { name: "Tostada de camarón", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de camarón (cebolla, pepino, cilantro, jitomate y salsas rojas).", price: "125.00" },
+      { name: "Aguachile rojo", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa roja a base de camarón, acompañado de pepino, cebolla morada y chile serrano.", price: "235.00" },
+      { name: "Aguachile verde estilo Sinaloa", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa verde a base de pepino, acompañado de pepino, cebolla morada y chile serrano, tradicional sinaloense.", price: "235.00" },
+      { name: "Aguachile negro", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa negra tatemada, acompañado de pepino, cebolla morada y chile serrano.", price: "235.00" },
+      { name: "Vuelve a la vida", quantity: "190 g", accompaniment: "Camarón pacotilla, pulpo y ostiones, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "185.00" },
   ];
 
   export const tacoItems = [
@@ -245,3 +245,4 @@ export const licorItems = [
     
 
     
+

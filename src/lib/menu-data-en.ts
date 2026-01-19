@@ -67,21 +67,21 @@ export const breakfastItemsEn = [
   ];
 
   export const seafoodItemsEn = [
-      { name: "Mummy shrimps", quantity: "150grs", accompaniment: "house salad", price: "225.00" },
-      { name: "Grilled tuna", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "213.00" },
-      { name: "Grilled salmon", quantity: "200grs", accompaniment: "house salad, yellow rice", price: "245.00" },
-      { name: "Shrimp cocktail small", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
-      { name: "Shrimp cocktail large", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
-      { name: "Campechano cocktail small", quantity: "80grs", accompaniment: "onion, tomato, cilantro, avocado", price: "95.00" },
-      { name: "Campechano cocktail large", quantity: "140grs", accompaniment: "onion, tomato, cilantro, avocado", price: "145.00" },
-      { name: "Tuna tostada", quantity: "1 pc 80grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
-      { name: "Fish tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "95.00" },
-      { name: "Octopus tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
-      { name: "Shrimp tostada", quantity: "1 pc 60grs", accompaniment: "onion, tomato, avocado", price: "125.00" },
-      { name: "Red aguachile 120 gr", price: "235.00", accompaniment: "crackers, salma toasts" },
-      { name: "Sinaloa style green aguachile 120 gr", price: "235.00", accompaniment: "crackers, salma toasts" },
-      { name: "Black aguachile 120 gr", price: "235.00", accompaniment: "crackers, salma toasts" },
-      { name: "Vuelve a la vida (Seafood Cocktail) 190 gr", price: "185.00", accompaniment: "crackers, salma toasts" },
+      { name: "Mummy Shrimps", quantity: "150 g", accompaniment: "Stuffed with jalapeño and gouda cheese, wrapped in bacon, and served with rice and house salad.", price: "225.00" },
+      { name: "Grilled Tuna", quantity: "200 g", accompaniment: "National tuna crusted with a mix of chiles and seeds, served with yellow rice and house salad.", price: "213.00" },
+      { name: "Grilled Salmon", quantity: "200 g", accompaniment: "Salmon bathed in a creamy lemon sauce, served with rice and house salad.", price: "245.00" },
+      { name: "Small Shrimp Cocktail", quantity: "80 g", accompaniment: "Small shrimp, with Acapulco sauce, tomato, cilantro, onion, avocado, and a touch of olive oil.", price: "95.00" },
+      { name: "Large Shrimp Cocktail", quantity: "140 g", accompaniment: "Small shrimp, with Acapulco sauce, tomato, cilantro, onion, avocado, and a touch of olive oil.", price: "145.00" },
+      { name: "Small Campechano Cocktail", quantity: "80 g", accompaniment: "Small shrimp and octopus, with Acapulco sauce, tomato, cilantro, onion, avocado, and a touch of olive oil.", price: "95.00" },
+      { name: "Large Campechano Cocktail", quantity: "140 g", accompaniment: "Small shrimp and octopus, with Acapulco sauce, tomato, cilantro, onion, avocado, and a touch of olive oil.", price: "145.00" },
+      { name: "Tuna Tostada", quantity: "1 pc - 80 g", accompaniment: "Corn tostada, with a bed of chipotle sauce, laminated tuna marinated in black sauce and lime, finished with avocado and fried leek.", price: "95.00" },
+      { name: "Fish Tostada", quantity: "1 pc - 60 g", accompaniment: "Corn tostada, with a bed of chipotle sauce, fish ceviche (onion, cucumber, cilantro, tomato and mango habanero sauce).", price: "95.00" },
+      { name: "Octopus Tostada", quantity: "1 pc - 60 g", accompaniment: "Corn tostada, with a bed of chipotle sauce, octopus ceviche (onion, cucumber, cilantro, tomato, and black sauce).", price: "125.00" },
+      { name: "Shrimp Tostada", quantity: "1 pc - 60 g", accompaniment: "Corn tostada, with a bed of chipotle sauce, shrimp ceviche (onion, cucumber, cilantro, tomato and red sauces).", price: "125.00" },
+      { name: "Red Aguachile", quantity: "120 g", accompaniment: "Shrimp marinated in lime and salt, red shrimp-based sauce, served with cucumber, red onion and serrano chili.", price: "235.00" },
+      { name: "Sinaloa Style Green Aguachile", quantity: "120 g", accompaniment: "Shrimp marinated in lime and salt, green cucumber-based sauce, served with cucumber, red onion and serrano chili, traditional Sinaloa style.", price: "235.00" },
+      { name: "Black Aguachile", quantity: "120 g", accompaniment: "Shrimp marinated in lime and salt, roasted black sauce, served with cucumber, red onion and serrano chili.", price: "235.00" },
+      { name: "Vuelve a la vida (Seafood Cocktail)", quantity: "190 g", accompaniment: "Small shrimp, octopus and oysters, with Acapulco sauce, tomato, cilantro, onion, avocado, and a touch of olive oil.", price: "185.00" },
   ];
 
   export const tacoItemsEn = [
@@ -245,3 +245,4 @@ export const licorItemsEn = [
     
 
     
+
