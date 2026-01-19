@@ -13,13 +13,13 @@ import { useState } from "react";
 import { 
     breakfastItems, entranceItems,
     cutsItems, saladItems, seafoodItems, tacoItems, burgerItems,
-    snackItems, sodaItems, beerItems, preparadosItems,
+    snackItems, sodaItems, beerItems, preparadosItems, cocteleriaItems,
     ginebraItems, vodkaItems, tequilaItems, mezcalItems, ronItems, whiskyItems, cognacItems, brandyItems, licorItems 
 } from "@/lib/menu-data";
 import { 
     breakfastItemsEn, entranceItemsEn,
     cutsItemsEn, saladItemsEn, seafoodItemsEn, tacoItemsEn, burgerItemsEn,
-    snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn,
+    snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn, cocteleriaItemsEn,
     ginebraItemsEn, vodkaItemsEn, tequilaItemsEn, mezcalItemsEn, ronItemsEn, whiskyItemsEn, cognacItemsEn, brandyItemsEn, licorItemsEn
 } from "@/lib/menu-data-en";
 
@@ -59,9 +59,10 @@ export default function Home() {
     refrescos: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
     cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
     preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:bg-[hsl(var(--neon-violet))]/10 data-[state=active]:border-[hsl(var(--neon-violet))]",
-    cocteleria: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
+    cocteleria: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
+    licores: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
     
-    // Cocteleria tabs
+    // Cocteleria tabs (now licores)
     ginebra: "text-blue-400 shadow-[0_0_10px_#60a5fa] border-blue-400 data-[state=active]:bg-blue-400/10 data-[state=active]:border-blue-400",
     vodka: "text-purple-400 shadow-[0_0_10px_#c084fc] border-purple-400 data-[state=active]:bg-purple-400/10 data-[state=active]:border-purple-400",
     tequila: "text-amber-400 shadow-[0_0_10px_#fbbf24] border-amber-400 data-[state=active]:bg-amber-400/10 data-[state=active]:border-amber-400",
@@ -103,13 +104,15 @@ export default function Home() {
       refrescos: "Refrescos",
       cerveza: "Cerveza",
       preparados: "Preparados",
-      cocteleria: "Licores"
+      cocteleria: "Coctelería",
+      licores: "Licores"
     },
     en: {
       refrescos: "Sodas",
       cerveza: "Beer",
       preparados: "Preparados",
-      cocteleria: "Liqueurs"
+      cocteleria: "Cocktails",
+      licores: "Liqueurs"
     }
   };
 
@@ -153,7 +156,8 @@ export default function Home() {
       case 'refrescos': return 'text-[hsl(var(--neon-magenta))]';
       case 'cerveza': return 'text-[hsl(var(--neon-red))]';
       case 'preparados': return 'text-[hsl(var(--neon-violet))]';
-      case 'cocteleria': return 'text-[hsl(var(--neon-blue))]';
+      case 'cocteleria': return 'text-[hsl(var(--neon-green))]';
+      case 'licores': return 'text-[hsl(var(--neon-blue))]';
       case 'ginebra': return 'text-blue-400';
       case 'vodka': return 'text-purple-400';
       case 'tequila': return 'text-amber-400';
@@ -260,6 +264,7 @@ export default function Home() {
   const currentSodaItems = language === 'es' ? sodaItems : sodaItemsEn;
   
   const currentPreparadosItems = language === 'es' ? preparadosItems : preparadosItemsEn;
+  const currentCocteleriaItems = language === 'es' ? cocteleriaItems : cocteleriaItemsEn;
 
   const currentCutsItems = language === 'es' ? cutsItems : cutsItemsEn;
   const currentSaladItems = language === 'es' ? saladItems : saladItemsEn;
@@ -582,7 +587,7 @@ export default function Home() {
 
               <TabsContent value="bebidas">
                  <Tabs defaultValue="refrescos" className="w-full">
-                   <TabsList className="grid w-full grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
+                   <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
                     {Object.keys(bebidasSubCategories[language as keyof typeof bebidasSubCategories]).map((tab) => (
                       <TabsTrigger
                         key={tab}
@@ -671,9 +676,27 @@ export default function Home() {
                     </div>
                   </TabsContent>
 
-                  <TabsContent value="cocteleria">
+                   <TabsContent value="cocteleria">
                     <div className="text-center mb-6">
-                        <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cocteleria'))}>{language === 'es' ? 'Bebidas por Botella y Copeo' : 'Drinks by Bottle and Glass'}</h3>
+                      <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cocteleria'))}>{bebidasSubCategories[language as keyof typeof bebidasSubCategories].cocteleria}</h3>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {currentCocteleriaItems.map((item, index) => (
+                        <Card key={index} className="bg-secondary border-primary/20">
+                          <CardHeader>
+                            <CardTitle>{item.name}</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <p className={cn("font-semibold text-lg", getPriceClassName('cocteleria'))}>${item.price}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+
+                  <TabsContent value="licores">
+                    <div className="text-center mb-6">
+                        <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('licores'))}>{language === 'es' ? 'Bebidas por Botella y Copeo' : 'Drinks by Bottle and Glass'}</h3>
                         <div className="mt-4 mb-8 max-w-md mx-auto p-4 rounded-lg border-2 border-[hsl(var(--neon-cyan))] bg-secondary shadow-[0_0_15px_hsl(var(--neon-cyan))]">
                             <div className="flex items-center justify-center gap-3">
                             <PartyPopper className="h-8 w-8 text-[hsl(var(--neon-cyan))]" />

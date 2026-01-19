@@ -156,6 +156,24 @@ export const beerItemsEn = [
     { name: "Large draft beer mug", quantity: "1L", price: "125.00", type: "draft" },
 ];
 
+export const cocteleriaItemsEn = [
+    { name: "Aperol Spritz", price: "175" },
+    { name: "Carajillo", price: "125" },
+    { name: "Mojito", price: "90" },
+    { name: "Negroni", price: "90" },
+    { name: "Old Fashioned", price: "220" },
+    { name: "Long Island Iced Tea", price: "125" },
+    { name: "Pina Colada", price: "135" },
+    { name: "Paloma", price: "155" },
+    { name: "Espresso Martini", price: "90" },
+    { name: "Classic Margarita", price: "90" },
+    { name: "Orgasm", price: "65" },
+    { name: "Whiskey Sour", price: "220" },
+    { name: "Back Room", price: "125" },
+    { name: "Cosmopolitan", price: "110" },
+    { name: "Classic Daiquiri", price: "65" },
+  ];
+
 export const ginebraItemsEn = [
     { name: "Tanqueray", category: "Gin", priceGlass: "120.00", priceBottle: "1,100.00" },
     { name: "Hendrick's", category: "Gin", priceGlass: "150.00", priceBottle: "1,900.00" },
@@ -245,6 +263,7 @@ export const licorItemsEn = [
     
 
     
+
 
 
 
