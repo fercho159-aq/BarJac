@@ -540,6 +540,7 @@ export default function Home() {
               <TabsContent value="hamburguesas">
                 <div className="text-center mb-6">
                   <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('hamburguesas'))}>{menuCategories[language as keyof typeof menuCategories].hamburguesas}</h3>
+                   <p className="text-muted-foreground mt-2">{language === 'es' ? 'TODAS LAS HAMBURGUESAS LLEVAN CATSUP Y CHILES CURADOS.' : 'ALL BURGERS COME WITH KETCHUP AND PICKLED CHILIES.'}</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {currentBurgerItems.map((item, index) => (
