@@ -60,9 +60,9 @@ export default function Home() {
     cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
     preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:bg-[hsl(var(--neon-violet))]/10 data-[state=active]:border-[hsl(var(--neon-violet))]",
     cocteleria: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
-    licores: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
+    destilados: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
     
-    // Cocteleria tabs (now licores)
+    // Cocteleria tabs (now destilados)
     ginebra: "text-blue-400 shadow-[0_0_10px_#60a5fa] border-blue-400 data-[state=active]:bg-blue-400/10 data-[state=active]:border-blue-400",
     vodka: "text-purple-400 shadow-[0_0_10px_#c084fc] border-purple-400 data-[state=active]:bg-purple-400/10 data-[state=active]:border-purple-400",
     tequila: "text-amber-400 shadow-[0_0_10px_#fbbf24] border-amber-400 data-[state=active]:bg-amber-400/10 data-[state=active]:border-amber-400",
@@ -106,14 +106,14 @@ export default function Home() {
       cerveza: "Cerveza",
       preparados: "Preparados",
       cocteleria: "Coctelería",
-      licores: "Licores"
+      destilados: "Destilados"
     },
     en: {
       refrescos: "Sodas",
       cerveza: "Beer",
       preparados: "Preparados",
       cocteleria: "Cocktails",
-      licores: "Liqueurs"
+      destilados: "Spirits"
     }
   };
 
@@ -160,7 +160,7 @@ export default function Home() {
       case 'cerveza': return 'text-[hsl(var(--neon-red))]';
       case 'preparados': return 'text-[hsl(var(--neon-violet))]';
       case 'cocteleria': return 'text-[hsl(var(--neon-green))]';
-      case 'licores': return 'text-[hsl(var(--neon-blue))]';
+      case 'destilados': return 'text-[hsl(var(--neon-blue))]';
       case 'ginebra': return 'text-blue-400';
       case 'vodka': return 'text-purple-400';
       case 'tequila': return 'text-amber-400';
@@ -701,9 +701,9 @@ export default function Home() {
                     </div>
                   </TabsContent>
 
-                  <TabsContent value="licores">
+                  <TabsContent value="destilados">
                     <div className="text-center mb-6">
-                        <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('licores'))}>{language === 'es' ? 'Bebidas por Botella y Copeo' : 'Drinks by Bottle and Glass'}</h3>
+                        <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('destilados'))}>{language === 'es' ? 'Bebidas por Botella y Copeo' : 'Drinks by Bottle and Glass'}</h3>
                         <div className="mt-4 mb-8 max-w-md mx-auto p-4 rounded-lg border-2 border-[hsl(var(--neon-cyan))] bg-secondary shadow-[0_0_15px_hsl(var(--neon-cyan))]">
                             <div className="flex items-center justify-center gap-3">
                             <PartyPopper className="h-8 w-8 text-[hsl(var(--neon-cyan))]" />
@@ -1059,5 +1059,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
