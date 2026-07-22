@@ -10,16 +10,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import { 
+import {
     breakfastItems, entranceItems,
-    cutsItems, saladItems, seafoodItems, tacoItems, burgerItems,
-    snackItems, sodaItems, beerItems, preparadosItems, cocteleriaItems,
+    cutsItems, saladItems, seafoodItems, tacoItems, costrasItems, burgerItems,
+    compartirItems, soupItems, dessertItems,
+    snackItems, sodaItems, cafeItems, beerItems, preparadosItems, cocteleriaItems,
     ginebraItems, vodkaItems, tequilaItems, mezcalItems, ronItems, whiskyItems, cognacItems, brandyItems, licorItems, bourbonItems
 } from "@/lib/menu-data";
-import { 
+import {
     breakfastItemsEn, entranceItemsEn,
-    cutsItemsEn, saladItemsEn, seafoodItemsEn, tacoItemsEn, burgerItemsEn,
-    snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn, cocteleriaItemsEn,
+    cutsItemsEn, saladItemsEn, seafoodItemsEn, tacoItemsEn, costrasItemsEn, burgerItemsEn,
+    compartirItemsEn, soupItemsEn, dessertItemsEn,
+    snackItemsEn, sodaItemsEn, cafeItemsEn, beerItemsEn, preparadosItemsEn, cocteleriaItemsEn,
     ginebraItemsEn, vodkaItemsEn, tequilaItemsEn, mezcalItemsEn, ronItemsEn, whiskyItemsEn, cognacItemsEn, brandyItemsEn, licorItemsEn, bourbonItemsEn
 } from "@/lib/menu-data-en";
 
@@ -52,7 +54,11 @@ export default function Home() {
     taco: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
     hamburguesas: "text-[hsl(var(--neon-cyan))] shadow-[0_0_10px_hsl(var(--neon-cyan))] border-[hsl(var(--neon-cyan))] data-[state=active]:bg-[hsl(var(--neon-cyan))]/10 data-[state=active]:border-[hsl(var(--neon-cyan))]",
     snacks: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
-    
+    sopas: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:bg-[hsl(var(--neon-violet))]/10 data-[state=active]:border-[hsl(var(--neon-violet))]",
+    costras: "text-[hsl(var(--neon-yellow))] shadow-[0_0_10px_hsl(var(--neon-yellow))] border-[hsl(var(--neon-yellow))] data-[state=active]:bg-[hsl(var(--neon-yellow))]/10 data-[state=active]:border-[hsl(var(--neon-yellow))]",
+    compartir: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
+    postres: "text-[hsl(var(--neon-magenta))] shadow-[0_0_10px_hsl(var(--neon-magenta))] border-[hsl(var(--neon-magenta))] data-[state=active]:bg-[hsl(var(--neon-magenta))]/10 data-[state=active]:border-[hsl(var(--neon-magenta))]",
+
     // Bebidas main category
     bebidas: "text-[hsl(var(--neon-gray))] shadow-[0_0_10px_hsl(var(--neon-gray))] border-[hsl(var(--neon-gray))] data-[state=active]:bg-[hsl(var(--neon-gray))]/10 data-[state=active]:border-[hsl(var(--neon-gray))]",
     // Sub-bebidas
@@ -60,6 +66,7 @@ export default function Home() {
     cerveza: "text-[hsl(var(--neon-red))] shadow-[0_0_10px_hsl(var(--neon-red))] border-[hsl(var(--neon-red))] data-[state=active]:bg-[hsl(var(--neon-red))]/10 data-[state=active]:border-[hsl(var(--neon-red))]",
     preparados: "text-[hsl(var(--neon-violet))] shadow-[0_0_10px_hsl(var(--neon-violet))] border-[hsl(var(--neon-violet))] data-[state=active]:bg-[hsl(var(--neon-violet))]/10 data-[state=active]:border-[hsl(var(--neon-violet))]",
     cocteleria: "text-[hsl(var(--neon-green))] shadow-[0_0_10px_hsl(var(--neon-green))] border-[hsl(var(--neon-green))] data-[state=active]:bg-[hsl(var(--neon-green))]/10 data-[state=active]:border-[hsl(var(--neon-green))]",
+    cafes: "text-[hsl(var(--neon-orange))] shadow-[0_0_10px_hsl(var(--neon-orange))] border-[hsl(var(--neon-orange))] data-[state=active]:bg-[hsl(var(--neon-orange))]/10 data-[state=active]:border-[hsl(var(--neon-orange))]",
     destilados: "text-[hsl(var(--neon-blue))] shadow-[0_0_10px_hsl(var(--neon-blue))] border-[hsl(var(--neon-blue))] data-[state=active]:bg-[hsl(var(--neon-blue))]/10 data-[state=active]:border-[hsl(var(--neon-blue))]",
     
     // Cocteleria tabs (now destilados)
@@ -79,23 +86,31 @@ export default function Home() {
     es: {
       desayunos: "Desayunos",
       entradas: "Entradas",
+      sopas: "Sopas",
       cortes: "Cortes",
       ensaladas: "Ensaladas",
       mariscos: "Mariscos",
       taco: "Taco",
+      costras: "Costras",
       hamburguesas: "Hamburguesas",
       snacks: "Snacks",
+      compartir: "Para Compartir",
+      postres: "Postres",
       bebidas: "Bebidas",
     },
     en: {
       desayunos: "Breakfast",
       entradas: "Appetizers",
+      sopas: "Soups",
       cortes: "Cuts",
       ensaladas: "Salads",
       mariscos: "Seafood",
       taco: "Taco",
+      costras: "Costras",
       hamburguesas: "Burgers",
       snacks: "Snacks",
+      compartir: "To Share",
+      postres: "Desserts",
       bebidas: "Drinks",
     }
   };
@@ -103,6 +118,7 @@ export default function Home() {
   const bebidasSubCategories = {
     es: {
       refrescos: "Refrescos",
+      cafes: "Cafés y Más",
       cerveza: "Cerveza",
       preparados: "Preparados",
       cocteleria: "Coctelería",
@@ -110,6 +126,7 @@ export default function Home() {
     },
     en: {
       refrescos: "Sodas",
+      cafes: "Coffee & More",
       cerveza: "Beer",
       preparados: "Preparados",
       cocteleria: "Cocktails",
@@ -155,8 +172,13 @@ export default function Home() {
       case 'taco': return 'text-[hsl(var(--neon-red))]';
       case 'hamburguesas': return 'text-[hsl(var(--neon-cyan))]';
       case 'snacks': return 'text-[hsl(var(--neon-orange))]';
+      case 'sopas': return 'text-[hsl(var(--neon-violet))]';
+      case 'costras': return 'text-[hsl(var(--neon-yellow))]';
+      case 'compartir': return 'text-[hsl(var(--neon-green))]';
+      case 'postres': return 'text-[hsl(var(--neon-magenta))]';
       case 'bebidas': return 'text-[hsl(var(--neon-gray))]';
       case 'refrescos': return 'text-[hsl(var(--neon-magenta))]';
+      case 'cafes': return 'text-[hsl(var(--neon-orange))]';
       case 'cerveza': return 'text-[hsl(var(--neon-red))]';
       case 'preparados': return 'text-[hsl(var(--neon-violet))]';
       case 'cocteleria': return 'text-[hsl(var(--neon-green))]';
@@ -272,7 +294,12 @@ export default function Home() {
   const currentSaladItems = language === 'es' ? saladItems : saladItemsEn;
   const currentSeafoodItems = language === 'es' ? seafoodItems : seafoodItemsEn;
   const currentTacoItems = language === 'es' ? tacoItems : tacoItemsEn;
+  const currentCostrasItems = language === 'es' ? costrasItems : costrasItemsEn;
   const currentBurgerItems = language === 'es' ? burgerItems : burgerItemsEn;
+  const currentCompartirItems = language === 'es' ? compartirItems : compartirItemsEn;
+  const currentSoupItems = language === 'es' ? soupItems : soupItemsEn;
+  const currentDessertItems = language === 'es' ? dessertItems : dessertItemsEn;
+  const currentCafeItems = language === 'es' ? cafeItems : cafeItemsEn;
 
   const currentGinebraItems = language === 'es' ? ginebraItems : ginebraItemsEn;
   const currentVodkaItems = language === 'es' ? vodkaItems : vodkaItemsEn;
@@ -373,7 +400,7 @@ export default function Home() {
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Nuestro Menú' : 'Our Menu'}</h2>
             <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
-            <TabsList className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
+            <TabsList className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
               {Object.keys(menuCategories[language as keyof typeof menuCategories]).map((tab) => (
                 <TabsTrigger 
                   key={tab} 
@@ -446,10 +473,12 @@ export default function Home() {
                                                     <p className="font-semibold">{language === 'es' ? 'Normal:' : 'Normal:'}</p>
                                                     <p className={cn("font-bold text-lg", getPriceClassName('desayunos'))}>${item.priceNormal}</p>
                                                 </div>
+                                                {item.pricePackage && (
                                                 <div>
                                                     <p className="font-semibold">{language === 'es' ? 'Paquete:' : 'Package:'}</p>
                                                     <p className={cn("font-bold text-lg", getPriceClassName('desayunos'))}>${item.pricePackage}</p>
                                                 </div>
+                                                )}
                                             </div>
                                         </CardContent>
                                     </Card>
@@ -476,7 +505,26 @@ export default function Home() {
                   ))}
                 </div>
               </TabsContent>
-              
+
+              {/* SOPAS */}
+              <TabsContent value="sopas">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('sopas'))}>{menuCategories[language as keyof typeof menuCategories].sopas}</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                  {currentSoupItems.map((item, index) => (
+                     <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('sopas'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+
               {/* CORTES */}
               <TabsContent value="cortes">
                 <div className="text-center mb-6">
@@ -553,6 +601,26 @@ export default function Home() {
                 </div>
               </TabsContent>
 
+              {/* COSTRAS */}
+              <TabsContent value="costras">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('costras'))}>{menuCategories[language as keyof typeof menuCategories].costras}</h3>
+                  <p className="text-muted-foreground mt-2 max-w-lg mx-auto">{language === 'es' ? 'Exquisita mezcla de quesos de la casa a la plancha, al punto de chicharrón, servidos con 4 tortillas de harina y salsa de la casa.' : 'Exquisite blend of house cheeses on the griddle, crisped to chicharrón point, served with 4 flour tortillas and house salsa.'}</p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentCostrasItems.map((item, index) => (
+                     <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        {item.accompaniment && <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>}
+                        <p className={cn("font-semibold text-lg", getPriceClassName('costras'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+
               {/* HAMBURGUESAS */}
               <TabsContent value="hamburguesas">
                 <div className="text-center mb-6">
@@ -592,9 +660,47 @@ export default function Home() {
                 </div>
               </TabsContent>
 
+              {/* PARA COMPARTIR */}
+              <TabsContent value="compartir">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('compartir'))}>{menuCategories[language as keyof typeof menuCategories].compartir}</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentCompartirItems.map((item, index) => (
+                     <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('compartir'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+
+              {/* POSTRES */}
+              <TabsContent value="postres">
+                <div className="text-center mb-6">
+                  <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('postres'))}>{menuCategories[language as keyof typeof menuCategories].postres}</h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                  {currentDessertItems.map((item, index) => (
+                     <Card key={index} className="bg-secondary border-primary/20">
+                      <CardHeader><CardTitle>{item.name}</CardTitle></CardHeader>
+                      <CardContent>
+                        {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                        <p className="text-muted-foreground mb-2 text-sm">{item.accompaniment}</p>
+                        <p className={cn("font-semibold text-lg", getPriceClassName('postres'))}>${item.price}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+
               <TabsContent value="bebidas">
                  <Tabs defaultValue="refrescos" className="w-full">
-                   <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
+                   <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 p-1 h-auto bg-transparent justify-center mb-8 gap-3">
                     {Object.keys(bebidasSubCategories[language as keyof typeof bebidasSubCategories]).map((tab) => (
                       <TabsTrigger
                         key={tab}
@@ -624,7 +730,26 @@ export default function Home() {
                       ))}
                     </div>
                   </TabsContent>
-                  
+
+                  <TabsContent value="cafes">
+                    <div className="text-center mb-6">
+                      <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cafes'))}>{bebidasSubCategories[language as keyof typeof bebidasSubCategories].cafes}</h3>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {currentCafeItems.map((item, index) => (
+                        <Card key={index} className="bg-secondary border-primary/20">
+                          <CardHeader>
+                            <CardTitle>{item.name}</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            {item.quantity && <p className="text-sm text-muted-foreground">{item.quantity}</p>}
+                            <p className={cn("font-semibold text-lg", getPriceClassName('cafes'))}>${item.price}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+
                   <TabsContent value="cerveza">
                     <div className="text-center mb-6">
                       <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cerveza'))}>{bebidasSubCategories[language as keyof typeof bebidasSubCategories].cerveza}</h3>
