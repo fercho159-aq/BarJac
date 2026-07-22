@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, Briefcase, Copy, UtensilsCrossed, PartyPopper } from "lucide-react";
+import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, Briefcase, UtensilsCrossed, PartyPopper } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -229,9 +229,9 @@ export default function Home() {
 
   const promotions = {
     es: [
-      { 
-        title: "Cervezas 3x$100 ¡Todos los días!", 
-        description: "Aprovecha nuestra promoción en cervezas embotelladas de 355ml, 3 por $100.", 
+      {
+        title: "Bebidas y Coctelería al 3x2 ¡Todos los días!",
+        description: "Todos los días, tus bebidas y cocteles favoritos al 3x2.",
         icon: BottleIcon,
         color: "blue"
       },
@@ -241,13 +241,7 @@ export default function Home() {
         icon: Briefcase,
         color: "green"
       },
-      { 
-        title: "Jueves de Coctelería Doble", 
-        description: "Todos los jueves, tu coctel favorito se sirve doble. ¡Aprovecha!", 
-        icon: Copy,
-        color: "yellow"
-      },
-      { 
+{ 
         title: "Tríos Bar Jac por $199", 
         description: "De lunes a viernes, disfruta de una comida completa por $199: Sopa o crema del día + Hamburguesa o Tacos de Arrachera o Pescadillas con Cóctel Chico + Bebida sin alcohol.", 
         icon: UtensilsCrossed,
@@ -255,9 +249,9 @@ export default function Home() {
       }
     ],
     en: [
-      { 
-        title: "Beers 3 for $100, Every Day!", 
-        description: "Take advantage of our promotion on 355ml bottled beers, 3 for $100.", 
+      {
+        title: "Drinks & Cocktails 3x2, Every Day!",
+        description: "Every day, your favorite drinks and cocktails 3 for the price of 2.",
         icon: BottleIcon,
         color: "blue"
       },
@@ -267,13 +261,7 @@ export default function Home() {
         icon: Briefcase,
         color: "green"
       },
-      { 
-        title: "Double Cocktails Thursdays", 
-        description: "Every Thursday, your favorite cocktail is served double. Enjoy!", 
-        icon: Copy,
-        color: "yellow"
-      },
-      { 
+{ 
         title: "Bar Jac Trios for $199", 
         description: "From Monday to Friday, enjoy a full meal for $199: Soup or cream of the day + Burger or Arrachera Tacos or Pescadillas with a Small Cocktail + Non-alcoholic drink.", 
         icon: UtensilsCrossed,
@@ -1019,7 +1007,7 @@ export default function Home() {
         <section id="promociones" className="py-16 md:py-24 bg-secondary">
           <div className="container">
             <h2 className="text-5xl font-bold text-center mb-12 font-orbitron neon-text">{language === 'es' ? 'Promociones' : 'Promotions'}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {(promotions[language as keyof typeof promotions]).map((promo, index) => {
                 const Icon = promo.icon;
                 const colors: { [key: string]: string } = {
