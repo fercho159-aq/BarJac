@@ -166,8 +166,8 @@ export const sodaItems = [
     { name: "Coca-Cola Sin Azúcar", quantity: "355 ml", price: "35.00" },
     { name: "Valle Frut Mango", quantity: "355 ml", price: "35.00" },
     { name: "Valle Frut Guayaba", quantity: "355 ml", price: "35.00" },
-    { name: "Ciel Mineral", quantity: "600 ml", price: "35.00" },
-    { name: "Topo Chico", quantity: "355 ml", price: "35.00" },
+    { name: "Ciel Mineral", quantity: "600 ml", price: "40.00" },
+    { name: "Topo Chico", quantity: "355 ml", price: "40.00" },
 ];
 
 export const cafeItems = [
@@ -305,13 +305,13 @@ export const mezcalItems = [
 ];
 
 export const ronItems = [
-    { name: "Matusalem plata", category: "Ron", priceGlass: "120.00", priceBottle: "1,400.00" },
-    { name: "Havana 3", category: "Ron", priceGlass: "105.00", priceBottle: "1,100.00" },
+    { name: "Matusalem plata", category: "Ron", priceGlass: "140.00", priceBottle: "1,400.00" },
+    { name: "Havana 3", category: "Ron", priceGlass: "125.00", priceBottle: "1,100.00" },
     { name: "Havana 7", category: "Ron", priceGlass: "135.00", priceBottle: "1,600.00" },
-    { name: "Bacardí añejo", category: "Ron", priceGlass: "105.00", priceBottle: "1,200.00" },
-    { name: "Bacardí solera", category: "Ron", priceGlass: "105.00", priceBottle: "1,700.00" },
+    { name: "Bacardí añejo", category: "Ron", priceGlass: "125.00", priceBottle: "1,200.00" },
+    { name: "Bacardí solera", category: "Ron", priceGlass: "125.00", priceBottle: "1,700.00" },
     { name: "Malibú", category: "Ron", priceGlass: "135.00", priceBottle: "1,200.00" },
-    { name: "Bacardi blanco", category: "Ron", priceGlass: "110.00", priceBottle: "1,800.00" },
+    { name: "Bacardi blanco", category: "Ron", priceGlass: "110.00", priceBottle: "1,400.00" },
 ];
 
 export const whiskyItems = [

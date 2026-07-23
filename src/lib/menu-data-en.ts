@@ -166,8 +166,8 @@ export const sodaItemsEn = [
     { name: "Coca-Cola Zero Sugar", quantity: "355 ml", price: "35.00" },
     { name: "Valle Frut Mango", quantity: "355 ml", price: "35.00" },
     { name: "Valle Frut Guava", quantity: "355 ml", price: "35.00" },
-    { name: "Ciel Mineral", quantity: "600 ml", price: "35.00" },
-    { name: "Topo Chico", quantity: "355 ml", price: "35.00" },
+    { name: "Ciel Mineral", quantity: "600 ml", price: "40.00" },
+    { name: "Topo Chico", quantity: "355 ml", price: "40.00" },
 ];
 
 export const cafeItemsEn = [
@@ -305,13 +305,13 @@ export const mezcalItemsEn = [
 ];
 
 export const ronItemsEn = [
-    { name: "Matusalem plata", category: "Rum", priceGlass: "120.00", priceBottle: "1,400.00" },
-    { name: "Havana 3", category: "Rum", priceGlass: "105.00", priceBottle: "1,100.00" },
+    { name: "Matusalem plata", category: "Rum", priceGlass: "140.00", priceBottle: "1,400.00" },
+    { name: "Havana 3", category: "Rum", priceGlass: "125.00", priceBottle: "1,100.00" },
     { name: "Havana 7", category: "Rum", priceGlass: "135.00", priceBottle: "1,600.00" },
-    { name: "Bacardí añejo", category: "Rum", priceGlass: "105.00", priceBottle: "1,200.00" },
-    { name: "Bacardí solera", category: "Rum", priceGlass: "105.00", priceBottle: "1,700.00" },
+    { name: "Bacardí añejo", category: "Rum", priceGlass: "125.00", priceBottle: "1,200.00" },
+    { name: "Bacardí solera", category: "Rum", priceGlass: "125.00", priceBottle: "1,700.00" },
     { name: "Malibu", category: "Rum", priceGlass: "135.00", priceBottle: "1,200.00" },
-    { name: "Bacardi blanco", category: "Rum", priceGlass: "110.00", priceBottle: "1,800.00" },
+    { name: "Bacardi blanco", category: "Rum", priceGlass: "110.00", priceBottle: "1,400.00" },
 ];
 
 export const whiskyItemsEn = [

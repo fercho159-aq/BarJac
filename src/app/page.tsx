@@ -235,6 +235,12 @@ export default function Home() {
         icon: BottleIcon,
         color: "blue"
       },
+      {
+        title: "Cerveza 3 x $130 ¡Todos los días!",
+        description: "Llévate 3 cervezas por solo $130, todos los días.",
+        icon: BottleIcon,
+        color: "blue"
+      },
       { 
         title: "Happy Hour Godín", 
         description: "Los martes y viernes, muestra tu credencial de trabajo y obtén un 20% de descuento en tu próxima visita.", 
@@ -252,6 +258,12 @@ export default function Home() {
       {
         title: "Drinks & Cocktails 3x2, Every Day!",
         description: "Every day, your favorite drinks and cocktails 3 for the price of 2.",
+        icon: BottleIcon,
+        color: "blue"
+      },
+      {
+        title: "Beer 3 for $130, Every Day!",
+        description: "Get 3 beers for just $130, every day.",
         icon: BottleIcon,
         color: "blue"
       },
@@ -741,6 +753,17 @@ export default function Home() {
                   <TabsContent value="cerveza">
                     <div className="text-center mb-6">
                       <h3 className={cn("text-4xl font-bold font-orbitron", getPriceClassName('cerveza'))}>{bebidasSubCategories[language as keyof typeof bebidasSubCategories].cerveza}</h3>
+                      <div className="mt-4 mb-8 max-w-md mx-auto p-4 rounded-lg border-2 border-[hsl(var(--neon-cyan))] bg-secondary shadow-[0_0_15px_hsl(var(--neon-cyan))]">
+                        <div className="flex items-center justify-center gap-3">
+                          <PartyPopper className="h-8 w-8 text-[hsl(var(--neon-cyan))]" />
+                          <p className="text-lg font-bold text-[hsl(var(--neon-cyan))]">
+                            {language === 'es' ? '¡PROMOCIÓN!' : 'PROMOTION!'}
+                          </p>
+                        </div>
+                        <p className="text-white mt-2">
+                          {language === 'es' ? 'Cerveza 3 x $130 ¡todos los días!' : 'Beer 3 for $130, every day!'}
+                        </p>
+                      </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                       {bottledBeers.map((item: any, index: number) => (
