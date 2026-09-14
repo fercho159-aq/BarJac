@@ -263,9 +263,9 @@ export function MenuEditor({ initialCategories, initialItems }: { initialCategor
           <Card>
             <CardContent className="flex flex-wrap items-center gap-3 p-4">
               <span className="h-4 w-4 rounded-full" style={{ background: colorCss(selected.color), boxShadow: `0 0 8px ${colorCss(selected.color)}` }} />
-              <div className="min-w-0 flex-1">
+              <div className="min-w-[12rem] flex-1">
                 <p className="text-xs text-muted-foreground">{pathOf(selected.id)}</p>
-                <h2 className="truncate text-xl font-bold">
+                <h2 className="break-words text-xl font-bold">
                   {selected.name.es}
                   {!selected.visible && <Badge variant="secondary" className="ml-2 align-middle">Oculta</Badge>}
                 </h2>
