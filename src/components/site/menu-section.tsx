@@ -175,7 +175,7 @@ export function MenuSection({ categories, items, lang }: { categories: MenuCateg
   return (
     <section id="menu" className="py-16 md:py-24">
       <div className="container">
-        <h2 className="mb-12 text-center font-orbitron text-5xl font-bold neon-text">
+        <h2 className="mb-12 text-center font-orbitron text-3xl sm:text-4xl md:text-5xl break-words font-bold neon-text">
           {lang === "es" ? "Nuestro Menú" : "Our Menu"}
         </h2>
         {roots.length > 0 && (

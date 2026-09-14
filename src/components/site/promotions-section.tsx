@@ -40,7 +40,7 @@ export function PromotionsSection({ promotions, lang }: { promotions: Promotion[
   return (
     <section id="promociones" className="bg-secondary py-16 md:py-24">
       <div className="container">
-        <h2 className="mb-12 text-center font-orbitron text-5xl font-bold neon-text">
+        <h2 className="mb-12 text-center font-orbitron text-3xl sm:text-4xl md:text-5xl break-words font-bold neon-text">
           {lang === "es" ? "Promociones" : "Promotions"}
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
