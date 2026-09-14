@@ -43,3 +43,7 @@ next-env.d.ts
 # firebase
 firebase-debug.log
 firestore-debug.log
+!.env.example
+
+# base de datos local de desarrollo (PGlite)
+/.data/
