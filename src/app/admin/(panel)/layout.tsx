@@ -18,13 +18,13 @@ export default async function PanelLayout({ children }: { children: React.ReactN
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4">
+        <div className="mx-auto flex h-16 max-w-7xl items-center gap-2 px-3 sm:gap-4 sm:px-4">
           <Link href="/admin" className="flex shrink-0 items-center gap-2">
             <Image src="/images/barjac-icon.png" alt="" width={32} height={32} className="rounded-full" />
             <span className="hidden font-orbitron font-bold neon-text sm:inline">Admin</span>
           </Link>
           <AdminNav />
-          <div className="ml-auto flex items-center gap-1">
+          <div className="ml-auto flex shrink-0 items-center">
             <Button asChild variant="ghost" size="sm">
               <a href="/" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4 sm:mr-1.5" />

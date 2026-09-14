@@ -233,7 +233,7 @@ export function MenuEditor({ initialCategories, initialItems }: { initialCategor
   const listItems = searchResults ?? (selected ? itemsOf(selected.id) : []);
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
       <Card className="lg:sticky lg:top-20 lg:self-start">
         <CardHeader className="pb-3">
           <CardTitle className="text-lg">Categorías</CardTitle>
