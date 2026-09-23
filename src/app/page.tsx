@@ -199,29 +199,53 @@ export default function Home() {
   const bottledBeers = currentBeerItems.filter((beer: any) => beer.type === 'botella');
   const draftBeers = currentBeerItems.filter((beer: any) => beer.type === 'barril');
 
-  const renderFoodCard = (item: any, index: number) => (
-    <Card key={index} className="group bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-      <CardHeader className="pb-2">
-        <CardTitle className="text-lg font-display text-[hsl(var(--warm-brown))]">{item.name}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
-        {item.accompaniment && <p className="text-[hsl(var(--muted-foreground))] mb-2 text-sm">{item.accompaniment}</p>}
-        <p className="font-semibold text-lg text-[hsl(var(--primary))]">${item.price}</p>
-      </CardContent>
-    </Card>
-  );
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+
+  const renderFoodCard = (item: any, index: number) => {
+    const cardId = `${item.name}-${index}`;
+    const isExpanded = expandedCard === cardId;
+    return (
+      <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+        {item.image && (
+          <div className="relative aspect-[3/2] overflow-hidden">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+        )}
+        <div className="p-4">
+          <h4 className="font-display font-bold text-lg text-[#2A3A1A] uppercase leading-tight">{item.name}</h4>
+          <div className="flex items-center justify-between mt-2">
+            <p className="text-[hsl(var(--primary))] font-bold text-xl">${item.price}</p>
+            <button
+              onClick={() => setExpandedCard(isExpanded ? null : cardId)}
+              className="text-[hsl(var(--primary))] text-sm font-semibold hover:underline"
+            >
+              {isExpanded ? (lang === 'es' ? 'Cerrar' : 'Close') : (lang === 'es' ? 'Ver →' : 'View →')}
+            </button>
+          </div>
+          {isExpanded && (
+            <div className="mt-3 pt-3 border-t border-gray-100 animate-fade-up">
+              {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))] font-medium">{item.quantity}</p>}
+              {item.accompaniment && <p className="text-[hsl(var(--muted-foreground))] text-sm mt-1">{item.accompaniment}</p>}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
 
   const renderSpiritCard = (item: any, index: number) => (
-    <Card key={index} className="group bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-      <CardHeader className="pb-2"><CardTitle className="text-lg font-display text-[hsl(var(--warm-brown))]">{item.name}</CardTitle></CardHeader>
-      <CardContent>
-        <div className="flex justify-between items-center mt-2">
-          <div><p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">{lang === 'es' ? 'Copa' : 'Glass'}</p><p className="font-bold text-[hsl(var(--primary))]">${item.priceGlass}</p></div>
-          <div className="text-right"><p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">{lang === 'es' ? 'Botella' : 'Bottle'}</p>{item.priceBottle ? <p className="font-bold text-[hsl(var(--primary))]">${item.priceBottle}</p> : <p className="text-xs text-[hsl(var(--muted-foreground))] italic">—</p>}</div>
-        </div>
-      </CardContent>
-    </Card>
+    <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 p-4">
+      <h4 className="font-display font-bold text-lg text-[#2A3A1A]">{item.name}</h4>
+      <div className="flex justify-between items-center mt-3">
+        <div><p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">{lang === 'es' ? 'Copa' : 'Glass'}</p><p className="font-bold text-xl text-[hsl(var(--primary))]">${item.priceGlass}</p></div>
+        <div className="text-right"><p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">{lang === 'es' ? 'Botella' : 'Bottle'}</p>{item.priceBottle ? <p className="font-bold text-xl text-[hsl(var(--primary))]">${item.priceBottle}</p> : <p className="text-sm text-[hsl(var(--muted-foreground))] italic">—</p>}</div>
+      </div>
+    </div>
   );
 
   return (
@@ -385,7 +409,7 @@ export default function Home() {
                       {key === 'snacks' && <p className="text-[hsl(var(--muted-foreground))] mt-2 max-w-lg mx-auto">{lang === 'es' ? 'Con salsa a elegir (BBQ, Búfalo, Mango Habanero y Mezcal, Tamarindo Jalapeño)' : 'With your choice of sauce (BBQ, Buffalo, Mango Habanero & Mezcal, Tamarind Jalapeño)'}</p>}
                     </div>
                   </ScrollReveal>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                     {(items as any[]).map((item, index) => renderFoodCard(item, index))}
                   </div>
                 </TabsContent>
@@ -407,15 +431,13 @@ export default function Home() {
                   {/* Refrescos */}
                   <TabsContent value="refrescos">
                     <div className="text-center mb-6"><h3 className="font-display text-3xl font-bold text-[hsl(var(--primary))]">{bebidasSubCategories[lang].refrescos}</h3></div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                       {currentSodaItems.map((item, i) => (
-                        <Card key={i} className="bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                          <CardHeader className="pb-2"><CardTitle className="text-lg font-display text-[hsl(var(--warm-brown))]">{item.name}</CardTitle></CardHeader>
-                          <CardContent>
-                            {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
-                            <p className="font-semibold text-lg text-[hsl(var(--primary))]">${item.price}</p>
-                          </CardContent>
-                        </Card>
+                        <div key={i} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-4">
+                          <h4 className="font-display font-bold text-lg text-[#2A3A1A]">{item.name}</h4>
+                          {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
+                          <p className="font-bold text-xl text-[hsl(var(--primary))] mt-2">${item.price}</p>
+                        </div>
                       ))}
                     </div>
                   </TabsContent>
@@ -423,29 +445,25 @@ export default function Home() {
                   {/* Cerveza */}
                   <TabsContent value="cerveza">
                     <div className="text-center mb-6"><h3 className="font-display text-3xl font-bold text-[hsl(var(--primary))]">{bebidasSubCategories[lang].cerveza}</h3></div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                       {bottledBeers.map((item: any, i: number) => (
-                        <Card key={i} className="bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                          <CardHeader className="pb-2"><CardTitle className="text-lg font-display text-[hsl(var(--warm-brown))]">{item.name}</CardTitle></CardHeader>
-                          <CardContent>
-                            {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
-                            <p className="font-semibold text-lg text-[hsl(var(--primary))]">${item.price}</p>
-                          </CardContent>
-                        </Card>
+                        <div key={i} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-4">
+                          <h4 className="font-display font-bold text-lg text-[#2A3A1A]">{item.name}</h4>
+                          {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
+                          <p className="font-bold text-xl text-[hsl(var(--primary))] mt-2">${item.price}</p>
+                        </div>
                       ))}
                     </div>
                     {draftBeers.length > 0 && (
                       <div className="mt-10">
                         <h4 className="font-display text-2xl font-bold text-[hsl(var(--warm-brown))] text-center mb-6">{lang === 'es' ? 'Cerveza de Barril' : 'Draft Beer'}</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+                        <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
                           {draftBeers.map((item: any, i: number) => (
-                            <Card key={i} className="bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                              <CardHeader className="pb-2"><CardTitle className="text-lg font-display text-[hsl(var(--warm-brown))]">{item.name}</CardTitle></CardHeader>
-                              <CardContent>
-                                {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
-                                <p className="font-semibold text-lg text-[hsl(var(--primary))]">${item.price}</p>
-                              </CardContent>
-                            </Card>
+                            <div key={i} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-4">
+                              <h4 className="font-display font-bold text-lg text-[#2A3A1A]">{item.name}</h4>
+                              {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
+                              <p className="font-bold text-xl text-[hsl(var(--primary))] mt-2">${item.price}</p>
+                            </div>
                           ))}
                         </div>
                       </div>
@@ -455,20 +473,14 @@ export default function Home() {
                   {/* Preparados */}
                   <TabsContent value="preparados">
                     <div className="text-center mb-6"><h3 className="font-display text-3xl font-bold text-[hsl(var(--primary))]">{bebidasSubCategories[lang].preparados}</h3></div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                       {currentPreparadosItems.map((item, i) => (
-                        <Card key={i} className="bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                          <CardHeader className="pb-2">
-                            <div className="flex justify-between items-baseline">
-                              <CardTitle className="text-lg font-display text-[hsl(var(--warm-brown))]">{item.name}</CardTitle>
-                              {item.quantity && <span className="text-sm text-[hsl(var(--muted-foreground))] ml-2">{item.quantity}</span>}
-                            </div>
-                          </CardHeader>
-                          <CardContent>
-                            {item.ingredients && <p className="text-sm text-[hsl(var(--muted-foreground))] mb-2">{item.ingredients}</p>}
-                            <p className="font-semibold text-lg text-[hsl(var(--primary))]">${item.price}</p>
-                          </CardContent>
-                        </Card>
+                        <div key={i} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-4">
+                          <h4 className="font-display font-bold text-lg text-[#2A3A1A]">{item.name}</h4>
+                          {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
+                          {item.ingredients && <p className="text-sm text-[hsl(var(--muted-foreground))] mt-1">{item.ingredients}</p>}
+                          <p className="font-bold text-xl text-[hsl(var(--primary))] mt-2">${item.price}</p>
+                        </div>
                       ))}
                     </div>
                   </TabsContent>
@@ -476,12 +488,12 @@ export default function Home() {
                   {/* Coctelería */}
                   <TabsContent value="cocteleria">
                     <div className="text-center mb-6"><h3 className="font-display text-3xl font-bold text-[hsl(var(--primary))]">{bebidasSubCategories[lang].cocteleria}</h3></div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                       {currentCocteleriaItems.map((item, i) => (
-                        <Card key={i} className="bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                          <CardHeader className="pb-2"><CardTitle className="text-lg font-display text-[hsl(var(--warm-brown))]">{item.name}</CardTitle></CardHeader>
-                          <CardContent><p className="font-semibold text-lg text-[hsl(var(--primary))]">${item.price}</p></CardContent>
-                        </Card>
+                        <div key={i} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-4">
+                          <h4 className="font-display font-bold text-lg text-[#2A3A1A]">{item.name}</h4>
+                          <p className="font-bold text-xl text-[hsl(var(--primary))] mt-2">${item.price}</p>
+                        </div>
                       ))}
                     </div>
                   </TabsContent>
