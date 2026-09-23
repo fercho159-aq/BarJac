@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react"
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "BarJac",
-  description: "Música, amigos y el mejor ambiente de la ciudad.",
+  title: "BarJac - Música, Amigos y el Mejor Ambiente",
+  description: "Restaurante bar en la Roma, CDMX. Cortes, mariscos, hamburguesas, cocteles y el mejor ambiente.",
 };
 
 export default function RootLayout({
@@ -18,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${inter.className} dark`}>
+      <body>
         {children}
         <Toaster />
         <Analytics />
