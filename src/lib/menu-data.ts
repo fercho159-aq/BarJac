@@ -44,13 +44,13 @@ export const breakfastItems = [
 ];
 
   export const entranceItems = [
-    { name: "Queso fundido tradicional", quantity: "180 g", accompaniment: "Preparado con queso derretido al punto perfecto, acompañado de cebolla cambray, chile toreado y tortillas recién hechas.", price: "175.00" },
-    { name: "Queso fundido con chistorra", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y chistorra, servido con cebolla cambray, chile toreado y tortillas.", price: "203.00" },
-    { name: "Queso fundido con arrachera", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y arrachera jugosa, servido con cebolla cambray, chile toreado y tortillas.", price: "231.00" },
-    { name: "Queso fundido con aguja norteña", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y aguja norteña, acompañado de cebolla cambray, chile toreado y tortillas.", price: "231.00" },
-    { name: "Queso fundido con rib eye", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y rib eye, servido con cebolla cambray, chile toreado y tortillas.", price: "259.00" },
-    { name: "Queso fundido con new york", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y corte New York, acompañado de cebolla cambray, chile toreado y tortillas.", price: "259.00" },
-    { name: "Queso fundido con sirloin", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y sirloin, servido con cebolla cambray, chile toreado y tortillas.", price: "259.00" },
+    { name: "Queso fundido tradicional", quantity: "180 g", accompaniment: "Preparado con queso derretido al punto perfecto, acompañado de cebolla cambray, chile toreado y tortillas recién hechas.", price: "90.00" },
+    { name: "Queso fundido con chistorra", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y chistorra, servido con cebolla cambray, chile toreado y tortillas.", price: "125.00" },
+    { name: "Queso fundido con arrachera", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y arrachera jugosa, servido con cebolla cambray, chile toreado y tortillas.", price: "125.00" },
+    { name: "Queso fundido con aguja norteña", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y aguja norteña, acompañado de cebolla cambray, chile toreado y tortillas.", price: "125.00" },
+    { name: "Queso fundido con rib eye", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y rib eye, servido con cebolla cambray, chile toreado y tortillas.", price: "135.00" },
+    { name: "Queso fundido con new york", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y corte New York, acompañado de cebolla cambray, chile toreado y tortillas.", price: "135.00" },
+    { name: "Queso fundido con sirloin", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y sirloin, servido con cebolla cambray, chile toreado y tortillas.", price: "135.00" },
     { name: "Guacamole tradicional", quantity: "180 g", accompaniment: "Preparado al momento con aguacate fresco, acompañado de pico de gallo, queso panela y chicharrón fresco.", price: "203.00" },
     { name: "Pescadillas de pescado", quantity: "3 pz – 500 g", accompaniment: "Deliciosas quesadillas rellenas de pescado, servidas con mix de coles, mayonesa chipotle y aguacate.", price: "98.00" },
   ];
@@ -137,8 +137,8 @@ export const snackItems = [
     { name: "Alitas", quantity: "300 g", accompaniment: "Preparadas al punto, acompañadas de apio, zanahoria y aderezo ranch.", price: "231.00" },
     { name: "Boneless", quantity: "200 g", accompaniment: "Elaborados con pechuga de pollo, servidos con apio, zanahoria y aderezo ranch.", price: "203.00" },
     { name: "Papas a la parmesana con trufa", quantity: "", accompaniment: "Papas doradas, terminadas con queso parmesano y un delicado toque de trufa.", price: "149.00" },
-    { name: "Dedos de queso", quantity: "", accompaniment: "Dedos de queso crujientes, acompañados de aderezo ranch.", price: "159.00" },
-    { name: "Charola de snack", quantity: "", accompaniment: "Charola surtida con selección de snacks de la casa.", price: "699.00" },
+    { name: "Dedos de queso", quantity: "", accompaniment: "Dedos de queso crujientes, acompañados de aderezo ranch.", price: "88.00" },
+    { name: "Charola de snack", quantity: "", accompaniment: "Charola surtida con selección de snacks de la casa.", price: "580.00" },
     { name: "Chicharrón pork belly", quantity: "", accompaniment: "Chicharrón de pork belly crujiente.", price: "439.00" },
     { name: "Chicharrón rib eye", quantity: "", accompaniment: "Chicharrón de rib eye crujiente.", price: "289.00" },
 ];
