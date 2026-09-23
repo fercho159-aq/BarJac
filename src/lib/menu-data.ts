@@ -1,23 +1,24 @@
 
 
+
 export const breakfastItems = [
     // Huevos
     { name: "Huevos al gusto", quantity: "120grs", accompaniment: "chorizo, jamón, tocino, a la mexicana, rancheros y divorciados. Acompañados de frijoles refritos y ensalada de la casa.", priceNormal: "119.00", pricePackage: "149.00", category: "Huevos" },
 
     // Chilaquiles
-    { name: "Chilaquiles Sencillos", quantity: "110 g", accompaniment: "", priceNormal: "126.00", pricePackage: "156.00", category: "Chilaquiles" },
+    { name: "Chilaquiles Sencillos", quantity: "100 g", accompaniment: "", priceNormal: "126.00", pricePackage: "156.00", category: "Chilaquiles" },
     { name: "Chilaquiles con huevo", quantity: "120 g", accompaniment: "", priceNormal: "154.00", pricePackage: "184.00", category: "Chilaquiles" },
-    { name: "Chilaquiles con pollo", quantity: "110 g", accompaniment: "", priceNormal: "168.00", pricePackage: "198.00", category: "Chilaquiles" },
-    { name: "Chilaquiles con aguja norteña", quantity: "110 g", accompaniment: "", priceNormal: "178.00", pricePackage: "208.00", category: "Chilaquiles" },
-    { name: "Chilaquiles con arrachera marinada", quantity: "110 g", accompaniment: "", priceNormal: "188.00", pricePackage: "218.00", category: "Chilaquiles" },
-    { name: "Chilaquiles con rib eye", quantity: "110 g", accompaniment: "", priceNormal: "188.00", pricePackage: "218.00", category: "Chilaquiles" },
-    { name: "Chilaquiles con sirloin", quantity: "110 g", accompaniment: "", priceNormal: "188.00", pricePackage: "218.00", category: "Chilaquiles" },
-    { name: "Chilaquiles con new york", quantity: "110 g", accompaniment: "", priceNormal: "188.00", pricePackage: "218.00", category: "Chilaquiles" },
+    { name: "Chilaquiles con pollo", quantity: "100 g", accompaniment: "", priceNormal: "168.00", pricePackage: "198.00", category: "Chilaquiles" },
+    { name: "Chilaquiles con aguja norteña", quantity: "100 g", accompaniment: "", priceNormal: "178.00", pricePackage: "208.00", category: "Chilaquiles" },
+    { name: "Chilaquiles con arrachera marinada", quantity: "100 g", accompaniment: "", priceNormal: "188.00", pricePackage: "218.00", category: "Chilaquiles" },
+    { name: "Chilaquiles con rib eye", quantity: "100 g", accompaniment: "", priceNormal: "188.00", pricePackage: "218.00", category: "Chilaquiles" },
+    { name: "Chilaquiles con sirloin", quantity: "100 g", accompaniment: "", priceNormal: "188.00", pricePackage: "218.00", category: "Chilaquiles" },
+    { name: "Chilaquiles con new york", quantity: "100 g", accompaniment: "", priceNormal: "188.00", pricePackage: "218.00", category: "Chilaquiles" },
 
     // Enchiladas
     { name: "Enchiladas con huevo", quantity: "120 g", accompaniment: "", priceNormal: "176.00", pricePackage: "206.00", category: "Enchiladas" },
     { name: "Enchiladas con pollo", quantity: "100 g", accompaniment: "", priceNormal: "162.00", pricePackage: "192.00", category: "Enchiladas" },
-    { name: "Enchiladas con aguja norteña", quantity: "100 g", accompaniment: "", priceNormal: "186.00", pricePackage: "216.00", category: "Enchiladas" },
+    { name: "Enchiladas con aguja norteña", quantity: "100 g", accompaniment: "", priceNormal: "196.00", pricePackage: "226.00", category: "Enchiladas" },
     { name: "Enchiladas con arrachera marinada", quantity: "100 g", accompaniment: "", priceNormal: "196.00", pricePackage: "226.00", category: "Enchiladas" },
     { name: "Enchiladas con rib eye", quantity: "100 g", accompaniment: "", priceNormal: "196.00", pricePackage: "226.00", category: "Enchiladas" },
     { name: "Enchiladas con new york", quantity: "100 g", accompaniment: "", priceNormal: "196.00", pricePackage: "226.00", category: "Enchiladas" },
@@ -26,45 +27,42 @@ export const breakfastItems = [
     { name: "Enchiladas Veracruzanas", quantity: "180 g", accompaniment: "", priceNormal: "161.00", pricePackage: "191.00", category: "Enchiladas" },
 
     // Sopes y Huaraches
-    { name: "Sopes Sencillos (2 pz)", quantity: "90 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "145.00", category: "Sopes y Huaraches" },
-    { name: "Sopes con Huevo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "166.00", category: "Sopes y Huaraches" },
-    { name: "Sopes con Pollo (2 pz)", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "166.00", category: "Sopes y Huaraches" },
-    { name: "Sopes con Aguja Norteña (2 pz)", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "186.00", category: "Sopes y Huaraches" },
-    { name: "Sopes con Arrachera marinada (2 pz)", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", category: "Sopes y Huaraches" },
-    { name: "Sopes con Rib Eye (2 pz)", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", category: "Sopes y Huaraches" },
-    { name: "Sopes con Sirloin (2 pz)", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", category: "Sopes y Huaraches" },
-    { name: "Sopes con New York (2 pz)", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", category: "Sopes y Huaraches" },
-    { name: "Huarache Sencillo", quantity: "180 gr", accompaniment: "Hecho en casa relleno de frijol refrito, acompañado con cebolla blanca, queso, lechuga y crema", priceNormal: "155.00", category: "Sopes y Huaraches" },
-    { name: "Huarache con Huevo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "176.00", category: "Sopes y Huaraches" },
-    { name: "Huarache con Pollo", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "176.00", category: "Sopes y Huaraches" },
-    { name: "Huarache con Aguja Norteña", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "186.00", category: "Sopes y Huaraches" },
-    { name: "Huarache con Arrachera marinada", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", category: "Sopes y Huaraches" },
-    { name: "Huarache con Rib Eye", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", category: "Sopes y Huaraches" },
-    { name: "Huarache con Sirloin", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", category: "Sopes y Huaraches" },
-    { name: "Huarache con New York", quantity: "110 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", category: "Sopes y Huaraches" },
+    { name: "Sopes con Arrachera (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", pricePackage: "226.00", category: "Sopes y Huaraches" },
+    { name: "Sopes con Sirlon (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", pricePackage: "226.00", category: "Sopes y Huaraches" },
+    { name: "Sopes con Rib Eye (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", pricePackage: "226.00", category: "Sopes y Huaraches" },
+    { name: "Sopes con New York (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "196.00", pricePackage: "226.00", category: "Sopes y Huaraches" },
+    { name: "Sopes con Aguja Norteña (2 pz)", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "186.00", pricePackage: "216.00", category: "Sopes y Huaraches" },
+    { name: "Sopes con Huevo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "166.00", pricePackage: "196.00", category: "Sopes y Huaraches" },
+    { name: "Sopes con Pollo (2 pz)", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "166.00", pricePackage: "196.00", category: "Sopes y Huaraches" },
+    { name: "Huarache con Arrachera", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "198.00", pricePackage: "228.00", category: "Sopes y Huaraches" },
+    { name: "Huarache con Sirlon", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "198.00", pricePackage: "228.00", category: "Sopes y Huaraches" },
+    { name: "Huarache con Rib Eye", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "198.00", pricePackage: "228.00", category: "Sopes y Huaraches" },
+    { name: "Huarache con New York", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "198.00", pricePackage: "228.00", category: "Sopes y Huaraches" },
+    { name: "Huarache con Aguja Norteña", quantity: "80 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "186.00", pricePackage: "216.00", category: "Sopes y Huaraches" },
+    { name: "Huarache con Huevo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "176.00", pricePackage: "206.00", category: "Sopes y Huaraches" },
+    { name: "Huarache con Pollo", quantity: "120 gr", accompaniment: "Frijoles, queso y crema", priceNormal: "176.00", pricePackage: "206.00", category: "Sopes y Huaraches" },
 ];
 
   export const entranceItems = [
-    { name: "Queso fundido tradicional", quantity: "200 g", accompaniment: "Preparado con queso derretido al punto perfecto, acompañado de cebolla cambray, chile toreado y tortillas recién hechas.", price: "175.00" },
-    { name: "Queso fundido con chistorra", quantity: "200 g + 100 g", accompaniment: "Elaborado con queso fundido y chistorra, servido con cebolla cambray, chile toreado y tortillas.", price: "203.00" },
-    { name: "Queso fundido con arrachera", quantity: "200 g + 100 g", accompaniment: "Elaborado con queso fundido y arrachera jugosa, servido con cebolla cambray, chile toreado y tortillas.", price: "231.00" },
-    { name: "Queso fundido con aguja norteña", quantity: "200 g + 100 g", accompaniment: "Preparado con queso fundido y aguja norteña, acompañado de cebolla cambray, chile toreado y tortillas.", price: "231.00" },
-    { name: "Queso fundido con rib eye", quantity: "200 g + 100 g", accompaniment: "Elaborado con queso fundido y rib eye, servido con cebolla cambray, chile toreado y tortillas.", price: "259.00" },
-    { name: "Queso fundido con new york", quantity: "200 g + 100 g", accompaniment: "Preparado con queso fundido y corte New York, acompañado de cebolla cambray, chile toreado y tortillas.", price: "259.00" },
-    { name: "Queso fundido con sirloin", quantity: "200 g + 100 g", accompaniment: "Elaborado con queso fundido y sirloin, servido con cebolla cambray, chile toreado y tortillas.", price: "259.00" },
+    { name: "Queso fundido tradicional", quantity: "180 g", accompaniment: "Preparado con queso derretido al punto perfecto, acompañado de cebolla cambray, chile toreado y tortillas recién hechas.", price: "175.00" },
+    { name: "Queso fundido con chistorra", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y chistorra, servido con cebolla cambray, chile toreado y tortillas.", price: "203.00" },
+    { name: "Queso fundido con arrachera", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y arrachera jugosa, servido con cebolla cambray, chile toreado y tortillas.", price: "231.00" },
+    { name: "Queso fundido con aguja norteña", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y aguja norteña, acompañado de cebolla cambray, chile toreado y tortillas.", price: "231.00" },
+    { name: "Queso fundido con rib eye", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y rib eye, servido con cebolla cambray, chile toreado y tortillas.", price: "259.00" },
+    { name: "Queso fundido con new york", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y corte New York, acompañado de cebolla cambray, chile toreado y tortillas.", price: "259.00" },
+    { name: "Queso fundido con sirloin", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y sirloin, servido con cebolla cambray, chile toreado y tortillas.", price: "259.00" },
     { name: "Guacamole tradicional", quantity: "180 g", accompaniment: "Preparado al momento con aguacate fresco, acompañado de pico de gallo, queso panela y chicharrón fresco.", price: "203.00" },
     { name: "Pescadillas de pescado", quantity: "3 pz – 500 g", accompaniment: "Deliciosas quesadillas rellenas de pescado, servidas con mix de coles, mayonesa chipotle y aguacate.", price: "98.00" },
-    { name: "Dedo de queso (5 pzas)", quantity: "150 g", accompaniment: "Queso gouda empanizado de panko acompañado de salsa catsup.", price: "159.00" },
   ];
 
   export const cutsItems = [
-    { name: "Aguja norteña a la parrilla", quantity: "250 g", accompaniment: "Cocinada al punto, acompañada de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "365.00" },
     { name: "Arrachera a la parrilla", quantity: "200 g", accompaniment: "Preparada a la parrilla, servida con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "365.00" },
     { name: "New York a la parrilla", quantity: "250 g", accompaniment: "Corte clásico a la parrilla, acompañado de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00" },
     { name: "Rib eye a la parrilla", quantity: "250 g", accompaniment: "Corte jugoso preparado a la parrilla, servido con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00" },
     { name: "Sirloin a la parrilla", quantity: "250 g", accompaniment: "Preparado a la parrilla, servido con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00" },
-    { name: "Pechuga al limón", quantity: "200 g", accompaniment: "Suprema de pechuga marinada en limón, miel y orégano acompañada de papas a la francesa y cebolla cambray.", price: "235.00" },
-    { name: "Pechuga al chipotle", quantity: "200 g", accompaniment: "Suprema de pechuga asada acompañada de cremoso chipotle sobre cama de papas a la francesa.", price: "265.00" },
+    { name: "Aguja norteña a la parrilla", quantity: "250 g", accompaniment: "Cocinada al punto, acompañada de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "365.00" },
+    { name: "Molcajete tierra", quantity: "", accompaniment: "Selección de carnes a la parrilla servidas en molcajete de piedra volcánica.", price: "336.00" },
+    { name: "Molcajete mar y tierra", quantity: "", accompaniment: "Selección de carnes y mariscos a la parrilla servidos en molcajete de piedra volcánica.", price: "272.00" },
   ];
 
   export const saladItems = [
@@ -76,8 +74,8 @@ export const breakfastItems = [
       { name: "Camarones momia", quantity: "150 g", accompaniment: "Rellenos de chile jalapeño y queso gouda, envueltos en tocino, y acompañados de arroz y ensalada de la casa.", price: "315.00" },
       { name: "Atún a la parrilla", quantity: "200 g", accompaniment: "Atún nacional en costra de mix de chiles y semillas, acompañado de arroz amarillo y ensalada de la casa.", price: "290.00" },
       { name: "Salmón a la parrilla", quantity: "200 g", accompaniment: "Salmón bañado en una salsa cremosa de limón, acompañado de arroz y ensalada de la casa.", price: "343.00" },
-      { name: "Cóctel de camarón chico", quantity: "75 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "135.00" },
-      { name: "Cóctel de camarón grande", quantity: "150 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "205.00" },
+      { name: "Cóctel de camarón chico", quantity: "80 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "135.00" },
+      { name: "Cóctel de camarón grande", quantity: "140 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "205.00" },
       { name: "Cóctel campechano chico", quantity: "80 g", accompaniment: "Camarón pacotilla y pulpo, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "135.00" },
       { name: "Cóctel campechano grande", quantity: "140 g", accompaniment: "Camarón pacotilla y pulpo, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "205.00" },
       { name: "Tostada de atún", quantity: "1 pza - 80 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, atún laminado marinado en salsa negra y limón, terminado con aguacate y poro frito.", price: "124.00" },
@@ -91,52 +89,36 @@ export const breakfastItems = [
   ];
 
   export const tacoItems = [
-    { name: "Taco de arrachera", quantity: "1 pza - 70 g", accompaniment: "Preparado con arrachera a la plancha, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
-    { name: "Taco de aguja norteña", quantity: "1 pza - 70 g", accompaniment: "Elaborado con aguja norteña, acompañado de papas al orégano, chiles toreados y guacamole.", price: "78.00" },
-    { name: "Taco de rib eye", quantity: "1 pza - 70 g", accompaniment: "Preparado con rib eye, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
-    { name: "Taco de New York", quantity: "1 pza - 70 g", accompaniment: "Elaborado con corte New York, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
-    { name: "Taco de sirloin", quantity: "1 pza - 70 g", accompaniment: "Preparado con sirloin, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
-    { name: "Taco de pechuga al limón", quantity: "1 pza - 70 g", accompaniment: "Elaborado con pechuga marinada al limón, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
-    { name: "Taco de pechuga al chipotle", quantity: "1 pza - 70 g", accompaniment: "Preparado con pechuga en salsa chipotle, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
+    { name: "Taco de arrachera", quantity: "1 pza - 60 g", accompaniment: "Preparado con arrachera a la plancha, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
+    { name: "Taco de aguja norteña", quantity: "1 pza - 60 g", accompaniment: "Elaborado con aguja norteña, acompañado de papas al orégano, chiles toreados y guacamole.", price: "78.00" },
+    { name: "Taco de rib eye", quantity: "1 pza - 60 g", accompaniment: "Preparado con rib eye, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
+    { name: "Taco de New York", quantity: "1 pza - 60 g", accompaniment: "Elaborado con corte New York, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
+    { name: "Taco de sirloin", quantity: "1 pza - 60 g", accompaniment: "Preparado con sirloin, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
+    { name: "Taco de pechuga al limón", quantity: "1 pza - 60 g", accompaniment: "Elaborado con pechuga marinada al limón, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
+    { name: "Taco de pechuga al chipotle", quantity: "1 pza - 60 g", accompaniment: "Preparado con pechuga en salsa chipotle, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
     { name: "Taco queso carne", quantity: "110 g", accompaniment: "Bisteck de cerdo encebollado, con queso gratinado, acompañado con salsa martajada y cebolla y cilantro.", price: "68.00" },
-    { name: "Taco ensenada", quantity: "70 g", accompaniment: "Filete de pescado rebozado, servido en tortilla de maíz acompañado de mix de lechugas, ensalada de pepino y mayonesa chipotle de la casa.", price: "96.00" },
-  ];
-
-  export const costrasItems = [
-    { name: "Costra de aguja norteña", quantity: "70 g", accompaniment: "", price: "78.00" },
-    { name: "Costra de arrachera marinada", quantity: "70 g", accompaniment: "", price: "96.00" },
-    { name: "Costra de rib eye", quantity: "70 g", accompaniment: "", price: "96.00" },
-    { name: "Costra de sirloin", quantity: "70 g", accompaniment: "", price: "96.00" },
-    { name: "Costra de new york", quantity: "70 g", accompaniment: "", price: "96.00" },
+    { name: "Taco Ensenada", quantity: "1 pza", accompaniment: "Taco de pescado estilo Ensenada.", price: "96.00" },
+    { name: "Costra de arrachera marinada", quantity: "1 pza", accompaniment: "Costra de queso con arrachera marinada.", price: "96.00" },
+    { name: "Costra de rib eye", quantity: "1 pza", accompaniment: "Costra de queso con rib eye.", price: "96.00" },
+    { name: "Costra de New York", quantity: "1 pza", accompaniment: "Costra de queso con corte New York.", price: "96.00" },
+    { name: "Costra de sirloin", quantity: "1 pza", accompaniment: "Costra de queso con sirloin.", price: "96.00" },
+    { name: "Costra de aguja norteña", quantity: "1 pza", accompaniment: "Costra de queso con aguja norteña.", price: "78.00" },
   ];
 
   export const burgerItems = [
-    { name: "Hamburguesa clásica", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "198" },
-    { name: "Hamburguesa doble carne", quantity: "1 pza - 300 g", accompaniment: "Doble carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "226" },
-    { name: "Hamburguesa tocinito", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino, tocino crispy y aderezo de la casa.", price: "216" },
-    { name: "Hamburguesa queso + queso", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, oaxaca, americano y gouda tocino y aderezo de la casa.", price: "216" },
-    { name: "Hamburguesa de la granja", quantity: "1 pza - 300 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, americano, tocino, aderezo de la casa y cubierta con huevo estrellado.", price: "216" },
-    { name: "Hamburguesa mar y tierra", quantity: "1 pza - 240 g", accompaniment: "Carne de res 80/20, camarón pacotilla, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y salsa BBQ.", price: "226" },
-    { name: "Hamburguesa de la casa", quantity: "1 pza - 150 g de arrachera", accompaniment: "Carne de arrachera, acompañada de lechuga, jitomate, cebolla crispy, queso chihuahua y aderezo de la casa.", price: "236" },
-    { name: "Hamburguesa de pollo", quantity: "1 pza - 180 g", accompaniment: "Muslo de pollo frito, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, salsa búfalo y salsa sriacha.", price: "216" },
+    { name: "Hamburguesa clásica", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "198.00" },
+    { name: "Hamburguesa doble carne", quantity: "1 pza - 300 g", accompaniment: "Doble carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "226.00" },
+    { name: "Hamburguesa tocinito", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino, tocino crispy y aderezo de la casa.", price: "216.00" },
+    { name: "Hamburguesa queso + queso", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, oaxaca, americano y gouda tocino y aderezo de la casa.", price: "216.00" },
+    { name: "Hamburguesa de la granja", quantity: "1 pza - 300 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, americano, tocino, aderezo de la casa y cubierta con huevo estrellado.", price: "216.00" },
+    { name: "Hamburguesa mar y tierra", quantity: "1 pza - 240 g", accompaniment: "Carne de res 80/20, camarón pacotilla, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y salsa BBQ.", price: "226.00" },
+    { name: "Hamburguesa de la casa", quantity: "1 pza - 150 g de arrachera", accompaniment: "Carne de arrachera, acompañada de lechuga, jitomate, cebolla crispy, queso chihuahua y aderezo de la casa.", price: "236.00" },
+    { name: "Hamburguesa de pollo", quantity: "1 pza - 180 g", accompaniment: "Muslo de pollo frito, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, salsa búfalo y salsa sriacha.", price: "216.00" },
   ];
 
-  export const compartirItems = [
-    { name: "Pork Belly", quantity: "500 g", accompaniment: "Montado en molcajete de piedra, acompañado de nopales a la plancha y cebollitas de cambray.", price: "439.00" },
-    { name: "Chicharrón de Rib eye", quantity: "200 g", accompaniment: "Rib eye cortado en cubos en fritura profunda con cebolla blanca, chile jalapeño en salsa negra y guacamole.", price: "289.00" },
-    { name: "Molcajete Mar y Tierra", quantity: "", accompaniment: "180 grs pechuga de pollo, 110 grs arrachera, 150 grs camarón mediano, 110 grs tentáculo de pulpo. Acompañado de nopal asado y cebollas de cambray.", price: "272.00" },
-    { name: "Molcajete Tierra", quantity: "", accompaniment: "180 grs pechuga de pollo, 200 grs arrachera, 200 grs rib eye, 150 grs chorizo. Acompañado de nopal asado y cebollas de cambray.", price: "336.00" },
-    { name: "Charola BarJac", quantity: "", accompaniment: "250 grs alitas, 250 grs boneless, 250 grs dedos de queso, 300 grs salchipulpo, 2 pzas pescadilla. Servidos con aderezos para acompañar.", price: "630.00" },
-  ];
-
-  export const soupItems = [
-    { name: "Consomé de pollo", quantity: "350 g", accompaniment: "Al día, acompañado de papa, zanahoria y cilantro / cebolla.", price: "45.00" },
-    { name: "Crema preparada al día", quantity: "350 g", accompaniment: "Al día, acompañada de papa, zanahoria y cilantro / cebolla.", price: "45.00" },
-  ];
-
-  export const dessertItems = [
-    { name: "Helado Frito", quantity: "", accompaniment: "Bola de helado cubierta de temperatura dulce y bañada con syrope de chocolate.", price: "89.00" },
-    { name: "Fresas con Crema", quantity: "", accompaniment: "Crema montada con canela y vainilla, fresas frescas con coulis de frutos rojos.", price: "109.00" },
+  export const chickenItems = [
+    { name: "Pechuga al limón", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "235.00" },
+    { name: "Pechuga al chipotle", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "265.00" },
   ];
 
 
@@ -155,6 +137,10 @@ export const snackItems = [
     { name: "Alitas", quantity: "300 g", accompaniment: "Preparadas al punto, acompañadas de apio, zanahoria y aderezo ranch.", price: "231.00" },
     { name: "Boneless", quantity: "200 g", accompaniment: "Elaborados con pechuga de pollo, servidos con apio, zanahoria y aderezo ranch.", price: "203.00" },
     { name: "Papas a la parmesana con trufa", quantity: "", accompaniment: "Papas doradas, terminadas con queso parmesano y un delicado toque de trufa.", price: "149.00" },
+    { name: "Dedos de queso", quantity: "", accompaniment: "Dedos de queso crujientes, acompañados de aderezo ranch.", price: "159.00" },
+    { name: "Charola de snack", quantity: "", accompaniment: "Charola surtida con selección de snacks de la casa.", price: "699.00" },
+    { name: "Chicharrón pork belly", quantity: "", accompaniment: "Chicharrón de pork belly crujiente.", price: "439.00" },
+    { name: "Chicharrón rib eye", quantity: "", accompaniment: "Chicharrón de rib eye crujiente.", price: "289.00" },
 ];
 
 export const sodaItems = [
@@ -166,20 +152,8 @@ export const sodaItems = [
     { name: "Coca-Cola Sin Azúcar", quantity: "355 ml", price: "35.00" },
     { name: "Valle Frut Mango", quantity: "355 ml", price: "35.00" },
     { name: "Valle Frut Guayaba", quantity: "355 ml", price: "35.00" },
-    { name: "Ciel Mineral", quantity: "600 ml", price: "40.00" },
-    { name: "Topo Chico", quantity: "355 ml", price: "40.00" },
-];
-
-export const cafeItems = [
-    { name: "Café Americano", quantity: "", price: "35.00" },
-    { name: "Café Capuchino", quantity: "", price: "35.00" },
-    { name: "Café Doble Expresso", quantity: "", price: "45.00" },
-    { name: "Jugo de Naranja", quantity: "", price: "30.00" },
-    { name: "Limonada", quantity: "", price: "30.00" },
-    { name: "Naranjada", quantity: "", price: "30.00" },
-    { name: "Té de Hierbabuena", quantity: "", price: "30.00" },
-    { name: "Té de Manzanilla", quantity: "", price: "30.00" },
-    { name: "Cigarros", quantity: "", price: "15.00" },
+    { name: "Ciel Mineral", quantity: "600 ml", price: "35.00" },
+    { name: "Topo Chico", quantity: "355 ml", price: "35.00" },
 ];
 
 export const beerItems = [
@@ -203,7 +177,7 @@ export const cocteleriaItems = [
     { name: "B52", price: "85" },
     { name: "Black Russian", price: "85" },
     { name: "White Russian", price: "85" },
-    { name: "Daiquiri Clásico", price: "85" },
+    { name: "Daiquiri Clasico", price: "85" },
     { name: "Orgasm", price: "85" },
     { name: "Caipiroska", price: "85" },
     { name: "Godmother", price: "85" },
@@ -237,9 +211,10 @@ export const cocteleriaItems = [
     { name: "AMF", price: "145" },
     { name: "Tommy's Margarita", price: "145" },
     { name: "Bull", price: "145" },
-    { name: "Lychburg Limonade", price: "145" },
+    { name: "Lynchburg Lemonade", price: "145" },
     { name: "Negroni Sbagliato", price: "155" },
     { name: "Carajillo", price: "155" },
+    { name: "Carajillo con Kahlúa", price: "165" },
     { name: "Long Island Iced Tea", price: "155" },
     { name: "Clover Club", price: "155" },
     { name: "Mezcalita", price: "155" },
@@ -247,7 +222,6 @@ export const cocteleriaItems = [
     { name: "Mimosa", price: "155" },
     { name: "Back Room", price: "155" },
     { name: "Tequila Sunrise", price: "155" },
-    { name: "Carajillo con Kahlúa", price: "165" },
     { name: "Bloody Mary", price: "165" },
     { name: "Tom Collins", price: "165" },
     { name: "Beverly Hills Iced Tea", price: "165" },
@@ -261,13 +235,13 @@ export const cocteleriaItems = [
     { name: "Paloma", price: "185" },
     { name: "Side Car", price: "215" },
     { name: "Aperol Spritz", price: "215" },
-    { name: "St Germain Spritz", price: "215" },
+    { name: "St-Germain Spritz", price: "215" },
     { name: "Old Fashioned", price: "245" },
     { name: "Pink Gin", price: "245" },
     { name: "Manhattan Dulce", price: "245" },
     { name: "Manhattan Seco", price: "245" },
-    { name: "Manhattan Perfecto", price: "245" },
     { name: "Horses Neck", price: "245" },
+    { name: "Manhattan Perfecto", price: "245" },
     { name: "Rob Roy", price: "245" },
     { name: "Whiskey Sour", price: "245" },
     { name: "Amaretto Sour", price: "285" },
@@ -305,13 +279,13 @@ export const mezcalItems = [
 ];
 
 export const ronItems = [
-    { name: "Matusalem plata", category: "Ron", priceGlass: "140.00", priceBottle: "1,400.00" },
-    { name: "Havana 3", category: "Ron", priceGlass: "125.00", priceBottle: "1,100.00" },
+    { name: "Matusalem plata", category: "Ron", priceGlass: "120.00", priceBottle: "1,400.00" },
+    { name: "Havana 3", category: "Ron", priceGlass: "105.00", priceBottle: "1,100.00" },
     { name: "Havana 7", category: "Ron", priceGlass: "135.00", priceBottle: "1,600.00" },
-    { name: "Bacardí añejo", category: "Ron", priceGlass: "125.00", priceBottle: "1,200.00" },
-    { name: "Bacardí solera", category: "Ron", priceGlass: "125.00", priceBottle: "1,700.00" },
+    { name: "Bacardí añejo", category: "Ron", priceGlass: "105.00", priceBottle: "1,200.00" },
+    { name: "Bacardí solera", category: "Ron", priceGlass: "105.00", priceBottle: "1,700.00" },
     { name: "Malibú", category: "Ron", priceGlass: "135.00", priceBottle: "1,200.00" },
-    { name: "Bacardi blanco", category: "Ron", priceGlass: "110.00", priceBottle: "1,400.00" },
+    { name: "Bacardi blanco", category: "Ron", priceGlass: "110.00", priceBottle: "1,800.00" },
 ];
 
 export const whiskyItems = [
@@ -354,4 +328,28 @@ export const licorItems = [
     { name: "Branca menta", category: "Licor", priceGlass: "140.00", priceBottle: null },
     { name: "St-Germain", category: "Licor", priceGlass: "160.00", priceBottle: null },
     { name: "Frangelico", category: "Licor", priceGlass: "135.00", priceBottle: null }
+];
+
+export const caldosItems = [
+    { name: "Crema del día", quantity: "", accompaniment: "Crema preparada del día.", price: "38.00" },
+    { name: "Consomé de pollo", quantity: "", accompaniment: "Consomé de pollo de la casa.", price: "38.00" },
+];
+
+export const postresItems = [
+    { name: "Fresas con crema", quantity: "", accompaniment: "Fresas frescas con crema.", price: "79.00" },
+    { name: "Helado frito", quantity: "", accompaniment: "Helado frito crujiente.", price: "79.00" },
+];
+
+export const cafeItems = [
+    { name: "Café americano", quantity: "", price: "35.00" },
+    { name: "Café capuchino", quantity: "", price: "35.00" },
+    { name: "Café doble expresso", quantity: "", price: "45.00" },
+];
+
+export const otrosItems = [
+    { name: "Jugo de naranja", quantity: "", price: "30.00" },
+    { name: "Limonada", quantity: "", price: "30.00" },
+    { name: "Naranjada", quantity: "", price: "30.00" },
+    { name: "Té hierba buena", quantity: "", price: "30.00" },
+    { name: "Té manzanilla", quantity: "", price: "30.00" },
 ];
