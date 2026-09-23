@@ -10,14 +10,14 @@ import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState, useEffect, useRef } from "react";
 import {
-  breakfastItems, entranceItems,
+  entranceItems,
   cutsItems, saladItems, seafoodItems, tacoItems, burgerItems,
   chickenItems, snackItems, sodaItems, beerItems, preparadosItems, cocteleriaItems,
   ginebraItems, vodkaItems, tequilaItems, mezcalItems, ronItems, whiskyItems, cognacItems, brandyItems, licorItems, bourbonItems,
   caldosItems, postresItems, cafeItems, otrosItems
 } from "@/lib/menu-data";
 import {
-  breakfastItemsEn, entranceItemsEn,
+  entranceItemsEn,
   cutsItemsEn, saladItemsEn, seafoodItemsEn, tacoItemsEn, burgerItemsEn,
   snackItemsEn, sodaItemsEn, beerItemsEn, preparadosItemsEn, cocteleriaItemsEn,
   ginebraItemsEn, vodkaItemsEn, tequilaItemsEn, mezcalItemsEn, ronItemsEn, whiskyItemsEn, cognacItemsEn, brandyItemsEn, licorItemsEn, bourbonItemsEn
@@ -87,7 +87,7 @@ const drinkImages = [
 
 export default function Home() {
   const [isSheetOpen, setSheetOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("desayunos");
+  const [activeTab, setActiveTab] = useState("entradas");
   const [language, setLanguage] = useState("es");
   const [scrolled, setScrolled] = useState(false);
 
@@ -99,12 +99,12 @@ export default function Home() {
 
   const menuCategories: Record<string, Record<string, string>> = {
     es: {
-      desayunos: "Desayunos", entradas: "Entradas", cortes: "Cortes", ensaladas: "Ensaladas",
+      entradas: "Entradas", cortes: "Cortes", ensaladas: "Ensaladas",
       mariscos: "Mariscos", taco: "Tacos", hamburguesas: "Hamburguesas", pollo: "Pollo",
       snacks: "Snacks", caldos: "Caldos", postres: "Postres", bebidas: "Bebidas",
     },
     en: {
-      desayunos: "Breakfast", entradas: "Appetizers", cortes: "Cuts", ensaladas: "Salads",
+      entradas: "Appetizers", cortes: "Cuts", ensaladas: "Salads",
       mariscos: "Seafood", taco: "Tacos", hamburguesas: "Burgers", pollo: "Chicken",
       snacks: "Snacks", caldos: "Soups", postres: "Desserts", bebidas: "Drinks",
     }
@@ -168,7 +168,6 @@ export default function Home() {
   };
 
   const lang = language as string;
-  const currentBreakfastItems = lang === 'es' ? breakfastItems : breakfastItemsEn;
   const currentEntranceItems = lang === 'es' ? entranceItems : entranceItemsEn;
   const currentCutsItems = lang === 'es' ? cutsItems : cutsItemsEn;
   const currentSaladItems = lang === 'es' ? saladItems : saladItemsEn;
@@ -199,17 +198,6 @@ export default function Home() {
   const currentBeerItems = lang === 'es' ? beerItems : beerItemsEn;
   const bottledBeers = currentBeerItems.filter((beer: any) => beer.type === 'botella');
   const draftBeers = currentBeerItems.filter((beer: any) => beer.type === 'barril');
-
-  const groupedBreakfastItems = (currentBreakfastItems as any[]).reduce((acc, item) => {
-    const category = item.category;
-    if (!acc[category]) acc[category] = [];
-    acc[category].push(item);
-    return acc;
-  }, {} as Record<string, any[]>);
-
-  const breakfastOrder = lang === 'es'
-    ? ['Huevos', 'Chilaquiles', 'Enchiladas', 'Sopes y Huaraches']
-    : ['Eggs', 'Chilaquiles', 'Enchiladas', 'Sopes & Huaraches'];
 
   const renderFoodCard = (item: any, index: number) => (
     <Card key={index} className="group bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
@@ -357,7 +345,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            <Tabs defaultValue="desayunos" className="w-full" onValueChange={setActiveTab} value={activeTab}>
+            <Tabs defaultValue="entradas" className="w-full" onValueChange={setActiveTab} value={activeTab}>
               <div className="overflow-x-auto pb-4 -mx-4 px-4">
                 <TabsList className="inline-flex p-1 h-auto bg-white rounded-full shadow-sm border border-[hsl(var(--border))] mb-8 gap-1 min-w-max">
                   {Object.keys(menuCategories[lang]).map((tab) => (
@@ -375,54 +363,6 @@ export default function Home() {
                   ))}
                 </TabsList>
               </div>
-
-              {/* DESAYUNOS */}
-              <TabsContent value="desayunos">
-                <ScrollReveal>
-                  <div className="text-center mb-8">
-                    <h3 className="font-display text-3xl md:text-4xl font-bold text-[hsl(var(--primary))]">{menuCategories[lang].desayunos}</h3>
-                    <p className="text-[hsl(var(--muted-foreground))] mt-2">{lang === 'es' ? 'En paquete te incluimos café, fruta o jugo.' : 'Package includes coffee, fruit or juice.'}</p>
-                  </div>
-                </ScrollReveal>
-                {breakfastOrder.map(categoryKey => {
-                  if (!groupedBreakfastItems[categoryKey]) return null;
-                  const getCategoryTitle = () => {
-                    if (lang === 'es') {
-                      if (categoryKey === 'Huevos') return 'Huevos al gusto';
-                      if (categoryKey === 'Chilaquiles') return 'Chilaquiles (verdes, rojos o combinados)';
-                      if (categoryKey === 'Enchiladas') return 'Enchiladas (verdes, rojas o combinadas)';
-                      return categoryKey;
-                    } else {
-                      if (categoryKey === 'Eggs') return 'Eggs Your Way';
-                      if (categoryKey === 'Chilaquiles') return 'Chilaquiles (green, red or combined)';
-                      if (categoryKey === 'Enchiladas') return 'Enchiladas (green, red or combined)';
-                      return categoryKey;
-                    }
-                  };
-                  return (
-                    <ScrollReveal key={categoryKey}>
-                      <div className="mb-12">
-                        <h4 className="font-display text-2xl font-bold text-[hsl(var(--warm-brown))] text-center mb-6">{getCategoryTitle()}</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {groupedBreakfastItems[categoryKey].map((item: any, index: number) => (
-                            <Card key={index} className="group bg-white border-[hsl(var(--border))] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                              <CardHeader className="pb-2"><CardTitle className="text-lg font-display text-[hsl(var(--warm-brown))]">{item.name}</CardTitle></CardHeader>
-                              <CardContent>
-                                {item.quantity && <p className="text-sm text-[hsl(var(--muted-foreground))]">{item.quantity}</p>}
-                                {item.accompaniment && <p className="text-[hsl(var(--muted-foreground))] mb-2 text-sm">{item.accompaniment}</p>}
-                                <div className="flex justify-between items-center mt-3">
-                                  <div><p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">{lang === 'es' ? 'Normal' : 'Regular'}</p><p className="font-bold text-[hsl(var(--primary))]">${item.priceNormal}</p></div>
-                                  <div className="text-right"><p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">{lang === 'es' ? 'Paquete' : 'Package'}</p><p className="font-bold text-[hsl(var(--primary))]">${item.pricePackage}</p></div>
-                                </div>
-                              </CardContent>
-                            </Card>
-                          ))}
-                        </div>
-                      </div>
-                    </ScrollReveal>
-                  );
-                })}
-              </TabsContent>
 
               {/* Generic food tabs */}
               {[
