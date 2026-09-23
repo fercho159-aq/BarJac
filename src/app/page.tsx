@@ -712,24 +712,64 @@ export default function Home() {
         </section>
 
         {/* Contacto placeholder */}
-        <section id="contacto" className="py-16 md:py-24 bg-[hsl(var(--cream))]">
-          <div className="container px-4 text-center">
+        <section id="contacto" className="py-16 md:py-24 bg-gradient-to-b from-[#3D4F27] to-[#2A3A1A]">
+          <div className="container px-4">
             <ScrollReveal>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-[hsl(var(--warm-brown))]">{lang === 'es' ? 'Contacto' : 'Contact'}</h2>
-              <div className="w-24 h-1 bg-[hsl(var(--primary))] mx-auto mt-4 rounded-full"></div>
-              <p className="mt-6 text-[hsl(var(--muted-foreground))] max-w-lg mx-auto">{lang === 'es' ? 'Próximamente más opciones de contacto. Por ahora, escríbenos por WhatsApp o síguenos en redes sociales.' : 'More contact options coming soon. For now, message us on WhatsApp or follow us on social media.'}</p>
-              <div className="mt-8 flex flex-wrap gap-4 justify-center">
-                <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold hover:scale-105 transition-all">
-                  <a href="https://wa.me/525636363018" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-full border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-white transition-all">
-                  <a href="https://www.instagram.com/barjac_cdmx/" target="_blank" rel="noopener noreferrer"><Instagram className="mr-2 h-5 w-5" />Instagram</a>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-full border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-white transition-all">
-                  <a href="https://www.tiktok.com/@barjacmexico" target="_blank" rel="noopener noreferrer"><TiktokIcon className="mr-2 h-5 w-5" />TikTok</a>
-                </Button>
+              <div className="text-center mb-10">
+                <h2 className="font-display text-4xl md:text-5xl font-bold text-white">{lang === 'es' ? 'Contacto' : 'Contact'}</h2>
+                <div className="w-24 h-1 bg-[hsl(var(--gold))] mx-auto mt-4 rounded-full"></div>
+                <p className="mt-4 text-white/70 max-w-lg mx-auto">{lang === 'es' ? 'Escríbenos, síguenos o visítanos. ¡Te esperamos!' : 'Write us, follow us or visit us. We\'re waiting for you!'}</p>
               </div>
             </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto items-center">
+              <ScrollReveal>
+                <div className="space-y-3">
+                  {[
+                    { label: lang === 'es' ? 'Ver Menú' : 'View Menu', href: '#menu', icon: <UtensilsCrossed className="h-6 w-6 flex-shrink-0" />, color: 'bg-[#5C6B3C]', hover: 'hover:bg-[#4A5D23]' },
+                    { label: 'WhatsApp', href: 'https://wa.me/525636363018', icon: <Phone className="h-6 w-6 flex-shrink-0" />, color: 'bg-[#25D366]', hover: 'hover:bg-[#1DA851]' },
+                    { label: 'Instagram', href: 'https://www.instagram.com/barjac_cdmx/', icon: <Instagram className="h-6 w-6 flex-shrink-0" />, color: 'bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737]', hover: 'hover:opacity-90' },
+                    { label: 'TikTok', href: 'https://www.tiktok.com/@barjacmexico', icon: <TiktokIcon className="h-6 w-6 flex-shrink-0" />, color: 'bg-black', hover: 'hover:bg-gray-900' },
+                    { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61584743632789&locale=es_LA', icon: <Facebook className="h-6 w-6 flex-shrink-0" />, color: 'bg-[#1877F2]', hover: 'hover:bg-[#166FE5]' },
+                    { label: 'Google Maps', href: 'https://maps.app.goo.gl/oRUrpHz1dkJy52SWA?g_st=aw', icon: <MapPin className="h-6 w-6 flex-shrink-0" />, color: 'bg-[#EA4335]', hover: 'hover:bg-[#D33426]' },
+                    { label: lang === 'es' ? 'Llamar' : 'Call', href: 'tel:+525636363018', icon: <Phone className="h-6 w-6 flex-shrink-0" />, color: 'bg-[#5C6B3C]', hover: 'hover:bg-[#4A5D23]' },
+                  ].map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.href}
+                      target={link.href.startsWith('http') || link.href.startsWith('tel:') ? '_blank' : undefined}
+                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className={`w-full flex items-center gap-4 px-6 py-4 rounded-2xl text-white font-semibold text-lg ${link.color} ${link.hover} transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg hover:shadow-xl`}
+                    >
+                      {link.icon}
+                      <span className="flex-1 text-center">{link.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <div className="flex flex-col items-center">
+                  <div className="bg-white rounded-3xl p-6 shadow-2xl">
+                    <h3 className="font-display text-2xl font-bold text-[#2A3A1A] text-center mb-2">{lang === 'es' ? 'ESCANÉAME' : 'SCAN ME'}</h3>
+                    <p className="text-[#6B7B5C] text-sm mb-4 text-center">
+                      {lang === 'es' ? 'Menú · WhatsApp · Redes · Ubicación' : 'Menu · WhatsApp · Social · Location'}
+                    </p>
+                    <div className="bg-[#FAF7F2] p-4 rounded-2xl shadow-inner">
+                      <img
+                        src={`https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=${encodeURIComponent('https://barjac.web.app/links')}&bgcolor=FAF7F2&color=2A3A1A&margin=20`}
+                        alt="QR Code - BarJac Links"
+                        width={240}
+                        height={240}
+                        className="rounded-xl"
+                      />
+                    </div>
+                    <p className="text-[#6B7B5C] text-xs mt-3 text-center">barjac.web.app/links</p>
+                  </div>
+                  <p className="text-white/50 text-xs mt-4 text-center">Álvaro Obregón 234, Roma Norte, CDMX</p>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
       </main>
