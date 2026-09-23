@@ -207,11 +207,11 @@ export default function Home() {
     return (
       <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
         {item.image && (
-          <div className="relative aspect-[3/2] overflow-hidden">
+          <div className="relative aspect-[3/2] overflow-hidden bg-[#F5F0E8] flex items-center justify-center">
             <img
               src={item.image}
               alt={item.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className={`transition-transform duration-500 ${item.image.includes('barjac-icon') ? 'w-16 h-16 object-contain opacity-30' : 'w-full h-full object-cover group-hover:scale-105'}`}
               loading="lazy"
             />
           </div>
