@@ -44,81 +44,81 @@ export const breakfastItems = [
 ];
 
   export const entranceItems = [
-    { name: "Queso fundido tradicional", quantity: "180 g", accompaniment: "Preparado con queso derretido al punto perfecto, acompañado de cebolla cambray, chile toreado y tortillas recién hechas.", price: "175.00" },
-    { name: "Queso fundido con chistorra", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y chistorra, servido con cebolla cambray, chile toreado y tortillas.", price: "203.00" },
-    { name: "Queso fundido con arrachera", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y arrachera jugosa, servido con cebolla cambray, chile toreado y tortillas.", price: "231.00" },
-    { name: "Queso fundido con aguja norteña", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y aguja norteña, acompañado de cebolla cambray, chile toreado y tortillas.", price: "231.00" },
-    { name: "Queso fundido con rib eye", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y rib eye, servido con cebolla cambray, chile toreado y tortillas.", price: "259.00" },
-    { name: "Queso fundido con new york", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y corte New York, acompañado de cebolla cambray, chile toreado y tortillas.", price: "259.00" },
-    { name: "Queso fundido con sirloin", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y sirloin, servido con cebolla cambray, chile toreado y tortillas.", price: "259.00" },
-    { name: "Guacamole tradicional", quantity: "180 g", accompaniment: "Preparado al momento con aguacate fresco, acompañado de pico de gallo, queso panela y chicharrón fresco.", price: "203.00" },
-    { name: "Pescadillas de pescado", quantity: "3 pz – 500 g", accompaniment: "Deliciosas quesadillas rellenas de pescado, servidas con mix de coles, mayonesa chipotle y aguacate.", price: "98.00" },
+    { name: "Queso fundido tradicional", quantity: "180 g", accompaniment: "Preparado con queso derretido al punto perfecto, acompañado de cebolla cambray, chile toreado y tortillas recién hechas.", price: "90.00", image: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=600&h=400&fit=crop" },
+    { name: "Queso fundido con chistorra", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y chistorra, servido con cebolla cambray, chile toreado y tortillas.", price: "125.00", image: "https://images.unsplash.com/photo-1618449840665-9ed506d73a34?w=600&h=400&fit=crop" },
+    { name: "Queso fundido con arrachera", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y arrachera jugosa, servido con cebolla cambray, chile toreado y tortillas.", price: "125.00", image: "https://images.unsplash.com/photo-1635564874865-89e0c56f3e91?w=600&h=400&fit=crop" },
+    { name: "Queso fundido con aguja norteña", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y aguja norteña, acompañado de cebolla cambray, chile toreado y tortillas.", price: "125.00", image: "https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=600&h=400&fit=crop" },
+    { name: "Queso fundido con rib eye", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y rib eye, servido con cebolla cambray, chile toreado y tortillas.", price: "135.00", image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop" },
+    { name: "Queso fundido con new york", quantity: "180 g + 80 g", accompaniment: "Preparado con queso fundido y corte New York, acompañado de cebolla cambray, chile toreado y tortillas.", price: "135.00", image: "https://images.unsplash.com/photo-1578861256987-53b5c3a5f7d3?w=600&h=400&fit=crop" },
+    { name: "Queso fundido con sirloin", quantity: "180 g + 80 g", accompaniment: "Elaborado con queso fundido y sirloin, servido con cebolla cambray, chile toreado y tortillas.", price: "135.00", image: "https://images.unsplash.com/photo-1585325701165-351af55537e0?w=600&h=400&fit=crop" },
+    { name: "Guacamole tradicional", quantity: "180 g", accompaniment: "Preparado al momento con aguacate fresco, acompañado de pico de gallo, queso panela y chicharrón fresco.", price: "203.00", image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&h=400&fit=crop" },
+    { name: "Pescadillas de pescado", quantity: "3 pz – 500 g", accompaniment: "Deliciosas quesadillas rellenas de pescado, servidas con mix de coles, mayonesa chipotle y aguacate.", price: "98.00", image: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=600&h=400&fit=crop" },
   ];
 
   export const cutsItems = [
-    { name: "Arrachera a la parrilla", quantity: "200 g", accompaniment: "Preparada a la parrilla, servida con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "365.00" },
-    { name: "New York a la parrilla", quantity: "250 g", accompaniment: "Corte clásico a la parrilla, acompañado de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00" },
-    { name: "Rib eye a la parrilla", quantity: "250 g", accompaniment: "Corte jugoso preparado a la parrilla, servido con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00" },
-    { name: "Sirloin a la parrilla", quantity: "250 g", accompaniment: "Preparado a la parrilla, servido con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00" },
-    { name: "Aguja norteña a la parrilla", quantity: "250 g", accompaniment: "Cocinada al punto, acompañada de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "365.00" },
-    { name: "Molcajete tierra", quantity: "", accompaniment: "Selección de carnes a la parrilla servidas en molcajete de piedra volcánica.", price: "336.00" },
-    { name: "Molcajete mar y tierra", quantity: "", accompaniment: "Selección de carnes y mariscos a la parrilla servidos en molcajete de piedra volcánica.", price: "272.00" },
+    { name: "Arrachera a la parrilla", quantity: "200 g", accompaniment: "Preparada a la parrilla, servida con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "365.00", image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop" },
+    { name: "New York a la parrilla", quantity: "250 g", accompaniment: "Corte clásico a la parrilla, acompañado de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00", image: "https://images.unsplash.com/photo-1558030006-450675393462?w=600&h=400&fit=crop" },
+    { name: "Rib eye a la parrilla", quantity: "250 g", accompaniment: "Corte jugoso preparado a la parrilla, servido con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00", image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&h=400&fit=crop" },
+    { name: "Sirloin a la parrilla", quantity: "250 g", accompaniment: "Preparado a la parrilla, servido con papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "415.00", image: "https://images.unsplash.com/photo-1432139509613-5c4255a1d10f?w=600&h=400&fit=crop" },
+    { name: "Aguja norteña a la parrilla", quantity: "250 g", accompaniment: "Cocinada al punto, acompañada de papas a la francesa, cebollas cambray, nopal baby y chiles toreados.", price: "365.00", image: "https://images.unsplash.com/photo-1529694157872-4e0c0f3b238b?w=600&h=400&fit=crop" },
+    { name: "Molcajete tierra", quantity: "", accompaniment: "Selección de carnes a la parrilla servidas en molcajete de piedra volcánica.", price: "336.00", image: "https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=600&h=400&fit=crop" },
+    { name: "Molcajete mar y tierra", quantity: "", accompaniment: "Selección de carnes y mariscos a la parrilla servidos en molcajete de piedra volcánica.", price: "272.00", image: "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&h=400&fit=crop" },
   ];
 
   export const saladItems = [
-    { name: "Ensalada de frutos rojos", quantity: "180 g", accompaniment: "Preparada con mix de lechugas y una selección de frutos rojos frescos, acompañada de aderezo de la casa, queso de cabra y nuez caramelizada.", price: "231.00" },
-    { name: "Ensalada de melón", quantity: "200 g", accompaniment: "Preparada con mix de lechugas y melón, prosciutto, acompañada de aderezo de miel mostaza, queso panela.", price: "161.00" },
+    { name: "Ensalada de frutos rojos", quantity: "180 g", accompaniment: "Preparada con mix de lechugas y una selección de frutos rojos frescos, acompañada de aderezo de la casa, queso de cabra y nuez caramelizada.", price: "231.00", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop" },
+    { name: "Ensalada de melón", quantity: "200 g", accompaniment: "Preparada con mix de lechugas y melón, prosciutto, acompañada de aderezo de miel mostaza, queso panela.", price: "161.00", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&h=400&fit=crop" },
   ];
 
   export const seafoodItems = [
-      { name: "Camarones momia", quantity: "150 g", accompaniment: "Rellenos de chile jalapeño y queso gouda, envueltos en tocino, y acompañados de arroz y ensalada de la casa.", price: "315.00" },
-      { name: "Atún a la parrilla", quantity: "200 g", accompaniment: "Atún nacional en costra de mix de chiles y semillas, acompañado de arroz amarillo y ensalada de la casa.", price: "290.00" },
-      { name: "Salmón a la parrilla", quantity: "200 g", accompaniment: "Salmón bañado en una salsa cremosa de limón, acompañado de arroz y ensalada de la casa.", price: "343.00" },
-      { name: "Cóctel de camarón chico", quantity: "80 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "135.00" },
-      { name: "Cóctel de camarón grande", quantity: "140 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "205.00" },
-      { name: "Cóctel campechano chico", quantity: "80 g", accompaniment: "Camarón pacotilla y pulpo, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "135.00" },
-      { name: "Cóctel campechano grande", quantity: "140 g", accompaniment: "Camarón pacotilla y pulpo, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "205.00" },
-      { name: "Tostada de atún", quantity: "1 pza - 80 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, atún laminado marinado en salsa negra y limón, terminado con aguacate y poro frito.", price: "124.00" },
-      { name: "Tostada de pescado", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de pescado (cebolla, pepino, cilantro, jitomate y salsa mango habanero).", price: "124.00" },
-      { name: "Tostada de pulpo", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de pulpo (cebolla, pepino, cilantro, jitomate, tomate y salsa negra).", price: "186.00" },
-      { name: "Tostada de camarón", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de camarón (cebolla, pepino, cilantro, jitomate y salsas rojas).", price: "186.00" },
-      { name: "Aguachile rojo", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa roja a base de camarón, acompañado de pepino, cebolla morada y chile serrano.", price: "329.00" },
-      { name: "Aguachile verde estilo Sinaloa", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa verde a base de pepino, acompañado de pepino, cebolla morada y chile serrano, tradicional sinaloense.", price: "329.00" },
-      { name: "Aguachile negro", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa negra tatemada, acompañado de pepino, cebolla morada y chile serrano.", price: "329.00" },
-      { name: "Vuelve a la vida", quantity: "190 g", accompaniment: "Camarón pacotilla, pulpo y ostiones, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "259.00" },
+      { name: "Camarones momia", quantity: "150 g", accompaniment: "Rellenos de chile jalapeño y queso gouda, envueltos en tocino, y acompañados de arroz y ensalada de la casa.", price: "315.00", image: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=600&h=400&fit=crop" },
+      { name: "Atún a la parrilla", quantity: "200 g", accompaniment: "Atún nacional en costra de mix de chiles y semillas, acompañado de arroz amarillo y ensalada de la casa.", price: "290.00", image: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600&h=400&fit=crop" },
+      { name: "Salmón a la parrilla", quantity: "200 g", accompaniment: "Salmón bañado en una salsa cremosa de limón, acompañado de arroz y ensalada de la casa.", price: "343.00", image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&h=400&fit=crop" },
+      { name: "Cóctel de camarón chico", quantity: "80 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "135.00", image: "https://images.unsplash.com/photo-1648431423797-b0fa5468e356?w=600&h=400&fit=crop" },
+      { name: "Cóctel de camarón grande", quantity: "140 g", accompaniment: "Camarón pacotilla, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "205.00", image: "https://images.unsplash.com/photo-1590759668628-05b0fc34bb70?w=600&h=400&fit=crop" },
+      { name: "Cóctel campechano chico", quantity: "80 g", accompaniment: "Camarón pacotilla y pulpo, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "135.00", image: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=600&h=400&fit=crop" },
+      { name: "Cóctel campechano grande", quantity: "140 g", accompaniment: "Camarón pacotilla y pulpo, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "205.00", image: "https://images.unsplash.com/photo-1579631542720-3a87824fff86?w=600&h=400&fit=crop" },
+      { name: "Tostada de atún", quantity: "1 pza - 80 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, atún laminado marinado en salsa negra y limón, terminado con aguacate y poro frito.", price: "124.00", image: "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?w=600&h=400&fit=crop" },
+      { name: "Tostada de pescado", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de pescado (cebolla, pepino, cilantro, jitomate y salsa mango habanero).", price: "124.00", image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&h=400&fit=crop" },
+      { name: "Tostada de pulpo", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de pulpo (cebolla, pepino, cilantro, jitomate, tomate y salsa negra).", price: "186.00", image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=400&fit=crop" },
+      { name: "Tostada de camarón", quantity: "1 pza - 60 g", accompaniment: "Tostada de maíz, con una cama de salsa chipotle, ceviche de camarón (cebolla, pepino, cilantro, jitomate y salsas rojas).", price: "186.00", image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&h=400&fit=crop" },
+      { name: "Aguachile rojo", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa roja a base de camarón, acompañado de pepino, cebolla morada y chile serrano.", price: "329.00", image: "https://images.unsplash.com/photo-1611599538835-b52a8c2f04da?w=600&h=400&fit=crop" },
+      { name: "Aguachile verde estilo Sinaloa", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa verde a base de pepino, acompañado de pepino, cebolla morada y chile serrano, tradicional sinaloense.", price: "329.00", image: "https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=600&h=400&fit=crop" },
+      { name: "Aguachile negro", quantity: "120 g", accompaniment: "Camarón marinado en limón y sal, salsa negra tatemada, acompañado de pepino, cebolla morada y chile serrano.", price: "329.00", image: "https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&h=400&fit=crop" },
+      { name: "Vuelve a la vida", quantity: "190 g", accompaniment: "Camarón pacotilla, pulpo y ostiones, con salsa acapulco, jitomate, cilantro, cebolla, aguacate, y un toque de aceite de oliva.", price: "259.00", image: "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=600&h=400&fit=crop" },
   ];
 
   export const tacoItems = [
-    { name: "Taco de arrachera", quantity: "1 pza - 60 g", accompaniment: "Preparado con arrachera a la plancha, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
-    { name: "Taco de aguja norteña", quantity: "1 pza - 60 g", accompaniment: "Elaborado con aguja norteña, acompañado de papas al orégano, chiles toreados y guacamole.", price: "78.00" },
-    { name: "Taco de rib eye", quantity: "1 pza - 60 g", accompaniment: "Preparado con rib eye, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
-    { name: "Taco de New York", quantity: "1 pza - 60 g", accompaniment: "Elaborado con corte New York, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
-    { name: "Taco de sirloin", quantity: "1 pza - 60 g", accompaniment: "Preparado con sirloin, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00" },
-    { name: "Taco de pechuga al limón", quantity: "1 pza - 60 g", accompaniment: "Elaborado con pechuga marinada al limón, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
-    { name: "Taco de pechuga al chipotle", quantity: "1 pza - 60 g", accompaniment: "Preparado con pechuga en salsa chipotle, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00" },
-    { name: "Taco queso carne", quantity: "110 g", accompaniment: "Bisteck de cerdo encebollado, con queso gratinado, acompañado con salsa martajada y cebolla y cilantro.", price: "68.00" },
-    { name: "Taco Ensenada", quantity: "1 pza", accompaniment: "Taco de pescado estilo Ensenada.", price: "96.00" },
-    { name: "Costra de arrachera marinada", quantity: "1 pza", accompaniment: "Costra de queso con arrachera marinada.", price: "96.00" },
-    { name: "Costra de rib eye", quantity: "1 pza", accompaniment: "Costra de queso con rib eye.", price: "96.00" },
-    { name: "Costra de New York", quantity: "1 pza", accompaniment: "Costra de queso con corte New York.", price: "96.00" },
-    { name: "Costra de sirloin", quantity: "1 pza", accompaniment: "Costra de queso con sirloin.", price: "96.00" },
-    { name: "Costra de aguja norteña", quantity: "1 pza", accompaniment: "Costra de queso con aguja norteña.", price: "78.00" },
+    { name: "Taco de arrachera", quantity: "1 pza - 60 g", accompaniment: "Preparado con arrachera a la plancha, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00", image: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=600&h=400&fit=crop" },
+    { name: "Taco de aguja norteña", quantity: "1 pza - 60 g", accompaniment: "Elaborado con aguja norteña, acompañado de papas al orégano, chiles toreados y guacamole.", price: "78.00", image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop" },
+    { name: "Taco de rib eye", quantity: "1 pza - 60 g", accompaniment: "Preparado con rib eye, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00", image: "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&h=400&fit=crop" },
+    { name: "Taco de New York", quantity: "1 pza - 60 g", accompaniment: "Elaborado con corte New York, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00", image: "https://images.unsplash.com/photo-1624300629298-e9209a0a27b5?w=600&h=400&fit=crop" },
+    { name: "Taco de sirloin", quantity: "1 pza - 60 g", accompaniment: "Preparado con sirloin, acompañado de papas al orégano, chiles toreados y guacamole.", price: "96.00", image: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=600&h=400&fit=crop" },
+    { name: "Taco de pechuga al limón", quantity: "1 pza - 60 g", accompaniment: "Elaborado con pechuga marinada al limón, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00", image: "https://images.unsplash.com/photo-1640719028782-8230f1bdc82d?w=600&h=400&fit=crop" },
+    { name: "Taco de pechuga al chipotle", quantity: "1 pza - 60 g", accompaniment: "Preparado con pechuga en salsa chipotle, acompañado de papas al orégano, chiles toreados y guacamole.", price: "68.00", image: "https://images.unsplash.com/photo-1613514785940-daed07799d9b?w=600&h=400&fit=crop" },
+    { name: "Taco queso carne", quantity: "110 g", accompaniment: "Bisteck de cerdo encebollado, con queso gratinado, acompañado con salsa martajada y cebolla y cilantro.", price: "68.00", image: "https://images.unsplash.com/photo-1570461226513-bf09873adbe2?w=600&h=400&fit=crop" },
+    { name: "Taco Ensenada", quantity: "1 pza", accompaniment: "Taco de pescado estilo Ensenada.", price: "96.00", image: "https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?w=600&h=400&fit=crop" },
+    { name: "Costra de arrachera marinada", quantity: "1 pza", accompaniment: "Costra de queso con arrachera marinada.", price: "96.00", image: "https://images.unsplash.com/photo-1628191013085-990d39ec25b8?w=600&h=400&fit=crop" },
+    { name: "Costra de rib eye", quantity: "1 pza", accompaniment: "Costra de queso con rib eye.", price: "96.00", image: "https://images.unsplash.com/photo-1586816001603-4dcf468f6024?w=600&h=400&fit=crop" },
+    { name: "Costra de New York", quantity: "1 pza", accompaniment: "Costra de queso con corte New York.", price: "96.00", image: "https://images.unsplash.com/photo-1604467707321-70d009801bf1?w=600&h=400&fit=crop" },
+    { name: "Costra de sirloin", quantity: "1 pza", accompaniment: "Costra de queso con sirloin.", price: "96.00", image: "https://images.unsplash.com/photo-1627662168781-4345690f0bb3?w=600&h=400&fit=crop" },
+    { name: "Costra de aguja norteña", quantity: "1 pza", accompaniment: "Costra de queso con aguja norteña.", price: "78.00", image: "https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?w=600&h=400&fit=crop" },
   ];
 
   export const burgerItems = [
-    { name: "Hamburguesa clásica", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "198.00" },
-    { name: "Hamburguesa doble carne", quantity: "1 pza - 300 g", accompaniment: "Doble carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "226.00" },
-    { name: "Hamburguesa tocinito", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino, tocino crispy y aderezo de la casa.", price: "216.00" },
-    { name: "Hamburguesa queso + queso", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, oaxaca, americano y gouda tocino y aderezo de la casa.", price: "216.00" },
-    { name: "Hamburguesa de la granja", quantity: "1 pza - 300 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, americano, tocino, aderezo de la casa y cubierta con huevo estrellado.", price: "216.00" },
-    { name: "Hamburguesa mar y tierra", quantity: "1 pza - 240 g", accompaniment: "Carne de res 80/20, camarón pacotilla, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y salsa BBQ.", price: "226.00" },
-    { name: "Hamburguesa de la casa", quantity: "1 pza - 150 g de arrachera", accompaniment: "Carne de arrachera, acompañada de lechuga, jitomate, cebolla crispy, queso chihuahua y aderezo de la casa.", price: "236.00" },
-    { name: "Hamburguesa de pollo", quantity: "1 pza - 180 g", accompaniment: "Muslo de pollo frito, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, salsa búfalo y salsa sriacha.", price: "216.00" },
+    { name: "Hamburguesa clásica", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "198.00", image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop" },
+    { name: "Hamburguesa doble carne", quantity: "1 pza - 300 g", accompaniment: "Doble carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y aderezo de la casa.", price: "226.00", image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&h=400&fit=crop" },
+    { name: "Hamburguesa tocinito", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino, tocino crispy y aderezo de la casa.", price: "216.00", image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop" },
+    { name: "Hamburguesa queso + queso", quantity: "1 pza - 180 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, oaxaca, americano y gouda tocino y aderezo de la casa.", price: "216.00", image: "https://images.unsplash.com/photo-1572802419224-296d0aeee15d?w=600&h=400&fit=crop" },
+    { name: "Hamburguesa de la granja", quantity: "1 pza - 300 g", accompaniment: "Carne de res 80/20, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, americano, tocino, aderezo de la casa y cubierta con huevo estrellado.", price: "216.00", image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=400&fit=crop" },
+    { name: "Hamburguesa mar y tierra", quantity: "1 pza - 240 g", accompaniment: "Carne de res 80/20, camarón pacotilla, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, tocino y salsa BBQ.", price: "226.00", image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop" },
+    { name: "Hamburguesa de la casa", quantity: "1 pza - 150 g de arrachera", accompaniment: "Carne de arrachera, acompañada de lechuga, jitomate, cebolla crispy, queso chihuahua y aderezo de la casa.", price: "236.00", image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&h=400&fit=crop" },
+    { name: "Hamburguesa de pollo", quantity: "1 pza - 180 g", accompaniment: "Muslo de pollo frito, acompañada de lechuga, jitomate, cebolla caramelizada, queso chihuahua, salsa búfalo y salsa sriacha.", price: "216.00", image: "https://images.unsplash.com/photo-1525164286253-04e68b9d94c6?w=600&h=400&fit=crop" },
   ];
 
   export const chickenItems = [
-    { name: "Pechuga al limón", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "235.00" },
-    { name: "Pechuga al chipotle", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "265.00" },
+    { name: "Pechuga al limón", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "235.00", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&h=400&fit=crop" },
+    { name: "Pechuga al chipotle", quantity: "200 grs", accompaniment: "ensalada de la casa, arroz amarillo", price: "265.00", image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=600&h=400&fit=crop" },
   ];
 
 
@@ -134,13 +134,13 @@ export const preparadosItems = [
 ];
 
 export const snackItems = [
-    { name: "Alitas", quantity: "300 g", accompaniment: "Preparadas al punto, acompañadas de apio, zanahoria y aderezo ranch.", price: "231.00" },
-    { name: "Boneless", quantity: "200 g", accompaniment: "Elaborados con pechuga de pollo, servidos con apio, zanahoria y aderezo ranch.", price: "203.00" },
-    { name: "Papas a la parmesana con trufa", quantity: "", accompaniment: "Papas doradas, terminadas con queso parmesano y un delicado toque de trufa.", price: "149.00" },
-    { name: "Dedos de queso", quantity: "", accompaniment: "Dedos de queso crujientes, acompañados de aderezo ranch.", price: "159.00" },
-    { name: "Charola de snack", quantity: "", accompaniment: "Charola surtida con selección de snacks de la casa.", price: "699.00" },
-    { name: "Chicharrón pork belly", quantity: "", accompaniment: "Chicharrón de pork belly crujiente.", price: "439.00" },
-    { name: "Chicharrón rib eye", quantity: "", accompaniment: "Chicharrón de rib eye crujiente.", price: "289.00" },
+    { name: "Alitas", quantity: "300 g", accompaniment: "Preparadas al punto, acompañadas de apio, zanahoria y aderezo ranch.", price: "231.00", image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=600&h=400&fit=crop" },
+    { name: "Boneless", quantity: "200 g", accompaniment: "Elaborados con pechuga de pollo, servidos con apio, zanahoria y aderezo ranch.", price: "203.00", image: "https://images.unsplash.com/photo-1562967914-608f82629710?w=600&h=400&fit=crop" },
+    { name: "Papas a la parmesana con trufa", quantity: "", accompaniment: "Papas doradas, terminadas con queso parmesano y un delicado toque de trufa.", price: "149.00", image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&h=400&fit=crop" },
+    { name: "Dedos de queso", quantity: "", accompaniment: "Dedos de queso crujientes, acompañados de aderezo ranch.", price: "88.00", image: "https://images.unsplash.com/photo-1531749668029-2db88e4276c7?w=600&h=400&fit=crop" },
+    { name: "Charola de snack", quantity: "", accompaniment: "Charola surtida con selección de snacks de la casa.", price: "580.00", image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&h=400&fit=crop" },
+    { name: "Chicharrón pork belly", quantity: "", accompaniment: "Chicharrón de pork belly crujiente.", price: "439.00", image: "https://images.unsplash.com/photo-1606851094655-b3b5a1ae8a54?w=600&h=400&fit=crop" },
+    { name: "Chicharrón rib eye", quantity: "", accompaniment: "Chicharrón de rib eye crujiente.", price: "289.00", image: "https://images.unsplash.com/photo-1619221882220-947b3d3c8861?w=600&h=400&fit=crop" },
 ];
 
 export const sodaItems = [
@@ -331,13 +331,13 @@ export const licorItems = [
 ];
 
 export const caldosItems = [
-    { name: "Crema del día", quantity: "", accompaniment: "Crema preparada del día.", price: "38.00" },
-    { name: "Consomé de pollo", quantity: "", accompaniment: "Consomé de pollo de la casa.", price: "38.00" },
+    { name: "Crema del día", quantity: "", accompaniment: "Crema preparada del día.", price: "38.00", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=400&fit=crop" },
+    { name: "Consomé de pollo", quantity: "", accompaniment: "Consomé de pollo de la casa.", price: "38.00", image: "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=600&h=400&fit=crop" },
 ];
 
 export const postresItems = [
-    { name: "Fresas con crema", quantity: "", accompaniment: "Fresas frescas con crema.", price: "79.00" },
-    { name: "Helado frito", quantity: "", accompaniment: "Helado frito crujiente.", price: "79.00" },
+    { name: "Fresas con crema", quantity: "", accompaniment: "Fresas frescas con crema.", price: "79.00", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=400&fit=crop" },
+    { name: "Helado frito", quantity: "", accompaniment: "Helado frito crujiente.", price: "79.00", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&h=400&fit=crop" },
 ];
 
 export const cafeItems = [
