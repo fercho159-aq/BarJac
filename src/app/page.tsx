@@ -708,7 +708,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="mt-8 text-center">
                 <Button asChild variant="outline" className="rounded-full border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-white transition-all">
-                  <a href="https://www.google.com/maps/place/BarJac/@19.4168227,-99.1708007,17z/data=!4m8!3m7!1s0x85d1ff001e0dc5b9:0xfdcd63bfe41952d9!8m2!3d19.4168177!4d-99.1659298!9m1!1b1!16s%2Fg%2F11yr45lq9_?entry=ttu" target="_blank" rel="noopener noreferrer">
+                  <a href="https://maps.app.goo.gl/oRUrpHz1dkJy52SWA?g_st=aw" target="_blank" rel="noopener noreferrer">
                     <Star className="mr-2 h-4 w-4" />{lang === 'es' ? 'Escribe una reseña' : 'Write a review'}
                   </a>
                 </Button>
