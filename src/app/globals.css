@@ -116,3 +116,22 @@
     transform: translateX(0);
   }
 }
+
+/* Menu tabs: the color comes from the --c custom property set per category.
+   Kept outside @layer so it wins over the shadcn TabsTrigger active utilities. */
+.neon-tab-quiet {
+  border-color: transparent;
+  color: hsl(var(--muted-foreground));
+}
+.neon-tab-quiet:hover {
+  color: #fff;
+}
+[role="tab"].neon-tab-outline,
+[role="tab"].neon-tab[data-state="active"] {
+  color: var(--c);
+  border-color: var(--c);
+  box-shadow: 0 0 10px var(--c);
+}
+[role="tab"].neon-tab[data-state="active"] {
+  background-color: color-mix(in srgb, var(--c) 10%, transparent);
+}
