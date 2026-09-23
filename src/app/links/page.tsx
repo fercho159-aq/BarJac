@@ -42,7 +42,7 @@ const links = [
   },
   {
     label: "Google Maps",
-    href: "https://www.google.com/maps/place/BarJac/@19.4168227,-99.1708007,17z/data=!4m8!3m7!1s0x85d1ff001e0dc5b9:0xfdcd63bfe41952d9!8m2!3d19.4168177!4d-99.1659298",
+    href: "https://maps.app.goo.gl/oRUrpHz1dkJy52SWA?g_st=aw",
     icon: MapPin,
     color: "bg-[#EA4335]",
     hoverColor: "hover:bg-[#D33426]",
