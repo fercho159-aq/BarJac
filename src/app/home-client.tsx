@@ -418,7 +418,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
               <Button asChild size="lg" className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--olive-light))] text-white font-semibold px-8 rounded-full hover:scale-105 transition-all shadow-lg">
                 <Link href="#menu">{lang === "es" ? "Ver Menú" : "View Menu"}</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/20 font-semibold px-8 rounded-full hover:scale-105 transition-all">
+              <Button asChild size="lg" className="bg-white text-[hsl(var(--warm-brown))] hover:bg-white/90 font-semibold px-8 rounded-full hover:scale-105 transition-all shadow-lg">
                 <a href="https://wa.me/525636363018" target="_blank" rel="noopener noreferrer">{lang === "es" ? "Reservar" : "Book"}</a>
               </Button>
             </div>
