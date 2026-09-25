@@ -23,7 +23,7 @@ export async function GET() {
     );
     if (snacks[0]) {
       const dedos = await db.query<{ id: string }>(
-        `SELECT id FROM menu_items WHERE data->'name'->>'es' ILIKE '%dedos de queso%' LIMIT 1`
+        `SELECT id FROM menu_items WHERE data->'name'->>'es' ILIKE '%dedo%queso%' LIMIT 1`
       );
       if (dedos[0]) {
         await db.query(`UPDATE menu_items SET category_id = $1 WHERE id = $2`, [snacks[0].id, dedos[0].id]);
