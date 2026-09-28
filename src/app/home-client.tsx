@@ -93,19 +93,15 @@ function ItemCard({
     return (
       <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 p-4">
         <h4 className="font-display font-bold text-lg text-[#2A3A1A]">{name}</h4>
-        <div className="flex flex-col gap-2 mt-3">
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wider">{lang === "es" ? "Copa" : "Glass"}</span>
-            <span className="font-bold text-lg text-[hsl(var(--primary))]">${glassP?.price}</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wider">{lang === "es" ? "Botella" : "Bottle"}</span>
-            {bottleP?.price ? (
-              <span className="font-bold text-lg text-[hsl(var(--primary))]">${bottleP.price}</span>
-            ) : (
-              <span className="text-sm text-[hsl(var(--muted-foreground))] italic">&mdash;</span>
-            )}
-          </div>
+        <div className="flex flex-col items-center mt-3 gap-1">
+          <span className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wider">{lang === "es" ? "Copa" : "Glass"}</span>
+          <span className="font-bold text-xl text-[hsl(var(--primary))]">${glassP?.price}</span>
+          <span className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wider mt-1">{lang === "es" ? "Botella" : "Bottle"}</span>
+          {bottleP?.price ? (
+            <span className="font-bold text-xl text-[hsl(var(--primary))]">${bottleP.price}</span>
+          ) : (
+            <span className="text-sm text-[hsl(var(--muted-foreground))] italic">&mdash;</span>
+          )}
         </div>
       </div>
     );
