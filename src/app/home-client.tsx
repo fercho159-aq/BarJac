@@ -93,15 +93,15 @@ function ItemCard({
     return (
       <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 p-4">
         <h4 className="font-display font-bold text-lg text-[#2A3A1A]">{name}</h4>
-        <div className="flex justify-between items-center mt-3">
-          <div>
-            <p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">{lang === "es" ? "Copa" : "Glass"}</p>
-            <p className="font-bold text-xl text-[hsl(var(--primary))]">${glassP?.price}</p>
+        <div className="flex justify-between mt-3 gap-2">
+          <div className="flex flex-col items-start">
+            <p className="text-[10px] text-[hsl(var(--muted-foreground))] uppercase tracking-wider mb-1">{lang === "es" ? "Copa" : "Glass"}</p>
+            <p className="font-bold text-lg text-[hsl(var(--primary))]">${glassP?.price}</p>
           </div>
-          <div className="text-right">
-            <p className="text-xs text-[hsl(var(--muted-foreground))] uppercase tracking-wide">{lang === "es" ? "Botella" : "Bottle"}</p>
+          <div className="flex flex-col items-end">
+            <p className="text-[10px] text-[hsl(var(--muted-foreground))] uppercase tracking-wider mb-1">{lang === "es" ? "Botella" : "Bottle"}</p>
             {bottleP?.price ? (
-              <p className="font-bold text-xl text-[hsl(var(--primary))]">${bottleP.price}</p>
+              <p className="font-bold text-lg text-[hsl(var(--primary))]">${bottleP.price}</p>
             ) : (
               <p className="text-sm text-[hsl(var(--muted-foreground))] italic">&mdash;</p>
             )}
