@@ -517,14 +517,14 @@ export default function HomeClient({ content }: { content: SiteContent }) {
               {visiblePromotions.map((promo, index) => (
                 <ScrollReveal key={promo.id} delay={index * 150}>
                   <Card className="overflow-hidden bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
-                    {promo.image && (
+                    {promo.image ? (
                       <div className="relative h-48 overflow-hidden">
-                        <Image src={promo.image} alt={t(promo.title, lang)} fill className="object-cover" />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={promo.image} alt={t(promo.title, lang)} className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold drop-shadow-lg">{t(promo.title, lang)}</h3>
                       </div>
-                    )}
-                    {!promo.image && (
+                    ) : (
                       <div className="px-4 pt-4">
                         <h3 className="font-display text-xl font-bold">{t(promo.title, lang)}</h3>
                       </div>
