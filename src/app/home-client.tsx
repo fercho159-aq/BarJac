@@ -67,15 +67,33 @@ const foodImages = [
   "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=600&fit=crop",
 ];
 
-// Photo shown for promotions that have no image uploaded in the admin panel.
-const BEER_IMAGE = "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop";
-const PROMO_FALLBACK_IMAGES: Partial<Record<IconKey, string>> = {
-  bottle: BEER_IMAGE,
-  beer: BEER_IMAGE,
-  wine: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop",
-  briefcase: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=300&fit=crop",
-  utensils: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop",
+// Photos for promotions that have no image uploaded in the admin panel.
+const unsplash = (id: string) => `https://images.unsplash.com/photo-${id}?w=400&h=300&fit=crop`;
+const BEER_PHOTOS = ["1535958636474-b021ee887b13", "1600788886242-5c96aabe3757", "1608270586620-248524c67de9", "1566633806327-68e152aaf26d", "1436076863939-06870fe779c2"].map(unsplash);
+const COCKTAIL_PHOTOS = ["1551024709-8f23befc6f87", "1514362545857-3bc16c4c7d1b", "1470337458703-46ad1756a187"].map(unsplash);
+const BAR_PHOTOS = ["1514933651103-005eec06c04b", "1532634922-8fe0b757fb13"].map(unsplash);
+const FOOD_PHOTOS = ["1504674900247-0877df9cc836", "1532634922-8fe0b757fb13"].map(unsplash);
+const PROMO_PHOTOS: Partial<Record<IconKey, string[]>> = {
+  bottle: BEER_PHOTOS,
+  beer: BEER_PHOTOS,
+  wine: COCKTAIL_PHOTOS,
+  briefcase: BAR_PHOTOS,
+  utensils: FOOD_PHOTOS,
 };
+const ALL_PROMO_PHOTOS = [...new Set([...BEER_PHOTOS, ...COCKTAIL_PHOTOS, ...BAR_PHOTOS, ...FOOD_PHOTOS])];
+
+/** Picks a photo per promotion that matches its theme without repeating one already on screen. */
+function promoImages(promotions: SiteContent["promotions"]): string[] {
+  const used = new Set(promotions.map((p) => p.image).filter(Boolean));
+  return promotions.map((p) => {
+    if (p.image) return p.image;
+    const isCocktail = /c[oó]ctel|cocktail|trago/i.test(`${p.title?.es} ${p.title?.en}`);
+    const preferred = isCocktail ? COCKTAIL_PHOTOS : PROMO_PHOTOS[p.icon] ?? [];
+    const photo = [...preferred, ...ALL_PROMO_PHOTOS].find((url) => !used.has(url)) ?? preferred[0] ?? ALL_PROMO_PHOTOS[0];
+    used.add(photo);
+    return photo;
+  });
+}
 
 function t(localized: { es: string; en: string } | null | undefined, lang: string): string {
   if (!localized) return "";
@@ -344,6 +362,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
   };
 
   const promotions = content.promotions ?? [];
+  const promotionImages = promoImages(promotions);
 
   return (
     <div className="flex flex-col min-h-screen bg-[hsl(var(--cream))]">
@@ -532,7 +551,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
                     <div className="relative h-48 overflow-hidden">
                       {/* Admin images can be uploads (/api/images/…) or any URL, so use a plain img. */}
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={promo.image || PROMO_FALLBACK_IMAGES[promo.icon] || PROMO_FALLBACK_IMAGES.wine} alt={t(promo.title, lang)} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                      <img src={promotionImages[index]} alt={t(promo.title, lang)} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold drop-shadow-lg">{t(promo.title, lang)}</h3>
                     </div>
