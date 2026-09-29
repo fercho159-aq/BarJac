@@ -16,6 +16,14 @@ import { BottleIcon } from "@/components/icons/bottle-icon";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import React from "react";
+
+class ErrorBoundary extends React.Component<{ children: React.ReactNode; fallback?: React.ReactNode }, { hasError: boolean }> {
+  constructor(props: any) { super(props); this.state = { hasError: false }; }
+  static getDerivedStateFromError() { return { hasError: true }; }
+  componentDidCatch(error: any) { console.error("[ErrorBoundary]", error); }
+  render() { return this.state.hasError ? (this.props.fallback ?? null) : this.props.children; }
+}
 
 function ScrollReveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -67,7 +75,8 @@ const foodImages = [
   "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=600&fit=crop",
 ];
 
-function t(localized: { es: string; en: string }, lang: string): string {
+function t(localized: { es: string; en: string } | null | undefined, lang: string): string {
+  if (!localized) return "";
   const val = lang === "en" ? localized.en : localized.es;
   return val || localized.es || "";
 }
@@ -332,7 +341,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
     ]
   };
 
-  const visiblePromotions = content.promotions.filter(p => p.visible);
+  const visiblePromotions = (content.promotions ?? []).filter(p => p.visible);
 
   return (
     <div className="flex flex-col min-h-screen bg-[hsl(var(--cream))]">
@@ -505,39 +514,43 @@ export default function HomeClient({ content }: { content: SiteContent }) {
         </section>
 
         {/* Promociones Section */}
-        <section id="promociones" className="py-16 md:py-24 bg-[hsl(var(--primary))]">
-          <div className="container px-4">
-            <ScrollReveal>
-              <div className="text-center mb-12">
-                <h2 className="font-display text-4xl md:text-5xl font-bold text-white">{lang === "es" ? "Promociones" : "Promotions"}</h2>
-                <div className="w-24 h-1 bg-white/50 mx-auto mt-4 rounded-full"></div>
-              </div>
-            </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {visiblePromotions.map((promo, index) => (
-                <ScrollReveal key={promo.id} delay={index * 150}>
-                  <Card className="overflow-hidden bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
-                    {promo.image ? (
-                      <div className="relative h-48 overflow-hidden">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={promo.image} alt={t(promo.title, lang)} className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold drop-shadow-lg">{t(promo.title, lang)}</h3>
-                      </div>
-                    ) : (
-                      <div className="px-4 pt-4">
-                        <h3 className="font-display text-xl font-bold">{t(promo.title, lang)}</h3>
-                      </div>
-                    )}
-                    <CardContent className="pt-4">
-                      <p className="text-sm text-white/80">{t(promo.description, lang)}</p>
-                    </CardContent>
-                  </Card>
+        {visiblePromotions.length > 0 && (
+          <ErrorBoundary>
+            <section id="promociones" className="py-16 md:py-24 bg-[hsl(var(--primary))]">
+              <div className="container px-4">
+                <ScrollReveal>
+                  <div className="text-center mb-12">
+                    <h2 className="font-display text-4xl md:text-5xl font-bold text-white">{lang === "es" ? "Promociones" : "Promotions"}</h2>
+                    <div className="w-24 h-1 bg-white/50 mx-auto mt-4 rounded-full"></div>
+                  </div>
                 </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                  {visiblePromotions.map((promo, index) => (
+                    <ScrollReveal key={promo.id ?? index} delay={index * 150}>
+                      <Card className="overflow-hidden bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
+                        {promo.image ? (
+                          <div className="relative h-48 overflow-hidden">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={promo.image} alt={t(promo.title, lang)} className="w-full h-full object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold drop-shadow-lg">{t(promo.title, lang)}</h3>
+                          </div>
+                        ) : (
+                          <div className="px-4 pt-4">
+                            <h3 className="font-display text-xl font-bold">{t(promo.title, lang)}</h3>
+                          </div>
+                        )}
+                        <CardContent className="pt-4">
+                          <p className="text-sm text-white/80">{t(promo.description, lang)}</p>
+                        </CardContent>
+                      </Card>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
+            </section>
+          </ErrorBoundary>
+        )}
 
         {/* Reservaciones */}
         <section id="reservaciones" className="py-16 md:py-24 bg-white">
