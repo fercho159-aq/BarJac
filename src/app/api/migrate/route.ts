@@ -8,15 +8,20 @@ export async function GET() {
     const db = await getDb();
     const results: string[] = [];
 
-    const promos = await db.query<{ id: string; data: any }>(
-      `SELECT id, data FROM promotions WHERE data->'title'->>'es' ILIKE ANY(ARRAY['%jueves%coctel%', '%jueves%doble%', '%tríos%bar%jac%'])`
+    const allPromos = await db.query<{ id: string; visible: boolean; data: any }>(
+      `SELECT id, visible, data FROM promotions ORDER BY sort_order`
     );
-    for (const p of promos) {
-      await db.query(`UPDATE promotions SET visible = false WHERE id = $1`, [p.id]);
-      results.push(`Hidden promotion: ${p.data.title.es} (${p.id})`);
+    for (const p of allPromos) {
+      results.push(`[${p.visible ? "visible" : "hidden"}] ${p.data.title?.es ?? "no title"} (${p.id})`);
     }
 
-    if (results.length === 0) results.push("No matching promotions found");
+    const jueves = allPromos.filter(p => /jueves/i.test(p.data.title?.es ?? ""));
+    for (const p of jueves) {
+      if (p.visible) {
+        await db.query(`UPDATE promotions SET visible = false WHERE id = $1`, [p.id]);
+        results.push(`>>> Hidden: ${p.data.title.es} (${p.id})`);
+      }
+    }
 
     revalidateTag(CONTENT_TAG);
     return NextResponse.json({ ok: true, results });
