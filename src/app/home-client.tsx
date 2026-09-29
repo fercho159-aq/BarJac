@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState, useEffect, useRef } from "react";
-import type { SiteContent, MenuCategory, MenuItem } from "@/lib/content/types";
+import type { SiteContent, MenuCategory, MenuItem, IconKey } from "@/lib/content/types";
 
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
 import { BottleIcon } from "@/components/icons/bottle-icon";
@@ -66,6 +66,16 @@ const foodImages = [
   "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&h=600&fit=crop",
   "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=600&fit=crop",
 ];
+
+// Photo shown for promotions that have no image uploaded in the admin panel.
+const BEER_IMAGE = "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop";
+const PROMO_FALLBACK_IMAGES: Partial<Record<IconKey, string>> = {
+  bottle: BEER_IMAGE,
+  beer: BEER_IMAGE,
+  wine: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop",
+  briefcase: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=300&fit=crop",
+  utensils: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop",
+};
 
 function t(localized: { es: string; en: string } | null | undefined, lang: string): string {
   if (!localized) return "";
@@ -333,20 +343,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
     ]
   };
 
-  const promotions: Record<string, Array<{ title: string; description: string; image: string }>> = {
-    es: [
-      { title: "Bebidas y Coctelería al 3x2 ¡Todos los días!", description: "Aprovecha nuestra promoción en bebidas y coctelería al 3x2. ¡Todos los días!", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop" },
-      { title: "Cervezas 3x$100", description: "Aprovecha nuestra promoción en cervezas embotelladas de 355ml, 3 por $100. ¡Todos los días!", image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop" },
-      { title: "Happy Hour Godín", description: "Los martes y viernes, muestra tu credencial de trabajo y obtén un 20% de descuento.", image: "https://images.unsplash.com/photo-1575037614876-c38a4c44f5b8?w=400&h=300&fit=crop" },
-      { title: "3 Tarros de 355 ml x $100 (Indio)", description: "Aprovecha 3 tarros de cerveza Indio de 355ml por solo $100.", image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop" },
-    ],
-    en: [
-      { title: "Drinks & Cocktails 3 for 2 Every Day!", description: "Take advantage of our 3-for-2 promotion on drinks and cocktails. Every day!", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop" },
-      { title: "Beers 3 for $100", description: "Take advantage of our promotion on 355ml bottled beers, 3 for $100. Every day!", image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop" },
-      { title: "Godín Happy Hour", description: "On Tuesdays and Fridays, show your work ID and get a 20% discount.", image: "https://images.unsplash.com/photo-1575037614876-c38a4c44f5b8?w=400&h=300&fit=crop" },
-      { title: "3 Mugs of 355ml x $100 (Indio)", description: "Get 3 mugs of Indio beer 355ml for just $100.", image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop" },
-    ]
-  };
+  const promotions = content.promotions ?? [];
 
   return (
     <div className="flex flex-col min-h-screen bg-[hsl(var(--cream))]">
@@ -518,7 +515,8 @@ export default function HomeClient({ content }: { content: SiteContent }) {
           </div>
         </section>
 
-        {/* Promociones Section */}
+        {/* Promociones Section: managed from Admin → Promociones */}
+        {promotions.length > 0 && (
         <section id="promociones" className="py-16 md:py-24 bg-[hsl(var(--primary))]">
           <div className="container px-4">
             <ScrollReveal>
@@ -528,16 +526,18 @@ export default function HomeClient({ content }: { content: SiteContent }) {
               </div>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {promotions[lang].map((promo, index) => (
-                <ScrollReveal key={index} delay={index * 150}>
+              {promotions.map((promo, index) => (
+                <ScrollReveal key={promo.id} delay={index * 150}>
                   <Card className="overflow-hidden bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
                     <div className="relative h-48 overflow-hidden">
-                      <Image src={promo.image} alt={promo.title} fill className="object-cover" />
+                      {/* Admin images can be uploads (/api/images/…) or any URL, so use a plain img. */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={promo.image || PROMO_FALLBACK_IMAGES[promo.icon] || PROMO_FALLBACK_IMAGES.wine} alt={t(promo.title, lang)} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold drop-shadow-lg">{promo.title}</h3>
+                      <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold drop-shadow-lg">{t(promo.title, lang)}</h3>
                     </div>
                     <CardContent className="pt-4">
-                      <p className="text-sm text-white/80">{promo.description}</p>
+                      <p className="text-sm text-white/80">{t(promo.description, lang)}</p>
                     </CardContent>
                   </Card>
                 </ScrollReveal>
@@ -545,6 +545,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
             </div>
           </div>
         </section>
+        )}
 
         {/* Reservaciones */}
         <section id="reservaciones" className="py-16 md:py-24 bg-white">
