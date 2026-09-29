@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, Briefcase, Copy, UtensilsCrossed, ChevronDown } from "lucide-react";
+import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -332,20 +332,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
     ]
   };
 
-  const promotions: Record<string, Array<{ title: string; description: string; icon: any; image: string }>> = {
-    es: [
-      { title: "Cervezas 3x$100", description: "Aprovecha nuestra promoción en cervezas embotelladas de 355ml, 3 por $100. ¡Todos los días!", icon: BottleIcon, image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop" },
-      { title: "Happy Hour Godín", description: "Los martes y viernes, muestra tu credencial de trabajo y obtén un 20% de descuento.", icon: Briefcase, image: "https://images.unsplash.com/photo-1575037614876-c38a4c44f5b8?w=400&h=300&fit=crop" },
-      { title: "Jueves de Coctelería Doble", description: "Todos los jueves, tu coctel favorito se sirve doble. ¡Aprovecha!", icon: Copy, image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop" },
-      { title: "Tríos Bar Jac por $199", description: "De lunes a viernes: Sopa o crema + Hamburguesa o Tacos de Arrachera o Pescadillas con Cóctel Chico + Bebida sin alcohol.", icon: UtensilsCrossed, image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop" },
-    ],
-    en: [
-      { title: "Beers 3 for $100", description: "Take advantage of our promotion on 355ml bottled beers, 3 for $100. Every day!", icon: BottleIcon, image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop" },
-      { title: "Godín Happy Hour", description: "On Tuesdays and Fridays, show your work ID and get a 20% discount.", icon: Briefcase, image: "https://images.unsplash.com/photo-1575037614876-c38a4c44f5b8?w=400&h=300&fit=crop" },
-      { title: "Double Cocktails Thursdays", description: "Every Thursday, your favorite cocktail is served double. Enjoy!", icon: Copy, image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop" },
-      { title: "Bar Jac Trios for $199", description: "Monday to Friday: Soup or cream + Burger or Arrachera Tacos or Pescadillas with Small Cocktail + Non-alcoholic drink.", icon: UtensilsCrossed, image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop" },
-    ]
-  };
+  const visiblePromotions = content.promotions.filter(p => p.visible);
 
   return (
     <div className="flex flex-col min-h-screen bg-[hsl(var(--cream))]">
@@ -527,16 +514,23 @@ export default function HomeClient({ content }: { content: SiteContent }) {
               </div>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {promotions[lang].map((promo, index) => (
-                <ScrollReveal key={index} delay={index * 150}>
+              {visiblePromotions.map((promo, index) => (
+                <ScrollReveal key={promo.id} delay={index * 150}>
                   <Card className="overflow-hidden bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
-                    <div className="relative h-48 overflow-hidden">
-                      <Image src={promo.image} alt={promo.title} fill className="object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold drop-shadow-lg">{promo.title}</h3>
-                    </div>
+                    {promo.image && (
+                      <div className="relative h-48 overflow-hidden">
+                        <Image src={promo.image} alt={t(promo.title, lang)} fill className="object-cover" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold drop-shadow-lg">{t(promo.title, lang)}</h3>
+                      </div>
+                    )}
+                    {!promo.image && (
+                      <div className="px-4 pt-4">
+                        <h3 className="font-display text-xl font-bold">{t(promo.title, lang)}</h3>
+                      </div>
+                    )}
                     <CardContent className="pt-4">
-                      <p className="text-sm text-white/80">{promo.description}</p>
+                      <p className="text-sm text-white/80">{t(promo.description, lang)}</p>
                     </CardContent>
                   </Card>
                 </ScrollReveal>
