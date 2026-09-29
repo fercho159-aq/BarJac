@@ -9,7 +9,7 @@ export async function GET() {
     const results: string[] = [];
 
     const promos = await db.query<{ id: string; data: any }>(
-      `SELECT id, data FROM promotions WHERE data->'title'->>'es' ILIKE ANY(ARRAY['%jueves%coctelería%', '%tríos%bar%jac%'])`
+      `SELECT id, data FROM promotions WHERE data->'title'->>'es' ILIKE ANY(ARRAY['%jueves%coctel%', '%jueves%doble%', '%tríos%bar%jac%'])`
     );
     for (const p of promos) {
       await db.query(`UPDATE promotions SET visible = false WHERE id = $1`, [p.id]);
