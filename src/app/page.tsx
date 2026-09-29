@@ -1,10 +1,9 @@
-import { HomePage } from "@/components/site/home-page";
 import { getSiteContent } from "@/lib/content/repository";
+import HomeClient from "./home-client";
 
-// Content is cached and refreshed on demand whenever the admin saves a change.
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const content = await getSiteContent();
-  return <HomePage content={content} />;
+  return <HomeClient content={content} />;
 }
