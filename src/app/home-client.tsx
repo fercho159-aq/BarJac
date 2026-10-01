@@ -717,7 +717,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
                     { label: "Instagram", href: "https://www.instagram.com/barjac_cdmx/", icon: <Instagram className="h-6 w-6 flex-shrink-0" />, color: "bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737]", hover: "hover:opacity-90" },
                     { label: "TikTok", href: "https://www.tiktok.com/@barjacmexico", icon: <TiktokIcon className="h-6 w-6 flex-shrink-0" />, color: "bg-black", hover: "hover:bg-gray-900" },
                     { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61584743632789&locale=es_LA", icon: <Facebook className="h-6 w-6 flex-shrink-0" />, color: "bg-[#1877F2]", hover: "hover:bg-[#166FE5]" },
-                    { label: "Google Maps", href: "https://maps.app.goo.gl/oRUrpHz1dkJy52SWA?g_st=aw", icon: <MapPin className="h-6 w-6 flex-shrink-0" />, color: "bg-[#EA4335]", hover: "hover:bg-[#D33426]" },
+                    { label: lang === "es" ? "Ubicación" : "Location", href: "https://maps.app.goo.gl/oRUrpHz1dkJy52SWA?g_st=aw", icon: <MapPin className="h-6 w-6 flex-shrink-0" />, color: "bg-[#EA4335]", hover: "hover:bg-[#D33426]" },
                     { label: lang === "es" ? "Llamar" : "Call", href: "tel:+525636363018", icon: <Phone className="h-6 w-6 flex-shrink-0" />, color: "bg-[#5C6B3C]", hover: "hover:bg-[#4A5D23]" },
                   ].map((link, index) => (
                     <a

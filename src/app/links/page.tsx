@@ -41,7 +41,7 @@ const links = [
     hoverColor: "hover:bg-[#166FE5]",
   },
   {
-    label: "Google Maps",
+    label: "Ubicación",
     href: "https://maps.app.goo.gl/oRUrpHz1dkJy52SWA?g_st=aw",
     icon: MapPin,
     color: "bg-[#EA4335]",
