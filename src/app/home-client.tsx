@@ -546,8 +546,8 @@ export default function HomeClient({ content }: { content: SiteContent }) {
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {promotions.map((promo, index) => (
-                <ScrollReveal key={promo.id} delay={index * 150}>
-                  <Card className="overflow-hidden bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
+                <ScrollReveal key={promo.id} delay={index * 150} className="h-full">
+                  <Card className="h-full overflow-hidden bg-white/10 backdrop-blur border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
                     <div className="relative h-48 overflow-hidden">
                       {/* Admin images can be uploads (/api/images/…) or any URL, so use a plain img. */}
                       {/* eslint-disable-next-line @next/next/no-img-element */}
