@@ -56,15 +56,15 @@ const StarRating = ({ rating }: { rating: number }) => (
 );
 
 const foodImages = [
-  "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=600&fit=crop",
+  "/images/menu/galeria-barjac.webp",
+  "/images/menu/aguachile.webp",
+  "/images/menu/tacos.webp",
+  "/images/menu/corte-de-carne.webp",
+  "/images/menu/charola-de-snacks.webp",
+  "/images/menu/hamburguesa-de-la-granja.webp",
+  "/images/menu/hamburguesa-tocinito.webp",
+  "/images/menu/cantarito.webp",
+  "/images/menu/hamburguesa.webp",
 ];
 
 // Photos for promotions that have no image uploaded in the admin panel.
