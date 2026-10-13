@@ -461,6 +461,24 @@ export default function HomeClient({ content }: { content: SiteContent }) {
                 <a href="https://wa.me/525636363018" target="_blank" rel="noopener noreferrer">{lang === "es" ? "Reservar" : "Book"}</a>
               </Button>
             </div>
+            <div className="mt-6 flex gap-4 animate-fade-up stagger-3">
+              {[
+                { label: "Instagram", href: "https://www.instagram.com/barjac_cdmx/", icon: <Instagram className="h-5 w-5" /> },
+                { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61584743632789", icon: <Facebook className="h-5 w-5" /> },
+                { label: "TikTok", href: "https://www.tiktok.com/@barjacdmx", icon: <TiktokIcon className="h-5 w-5" /> },
+              ].map(s => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  aria-label={s.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-white hover:text-[hsl(var(--warm-brown))]"
+                >
+                  {s.icon}
+                </a>
+              ))}
+            </div>
             <div className="absolute bottom-8 animate-bounce">
               <ChevronDown className="h-8 w-8 text-white/70" />
             </div>
@@ -741,7 +759,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
                     { label: lang === "es" ? "Ver Menú" : "View Menu", href: "#menu", icon: <UtensilsCrossed className="h-6 w-6 flex-shrink-0" />, color: "bg-[#5C6B3C]", hover: "hover:bg-[#4A5D23]" },
                     { label: "WhatsApp", href: "https://wa.me/525636363018", icon: <Phone className="h-6 w-6 flex-shrink-0" />, color: "bg-[#25D366]", hover: "hover:bg-[#1DA851]" },
                     { label: "Instagram", href: "https://www.instagram.com/barjac_cdmx/", icon: <Instagram className="h-6 w-6 flex-shrink-0" />, color: "bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737]", hover: "hover:opacity-90" },
-                    { label: "TikTok", href: "https://www.tiktok.com/@barjacmexico", icon: <TiktokIcon className="h-6 w-6 flex-shrink-0" />, color: "bg-black", hover: "hover:bg-gray-900" },
+                    { label: "TikTok", href: "https://www.tiktok.com/@barjacdmx", icon: <TiktokIcon className="h-6 w-6 flex-shrink-0" />, color: "bg-black", hover: "hover:bg-gray-900" },
                     { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61584743632789&locale=es_LA", icon: <Facebook className="h-6 w-6 flex-shrink-0" />, color: "bg-[#1877F2]", hover: "hover:bg-[#166FE5]" },
                     { label: lang === "es" ? "Ubicación" : "Location", href: "https://maps.app.goo.gl/oRUrpHz1dkJy52SWA?g_st=aw", icon: <MapPin className="h-6 w-6 flex-shrink-0" />, color: "bg-[#EA4335]", hover: "hover:bg-[#D33426]" },
                     { label: lang === "es" ? "Llamar" : "Call", href: "tel:+525636363018", icon: <Phone className="h-6 w-6 flex-shrink-0" />, color: "bg-[#5C6B3C]", hover: "hover:bg-[#4A5D23]" },
@@ -806,7 +824,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
                 <a href="https://www.instagram.com/barjac_cdmx/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram className="h-5 w-5" /></a>
               </Button>
               <Button variant="ghost" size="icon" asChild className="text-white/80 hover:text-white hover:bg-white/10 rounded-full">
-                <a href="https://www.tiktok.com/@barjacmexico" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon className="h-5 w-5" /></a>
+                <a href="https://www.tiktok.com/@barjacdmx" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon className="h-5 w-5" /></a>
               </Button>
             </div>
           </div>

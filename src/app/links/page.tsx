@@ -28,7 +28,7 @@ const links = [
   },
   {
     label: "TikTok",
-    href: "https://www.tiktok.com/@barjacmexico",
+    href: "https://www.tiktok.com/@barjacdmx",
     icon: TiktokIcon,
     color: "bg-black",
     hoverColor: "hover:bg-gray-900",
