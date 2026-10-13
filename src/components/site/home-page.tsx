@@ -233,7 +233,7 @@ export function HomePage({ content }: { content: SiteContent }) {
               <a href="https://www.instagram.com/barjac_cdmx/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild className="text-primary-foreground hover:bg-primary/20">
-              <a href="https://www.tiktok.com/@barjacmexico" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
+              <a href="https://www.tiktok.com/@barjacdmx" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><TiktokIcon /></a>
             </Button>
           </div>
         </div>
