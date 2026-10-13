@@ -8,7 +8,7 @@ import { Facebook, Instagram, Phone, Star, MapPin, Menu as MenuIcon, ChevronDown
 import Image from "next/image";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import type { SiteContent, MenuCategory, MenuItem, IconKey } from "@/lib/content/types";
 
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
@@ -93,6 +93,30 @@ function promoImages(promotions: SiteContent["promotions"]): string[] {
     used.add(photo);
     return photo;
   });
+}
+
+/**
+ * Keeps each menu photo only on the first dish that uses it (in display order);
+ * later dishes sharing the same photo render as text cards.
+ */
+function withUniqueImages(categories: MenuCategory[], items: MenuItem[]): MenuItem[] {
+  const byOrder = (a: { sortOrder: number }, b: { sortOrder: number }) => a.sortOrder - b.sortOrder;
+  const ordered: MenuItem[] = [];
+  const walk = (parentId: string | null) => {
+    for (const c of categories.filter(c => c.visible && (c.parentId ?? null) === parentId).sort(byOrder)) {
+      ordered.push(...items.filter(i => i.visible && i.categoryId === c.id).sort(byOrder));
+      walk(c.id);
+    }
+  };
+  walk(null);
+  const used = new Set<string>();
+  const unique = new Map<string, MenuItem>();
+  for (const item of ordered) {
+    if (!item.image) continue;
+    if (used.has(item.image)) unique.set(item.id, { ...item, image: null });
+    else used.add(item.image);
+  }
+  return items.map(i => unique.get(i.id) ?? i);
 }
 
 function t(localized: { es: string; en: string } | null | undefined, lang: string): string {
@@ -325,6 +349,8 @@ export default function HomeClient({ content }: { content: SiteContent }) {
 
   const lang = language;
 
+  const menuItems = useMemo(() => withUniqueImages(content.categories, content.items), [content.categories, content.items]);
+
   const topCategories = content.categories
     .filter(c => c.visible && !c.parentId)
     .sort((a, b) => a.sortOrder - b.sortOrder);
@@ -522,7 +548,7 @@ export default function HomeClient({ content }: { content: SiteContent }) {
                     <CategoryContent
                       category={cat}
                       allCategories={content.categories}
-                      allItems={content.items}
+                      allItems={menuItems}
                       lang={lang}
                       expandedCard={expandedCard}
                       setExpandedCard={setExpandedCard}
